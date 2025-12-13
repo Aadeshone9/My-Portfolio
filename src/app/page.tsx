@@ -62,12 +62,7 @@ export default function Home() {
                 />
                 </div>
                 <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3 hover:bg-black hover:text-white">
-                  <SplitText
-                    text="View all projects"
-                    tag="span"
-                    splitType="chars"
-                    className="flex items-center"
-                  />
+                  View all projects
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
             </div>
