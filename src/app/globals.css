@@ -111,6 +111,6 @@
 
   .spotlight-card:hover::before,
   .spotlight-card:focus-within::before {
-    opacity: 0.6;
+    opacity: 1;
   }
 }
