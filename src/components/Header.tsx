@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 h-auto w-full bg-[#EDEDED] [border-bottom-left-radius:24px] [border-bottom-right-radius:24px]">
+    <header className="sticky top-0 z-50 h-auto w-[80%] bg-[#EDEDED] [border-bottom-left-radius:24px] [border-bottom-right-radius:24px]">
         <div className="container mx-auto flex h-[51px] items-center justify-between">
             <Link href="/" className="font-headline font-semibold text-lg">
                 Aadesh
@@ -15,7 +15,7 @@ export default function Header() {
               Why Hire Me
             </Link>
             <Link href="/learnings" className="text-sm font-medium text-gray-500 hover:text-black">
-              Learnings & Reflection
+              Learnings &amp; Reflection
             </Link>
           </nav>
         </div>
