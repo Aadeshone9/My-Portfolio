@@ -43,8 +43,9 @@ export default function Home() {
                 A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design.
               </p>
             </div>
-            <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3">
+            <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3 hover:bg-black hover:text-white">
               View all projects
+              <ArrowUpRight className="w-5 h-5 ml-2 -rotate-45" />
             </Button>
           </div>
 
