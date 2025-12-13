@@ -87,7 +87,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pb-20 container mx-auto px-20 mt-2">
+        <section className="pb-4 container mx-auto px-20 pt-2">
            <div className="flex flex-row items-center justify-between gap-8 md:gap-[297px]">
                 <div className="flex flex-col items-start max-w-[875px]">
                     <SplitText
@@ -109,7 +109,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="bg-transparent py-20">
+        <section className="bg-transparent py-4">
             <div className="container mx-auto px-20 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <TiltedCard>
                     <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full w-full">
