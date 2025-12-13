@@ -1,4 +1,3 @@
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export default function Header() {
@@ -8,20 +7,13 @@ export default function Header() {
             Aadesh
         </Link>
       <nav className="hidden md:flex items-center gap-6">
-        <Link href="/" className="text-sm font-medium text-gray-500 hover:text-black">
-          Home
-        </Link>
         <Link href="/about" className="text-sm font-medium text-gray-500 hover:text-black">
           About
         </Link>
         <Link href="/projects" className="text-sm font-medium text-gray-500 hover:text-black">
           Projects
         </Link>
-        <Link href="/contact" className="text-sm font-medium text-gray-500 hover:text-black">
-          Contact
-        </Link>
       </nav>
-      <Button className='hidden md:inline-flex'>Get in touch</Button>
     </header>
   );
 }
