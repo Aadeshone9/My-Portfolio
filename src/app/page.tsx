@@ -2,7 +2,7 @@ import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -45,7 +45,7 @@ export default function Home() {
             </div>
             <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3 hover:bg-black hover:text-white">
               View all projects
-              <ArrowUpRight className="w-5 h-5 ml-2 -rotate-45" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
 
