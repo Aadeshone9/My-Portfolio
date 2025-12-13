@@ -76,8 +76,8 @@ export default function Home() {
         <section className="py-20 container mx-auto px-20">
           <div className="flex flex-col items-start gap-4 my-8">
             <div className="w-[104px] h-[104px] border-2 border-[#757575] rounded-lg"></div>
-            <div className="w-[109px] border-2 border-[#757575] my-4"></div>
-            <h2 className="font-headline font-semibold text-5xl leading-[58px] tracking-wide text-black mt-4">
+            <div className="w-[109px] border-2 border-[#757575]"></div>
+            <h2 className="font-headline font-semibold text-5xl leading-[58px] tracking-wide text-black">
                 Know me better...
             </h2>
           </div>
