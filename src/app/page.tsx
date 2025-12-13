@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="bg-white">
       <Header />
-      <main className="container mx-auto px-8 pt-[100px] flex flex-col">
+      <main className="container mx-auto px-20 pt-[100px] flex flex-col">
         <div className="py-8">
           <h1 className="font-headline font-semibold text-7xl md:text-[100px] leading-tight tracking-wide text-black">
             Hi, I’m Aadesh
@@ -85,7 +85,7 @@ export default function Home() {
         </section>
       </main>
       <footer className="bg-[#131313] text-white mt-24">
-        <div className="container mx-auto px-8 py-16">
+        <div className="container mx-auto px-20 py-16">
             <div className="grid md:grid-cols-2 gap-16">
                 <div>
                     <h3 className="font-semibold text-[#757575] text-2xl tracking-wide">Now that you know me better than Earlier, Lets get in Touch....</h3>
