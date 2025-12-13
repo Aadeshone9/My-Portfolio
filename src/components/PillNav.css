@@ -1,0 +1,50 @@
+.pill-nav {
+  display: flex;
+  position: relative;
+  border-radius: 9999px;
+  padding: 4px;
+}
+
+.pill-nav-item {
+  position: relative;
+  padding: 8px 16px;
+  color: #888;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 9999px;
+  z-index: 10;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.pill-nav-item.active {
+  color: #000;
+}
+
+.pill-nav-item:hover {
+  color: #000;
+}
+
+.pill-nav-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border-radius: 9999px;
+  z-index: 5;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.pill-nav-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border-radius: 9999px;
+  z-index: 5;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
