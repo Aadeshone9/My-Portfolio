@@ -5,7 +5,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import SpotlightCard from '@/components/SpotlightCard';
-import BlurIn from '@/components/BlurIn';
+import SplitText from '@/components/SplitText';
 
 export default function Home() {
   const mainImage = PlaceHolderImages[0];
@@ -15,8 +15,9 @@ export default function Home() {
       <main className="flex flex-col">
         <div className="container mx-auto px-20 pt-[100px]">
             <div className="py-8">
-              <BlurIn 
+              <SplitText 
                 text="Hi, I’m Aadesh" 
+                tag="h1"
                 className="font-headline font-semibold text-7xl md:text-[100px] leading-tight tracking-wide text-black"
               />
             <p className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] max-w-xl mt-4">
