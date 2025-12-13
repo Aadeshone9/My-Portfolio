@@ -57,12 +57,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-24 container mx-auto px-20">
+        <section className="py-12 container mx-auto px-20">
           <div className="w-[104px] h-[104px] border-2 border-[#757575] rounded-lg mb-4"></div>
+          <div className="w-[109px] h-0 border-2 border-[#757575] mb-6"></div>
           <h2 className="font-headline font-semibold text-5xl leading-[58px] tracking-wide text-black">
               Know me better...
           </h2>
-          <div className="w-[109px] h-0 border-2 border-[#757575] mt-6"></div>
         </section>
 
         <section className="py-12 container mx-auto px-20">
