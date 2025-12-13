@@ -186,6 +186,12 @@ const SplitText = ({
             {text}
           </h6>
         );
+      case 'span':
+        return (
+          <span ref={ref} style={style} className={classes}>
+            {text}
+          </span>
+        );
       default:
         return (
           <p ref={ref} style={style} className={classes}>
