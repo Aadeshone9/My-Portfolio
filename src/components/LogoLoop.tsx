@@ -1,9 +1,9 @@
 import React from 'react';
 
-const LOGOS = ['Google', 'Meta', 'Amazon', 'Netflix', 'Apple', 'Microsoft', 'Tesla', 'SpaceX'];
+const LOGOS = ['Google'];
 
 const LogoLoop = () => {
-  const extendedLogos = [...LOGOS, ...LOGOS];
+  const extendedLogos = [...LOGOS, ...LOGOS, ...LOGOS, ...LOGOS, ...LOGOS, ...LOGOS, ...LOGOS, ...LOGOS];
 
   return (
     <div className="absolute left-1/2 -translate-x-1/2 top-[40%] w-full h-[248px] overflow-x-hidden">
