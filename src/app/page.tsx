@@ -86,33 +86,33 @@ export default function Home() {
         <section className="bg-background py-24">
             <div className="container mx-auto px-20 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <SpotlightCard>
-                    <div className="bg-[#111] border border-[#222] rounded-3xl p-8 h-full">
-                        <h3 className="font-headline font-semibold text-3xl text-white">Visual Roots</h3>
-                        <p className="font-subtitle text-xl text-white mt-4">
+                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
+                        <h3 className="font-headline font-semibold text-3xl text-black">Visual Roots</h3>
+                        <p className="font-subtitle text-xl text-black mt-4">
                             With a background in Applied Art and Visual Communication, I bring a rigorous understanding of form, composition, and detail to every pixel.
                         </p>
                     </div>
                 </SpotlightCard>
                 <SpotlightCard>
-                    <div className="bg-[#111] border border-[#222] rounded-3xl p-8 h-full">
-                        <h3 className="font-headline font-semibold text-3xl text-white">Cognitive Focus</h3>
-                        <p className="font-subtitle text-xl text-white mt-4">
+                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
+                        <h3 className="font-headline font-semibold text-3xl text-black">Cognitive Focus</h3>
+                        <p className="font-subtitle text-xl text-black mt-4">
                             My transition from Visual Design driven by a fascination with Cognitive Psychology. I focus on the subtle details and emotional connections that determine how users perceive and interact with a product.
                         </p>
                     </div>
                 </SpotlightCard>
                 <SpotlightCard>
-                    <div className="bg-[#111] border border-[#222] rounded-3xl p-8 h-full">
-                        <h3 className="font-headline font-semibold text-3xl text-white">Building Since 2022</h3>
-                        <p className="font-subtitle text-xl text-white mt-4">
+                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
+                        <h3 className="font-headline font-semibold text-3xl text-black">Building Since 2022</h3>
+                        <p className="font-subtitle text-xl text-black mt-4">
                             For the past few years, I’ve used this blend of psychology & aesthetics to build breakthrough products that are not just usable & memorable.
                         </p>
                     </div>
                 </SpotlightCard>
                 <SpotlightCard>
-                    <div className="bg-[#111] border border-[#222] rounded-3xl p-8 h-full">
-                        <h3 className="font-headline font-semibold text-3xl text-white">Inspired Living</h3>
-                        <p className="font-subtitle text-xl text-white mt-4">
+                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
+                        <h3 className="font-headline font-semibold text-3xl text-black">Inspired Living</h3>
+                        <p className="font-subtitle text-xl text-black mt-4">
                             My designs are grounded in real life. As a passionate biker, illustrator, and hobby cook I draw inspiration from the world around me to keep my work fresh, organic, and deeply human.
                         </p>
                     </div>
