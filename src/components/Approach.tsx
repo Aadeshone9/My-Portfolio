@@ -34,7 +34,7 @@ const Approach = () => {
         <div className="grid lg:grid-cols-2 gap-x-8 gap-y-12">
           <div className="lg:col-span-2">
             <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black">
-              / My Approach Towards Problem Solving
+              /My Approach Towards Problem Solving
             </h2>
           </div>
           <div className="flex flex-col justify-end">
