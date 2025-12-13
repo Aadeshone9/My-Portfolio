@@ -47,12 +47,19 @@ export default function Home() {
           <div className="container mx-auto px-20 relative z-10">
             <div className="flex justify-between items-center">
                 <div>
-                <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black">
-                    /Recent Projects
-                </h2>
-                <p className="font-subtitle text-[32px] leading-[43px] text-[#757575] mt-2 max-w-[700px]">
-                    A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design.
-                </p>
+                <SplitText
+                  text="/Recent Projects"
+                  tag="h2"
+                  className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black"
+                  textAlign="left"
+                />
+                <SplitText
+                  text="A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design."
+                  tag="p"
+                  splitType="words"
+                  className="font-subtitle text-[32px] leading-[43px] text-[#757575] mt-2 max-w-[700px]"
+                  textAlign="left"
+                />
                 </div>
                 <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3 hover:bg-black hover:text-white">
                 View all projects
@@ -67,7 +74,7 @@ export default function Home() {
         </section>
 
         <section className="py-12 container mx-auto px-20">
-          <div className="flex flex-col items-start gap-4">
+          <div className="flex flex-col items-start gap-4 my-8">
             <div className="w-[104px] h-[104px] border-2 border-[#757575] rounded-lg"></div>
             <div className="w-[109px] border-2 border-[#757575] my-4"></div>
             <h2 className="font-headline font-semibold text-5xl leading-[58px] tracking-wide text-black mt-4">
