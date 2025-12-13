@@ -12,7 +12,7 @@ const LogoLoop = () => {
           {extendedLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex-none font-subtitle font-semibold text-[200px] leading-[248px] tracking-[0.02em] text-[#757575] w-[657px] text-center"
+              className="flex-none font-subtitle font-semibold text-[200px] leading-[248px] tracking-[0.02em] text-[#757575] w-[657px] text-center mr-20"
             >
               {logo}
             </div>
