@@ -34,18 +34,18 @@ export default function Home() {
         )}
 
         <section className="py-24">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-[297px]">
             <div className="max-w-3xl">
-              <h2 className="font-headline font-semibold text-3xl md:text-[32px] leading-tight tracking-wide text-black flex items-center gap-2">
+              <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black p-[10px]">
                 /Recent Projects
               </h2>
-              <p className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] mt-4">
+              <p className="font-subtitle text-[32px] leading-[43px] text-[#757575] mt-2 max-w-[700px] p-[10px]">
                 A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design.
               </p>
             </div>
-            <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3 self-start md:self-center">
+            <Button variant="secondary" className="bg-[#EBEAEB] rounded-[20px] text-black font-medium text-[20px] px-4 py-2 h-auto self-start md:self-center">
               View all projects
-              <MoveRight className="w-5 h-5 ml-2" />
+              <MoveRight className="w-[22px] h-[22px] ml-2" />
             </Button>
           </div>
 
