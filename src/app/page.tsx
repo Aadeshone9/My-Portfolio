@@ -19,12 +19,14 @@ export default function Home() {
                 text="Hi, I’m Aadesh" 
                 tag="h1"
                 className="font-headline font-semibold text-7xl md:text-[100px] leading-tight tracking-wide text-black"
+                textAlign="left"
               />
             <SplitText
                 text="I have contributed to products at scale, Chances are you've used some!"
                 tag="p"
                 splitType="words"
                 className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] max-w-xl mt-4"
+                textAlign="left"
               />
             </div>
 
