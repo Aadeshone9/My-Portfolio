@@ -6,160 +6,156 @@ import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import SpotlightCard from '@/components/SpotlightCard';
 import SplitText from '@/components/SplitText';
-import DarkVeil from '@/components/DarkVeil';
 
 export default function Home() {
   const mainImage = PlaceHolderImages[0];
   return (
-    <div className="relative bg-white">
-      <DarkVeil />
-      <div className="relative z-10">
-        <Header />
-        <main className="flex flex-col">
-          <div className="container mx-auto px-20 pt-[100px]">
-              <div className="py-8">
-                <SplitText 
-                  text="Hi, I’m Aadesh" 
-                  tag="h1"
-                  className="font-headline font-semibold text-7xl md:text-[100px] leading-tight tracking-wide text-black"
+    <div className="bg-white">
+      <Header />
+      <main className="flex flex-col">
+        <div className="container mx-auto px-20 pt-[100px]">
+            <div className="py-8">
+              <SplitText 
+                text="Hi, I’m Aadesh" 
+                tag="h1"
+                className="font-headline font-semibold text-7xl md:text-[100px] leading-tight tracking-wide text-black"
+                textAlign="left"
+              />
+            <SplitText
+                text="I have contributed to products at scale, Chances are you've used some!"
+                tag="p"
+                splitType="words"
+                className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] max-w-xl mt-4"
+                textAlign="left"
+              />
+            </div>
+
+            {mainImage && (
+            <div className="relative w-full h-[400px] md:h-[696px] bg-[#E2E2E2] rounded-2xl overflow-hidden">
+                <Image
+                src={mainImage.imageUrl}
+                alt={mainImage.description}
+                fill
+                className="object-cover"
+                data-ai-hint={mainImage.imageHint}
+                />
+            </div>
+            )}
+        </div>
+
+        <section className="py-24">
+          <div className="container mx-auto px-20 relative z-10">
+            <div className="flex justify-between items-center">
+                <div>
+                <SplitText
+                  text="/Recent Projects"
+                  tag="h2"
+                  className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black"
                   textAlign="left"
                 />
-              <SplitText
-                  text="I have contributed to products at scale, Chances are you've used some!"
+                <SplitText
+                  text="A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design."
                   tag="p"
                   splitType="words"
-                  className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] max-w-xl mt-4"
+                  className="font-subtitle text-[32px] leading-[43px] text-[#757575] mt-2 max-w-[700px]"
                   textAlign="left"
                 />
-              </div>
-
-              {mainImage && (
-              <div className="relative w-full h-[400px] md:h-[696px] bg-[#E2E2E2] rounded-2xl overflow-hidden">
-                  <Image
-                  src={mainImage.imageUrl}
-                  alt={mainImage.description}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={mainImage.imageHint}
-                  />
-              </div>
-              )}
+                </div>
+                <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3 hover:bg-black hover:text-white">
+                  View all projects
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+            </div>
           </div>
 
-          <section className="py-24">
-            <div className="container mx-auto px-20 relative z-10">
-              <div className="flex justify-between items-center">
-                  <div>
-                  <SplitText
-                    text="/Recent Projects"
-                    tag="h2"
-                    className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black"
-                    textAlign="left"
-                  />
-                  <SplitText
-                    text="A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design."
-                    tag="p"
-                    splitType="words"
-                    className="font-subtitle text-[32px] leading-[43px] text-[#757575] mt-2 max-w-[700px]"
-                    textAlign="left"
-                  />
-                  </div>
-                  <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3 hover:bg-black hover:text-white">
-                    View all projects
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-              </div>
-            </div>
+          <div className="relative mt-12">
+            <ProjectStack />
+          </div>
+        </section>
 
-            <div className="relative mt-12">
-              <ProjectStack />
-            </div>
-          </section>
+        <section className="py-12 container mx-auto px-20">
+          <div className="flex flex-col items-start gap-4 my-8">
+            <div className="w-[104px] h-[104px] border-2 border-[#757575] rounded-lg"></div>
+            <div className="w-[109px] border-2 border-[#757575] my-4"></div>
+            <h2 className="font-headline font-semibold text-5xl leading-[58px] tracking-wide text-black mt-4">
+                Know me better...
+            </h2>
+          </div>
+        </section>
 
-          <section className="py-12 container mx-auto px-20">
-            <div className="flex flex-col items-start gap-4 my-8">
-              <div className="w-[104px] h-[104px] border-2 border-[#757575] rounded-lg"></div>
-              <div className="w-[109px] border-2 border-[#757575] my-4"></div>
-              <h2 className="font-headline font-semibold text-5xl leading-[58px] tracking-wide text-black mt-4">
-                  Know me better...
-              </h2>
+        <section className="py-12 container mx-auto px-20">
+           <div className="flex flex-row items-center justify-between gap-8 md:gap-[297px]">
+                <div className="flex flex-col items-start gap-2 max-w-[875px]">
+                    <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black flex items-center p-2.5">
+                        /Let’s Break some ice
+                    </h2>
+                    <div className="p-2.5">
+                      <p className="font-subtitle font-medium text-[32px] leading-[43px] text-[#757575]">
+                          I create to solve, and I solve to create. I am a designer, defined by my craft, dedicated to crafting better experiences for my fellow beings.
+                      </p>
+                    </div>
+                </div>
             </div>
-          </section>
+        </section>
 
-          <section className="py-12 container mx-auto px-20">
-             <div className="flex flex-row items-center justify-between gap-8 md:gap-[297px]">
-                  <div className="flex flex-col items-start gap-2 max-w-[875px]">
-                      <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black flex items-center p-2.5">
-                          /Let’s Break some ice
-                      </h2>
-                      <div className="p-2.5">
-                        <p className="font-subtitle font-medium text-[32px] leading-[43px] text-[#757575]">
-                            I create to solve, and I solve to create. I am a designer, defined by my craft, dedicated to crafting better experiences for my fellow beings.
+        <section className="bg-transparent py-24">
+            <div className="container mx-auto px-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <SpotlightCard>
+                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
+                        <h3 className="font-headline font-semibold text-3xl text-black">Visual Roots</h3>
+                        <p className="font-subtitle text-xl text-black mt-4">
+                            With a background in Applied Art and Visual Communication, I bring a rigorous understanding of form, composition, and detail to every pixel.
                         </p>
-                      </div>
-                  </div>
-              </div>
-          </section>
-
-          <section className="bg-transparent py-24">
-              <div className="container mx-auto px-20 grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <SpotlightCard>
-                      <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
-                          <h3 className="font-headline font-semibold text-3xl text-black">Visual Roots</h3>
-                          <p className="font-subtitle text-xl text-black mt-4">
-                              With a background in Applied Art and Visual Communication, I bring a rigorous understanding of form, composition, and detail to every pixel.
-                          </p>
-                      </div>
-                  </SpotlightCard>
-                  <SpotlightCard>
-                      <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
-                          <h3 className="font-headline font-semibold text-3xl text-black">Cognitive Focus</h3>
-                          <p className="font-subtitle text-xl text-black mt-4">
-                              My transition from Visual Design driven by a fascination with Cognitive Psychology. I focus on the subtle details and emotional connections that determine how users perceive and interact with a product.
-                          </p>
-                      </div>
-                  </SpotlightCard>
-                  <SpotlightCard>
-                      <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
-                          <h3 className="font-headline font-semibold text-3xl text-black">Building Since 2022</h3>
-                          <p className="font-subtitle text-xl text-black mt-4">
-                              For the past few years, I’ve used this blend of psychology & aesthetics to build breakthrough products that are not just usable & memorable.
-                          </p>
-                      </div>
-                  </SpotlightCard>
-                  <SpotlightCard>
-                      <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
-                          <h3 className="font-headline font-semibold text-3xl text-black">Inspired Living</h3>
-                          <p className="font-subtitle text-xl text-black mt-4">
-                              My designs are grounded in real life. As a passionate biker, illustrator, and hobby cook I draw inspiration from the world around me to keep my work fresh, organic, and deeply human.
-                          </p>
-                      </div>
-                  </SpotlightCard>
-              </div>
-          </section>
-        </main>
-        <footer className="bg-[#131313] text-white">
-          <div className="container mx-auto px-20 py-16">
-              <div className="grid md:grid-cols-2 gap-16">
-                  <div>
-                      <h3 className="font-semibold text-[#757575] text-2xl tracking-wide">Now that you know me better than Earlier, Lets get in Touch....</h3>
-                      <div className="mt-6 space-y-2">
-                          <a href="mailto:Aadesh.one9@gmail.com" className="block text-2xl underline">Aadesh.one9@gmail.com</a>
-                          <p className="text-2xl">+ (91) 8975143018</p>
-                          <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="block text-2xl underline">https://www.linkedin.com/in/aadeshgovenkar/</a>
-                      </div>
-                  </div>
-                  <div className="font-headline font-semibold text-5xl md:text-8xl lg:text-[160px] leading-tight tracking-wide break-words">
-                      Aadesh. One9.com
-                  </div>
-              </div>
-              <div className="mt-24 text-right text-sm">
-                  <p>Design In Figma By Aadesh Govenkar Developed in Curser by Harshad Pachore</p>
-                  <p>2026 Copyright All Rights Reserved</p>
-              </div>
-          </div>
-        </footer>
-      </div>
+                    </div>
+                </SpotlightCard>
+                <SpotlightCard>
+                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
+                        <h3 className="font-headline font-semibold text-3xl text-black">Cognitive Focus</h3>
+                        <p className="font-subtitle text-xl text-black mt-4">
+                            My transition from Visual Design driven by a fascination with Cognitive Psychology. I focus on the subtle details and emotional connections that determine how users perceive and interact with a product.
+                        </p>
+                    </div>
+                </SpotlightCard>
+                <SpotlightCard>
+                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
+                        <h3 className="font-headline font-semibold text-3xl text-black">Building Since 2022</h3>
+                        <p className="font-subtitle text-xl text-black mt-4">
+                            For the past few years, I’ve used this blend of psychology & aesthetics to build breakthrough products that are not just usable & memorable.
+                        </p>
+                    </div>
+                </SpotlightCard>
+                <SpotlightCard>
+                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
+                        <h3 className="font-headline font-semibold text-3xl text-black">Inspired Living</h3>
+                        <p className="font-subtitle text-xl text-black mt-4">
+                            My designs are grounded in real life. As a passionate biker, illustrator, and hobby cook I draw inspiration from the world around me to keep my work fresh, organic, and deeply human.
+                        </p>
+                    </div>
+                </SpotlightCard>
+            </div>
+        </section>
+      </main>
+      <footer className="bg-[#131313] text-white">
+        <div className="container mx-auto px-20 py-16">
+            <div className="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h3 className="font-semibold text-[#757575] text-2xl tracking-wide">Now that you know me better than Earlier, Lets get in Touch....</h3>
+                    <div className="mt-6 space-y-2">
+                        <a href="mailto:Aadesh.one9@gmail.com" className="block text-2xl underline">Aadesh.one9@gmail.com</a>
+                        <p className="text-2xl">+ (91) 8975143018</p>
+                        <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="block text-2xl underline">https://www.linkedin.com/in/aadeshgovenkar/</a>
+                    </div>
+                </div>
+                <div className="font-headline font-semibold text-5xl md:text-8xl lg:text-[160px] leading-tight tracking-wide break-words">
+                    Aadesh. One9.com
+                </div>
+            </div>
+            <div className="mt-24 text-right text-sm">
+                <p>Design In Figma By Aadesh Govenkar Developed in Curser by Harshad Pachore</p>
+                <p>2026 Copyright All Rights Reserved</p>
+            </div>
+        </div>
+      </footer>
     </div>
   );
 }
