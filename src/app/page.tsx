@@ -54,7 +54,6 @@ export default function Home() {
           </div>
 
           <div className="relative mt-12">
-            <LogoLoop />
             <ProjectStack />
           </div>
         </section>
