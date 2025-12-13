@@ -1,52 +1,204 @@
-.pill-nav {
+.pill-nav-container {
+  position: relative;
   display: flex;
-  position: relative;
-  border-radius: 9999px;
-  padding: 4px;
+  align-items: center;
 }
 
-.pill-nav-item {
+.pill-nav {
+  --nav-h: 36px;
+  --logo: 36px;
+  --pill-pad-x: 16px;
+  --pill-gap: 4px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.pill-nav-items {
   position: relative;
-  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  height: var(--nav-h);
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 9999px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pill-list {
+  list-style: none;
+  display: flex;
+  align-items: stretch;
+  gap: var(--pill-gap);
+  margin: 0;
+  padding: 3px;
+  height: 100%;
+}
+
+.pill-list > li {
+  display: flex;
+  height: 100%;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 var(--pill-pad-x);
+  background: transparent;
   color: #888;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 9999px;
-  z-index: 10;
-  transition: color 0.3s ease, font-weight 0.3s ease;
   text-decoration: none;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
 }
 
-.pill-nav-item.active {
+.pill.is-active {
   color: #000;
-}
-
-.pill-nav-item:hover {
-  color: #fff;
   font-weight: 600;
 }
 
-.pill-nav-hover {
+.pill .hover-circle {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  left: 50%;
   bottom: 0;
-  background-color: #000;
-  border-radius: 9999px;
-  z-index: 5;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 50%;
+  background: var(--pill-bg, #000);
+  z-index: 1;
+  display: block;
+  pointer-events: none;
+  will-change: transform;
 }
 
-.pill-nav-active {
+.pill .label-stack {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  z-index: 2;
+}
+
+.pill .pill-label {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  line-height: 1;
+  will-change: transform;
+}
+
+.pill .pill-label-hover {
   position: absolute;
-  top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #fff;
+  top: 0;
+  color: var(--hover-text, #fff);
+  z-index: 3;
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+  
+  .pill-nav-container {
+     width: auto;
+  }
+  
+  .pill-nav {
+    width: auto;
+    justify-content: flex-end;
+  }
+}
+
+.mobile-menu-button {
+  width: var(--nav-h);
+  height: var(--nav-h);
+  border-radius: 50%;
+  background: var(--base, #f0f0f0);
   border: 1px solid #e0e0e0;
-  border-radius: 9999px;
-  z-index: 5;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    display: flex;
+  }
+}
+
+.hamburger-line {
+  width: 16px;
+  height: 2px;
+  background: var(--pill-text, #000);
+  border-radius: 1px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.mobile-menu-popover {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: var(--base, #fff);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  z-index: 998;
+  opacity: 0;
+  transform-origin: top center;
+  visibility: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.mobile-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-menu-popover .mobile-menu-link {
+  display: block;
+  padding: 8px 12px;
+  color: var(--pill-text, #333);
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-popover .mobile-menu-link.is-active,
+.mobile-menu-popover .mobile-menu-link:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  color: #000;
 }
