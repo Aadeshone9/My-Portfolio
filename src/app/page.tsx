@@ -68,7 +68,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mt-4">
+          <div className="relative mt-1">
             <ProjectStack />
           </div>
         </section>
