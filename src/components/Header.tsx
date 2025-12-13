@@ -7,14 +7,14 @@ export default function Header() {
             Aadesh
         </Link>
       <nav className="hidden md:flex items-center gap-6">
+        <Link href="/projects" className="text-sm font-medium text-gray-500 hover:text-black">
+          Projects
+        </Link>
         <Link href="/why-hire-me" className="text-sm font-medium text-gray-500 hover:text-black">
           Why Hire Me
         </Link>
         <Link href="/learnings" className="text-sm font-medium text-gray-500 hover:text-black">
           Learnings and Reflection
-        </Link>
-        <Link href="/projects" className="text-sm font-medium text-gray-500 hover:text-black">
-          Projects
         </Link>
       </nav>
     </header>
