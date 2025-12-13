@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react';
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 
 type SpotlightCardProps = {
   children: React.ReactNode;
@@ -23,13 +24,16 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({ children, className }) =>
   };
 
   return (
-    <div
+    <motion.div
       ref={cardRef}
       onMouseMove={handleMouseMove}
       className={cn('spotlight-card', className)}
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 

@@ -6,6 +6,7 @@ import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import SpotlightCard from '@/components/SpotlightCard';
 import SplitText from '@/components/SplitText';
+import TiltedCard from '@/components/TiltedCard';
 
 export default function Home() {
   const mainImage = PlaceHolderImages[0];
@@ -68,12 +69,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mt-1">
+          <div className="relative mt-4">
             <ProjectStack />
           </div>
         </section>
 
-        <section className="pt-8 pb-2 container mx-auto px-20">
+        <section className="pt-8 pb-2 container mx-auto px-20 mb-2">
           <div className="flex flex-col items-start gap-4">
             <div className="w-[104px] h-[104px] border-2 border-[#757575] rounded-lg"></div>
             <div className="w-[109px] border-2 border-[#757575]"></div>
@@ -83,13 +84,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pb-20 container mx-auto px-20 mt-2">
+        <section className="pb-20 container mx-auto px-20 mt-4">
            <div className="flex flex-row items-center justify-between gap-8 md:gap-[297px]">
                 <div className="flex flex-col items-start gap-2 max-w-[875px]">
                     <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black flex items-center">
                         /Let’s Break some ice
                     </h2>
-                    <div>
+                    <div className="mt-2">
                       <p className="font-subtitle font-medium text-[32px] leading-[43px] text-[#757575]">
                           I create to solve, and I solve to create. I am a designer, defined by my craft, dedicated to crafting better experiences for my fellow beings.
                       </p>
@@ -100,38 +101,38 @@ export default function Home() {
 
         <section className="bg-transparent py-20">
             <div className="container mx-auto px-20 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <SpotlightCard>
-                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
+                <TiltedCard>
+                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full w-full">
                         <h3 className="font-headline font-semibold text-3xl text-black">Visual Roots</h3>
                         <p className="font-subtitle text-xl text-black mt-4">
                             With a background in Applied Art and Visual Communication, I bring a rigorous understanding of form, composition, and detail to every pixel.
                         </p>
                     </div>
-                </SpotlightCard>
-                <SpotlightCard>
-                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
+                </TiltedCard>
+                <TiltedCard>
+                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full w-full">
                         <h3 className="font-headline font-semibold text-3xl text-black">Cognitive Focus</h3>
                         <p className="font-subtitle text-xl text-black mt-4">
                             My transition from Visual Design driven by a fascination with Cognitive Psychology. I focus on the subtle details and emotional connections that determine how users perceive and interact with a product.
                         </p>
                     </div>
-                </SpotlightCard>
-                <SpotlightCard>
-                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
+                </TiltedCard>
+                <TiltedCard>
+                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full w-full">
                         <h3 className="font-headline font-semibold text-3xl text-black">Building Since 2022</h3>
                         <p className="font-subtitle text-xl text-black mt-4">
                             For the past few years, I’ve used this blend of psychology & aesthetics to build breakthrough products that are not just usable & memorable.
                         </p>
                     </div>
-                </SpotlightCard>
-                <SpotlightCard>
-                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full">
+                </TiltedCard>
+                <TiltedCard>
+                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full w-full">
                         <h3 className="font-headline font-semibold text-3xl text-black">Inspired Living</h3>
                         <p className="font-subtitle text-xl text-black mt-4">
                             My designs are grounded in real life. As a passionate biker, illustrator, and hobby cook I draw inspiration from the world around me to keep my work fresh, organic, and deeply human.
                         </p>
                     </div>
-                </SpotlightCard>
+                </TiltedCard>
             </div>
         </section>
       </main>

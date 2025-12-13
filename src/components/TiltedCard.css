@@ -1,0 +1,14 @@
+.tilted-card-figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+.tilted-card-inner {
+  transform-style: preserve-3d;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
