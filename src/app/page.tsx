@@ -12,42 +12,46 @@ export default function Home() {
   return (
     <div className="bg-white">
       <Header />
-      <main className="container mx-auto px-20 pt-[100px] flex flex-col">
-        <div className="py-8">
-          <h1 className="font-headline font-semibold text-7xl md:text-[100px] leading-tight tracking-wide text-black">
-            Hi, I’m Aadesh
-          </h1>
-          <p className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] max-w-xl mt-4">
-            I have contributed to products at scale, Chances are you&apos;ve used some!
-          </p>
+      <main className="flex flex-col">
+        <div className="container mx-auto px-20 pt-[100px]">
+            <div className="py-8">
+            <h1 className="font-headline font-semibold text-7xl md:text-[100px] leading-tight tracking-wide text-black">
+                Hi, I’m Aadesh
+            </h1>
+            <p className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] max-w-xl mt-4">
+                I have contributed to products at scale, Chances are you&apos;ve used some!
+            </p>
+            </div>
+
+            {mainImage && (
+            <div className="relative w-full h-[400px] md:h-[696px] bg-[#E2E2E2] rounded-2xl overflow-hidden">
+                <Image
+                src={mainImage.imageUrl}
+                alt={mainImage.description}
+                fill
+                className="object-cover"
+                data-ai-hint={mainImage.imageHint}
+                />
+            </div>
+            )}
         </div>
 
-        {mainImage && (
-          <div className="relative w-full h-[400px] md:h-[696px] bg-[#E2E2E2] rounded-2xl overflow-hidden">
-            <Image
-              src={mainImage.imageUrl}
-              alt={mainImage.description}
-              fill
-              className="object-cover"
-              data-ai-hint={mainImage.imageHint}
-            />
-          </div>
-        )}
-
         <section className="py-24 relative">
-          <div className="flex justify-between items-center">
-            <div>
-              <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black">
-                /Recent Projects
-              </h2>
-              <p className="font-subtitle text-[32px] leading-[43px] text-[#757575] mt-2 max-w-[700px]">
-                A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design.
-              </p>
+          <div className="container mx-auto px-20">
+            <div className="flex justify-between items-center">
+                <div>
+                <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black">
+                    /Recent Projects
+                </h2>
+                <p className="font-subtitle text-[32px] leading-[43px] text-[#757575] mt-2 max-w-[700px]">
+                    A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design.
+                </p>
+                </div>
+                <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3 hover:bg-black hover:text-white">
+                View all projects
+                <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
             </div>
-            <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3 hover:bg-black hover:text-white">
-              View all projects
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
           </div>
 
           <div className="relative mt-12 z-10">
@@ -75,7 +79,7 @@ export default function Home() {
           <LogoLoop />
         </section>
 
-        <section className="py-12">
+        <section className="py-12 container mx-auto px-20">
            <div className="flex flex-col md:flex-row items-start justify-between gap-8">
                 <div className="max-w-4xl">
                     <h2 className="font-headline font-semibold text-3xl md:text-[32px] leading-tight tracking-wide text-black flex items-center gap-2">
