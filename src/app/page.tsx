@@ -73,7 +73,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pt-20 pb-1 container mx-auto px-20">
+        <section className="pt-20 pb-2 container mx-auto px-20">
           <div className="flex flex-col items-start gap-4">
             <div className="w-[104px] h-[104px] border-2 border-[#757575] rounded-lg"></div>
             <div className="w-[109px] border-2 border-[#757575]"></div>
@@ -83,7 +83,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pt-1 pb-20 container mx-auto px-20">
+        <section className="pb-20 container mx-auto px-20">
            <div className="flex flex-row items-center justify-between gap-8 md:gap-[297px]">
                 <div className="flex flex-col items-start gap-4 max-w-[875px]">
                     <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black flex items-center">
