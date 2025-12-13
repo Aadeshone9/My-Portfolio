@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
 type SpotlightCardProps = {
@@ -10,7 +10,6 @@ type SpotlightCardProps = {
 
 const SpotlightCard: React.FC<SpotlightCardProps> = ({ children, className }) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     const card = cardRef.current;
@@ -20,25 +19,21 @@ const SpotlightCard: React.FC<SpotlightCardProps> = ({ children, className }) =>
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      card.style.setProperty('--spotlight-x', `${x}px`);
-      card.style.setProperty('--spotlight-y', `${y}px`);
+      card.style.setProperty('--mouse-x', `${(x / rect.width) * 100}%`);
+      card.style.setProperty('--mouse-y', `${(y / rect.height) * 100}%`);
     };
 
-    if (isHovering) {
-      card.addEventListener('mousemove', handleMouseMove);
-    }
+    card.addEventListener('mousemove', handleMouseMove);
 
     return () => {
       card.removeEventListener('mousemove', handleMouseMove);
     };
-  }, [isHovering]);
+  }, []);
 
   return (
     <div
       ref={cardRef}
       className={cn('spotlight-card', className)}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
     >
       {children}
     </div>
