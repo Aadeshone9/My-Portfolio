@@ -4,7 +4,6 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import LogoLoop from "./LogoLoop";
 
 const projects = [
   {
@@ -77,8 +76,7 @@ const ProjectStack = () => {
     });
 
     return (
-        <div ref={containerRef} className="relative z-10">
-            <LogoLoop />
+        <div ref={containerRef} className="relative">
             {projects.map((project, i) => {
                 const targetScale = 1 - ((projects.length - i) * 0.05);
                 return <ProjectCard key={i} i={i} {...{project, progress: scrollYProgress, range: [i * .25, 1], targetScale}}/>

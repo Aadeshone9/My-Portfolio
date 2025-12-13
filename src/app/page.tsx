@@ -1,5 +1,4 @@
 import Header from '@/components/Header';
-import LogoLoop from '@/components/LogoLoop';
 import ProjectStack from '@/components/ProjectStack';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
