@@ -49,7 +49,7 @@ export default function Home() {
             </Button>
           </div>
 
-          <Card className="mt-12 p-6 bg-[#F2F2F2] border border-[#BFBFBF] rounded-2xl">
+          <Card className="mt-12 p-6 bg-[#F2F2F2] border border-[#BFBFBF] rounded-2xl w-[40vw]">
             <div className="bg-[#D9D9D9] w-full h-96 rounded-lg flex items-center justify-center">
                 <svg width="140" height="140" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M49.2599 23.6001C49.2599 21.6801 49.0999 19.8801 48.7599 18.1401H25.0001V28.3201H38.7999C38.2199 31.4201 36.6199 33.9601 34.0599 35.6801V42.5001H42.0299C46.5199 38.3401 49.2599 31.6401 49.2599 23.6001Z" fill="#1976D2"/>
