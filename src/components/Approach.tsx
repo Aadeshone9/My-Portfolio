@@ -7,7 +7,7 @@ const approachData = [
   },
   {
     title: 'Define',
-    description: 'You\'ve proven the concept; now let\'s perfect the experience.',
+    description: "You've proven the concept; now let's perfect the experience.",
   },
   {
     title: 'The Experience Layout',
@@ -32,7 +32,7 @@ const Approach = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap lg:flex-nowrap gap-x-8 gap-y-12">
           <div className="w-full lg:w-1/3 flex-shrink-0">
-            <h2 className="font-headline font-semibold text-3xl md:text-[32px] leading-tight tracking-wide text-black">
+            <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black">
               / My Approach Towards Problem Solving
             </h2>
             <p className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] mt-4">
