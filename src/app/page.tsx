@@ -1,7 +1,9 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-background">
-      <h1 className="text-5xl font-bold tracking-tight text-primary">Hello</h1>
+    <main className="flex min-h-screen flex-col p-8">
+      <h1 className="w-[837px] h-[90px] font-headline font-semibold text-[100px] leading-[58px] flex items-center tracking-[0.02em] text-foreground">
+        Hi, I’m Aadesh
+      </h1>
     </main>
   );
 }
