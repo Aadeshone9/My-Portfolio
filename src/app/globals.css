@@ -113,4 +113,17 @@
   .spotlight-card:focus-within::before {
     opacity: 1;
   }
+
+  .animate-blur-in {
+    animation: blur-in 0.8s ease-in-out forwards;
+    filter: blur(10px);
+    opacity: 0;
+  }
+
+  @keyframes blur-in {
+    to {
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
 }
