@@ -3,8 +3,11 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 flex h-[51px] w-full flex-row items-center justify-between bg-[#EDEDED] px-8 py-[13px] [border-bottom-left-radius:24px] [border-bottom-right-radius:24px] max-w-[1280px] left-1/2 -translate-x-1/2">
-      <nav className="flex items-center gap-6">
+    <header className="sticky top-0 z-50 flex h-auto w-full flex-row items-center justify-between bg-[#EDEDED] px-8 py-3 md:h-[51px] [border-bottom-left-radius:24px] [border-bottom-right-radius:24px] max-w-7xl mx-auto">
+        <Link href="/" className="font-headline font-semibold text-lg">
+            Aadesh
+        </Link>
+      <nav className="hidden md:flex items-center gap-6">
         <Link href="/" className="text-sm font-medium text-gray-500 hover:text-black">
           Home
         </Link>
@@ -18,7 +21,7 @@ export default function Header() {
           Contact
         </Link>
       </nav>
-      <Button>Get in touch</Button>
+      <Button className='hidden md:inline-flex'>Get in touch</Button>
     </header>
   );
 }
