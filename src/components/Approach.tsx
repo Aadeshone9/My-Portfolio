@@ -1,4 +1,5 @@
 import React from 'react';
+import SplitText from './SplitText';
 
 const approachData = [
   {
@@ -30,17 +31,19 @@ const Approach = () => {
   return (
     <section className="bg-white py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap lg:flex-nowrap gap-x-8 gap-y-12">
-          <div className="w-full lg:w-1/3 flex-shrink-0">
-            <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black">
+        <div className="grid lg:grid-cols-2 gap-x-8 gap-y-12">
+          <div className="lg:col-span-2">
+            <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black whitespace-nowrap">
               / My Approach Towards Problem Solving
             </h2>
-            <p className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] mt-4">
+          </div>
+          <div className="flex flex-col justify-end">
+            <p className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] mt-4 max-w-md">
               I believe great design is a result of clarity, collaboration, and
               craft.
             </p>
           </div>
-          <div className="w-full lg:w-2/3">
+          <div className="w-full">
             <div className="space-y-6 max-h-[404px] overflow-y-auto pr-4">
               {approachData.map((item, index) => (
                 <div
