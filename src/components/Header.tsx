@@ -14,7 +14,7 @@ export default function Header() {
           Why Hire Me
         </Link>
         <Link href="/learnings" className="text-sm font-medium text-gray-500 hover:text-black">
-          Learnings and Reflection
+          Learnings & Reflection
         </Link>
       </nav>
     </header>
