@@ -85,11 +85,11 @@ export default function Home() {
 
         <section className="py-20 container mx-auto px-20">
            <div className="flex flex-row items-center justify-between gap-8 md:gap-[297px]">
-                <div className="flex flex-col items-start gap-2 max-w-[875px]">
-                    <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black flex items-center p-2.5">
+                <div className="flex flex-col items-start gap-4 max-w-[875px]">
+                    <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black flex items-center">
                         /Let’s Break some ice
                     </h2>
-                    <div className="p-2.5">
+                    <div>
                       <p className="font-subtitle font-medium text-[32px] leading-[43px] text-[#757575]">
                           I create to solve, and I solve to create. I am a designer, defined by my craft, dedicated to crafting better experiences for my fellow beings.
                       </p>
