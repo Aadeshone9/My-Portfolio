@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 h-auto w-full bg-[#EDEDED] [border-bottom-left-radius:24px] [border-bottom-right-radius:24px]">
-        <div className="mx-auto flex h-[51px] w-3/5 items-center justify-between">
+        <div className="container mx-auto flex h-[51px] items-center justify-between">
             <Link href="/" className="font-headline font-semibold text-lg">
                 Aadesh
             </Link>
