@@ -14,7 +14,7 @@ export default function Home() {
       <Header />
       <main className="flex flex-col">
         <div className="container mx-auto px-20 pt-10">
-            <div className="py-8">
+            <div className="py-20">
               <SplitText 
                 text="Hi, I’m Aadesh" 
                 tag="h1"
@@ -68,7 +68,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mt-8">
+          <div className="relative mt-6">
             <ProjectStack />
           </div>
         </section>
