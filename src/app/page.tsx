@@ -35,8 +35,8 @@ export default function Home() {
             )}
         </div>
 
-        <section className="py-24 relative">
-          <div className="container mx-auto px-20">
+        <section className="py-24">
+          <div className="container mx-auto px-20 relative z-10">
             <div className="flex justify-between items-center">
                 <div>
                 <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black">
@@ -53,10 +53,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mt-12 z-10">
+          <div className="relative mt-12">
+            <LogoLoop />
             <ProjectStack />
           </div>
-          <LogoLoop />
         </section>
 
         <section className="py-12 container mx-auto px-20">
