@@ -2,7 +2,7 @@ import Header from '@/components/Header';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowUpRight, MoveRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -34,22 +34,21 @@ export default function Home() {
         )}
 
         <section className="py-24">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-[297px]">
-            <div className="max-w-3xl">
-              <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black p-[10px]">
+          <div className="flex justify-between items-center">
+            <div>
+              <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black">
                 /Recent Projects
               </h2>
-              <p className="font-subtitle text-[32px] leading-[43px] text-[#757575] mt-2 max-w-[700px] p-[10px]">
+              <p className="font-subtitle text-[32px] leading-[43px] text-[#757575] mt-2 max-w-[700px]">
                 A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design.
               </p>
             </div>
-            <Button variant="secondary" className="bg-[#EBEAEB] rounded-[20px] text-black font-medium text-[20px] px-4 py-2 h-auto self-start md:self-center">
+            <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3">
               View all projects
-              <MoveRight className="w-[22px] h-[22px] ml-2" />
             </Button>
           </div>
 
-          <Card className="mt-12 p-6 bg-[#F2F2F2] border border-[#BFBFBF] rounded-2xl max-w-3xl mx-auto">
+          <Card className="mt-12 p-6 bg-[#F2F2F2] border border-[#BFBFBF] rounded-2xl">
             <div className="bg-[#D9D9D9] w-full h-96 rounded-lg flex items-center justify-center">
                 <svg width="140" height="140" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M49.2599 23.6001C49.2599 21.6801 49.0999 19.8801 48.7599 18.1401H25.0001V28.3201H38.7999C38.2199 31.4201 36.6199 33.9601 34.0599 35.6801V42.5001H42.0299C46.5199 38.3401 49.2599 31.6401 49.2599 23.6001Z" fill="#1976D2"/>
