@@ -74,7 +74,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pt-8 pb-2 container mx-auto px-20 mb-16">
+        <section className="pt-8 pb-2 container mx-auto px-20 mb-8">
           <div className="flex flex-col items-start gap-4">
             <div className="w-[104px] h-[104px] border-2 border-[#757575] rounded-lg"></div>
             <div className="w-[109px] border-2 border-[#757575]"></div>
@@ -87,9 +87,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pb-20 container mx-auto px-20 mt-4">
+        <section className="pb-20 container mx-auto px-20 mt-8">
            <div className="flex flex-row items-center justify-between gap-8 md:gap-[297px]">
-                <div className="flex flex-col items-start gap-2 max-w-[875px]">
+                <div className="flex flex-col items-start gap-4 max-w-[875px]">
                     <SplitText
                       text="/Let’s Break some ice"
                       tag="h2"
@@ -97,9 +97,13 @@ export default function Home() {
                       textAlign="left"
                     />
                     <div className="mt-2">
-                      <p className="font-subtitle font-medium text-[32px] leading-[43px] text-[#757575]">
-                          I create to solve, and I solve to create. I am a designer, defined by my craft, dedicated to crafting better experiences for my fellow beings.
-                      </p>
+                        <SplitText
+                            text="I create to solve, and I solve to create. I am a designer, defined by my craft, dedicated to crafting better experiences for my fellow beings."
+                            tag="p"
+                            splitType="words"
+                            className="font-subtitle font-medium text-[32px] leading-[43px] text-[#757575]"
+                            textAlign="left"
+                        />
                     </div>
                 </div>
             </div>
