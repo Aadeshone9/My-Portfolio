@@ -7,6 +7,7 @@ import Image from 'next/image';
 import SpotlightCard from '@/components/SpotlightCard';
 import SplitText from '@/components/SplitText';
 import TiltedCard from '@/components/TiltedCard';
+import Approach from '@/components/Approach';
 
 export default function Home() {
   const mainImage = PlaceHolderImages[0];
@@ -145,6 +146,9 @@ export default function Home() {
                 </TiltedCard>
             </div>
         </section>
+        
+        <Approach />
+
       </main>
       <footer className="bg-[#131313] text-white mt-20">
         <div className="container mx-auto px-20 py-16">
