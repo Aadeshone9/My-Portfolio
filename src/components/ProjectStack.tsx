@@ -2,8 +2,14 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Lock } from "lucide-react";
 import PillButton from "./PillButton";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const projects = [
   {
@@ -53,7 +59,21 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
             )}
           </div>
           <div className="mt-6">
-              <CardTitle className="text-3xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
+              <div className="flex items-center gap-2">
+                <CardTitle className="text-3xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
+                {i === 0 && (
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Lock className="w-6 h-6 text-muted-foreground" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Request Access</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                )}
+              </div>
               <p className="text-lg text-muted-foreground mt-1">{project.role}</p>
               <CardDescription className="text-xl text-foreground mt-2">
                   {project.description}
