@@ -7,9 +7,9 @@ import PillButton from "./PillButton";
 
 const projects = [
   {
-    title: "Google",
-    role: "Lead + Individual Contributor",
-    description: "Body Text description Body Text description Body Text description Body Text description",
+    title: "Google Cloud Security",
+    role: "Partner Product & UX Design consultant",
+    description: "Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
   },
