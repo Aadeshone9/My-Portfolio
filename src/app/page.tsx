@@ -64,7 +64,7 @@ export default function Home() {
                   textAlign="left"
                 />
                 </div>
-                <PillButton href="#">
+                <PillButton href="#" baseColor="hsl(var(--background))">
                     <span>View recent projects</span>
                     <ArrowRight />
                 </PillButton>
