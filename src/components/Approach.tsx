@@ -50,11 +50,11 @@ const Approach = () => {
                   key={index}
                   className="bg-white border border-[#BFBFBF] rounded-2xl p-6"
                 >
-                  <div className='space-y-1'>
+                  <div className="space-y-1">
                     <h3 className="font-headline font-semibold text-3xl text-black leading-tight">
                       {item.title}
                     </h3>
-                    <p className="font-headline text-xl text-black leading-9">
+                    <p className="font-headline text-2xl text-black leading-9">
                       {item.description}
                     </p>
                   </div>
