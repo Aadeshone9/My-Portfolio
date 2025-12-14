@@ -48,13 +48,13 @@ const Approach = () => {
               {approachData.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-[#BFBFBF] rounded-2xl p-6 w-full flex flex-col justify-center min-h-[172px]"
+                  className="bg-white border border-[#BFBFBF] rounded-2xl p-6 w-full flex flex-col justify-center min-h-[140px]"
                 >
                   <div className="space-y-1">
                     <h3 className="font-headline font-semibold text-3xl text-black leading-tight">
                       {item.title}
                     </h3>
-                    <p className="font-body text-base text-black leading-9">
+                    <p className="font-body text-base text-black leading-relaxed">
                       {item.description}
                     </p>
                   </div>
