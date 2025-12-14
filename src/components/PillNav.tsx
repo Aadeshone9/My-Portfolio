@@ -9,14 +9,14 @@ const PillNav = ({
   activeHref,
   className = '',
   ease = 'power3.easeOut',
-  baseColor = '#fff',
-  pillColor = '#000',
-  hoveredPillTextColor = '#fff',
+  baseColor = 'var(--background)',
+  pillColor = 'var(--primary)',
+  hoveredPillTextColor = 'var(--primary-foreground)',
   pillTextColor,
   onMobileMenuClick,
   initialLoadAnimation = true,
 }) => {
-  const resolvedPillTextColor = pillTextColor ?? baseColor;
+  const resolvedPillTextColor = pillTextColor ?? 'var(--foreground)';
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const circleRefs = useRef([]);
   const tlRefs = useRef([]);
@@ -167,8 +167,8 @@ const PillNav = ({
 
   const cssVars = {
     ['--base']: baseColor,
-    ['--pill-bg']: pillColor,
-    ['--hover-text']: hoveredPillTextColor,
+    ['--pill-bg']: `hsl(${pillColor})`,
+    ['--hover-text']: `hsl(${hoveredPillTextColor})`,
     ['--pill-text']: resolvedPillTextColor,
   };
 

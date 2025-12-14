@@ -10,22 +10,22 @@ const projects = [
     title: "Google",
     role: "Lead + Individual Contributor",
     description: "Body Text description Body Text description Body Text description Body Text description",
-    bgColor: "bg-[#F2F2F2]",
-    imageBgColor: "bg-[#D9D9D9]",
+    bgColor: "bg-secondary",
+    imageBgColor: "bg-muted",
   },
   {
     title: "Microsoft",
     role: "Product Designer",
     description: "Another project description detailing the work done and technologies used.",
-    bgColor: "bg-[#EAEBEE]",
-    imageBgColor: "bg-[#C9CED4]",
+    bgColor: "bg-secondary",
+    imageBgColor: "bg-muted",
   },
   {
     title: "Apple",
     role: "UX/UI Designer",
     description: "A third project description for another great company to showcase skills.",
-    bgColor: "bg-[#F0F0F0]",
-    imageBgColor: "bg-[#DADADA]",
+    bgColor: "bg-secondary",
+    imageBgColor: "bg-muted",
   },
 ];
 
@@ -41,7 +41,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
         }} 
         className={`relative w-[55%] transform-gpu`}
       >
-        <Card className={`p-6 ${project.bgColor} border border-[#BFBFBF] rounded-2xl w-full mx-auto`}>
+        <Card className={`p-6 ${project.bgColor} border-border rounded-2xl w-full mx-auto`}>
           <div className={`${project.imageBgColor} w-full h-96 rounded-lg flex items-center justify-center`}>
             {i === 0 && (
               <svg width="140" height="140" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,12 +53,12 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
             )}
           </div>
           <div className="mt-6">
-              <CardTitle className="text-3xl font-headline font-semibold text-black">{project.title}</CardTitle>
+              <CardTitle className="text-3xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
               <p className="text-lg text-gray-500 mt-1">{project.role}</p>
-              <CardDescription className="text-xl text-black mt-2">
+              <CardDescription className="text-xl text-foreground mt-2">
                   {project.description}
               </CardDescription>
-              <Button variant="link" className="p-0 h-auto text-lg mt-4 text-black">
+              <Button variant="link" className="p-0 h-auto text-lg mt-4 text-foreground hover:text-primary">
                   View project <ArrowRight className="w-5 h-5 ml-1"/>
               </Button>
           </div>

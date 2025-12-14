@@ -13,9 +13,9 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 mx-auto h-auto w-[90%] bg-[#EDEDED] flex justify-start [border-bottom-left-radius:24px] [border-bottom-right-radius:24px]">
+    <header className="sticky top-0 z-50 mx-auto h-auto w-[90%] bg-secondary/80 backdrop-blur-sm flex justify-start [border-bottom-left-radius:24px] [border-bottom-right-radius:24px]">
       <div className="container mx-auto flex h-[51px] items-center justify-between">
-        <Link href="/" className="font-headline font-semibold text-lg">
+        <Link href="/" className="font-headline font-semibold text-lg text-foreground">
           Aadesh.one9.com
         </Link>
         <PillNav items={navItems} activeHref={pathname} />

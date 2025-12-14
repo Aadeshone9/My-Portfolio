@@ -13,7 +13,7 @@ import Approach from '@/components/Approach';
 export default function Home() {
   const mainImage = PlaceHolderImages[0];
   return (
-    <div className="bg-white">
+    <div className="bg-background">
       <Header />
       <main className="flex flex-col">
         <div className="container mx-auto px-20 pt-10">
@@ -21,20 +21,20 @@ export default function Home() {
               <SplitText 
                 text="Hi, I’m Aadesh" 
                 tag="h1"
-                className="font-headline font-semibold text-7xl md:text-[100px] leading-tight tracking-wide text-black"
+                className="font-headline font-semibold text-7xl md:text-[100px] leading-tight tracking-wide text-foreground"
                 textAlign="left"
               />
             <SplitText
                 text="I have contributed to products at scale, Chances are you've used some!"
                 tag="p"
                 splitType="words"
-                className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] max-w-xl mt-4"
+                className="font-subtitle text-2xl md:text-[32px] leading-snug text-muted-foreground max-w-xl mt-4"
                 textAlign="left"
               />
             </div>
 
             {mainImage && (
-            <div className="relative w-full h-[400px] md:h-[696px] bg-[#E2E2E2] rounded-2xl overflow-hidden">
+            <div className="relative w-full h-[400px] md:h-[696px] bg-secondary rounded-2xl overflow-hidden">
                 <Image
                 src={mainImage.imageUrl}
                 alt={mainImage.description}
@@ -53,18 +53,18 @@ export default function Home() {
                 <SplitText
                   text="/Recent Projects"
                   tag="h2"
-                  className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black"
+                  className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-foreground"
                   textAlign="left"
                 />
                 <SplitText
                   text="A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design."
                   tag="p"
                   splitType="words"
-                  className="font-subtitle text-[32px] leading-[43px] text-[#757575] mt-2 max-w-[700px]"
+                  className="font-subtitle text-[32px] leading-[43px] text-muted-foreground mt-2 max-w-[700px]"
                   textAlign="left"
                 />
                 </div>
-                <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3 hover:bg-black hover:text-white">
+                <Button variant="secondary" className="bg-secondary rounded-full text-foreground font-medium text-lg px-6 py-3 hover:bg-primary hover:text-primary-foreground">
                   Why you should hire me
                 </Button>
             </div>
@@ -75,26 +75,26 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pt-24 pb-4 container mx-auto px-20">
+        <section className="pt-4 pb-4 container mx-auto px-20">
           <div className="flex flex-col items-start gap-2">
-            <div className="w-[8px] h-[8px] border border-[#757575] rounded-sm"></div>
-            <div className="w-[12px] border border-[#757575]"></div>
+            <div className="w-[8px] h-[8px] border border-muted-foreground rounded-sm"></div>
+            <div className="w-[12px] border border-muted-foreground"></div>
             <SplitText
               text="Know me better..."
               tag="h2"
-              className="font-headline font-semibold text-5xl leading-[58px] tracking-wide text-black mt-2"
+              className="font-headline font-semibold text-5xl leading-[58px] tracking-wide text-foreground mt-2"
               textAlign="left"
             />
           </div>
         </section>
 
-        <section className="pt-4 pb-4 container mx-auto px-20">
+        <section className="pt-4 pb-16 container mx-auto px-20">
            <div className="flex flex-row items-center justify-between gap-8 md:gap-[297px]">
                 <div className="flex flex-col items-start max-w-[875px]">
                     <SplitText
                       text="/Let’s Break some ice"
                       tag="h2"
-                      className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black flex items-center"
+                      className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-foreground flex items-center"
                       textAlign="left"
                     />
                     <div className="mt-2">
@@ -102,7 +102,7 @@ export default function Home() {
                             text="I create to solve, and I solve to create. I am a designer, defined by my craft, dedicated to crafting better experiences for my fellow beings."
                             tag="p"
                             splitType="words"
-                            className="font-subtitle font-medium text-[32px] leading-[43px] text-[#757575]"
+                            className="font-subtitle font-medium text-[32px] leading-[43px] text-muted-foreground"
                             textAlign="left"
                         />
                     </div>
@@ -113,33 +113,33 @@ export default function Home() {
         <section className="pb-24 pt-0">
             <div className="container mx-auto px-20 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <TiltedCard>
-                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full w-full">
-                        <h3 className="font-headline font-semibold text-3xl text-black">Visual Roots</h3>
-                        <p className="font-subtitle text-xl text-black mt-4">
+                    <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
+                        <h3 className="font-headline font-semibold text-3xl text-foreground">Visual Roots</h3>
+                        <p className="font-subtitle text-xl text-foreground mt-4">
                             With a background in Applied Art and Visual Communication, I bring a rigorous understanding of form, composition, and detail to every pixel.
                         </p>
                     </div>
                 </TiltedCard>
                 <TiltedCard>
-                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full w-full">
-                        <h3 className="font-headline font-semibold text-3xl text-black">Cognitive Focus</h3>
-                        <p className="font-subtitle text-xl text-black mt-4">
+                    <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
+                        <h3 className="font-headline font-semibold text-3xl text-foreground">Cognitive Focus</h3>
+                        <p className="font-subtitle text-xl text-foreground mt-4">
                             My transition from Visual Design driven by a fascination with Cognitive Psychology. I focus on the subtle details and emotional connections that determine how users perceive and interact with a product.
                         </p>
                     </div>
                 </TiltedCard>
                 <TiltedCard>
-                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full w-full">
-                        <h3 className="font-headline fontsemibold text-3xl text-black">Building Since 2022</h3>
-                        <p className="font-subtitle text-xl text-black mt-4">
+                    <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
+                        <h3 className="font-headline fontsemibold text-3xl text-foreground">Building Since 2022</h3>
+                        <p className="font-subtitle text-xl text-foreground mt-4">
                             For the past few years, I’ve used this blend of psychology & aesthetics to build breakthrough products that are not just usable & memorable.
                         </p>
                     </div>
                 </TiltedCard>
                 <TiltedCard>
-                    <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full w-full">
-                        <h3 className="font-headline font-semibold text-3xl text-black">Inspired Living</h3>
-                        <p className="font-subtitle text-xl text-black mt-4">
+                    <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
+                        <h3 className="font-headline font-semibold text-3xl text-foreground">Inspired Living</h3>
+                        <p className="font-subtitle text-xl text-foreground mt-4">
                             My designs are grounded in real life. As a passionate biker, illustrator, and hobby cook I draw inspiration from the world around me to keep my work fresh, organic, and deeply human.
                         </p>
                     </div>
@@ -153,14 +153,14 @@ export default function Home() {
         
         <div className="w-[90%] mx-auto my-24">
           <SpotlightCard>
-            <div className="bg-[#F2F2F2] rounded-2xl py-4 px-6 flex items-center justify-start">
+            <div className="bg-secondary rounded-2xl py-4 px-6 flex items-center justify-start">
               <SplitText 
                 text="Find out" 
                 tag="h2"
-                className="font-headline font-semibold text-2xl leading-tight tracking-[0.02em] text-black"
+                className="font-headline font-semibold text-2xl leading-tight tracking-[0.02em] text-foreground"
                 textAlign="left"
               />
-              <Button variant="secondary" className="bg-[#EBEAEB] rounded-[20px] text-black font-medium text-xl px-4 py-2 h-auto ml-2 hover:bg-black hover:text-white">
+              <Button variant="secondary" className="bg-background rounded-[20px] text-foreground font-medium text-xl px-4 py-2 h-auto ml-2 hover:bg-primary hover:text-primary-foreground">
                 Why you should hire me
               </Button>
             </div>
@@ -168,11 +168,11 @@ export default function Home() {
         </div>
 
       </main>
-      <footer className="bg-[#131313] text-white py-16">
+      <footer className="bg-[#1F1F21] text-white py-16">
         <div className="w-[90%] mx-auto flex flex-col gap-10">
           <div className='flex flex-col gap-10'>
             <div className='flex flex-col gap-6'>
-              <p className="font-headline font-semibold text-[#757575] text-2xl tracking-[0.02em] leading-normal">
+              <p className="font-headline font-semibold text-[#A4A4A4] text-2xl tracking-[0.02em] leading-normal">
                 Now that you know me better than Earlier, Lets get in Touch....
               </p>
               <div className="flex flex-col gap-4">
