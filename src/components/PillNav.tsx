@@ -16,7 +16,6 @@ const PillNav = ({
   hoveredPillTextColor,
   pillTextColor,
   onMobileMenuClick,
-  initialLoadAnimation = true,
 }) => {
   const resolvedBaseColor = baseColor ?? 'hsl(var(--card))';
   const resolvedPillColor = pillColor ?? 'hsl(var(--primary))';
@@ -211,20 +210,20 @@ const PillNav = ({
             ))}
           </ul>
         </div>
-
-        <div className="mobile-only">
-            <Button
-              variant="outline"
-              size="icon"
-              className="mobile-menu-button rounded-full"
-              onClick={toggleMobileMenu}
-              aria-label="Toggle menu"
-              ref={hamburgerRef}
-            >
-              <Menu className="h-[1.2rem] w-[1.2rem]" />
-            </Button>
-        </div>
       </nav>
+
+      <div className="mobile-only">
+        <Button
+            variant="outline"
+            size="icon"
+            className="mobile-menu-button rounded-full"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+            ref={hamburgerRef}
+        >
+            <Menu className="h-[1.2rem] w-[1.2rem]" />
+        </Button>
+      </div>
 
       <div className="mobile-menu-popover mobile-only" ref={mobileMenuRef} style={cssVars}>
         <ul className="mobile-menu-list">

@@ -127,8 +127,7 @@
   }
   
   .pill-nav {
-    width: auto;
-    justify-content: flex-end;
+    display: none;
   }
 }
 
