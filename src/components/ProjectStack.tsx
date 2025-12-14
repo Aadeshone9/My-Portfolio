@@ -27,6 +27,20 @@ const projects = [
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
   },
+  {
+    title: "Netflix",
+    role: "Interaction Designer",
+    description: "Redesigned the content discovery experience, improving user engagement metrics.",
+    bgColor: "bg-background",
+    imageBgColor: "bg-muted",
+  },
+  {
+    title: "Spotify",
+    role: "UX Researcher",
+    description: "Conducted foundational research to inform the strategy for personalized playlists.",
+    bgColor: "bg-background",
+    imageBgColor: "bg-muted",
+  },
 ];
 
 const ProjectCard = ({ project, i, progress, range, targetScale }: { project: any, i: number, progress: any, range: number[], targetScale: number }) => {
