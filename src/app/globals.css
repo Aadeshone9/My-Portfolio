@@ -126,4 +126,14 @@
       opacity: 1;
     }
   }
+
+  .scroll-fade {
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      hsl(var(--secondary)) 10%,
+      hsl(var(--secondary)) 90%,
+      transparent 100%
+    );
+  }
 }

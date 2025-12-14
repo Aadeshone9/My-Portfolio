@@ -44,7 +44,7 @@ const Approach = () => {
             </p>
           </div>
           <div className="w-full lg:flex-1">
-            <div className="space-y-6 max-h-[404px] overflow-y-auto pr-4">
+            <div className="space-y-6 max-h-[404px] overflow-y-auto pr-4 scroll-fade">
               {approachData.map((item, index) => (
                 <div
                   key={index}
