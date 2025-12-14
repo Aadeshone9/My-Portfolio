@@ -64,8 +64,9 @@ export default function Home() {
                   textAlign="left"
                 />
                 </div>
-                <Button className="rounded-full font-medium text-lg px-6 py-3">
-                  Why you should hire me
+                <Button className="rounded-full font-medium text-lg px-6 py-3 hover:font-semibold">
+                  View recent projects
+                  <ArrowRight />
                 </Button>
             </div>
           </div>
@@ -160,8 +161,9 @@ export default function Home() {
                 className="font-headline font-semibold text-2xl leading-tight tracking-[0.02em] text-secondary-foreground"
                 textAlign="left"
               />
-              <Button className="bg-background rounded-[20px] text-foreground font-medium text-xl px-4 py-2 h-auto ml-2 hover:bg-primary hover:text-primary-foreground">
-                Why you should hire me
+              <Button className="bg-background rounded-[20px] text-foreground font-medium text-xl px-4 py-2 h-auto ml-2 hover:bg-primary hover:text-primary-foreground hover:font-semibold">
+                View recent projects
+                <ArrowRight />
               </Button>
             </div>
           </SpotlightCard>
