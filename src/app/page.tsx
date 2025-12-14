@@ -1,3 +1,4 @@
+
 import Header from '@/components/Header';
 import ProjectStack from '@/components/ProjectStack';
 import { Button } from '@/components/ui/button';
@@ -170,13 +171,13 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-20 flex flex-col gap-10">
           <div className='flex flex-col gap-6'>
             <div className='flex flex-col gap-4'>
-              <p className="font-headline font-semibold text-[#757575] text-2xl tracking-[0.02em] leading-[1.2]">
+              <p className="font-headline font-semibold text-[#757575] text-2xl tracking-[0.02em] leading-normal">
                 Now that you know me better than Earlier, Lets get in Touch....
               </p>
               <div className="flex flex-col gap-4">
-                <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold text-2xl tracking-[0.02em] underline leading-[1.2]">Aadesh.one9@gmail.com</a>
-                <p className="font-headline font-semibold text-2xl tracking-[0.02em] leading-[1.2]">+ (91) 8975143018</p>
-                <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold text-2xl tracking-[0.02em] underline leading-[1.2]">
+                <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold text-2xl tracking-[0.02em] underline leading-normal">Aadesh.one9@gmail.com</a>
+                <p className="font-headline font-semibold text-2xl tracking-[0.02em] leading-normal">+ (91) 8975143018</p>
+                <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold text-2xl tracking-[0.02em] underline leading-normal">
                   https://www.linkedin.com/in/aadeshgovenkar/
                 </a>
               </div>
