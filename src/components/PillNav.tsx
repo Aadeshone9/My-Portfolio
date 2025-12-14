@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import './PillNav.css';
+import { Button } from './ui/button';
+import { Menu } from 'lucide-react';
 
 const PillNav = ({
   items,
@@ -211,15 +213,16 @@ const PillNav = ({
         </div>
 
         <div className="mobile-only">
-            <button
-              className="mobile-menu-button"
+            <Button
+              variant="outline"
+              size="icon"
+              className="mobile-menu-button rounded-full"
               onClick={toggleMobileMenu}
               aria-label="Toggle menu"
               ref={hamburgerRef}
             >
-              <span className="hamburger-line" />
-              <span className="hamburger-line" />
-            </button>
+              <Menu className="h-[1.2rem] w-[1.2rem]" />
+            </Button>
         </div>
       </nav>
 

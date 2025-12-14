@@ -133,19 +133,7 @@
 }
 
 .mobile-menu-button {
-  width: var(--nav-h);
-  height: var(--nav-h);
-  border-radius: 50%;
-  background: var(--base, #f0f0f0);
-  border: 1px solid hsl(var(--border));
   display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  cursor: pointer;
-  padding: 0;
-  position: relative;
 }
 
 @media (max-width: 768px) {
