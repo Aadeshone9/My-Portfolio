@@ -149,6 +149,18 @@ export default function Home() {
         
         <Approach />
 
+        <section className="container mx-auto px-20 my-20">
+          <div className="bg-[#F2F2F2] rounded-2xl p-6 flex justify-between items-center">
+            <h2 className="font-headline font-semibold text-5xl leading-[58px] tracking-wide text-black">
+              Find out
+            </h2>
+            <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-xl px-6 py-3 h-auto hover:bg-black hover:text-white">
+              View all projects
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+          </div>
+        </section>
+
       </main>
       <footer className="bg-[#131313] text-white mt-20">
         <div className="container mx-auto px-20 py-16">
