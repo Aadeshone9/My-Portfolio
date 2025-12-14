@@ -150,7 +150,7 @@ export default function Home() {
         <Approach />
 
         <div className="w-[90%] mx-auto my-20">
-          <div className="bg-[#F2F2F2] rounded-2xl py-4 px-6 flex justify-between items-center">
+          <div className="bg-[#F2F2F2] rounded-2xl py-4 px-6 flex items-center">
             <h2 className="font-headline font-semibold text-4xl leading-tight tracking-[0.02em] text-black">
               Find out
             </h2>
