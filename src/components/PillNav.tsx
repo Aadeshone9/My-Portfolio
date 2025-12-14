@@ -3,8 +3,6 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import './PillNav.css';
-import { Button } from './ui/button';
-import { Menu } from 'lucide-react';
 
 const PillNav = ({
   items,
@@ -15,19 +13,15 @@ const PillNav = ({
   pillColor,
   hoveredPillTextColor,
   pillTextColor,
-  onMobileMenuClick,
 }) => {
   const resolvedBaseColor = baseColor ?? 'hsl(var(--card))';
   const resolvedPillColor = pillColor ?? 'hsl(var(--primary))';
   const resolvedHoveredPillTextColor = hoveredPillTextColor ?? 'hsl(var(--primary-foreground))';
   const resolvedPillTextColor = pillTextColor ?? 'hsl(var(--card-foreground))';
 
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const circleRefs = useRef([]);
   const tlRefs = useRef([]);
   const activeTweenRefs = useRef([]);
-  const hamburgerRef = useRef(null);
-  const mobileMenuRef = useRef(null);
   const navItemsRef = useRef(null);
 
   useEffect(() => {
@@ -89,11 +83,6 @@ const PillNav = ({
       document.fonts.ready.then(layout).catch(() => {});
     }
 
-    const menu = mobileMenuRef.current;
-    if (menu) {
-      gsap.set(menu, { visibility: 'hidden', opacity: 0, scaleY: 0.95 });
-    }
-
     return () => window.removeEventListener('resize', onResize);
   }, [items, ease]);
 
@@ -118,58 +107,7 @@ const PillNav = ({
       overwrite: 'auto',
     });
   };
-
-  const toggleMobileMenu = () => {
-    const newState = !isMobileMenuOpen;
-    setIsMobileMenuOpen(newState);
-
-    const hamburger = hamburgerRef.current;
-    const menu = mobileMenuRef.current;
-
-    if (hamburger) {
-      const lines = hamburger.querySelectorAll('.hamburger-line');
-      if (newState) {
-        gsap.to(lines[0], { rotation: 45, y: 3, duration: 0.3, ease });
-        gsap.to(lines[1], { rotation: -45, y: -3, duration: 0.3, ease });
-      } else {
-        gsap.to(lines[0], { rotation: 0, y: 0, duration: 0.3, ease });
-        gsap.to(lines[1], { rotation: 0, y: 0, duration: 0.3, ease });
-      }
-    }
-
-    if (menu) {
-      if (newState) {
-        gsap.set(menu, { visibility: 'visible' });
-        gsap.fromTo(
-          menu,
-          { opacity: 0, y: -10, scaleY: 0.95 },
-          {
-            opacity: 1,
-            y: 0,
-            scaleY: 1,
-            duration: 0.2,
-            ease,
-            transformOrigin: 'top center',
-          }
-        );
-      } else {
-        gsap.to(menu, {
-          opacity: 0,
-          y: -10,
-          scaleY: 0.95,
-          duration: 0.2,
-          ease,
-          transformOrigin: 'top center',
-          onComplete: () => {
-            gsap.set(menu, { visibility: 'hidden' });
-          },
-        });
-      }
-    }
-
-    onMobileMenuClick?.();
-  };
-
+  
   const cssVars = {
     ['--base']: resolvedBaseColor,
     ['--pill-bg']: resolvedPillColor,
@@ -178,72 +116,38 @@ const PillNav = ({
   };
 
   return (
-    <div className="pill-nav-container">
-      <nav className={`pill-nav ${className}`} aria-label="Primary" style={cssVars}>
-        <div className="pill-nav-items desktop-only" ref={navItemsRef}>
-          <ul className="pill-list" role="menubar">
-            {items.map((item, i) => (
-              <li key={item.href || `item-${i}`} role="none">
-                <Link
-                  role="menuitem"
-                  href={item.href}
-                  className={`pill group${activeHref === item.href ? ' is-active' : ''}`}
-                  aria-label={item.ariaLabel || item.label}
-                  onMouseEnter={() => handleEnter(i)}
-                  onMouseLeave={() => handleLeave(i)}
-                >
-                  <span
-                    className="hover-circle"
-                    aria-hidden="true"
-                    ref={el => {
-                      circleRefs.current[i] = el;
-                    }}
-                  />
-                  <span className="label-stack">
-                    <span className="pill-label group-hover:font-semibold">{item.label}</span>
-                    <span className="pill-label-hover" aria-hidden="true">
-                      {item.label}
-                    </span>
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </nav>
-
-      <div className="mobile-only">
-        <Button
-            variant="outline"
-            size="icon"
-            className="mobile-menu-button rounded-full"
-            onClick={toggleMobileMenu}
-            aria-label="Toggle menu"
-            ref={hamburgerRef}
-        >
-            <Menu className="h-[1.2rem] w-[1.2rem]" />
-        </Button>
-      </div>
-
-      <div className="mobile-menu-popover mobile-only" ref={mobileMenuRef} style={cssVars}>
-        <ul className="mobile-menu-list">
+    <nav className={`pill-nav ${className}`} aria-label="Primary" style={cssVars}>
+      <div className="pill-nav-items" ref={navItemsRef}>
+        <ul className="pill-list" role="menubar">
           {items.map((item, i) => (
-            <li key={item.href || `mobile-item-${i}`}>
+            <li key={item.href || `item-${i}`} role="none">
               <Link
+                role="menuitem"
                 href={item.href}
-                className={`mobile-menu-link${activeHref === item.href ? ' is-active' : ''}`}
-                onClick={() => {
-                    setIsMobileMenuOpen(false);
-                    toggleMobileMenu();
-                }}
+                className={`pill group${activeHref === item.href ? ' is-active' : ''}`}
+                aria-label={item.ariaLabel || item.label}
+                onMouseEnter={() => handleEnter(i)}
+                onMouseLeave={() => handleLeave(i)}
               >
-                {item.label}
+                <span
+                  className="hover-circle"
+                  aria-hidden="true"
+                  ref={el => {
+                    circleRefs.current[i] = el;
+                  }}
+                />
+                <span className="label-stack">
+                  <span className="pill-label group-hover:font-semibold">{item.label}</span>
+                  <span className="pill-label-hover" aria-hidden="true">
+                    {item.label}
+                  </span>
+                </span>
               </Link>
             </li>
           ))}
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 
