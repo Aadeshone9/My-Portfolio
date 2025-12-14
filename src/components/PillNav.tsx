@@ -9,14 +9,14 @@ const PillNav = ({
   activeHref,
   className = '',
   ease = 'power3.easeOut',
-  baseColor = 'var(--background)',
-  pillColor = 'var(--primary)',
-  hoveredPillTextColor = 'var(--primary-foreground)',
+  baseColor = 'hsl(var(--background))',
+  pillColor = 'hsl(var(--primary))',
+  hoveredPillTextColor = 'hsl(var(--primary-foreground))',
   pillTextColor,
   onMobileMenuClick,
   initialLoadAnimation = true,
 }) => {
-  const resolvedPillTextColor = pillTextColor ?? 'var(--foreground)';
+  const resolvedPillTextColor = pillTextColor ?? 'hsl(var(--secondary-foreground))';
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const circleRefs = useRef([]);
   const tlRefs = useRef([]);
@@ -167,8 +167,8 @@ const PillNav = ({
 
   const cssVars = {
     ['--base']: baseColor,
-    ['--pill-bg']: `hsl(${pillColor})`,
-    ['--hover-text']: `hsl(${hoveredPillTextColor})`,
+    ['--pill-bg']: pillColor,
+    ['--hover-text']: hoveredPillTextColor,
     ['--pill-text']: resolvedPillTextColor,
   };
 
@@ -182,7 +182,7 @@ const PillNav = ({
                 <Link
                   role="menuitem"
                   href={item.href}
-                  className={`pill${activeHref === item.href ? ' is-active' : ''}`}
+                  className={`pill group${activeHref === item.href ? ' is-active' : ''}`}
                   aria-label={item.ariaLabel || item.label}
                   onMouseEnter={() => handleEnter(i)}
                   onMouseLeave={() => handleLeave(i)}
@@ -195,7 +195,7 @@ const PillNav = ({
                     }}
                   />
                   <span className="label-stack">
-                    <span className="pill-label">{item.label}</span>
+                    <span className="pill-label group-hover:font-semibold">{item.label}</span>
                     <span className="pill-label-hover" aria-hidden="true">
                       {item.label}
                     </span>
