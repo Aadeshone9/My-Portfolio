@@ -150,11 +150,11 @@ export default function Home() {
         <Approach />
 
         <div className="w-[90%] mx-auto my-20">
-          <div className="bg-[#F2F2F2] rounded-2xl py-4 px-6 flex justify-between items-center h-[90px]">
-            <h2 className="font-headline font-semibold text-[50px] leading-[58px] tracking-[0.02em] text-black">
+          <div className="bg-[#F2F2F2] rounded-2xl py-4 px-6 flex justify-between items-center">
+            <h2 className="font-headline font-semibold text-4xl leading-tight tracking-[0.02em] text-black">
               Find out
             </h2>
-            <Button variant="secondary" className="bg-[#EBEAEB] rounded-[20px] text-black font-medium text-xl px-4 py-2 h-auto hover:bg-black hover:text-white">
+            <Button variant="secondary" className="bg-[#EBEAEB] rounded-[20px] text-black font-medium text-xl px-4 py-2 h-auto hover:bg-black hover:text-white ml-1">
               Why you should hire
             </Button>
           </div>
