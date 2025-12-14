@@ -152,7 +152,7 @@ export default function Home() {
 
         <div className="w-[90%] mx-auto my-20">
           <SpotlightCard>
-            <div className="bg-[#F2F2F2] rounded-2xl py-4 px-6 flex items-center">
+            <div className="bg-[#F2F2F2] rounded-2xl py-4 px-6 flex items-center justify-start">
               <SplitText 
                 text="Find out" 
                 tag="h2"
@@ -190,7 +190,7 @@ export default function Home() {
           </div>
           <div className="text-right text-base font-normal tracking-[0.02em] flex flex-col gap-2">
             <p>Design In Figma By Aadesh Govenkar Developed in Curser by Harshad Pachore</p>
-            <p>2026 Copyright All Rights Reserved</p>
+            <p>© 2026 Copyright All Rights Reserved</p>
           </div>
         </div>
       </footer>
