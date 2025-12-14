@@ -75,10 +75,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pt-12 pb-6 container mx-auto px-20">
+        <section className="pt-24 pb-4 container mx-auto px-20">
           <div className="flex flex-col items-start gap-2">
-            <div className="w-[10px] h-[10px] border border-[#757575] rounded-sm"></div>
-            <div className="w-[14px] border border-[#757575]"></div>
+            <div className="w-[8px] h-[8px] border border-[#757575] rounded-sm"></div>
+            <div className="w-[12px] border border-[#757575]"></div>
             <SplitText
               text="Know me better..."
               tag="h2"
@@ -88,7 +88,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-6 container mx-auto px-20">
+        <section className="py-0 container mx-auto px-20">
            <div className="flex flex-row items-center justify-between gap-8 md:gap-[297px]">
                 <div className="flex flex-col items-start max-w-[875px]">
                     <SplitText
