@@ -33,7 +33,7 @@ const Approach = () => {
       <div className="container mx-auto px-20">
         <div className="flex flex-wrap items-start content-start gap-y-6 gap-x-[26px]">
           <div className="w-full">
-            <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black">
+            <h2 className="font-headline font-semibold text-3xl leading-[58px] tracking-[0.02em] text-black">
               /My Approach Towards Problem Solving
             </h2>
           </div>
@@ -54,7 +54,7 @@ const Approach = () => {
                     <h3 className="font-headline font-semibold text-3xl text-black leading-tight">
                       {item.title}
                     </h3>
-                    <p className="font-headline text-2xl text-black leading-9">
+                    <p className="font-body text-base text-black leading-9">
                       {item.description}
                     </p>
                   </div>
