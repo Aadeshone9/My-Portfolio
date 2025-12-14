@@ -155,8 +155,7 @@ export default function Home() {
               Find out
             </h2>
             <Button variant="secondary" className="bg-[#EBEAEB] rounded-[20px] text-black font-medium text-xl px-4 py-2 h-auto hover:bg-black hover:text-white">
-              View all projects
-              <ArrowRight className="w-5 h-5 ml-2" />
+              Why you should hire
             </Button>
           </div>
         </div>
