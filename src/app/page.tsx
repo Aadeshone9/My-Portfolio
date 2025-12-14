@@ -77,8 +77,8 @@ export default function Home() {
 
         <section className="pt-8 pb-2 container mx-auto px-20 mb-2">
           <div className="flex flex-col items-start gap-2">
-            <div className="w-[12px] h-[12px] border border-[#757575] rounded-sm"></div>
-            <div className="w-[16px] border border-[#757575]"></div>
+            <div className="w-[10px] h-[10px] border border-[#757575] rounded-sm"></div>
+            <div className="w-[14px] border border-[#757575]"></div>
             <SplitText
               text="Know me better..."
               tag="h2"
@@ -182,9 +182,9 @@ export default function Home() {
               </div>
             </div>
             <div className="p-2.5">
-              <div className="font-headline font-semibold text-[160px] leading-[0.8] tracking-tighter flex flex-col">
+              <div className="font-headline font-semibold text-[160px] leading-[0.8] tracking-tighter flex flex-col gap-6">
                 <span>Aadesh.</span>
-                <span>One9.com</span>
+                <span>one9.com</span>
               </div>
             </div>
           </div>
