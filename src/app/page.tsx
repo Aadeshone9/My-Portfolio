@@ -75,7 +75,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-24 container mx-auto px-20">
+        <section className="py-16 container mx-auto px-20">
           <div className="flex flex-col items-start gap-2">
             <div className="w-[14px] h-[14px] border border-[#757575] rounded-sm"></div>
             <div className="w-[18px] border border-[#757575]"></div>
@@ -88,7 +88,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-24 container mx-auto px-20">
+        <section className="pt-8 pb-24 container mx-auto px-20">
            <div className="flex flex-row items-center justify-between gap-8 md:gap-[297px]">
                 <div className="flex flex-col items-start max-w-[875px]">
                     <SplitText
