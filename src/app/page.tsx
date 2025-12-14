@@ -154,7 +154,7 @@ export default function Home() {
             <h2 className="font-headline font-semibold text-4xl leading-tight tracking-[0.02em] text-black">
               Find out
             </h2>
-            <Button variant="secondary" className="bg-[#EBEAEB] rounded-[20px] text-black font-medium text-xl px-4 py-2 h-auto hover:bg-black hover:text-white ml-1">
+            <Button variant="secondary" className="bg-[#EBEAEB] rounded-[20px] text-black font-medium text-xl px-4 py-2 h-auto hover:bg-black hover:text-white ml-2">
               Why you should hire
             </Button>
           </div>
