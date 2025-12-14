@@ -65,7 +65,7 @@ export default function Home() {
                 />
                 </div>
                 <PillButton href="#" baseColor="hsl(var(--background))">
-                    <span>View recent projects</span>
+                    <span>View all Projects</span>
                     <ArrowRight />
                 </PillButton>
             </div>
@@ -169,7 +169,7 @@ export default function Home() {
                 pillTextColor="var(--foreground)"
                 className="ml-4"
               >
-                  <span>View recent projects</span>
+                  <span>View all Projects</span>
                   <ArrowRight />
               </PillButton>
             </div>
