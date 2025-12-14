@@ -154,11 +154,11 @@ export default function Home() {
         
         <div className="w-[90%] mx-auto my-16">
           <SpotlightCard>
-            <div className="bg-secondary rounded-2xl py-4 px-6 flex items-center justify-start">
+            <div className="bg-background border border-border rounded-2xl py-4 px-6 flex items-center justify-start">
               <SplitText 
                 text="Find out" 
                 tag="h2"
-                className="font-headline font-semibold text-2xl leading-tight tracking-[0.02em] text-secondary-foreground"
+                className="font-headline font-semibold text-2xl leading-tight tracking-[0.02em] text-foreground"
                 textAlign="left"
               />
               <PillButton 
