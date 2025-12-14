@@ -48,7 +48,7 @@ const Approach = () => {
               {approachData.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-[#BFBFBF] rounded-2xl p-6 w-full"
+                  className="bg-white border border-[#BFBFBF] rounded-2xl p-6 w-full flex flex-col justify-center min-h-[172px]"
                 >
                   <div className="space-y-1">
                     <h3 className="font-headline font-semibold text-3xl text-black leading-tight">
