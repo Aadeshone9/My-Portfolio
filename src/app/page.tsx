@@ -64,8 +64,8 @@ export default function Home() {
                   textAlign="left"
                 />
                 </div>
-                <PillButton href="#" baseColor="hsl(var(--background))">
-                    <span>View all Projects</span>
+                <PillButton href="#" baseColor="hsl(var(--background))" className="group">
+                    <span className="group-hover:font-semibold">View all Projects</span>
                     <ArrowRight />
                 </PillButton>
             </div>
