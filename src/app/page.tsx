@@ -154,7 +154,7 @@ export default function Home() {
             <h2 className="font-headline font-semibold text-4xl tracking-wide text-black">
               Find out
             </h2>
-            <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3 h-auto hover:bg-black hover:text-white">
+            <Button variant="secondary" className="bg-[#EBEAEB] rounded-[20px] text-black font-medium text-xl px-4 py-2 h-auto hover:bg-black hover:text-white">
               View all projects
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
