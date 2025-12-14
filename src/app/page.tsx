@@ -64,7 +64,7 @@ export default function Home() {
                   textAlign="left"
                 />
                 </div>
-                <Button className="rounded-full font-medium text-lg px-6 py-3 hover:font-semibold">
+                <Button className="rounded-full font-medium text-lg px-6 py-3 hover:font-semibold hover:bg-secondary hover:text-secondary-foreground">
                   View recent projects
                   <ArrowRight />
                 </Button>
@@ -76,7 +76,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pt-4 pb-4 container mx-auto px-20">
+        <section className="pt-4 pb-16 container mx-auto px-20">
           <div className="flex flex-col items-start gap-2">
             <div className="w-[8px] h-[8px] border border-muted-foreground rounded-sm"></div>
             <div className="w-[12px] border border-muted-foreground"></div>
