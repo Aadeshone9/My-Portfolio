@@ -224,7 +224,10 @@ const PillNav = ({
               <Link
                 href={item.href}
                 className={`mobile-menu-link${activeHref === item.href ? ' is-active' : ''}`}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    toggleMobileMenu();
+                }}
               >
                 {item.label}
               </Link>
