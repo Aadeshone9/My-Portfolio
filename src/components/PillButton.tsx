@@ -15,10 +15,10 @@ const PillButton = ({
   hoveredPillTextColor,
   pillTextColor,
 }) => {
-  const resolvedBaseColor = baseColor ?? 'hsl(var(--secondary))';
+  const resolvedBaseColor = baseColor ?? 'transparent';
   const resolvedPillColor = pillColor ?? 'hsl(var(--primary))';
   const resolvedHoveredPillTextColor = hoveredPillTextColor ?? 'hsl(var(--primary-foreground))';
-  const resolvedPillTextColor = pillTextColor ?? 'hsl(var(--secondary-foreground))';
+  const resolvedPillTextColor = pillTextColor ?? 'hsl(var(--primary))';
   const circleRef = useRef(null);
   const tlRef = useRef(null);
   const activeTweenRef = useRef(null);

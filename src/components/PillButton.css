@@ -13,7 +13,7 @@
   background: var(--base);
   color: var(--pill-text);
   
-  border: 1px solid hsl(var(--border));
+  border: 1px solid var(--pill-text);
   border-radius: 9999px;
   box-sizing: border-box;
 
