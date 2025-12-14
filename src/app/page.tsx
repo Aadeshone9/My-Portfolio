@@ -167,7 +167,7 @@ export default function Home() {
 
       </main>
       <footer className="bg-[#131313] text-white mt-20 py-16">
-        <div className="w-full pl-[10%] pr-5 flex flex-col gap-10">
+        <div className="w-[90%] mx-auto flex flex-col gap-10">
           <div className='flex flex-col gap-6'>
             <div className='flex flex-col gap-4'>
               <p className="font-headline font-semibold text-[#757575] text-2xl tracking-[0.02em] leading-normal">
