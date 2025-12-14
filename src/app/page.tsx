@@ -166,8 +166,8 @@ export default function Home() {
         </div>
 
       </main>
-      <footer className="bg-[#131313] text-white mt-20 py-16 px-5">
-        <div className="container mx-auto px-4 md:px-20 flex flex-col gap-10">
+      <footer className="bg-[#131313] text-white mt-20 py-16">
+        <div className="w-full pl-[10%] pr-5 flex flex-col gap-10">
           <div className='flex flex-col gap-6'>
             <div className='flex flex-col gap-4'>
               <p className="font-headline font-semibold text-[#757575] text-2xl tracking-[0.02em] leading-normal">
@@ -188,7 +188,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-right text-base font-normal tracking-[0.02em] flex flex-col gap-2">
-            <p>Design In Figma &amp; Developed in Firebase studio by Aadesh Govenkar</p>
+            <p>Design In Figma & Developed in Firebase studio by Aadesh Govenkar</p>
             <p>&copy; 2026 Copyright All Rights Reserved</p>
           </div>
         </div>
