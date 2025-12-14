@@ -29,7 +29,7 @@ const approachData = [
 
 const Approach = () => {
   return (
-    <section className="bg-white py-6">
+    <section className="bg-white">
       <div className="container mx-auto px-20">
         <div className="flex flex-wrap items-start content-start gap-y-6 gap-x-[26px]">
           <div className="w-full">

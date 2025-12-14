@@ -46,7 +46,7 @@ export default function Home() {
             )}
         </div>
 
-        <section className="py-20">
+        <section className="py-24">
           <div className="container mx-auto px-20 relative z-10">
             <div className="flex justify-between items-center">
                 <div>
@@ -70,15 +70,15 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mt-4">
+          <div className="relative mt-16">
             <ProjectStack />
           </div>
         </section>
 
-        <section className="pt-8 pb-2 container mx-auto px-20 mb-2">
+        <section className="py-24 container mx-auto px-20">
           <div className="flex flex-col items-start gap-2">
-            <div className="w-[10px] h-[10px] border border-[#757575] rounded-sm"></div>
-            <div className="w-[14px] border border-[#757575]"></div>
+            <div className="w-[14px] h-[14px] border border-[#757575] rounded-sm"></div>
+            <div className="w-[18px] border border-[#757575]"></div>
             <SplitText
               text="Know me better..."
               tag="h2"
@@ -88,7 +88,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pb-4 container mx-auto px-20 pt-2">
+        <section className="py-24 container mx-auto px-20">
            <div className="flex flex-row items-center justify-between gap-8 md:gap-[297px]">
                 <div className="flex flex-col items-start max-w-[875px]">
                     <SplitText
@@ -110,7 +110,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="bg-transparent py-4">
+        <section className="py-24">
             <div className="container mx-auto px-20 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <TiltedCard>
                     <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full w-full">
@@ -147,9 +147,11 @@ export default function Home() {
             </div>
         </section>
         
-        <Approach />
-
-        <div className="w-[90%] mx-auto my-20">
+        <div className="py-24">
+            <Approach />
+        </div>
+        
+        <div className="w-[90%] mx-auto my-24">
           <SpotlightCard>
             <div className="bg-[#F2F2F2] rounded-2xl py-4 px-6 flex items-center justify-start">
               <SplitText 
@@ -166,7 +168,7 @@ export default function Home() {
         </div>
 
       </main>
-      <footer className="bg-[#131313] text-white mt-20 py-16">
+      <footer className="bg-[#131313] text-white py-16">
         <div className="w-[90%] mx-auto flex flex-col gap-10">
           <div className='flex flex-col gap-10'>
             <div className='flex flex-col gap-6'>
