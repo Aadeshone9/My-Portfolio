@@ -89,7 +89,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pt-4 pb-16 container mx-auto px-20">
+        <section className="pt-4 pb-4 container mx-auto px-20">
            <div className="flex flex-row items-center justify-between gap-8 md:gap-[297px]">
                 <div className="flex flex-col items-start max-w-[875px]">
                     <SplitText
@@ -163,13 +163,10 @@ export default function Home() {
               />
               <PillButton 
                 href="#"
-                baseColor="var(--background)"
-                pillColor="var(--primary)"
-                hoveredPillTextColor="var(--primary-foreground)"
-                pillTextColor="var(--foreground)"
+                baseColor="hsl(var(--background))"
                 className="ml-4"
               >
-                  <span>why hire me</span>
+                  <span>Why Hire me</span>
                   <ArrowRight />
               </PillButton>
             </div>
