@@ -30,8 +30,8 @@ const approachData = [
 const Approach = () => {
   return (
     <section className="bg-background">
-      <div className="container mx-auto px-20">
-        <div className="flex flex-wrap items-start content-start gap-y-6 gap-x-[26px]">
+      <div className="container mx-auto px-4 sm:px-8 md:px-20">
+        <div className="flex flex-col lg:flex-row flex-wrap items-start content-start gap-y-6 gap-x-[26px]">
           <div className="w-full">
             <h2 className="font-headline font-semibold text-3xl leading-[58px] tracking-[0.02em] text-foreground">
               /My Approach Towards Problem Solving

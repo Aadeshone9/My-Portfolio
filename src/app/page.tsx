@@ -16,25 +16,25 @@ export default function Home() {
     <div className="bg-background">
       <Header />
       <main className="flex flex-col">
-        <div className="container mx-auto px-20 pt-10">
-            <div className="py-20">
+        <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-10">
+            <div className="py-10 md:py-20">
               <SplitText 
                 text="Hi, I’m Aadesh" 
                 tag="h1"
-                className="font-headline font-semibold text-7xl md:text-[100px] leading-tight tracking-wide text-foreground"
+                className="font-headline font-semibold text-5xl md:text-[100px] leading-tight tracking-wide text-foreground"
                 textAlign="left"
               />
             <SplitText
                 text="I have contributed to products at scale, Chances are you've used some!"
                 tag="p"
                 splitType="words"
-                className="font-subtitle text-2xl md:text-[32px] leading-snug text-muted-foreground max-w-xl mt-4"
+                className="font-subtitle text-xl md:text-[32px] leading-snug text-muted-foreground max-w-xl mt-4"
                 textAlign="left"
               />
             </div>
 
             {mainImage && (
-            <div className="relative w-full h-[400px] md:h-[696px] bg-secondary rounded-2xl overflow-hidden">
+            <div className="relative w-full h-[300px] md:h-[696px] bg-secondary rounded-2xl overflow-hidden">
                 <Image
                 src={mainImage.imageUrl}
                 alt={mainImage.description}
@@ -47,24 +47,24 @@ export default function Home() {
         </div>
 
         <section className="py-16">
-          <div className="container mx-auto px-20 relative z-10">
-            <div className="flex justify-between items-center">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div>
                 <SplitText
                   text="/Recent Projects"
                   tag="h2"
-                  className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-foreground"
+                  className="font-headline font-semibold text-3xl md:text-[32px] leading-snug tracking-[0.02em] text-foreground"
                   textAlign="left"
                 />
                 <SplitText
                   text="A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design."
                   tag="p"
                   splitType="words"
-                  className="font-subtitle text-[32px] leading-[43px] text-muted-foreground mt-2 max-w-[700px]"
+                  className="font-subtitle text-xl md:text-[32px] leading-normal md:leading-[43px] text-muted-foreground mt-2 max-w-[700px]"
                   textAlign="left"
                 />
                 </div>
-                <PillButton href="#" baseColor="hsl(var(--background))" className="group">
+                <PillButton href="#" baseColor="hsl(var(--background))" className="group mt-4 md:mt-0 flex-shrink-0">
                     <span className="group-hover:font-semibold">View all Projects</span>
                     <ArrowRight />
                 </PillButton>
@@ -76,26 +76,26 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pt-4 pb-4 container mx-auto px-20">
+        <section className="pt-4 pb-4 container mx-auto px-4 sm:px-8 md:px-20">
           <div className="flex flex-col items-start gap-2">
             <div className="w-[8px] h-[8px] border border-muted-foreground rounded-sm"></div>
             <div className="w-[12px] border border-muted-foreground"></div>
             <SplitText
               text="Know me better..."
               tag="h2"
-              className="font-headline font-semibold text-5xl leading-[58px] tracking-wide text-foreground mt-2"
+              className="font-headline font-semibold text-4xl md:text-5xl leading-[58px] tracking-wide text-foreground mt-2"
               textAlign="left"
             />
           </div>
         </section>
 
-        <section className="pt-4 pb-16 container mx-auto px-20">
-           <div className="flex flex-row items-center justify-between gap-8 md:gap-[297px]">
-                <div className="flex flex-col items-start max-w-[875px]">
+        <section className="pt-4 pb-16 container mx-auto px-4 sm:px-8 md:px-20">
+           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div className="flex flex-col items-start w-full">
                     <SplitText
                       text="/Let’s Break some ice"
                       tag="h2"
-                      className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-foreground flex items-center"
+                      className="font-headline font-semibold text-2xl md:text-[32px] leading-[58px] tracking-[0.02em] text-foreground flex items-center"
                       textAlign="left"
                     />
                     <div className="mt-2">
@@ -103,7 +103,7 @@ export default function Home() {
                             text="I create to solve, and I solve to create. I am a designer, defined by my craft, dedicated to crafting better experiences for my fellow beings."
                             tag="p"
                             splitType="words"
-                            className="font-subtitle font-medium text-[32px] leading-[43px] text-muted-foreground"
+                            className="font-subtitle font-medium text-2xl md:text-[32px] leading-snug md:leading-[43px] text-muted-foreground"
                             textAlign="left"
                         />
                     </div>
@@ -112,7 +112,7 @@ export default function Home() {
         </section>
 
         <section className="pb-16 pt-4">
-            <div className="container mx-auto px-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <TiltedCard>
                     <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
                         <h3 className="font-headline font-semibold text-3xl text-foreground">Visual Roots</h3>
@@ -154,7 +154,7 @@ export default function Home() {
         
         <div className="w-[90%] mx-auto my-16">
           <SpotlightCard>
-            <div className="bg-background border border-border rounded-2xl py-4 px-6 flex items-center justify-start">
+            <div className="bg-background border border-border rounded-2xl py-4 px-6 flex flex-col sm:flex-row items-center justify-start gap-4">
               <SplitText 
                 text="Find out" 
                 tag="h2"
@@ -164,7 +164,7 @@ export default function Home() {
               <PillButton 
                 href="#"
                 baseColor="hsl(var(--background))"
-                className="ml-4 group"
+                className="group"
               >
                   <span className="group-hover:font-semibold">Why Hire Me</span>
                   <ArrowRight />
@@ -178,25 +178,25 @@ export default function Home() {
         <div className="w-[90%] mx-auto flex flex-col gap-10">
           <div className='flex flex-col gap-10'>
             <div className='flex flex-col gap-6'>
-              <p className="font-headline font-semibold text-[#A4A4A4] text-2xl tracking-[0.02em] leading-normal">
+              <p className="font-headline font-semibold text-[#A4A4A4] text-lg md:text-2xl tracking-[0.02em] leading-normal">
                 Now that you know me better than Earlier, Lets get in Touch....
               </p>
-              <div className="flex flex-col gap-4">
-                <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold text-2xl tracking-[0.02em] underline leading-normal">Aadesh.one9@gmail.com</a>
-                <p className="font-headline font-semibold text-2xl tracking-[0.02em] leading-normal">+ (91) 8975143018</p>
-                <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold text-2xl tracking-[0.02em] underline leading-normal">
+              <div className="flex flex-col gap-4 text-base md:text-2xl">
+                <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-[0.02em] underline leading-normal break-all">Aadesh.one9@gmail.com</a>
+                <p className="font-headline font-semibold tracking-[0.02em] leading-normal">+ (91) 8975143018</p>
+                <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold tracking-[0.02em] underline leading-normal break-all">
                   https://www.linkedin.com/in/aadeshgovenkar/
                 </a>
               </div>
             </div>
             <div className="p-2.5">
-              <div className="font-headline font-semibold text-[160px] leading-[0.8] tracking-tighter flex flex-col gap-6">
+              <div className="font-headline font-semibold text-6xl sm:text-8xl md:text-[160px] leading-[0.8] tracking-tighter flex flex-col gap-6">
                 <span>Aadesh.</span>
                 <span>one9.com</span>
               </div>
             </div>
           </div>
-          <div className="text-right text-base font-normal tracking-[0.02em] flex flex-col gap-2">
+          <div className="text-right text-sm md:text-base font-normal tracking-[0.02em] flex flex-col gap-2">
             <p>Design In Figma & Developed in Firebase studio by Aadesh Govenkar</p>
             <p>&copy; 2026 Copyright All Rights Reserved</p>
           </div>
