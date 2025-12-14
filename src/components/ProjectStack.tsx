@@ -4,12 +4,6 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { ArrowRight, Lock } from "lucide-react";
 import PillButton from "./PillButton";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 
 const projects = [
   {
@@ -65,25 +59,24 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                   {project.description}
               </CardDescription>
               <div className="flex items-center gap-2 mt-4">
-                <PillButton 
-                  href="#"
-                  baseColor="hsl(var(--background))"
-                  className="group"
-                >
-                    <span className="group-hover:font-semibold">View project</span>
-                    <ArrowRight />
-                </PillButton>
-                {i === 0 && (
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <Lock className="w-6 h-6 text-muted-foreground" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Request Access</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
+                {i === 0 ? (
+                    <PillButton 
+                      href="#"
+                      baseColor="hsl(var(--background))"
+                      className="group"
+                    >
+                        <span className="group-hover:font-semibold">Request Access</span>
+                        <Lock />
+                    </PillButton>
+                ) : (
+                    <PillButton 
+                      href="#"
+                      baseColor="hsl(var(--background))"
+                      className="group"
+                    >
+                        <span className="group-hover:font-semibold">View project</span>
+                        <ArrowRight />
+                    </PillButton>
                 )}
               </div>
           </div>
