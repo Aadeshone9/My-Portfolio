@@ -13,8 +13,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm">
-      <div className="container mx-auto flex h-[70px] items-center justify-between">
+    <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-sm rounded-b-2xl">
+      <div className="container mx-auto flex h-[51px] items-center justify-between py-[13px] px-8">
         <Link href="/" className="font-headline font-semibold text-lg text-foreground">
           Aadesh.one9.com
         </Link>
