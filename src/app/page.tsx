@@ -64,7 +64,7 @@ export default function Home() {
                   textAlign="left"
                 />
                 </div>
-                <Button variant="secondary" className="bg-secondary rounded-full text-foreground font-medium text-lg px-6 py-3 hover:bg-primary hover:text-primary-foreground">
+                <Button variant="secondary" className="bg-secondary rounded-full text-secondary-foreground font-medium text-lg px-6 py-3 hover:bg-primary hover:text-primary-foreground">
                   Why you should hire me
                 </Button>
             </div>
@@ -157,7 +157,7 @@ export default function Home() {
               <SplitText 
                 text="Find out" 
                 tag="h2"
-                className="font-headline font-semibold text-2xl leading-tight tracking-[0.02em] text-foreground"
+                className="font-headline font-semibold text-2xl leading-tight tracking-[0.02em] text-secondary-foreground"
                 textAlign="left"
               />
               <Button variant="secondary" className="bg-background rounded-[20px] text-foreground font-medium text-xl px-4 py-2 h-auto ml-2 hover:bg-primary hover:text-primary-foreground">
@@ -168,7 +168,7 @@ export default function Home() {
         </div>
 
       </main>
-      <footer className="bg-[#1F1F21] text-white py-16">
+      <footer className="bg-[#222D41] text-white py-16">
         <div className="w-[90%] mx-auto flex flex-col gap-10">
           <div className='flex flex-col gap-10'>
             <div className='flex flex-col gap-6'>

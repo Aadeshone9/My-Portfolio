@@ -10,21 +10,21 @@ const projects = [
     title: "Google",
     role: "Lead + Individual Contributor",
     description: "Body Text description Body Text description Body Text description Body Text description",
-    bgColor: "bg-secondary",
+    bgColor: "bg-background",
     imageBgColor: "bg-muted",
   },
   {
     title: "Microsoft",
     role: "Product Designer",
     description: "Another project description detailing the work done and technologies used.",
-    bgColor: "bg-secondary",
+    bgColor: "bg-background",
     imageBgColor: "bg-muted",
   },
   {
     title: "Apple",
     role: "UX/UI Designer",
     description: "A third project description for another great company to showcase skills.",
-    bgColor: "bg-secondary",
+    bgColor: "bg-background",
     imageBgColor: "bg-muted",
   },
 ];
@@ -54,7 +54,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
           </div>
           <div className="mt-6">
               <CardTitle className="text-3xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
-              <p className="text-lg text-gray-500 mt-1">{project.role}</p>
+              <p className="text-lg text-muted-foreground mt-1">{project.role}</p>
               <CardDescription className="text-xl text-foreground mt-2">
                   {project.description}
               </CardDescription>
