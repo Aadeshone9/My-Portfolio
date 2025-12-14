@@ -49,6 +49,7 @@ const Approach = () => {
                 <div
                   key={index}
                   className="bg-white border border-[#BFBFBF] rounded-2xl p-6"
+                  style={{ width: '731px', height: '172px', overflowY: 'auto' }}
                 >
                   <div className="space-y-1">
                     <h3 className="font-headline font-semibold text-3xl text-black leading-tight">
