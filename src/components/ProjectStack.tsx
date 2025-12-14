@@ -59,8 +59,20 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
             )}
           </div>
           <div className="mt-6">
-              <div className="flex items-center gap-2">
-                <CardTitle className="text-3xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
+              <CardTitle className="text-3xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
+              <p className="text-lg text-muted-foreground mt-1">{project.role}</p>
+              <CardDescription className="text-xl text-foreground mt-2">
+                  {project.description}
+              </CardDescription>
+              <div className="flex items-center gap-2 mt-4">
+                <PillButton 
+                  href="#"
+                  baseColor="hsl(var(--background))"
+                  className="group"
+                >
+                    <span className="group-hover:font-semibold">View project</span>
+                    <ArrowRight />
+                </PillButton>
                 {i === 0 && (
                   <TooltipProvider>
                     <Tooltip>
@@ -74,18 +86,6 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                   </TooltipProvider>
                 )}
               </div>
-              <p className="text-lg text-muted-foreground mt-1">{project.role}</p>
-              <CardDescription className="text-xl text-foreground mt-2">
-                  {project.description}
-              </CardDescription>
-              <PillButton 
-                href="#"
-                baseColor="hsl(var(--background))"
-                className="group mt-4"
-              >
-                  <span className="group-hover:font-semibold">View project</span>
-                  <ArrowRight />
-              </PillButton>
           </div>
         </Card>
       </motion.div>
