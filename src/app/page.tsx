@@ -76,13 +76,13 @@ export default function Home() {
         </section>
 
         <section className="pt-8 pb-2 container mx-auto px-20 mb-2">
-          <div className="flex flex-col items-start gap-4">
-            <div className="w-[104px] h-[104px] border-2 border-[#757575] rounded-lg"></div>
-            <div className="w-[109px] border-2 border-[#757575]"></div>
+          <div className="flex flex-col items-start gap-2">
+            <div className="w-[52px] h-[52px] border border-[#757575] rounded-lg"></div>
+            <div className="w-[55px] border border-[#757575]"></div>
             <SplitText
               text="Know me better..."
               tag="h2"
-              className="font-headline font-semibold text-5xl leading-[58px] tracking-wide text-black"
+              className="font-headline font-semibold text-5xl leading-[58px] tracking-wide text-black mt-2"
               textAlign="left"
             />
           </div>
