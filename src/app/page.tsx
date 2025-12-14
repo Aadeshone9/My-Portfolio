@@ -189,7 +189,7 @@ export default function Home() {
             </div>
           </div>
           <div className="text-right text-base font-normal tracking-[0.02em] flex flex-col gap-2">
-            <p>Design In Figma By Aadesh Govenkar Developed in Curser by Harshad Pachore</p>
+            <p>Design In Figma & Developed in Firebase studio by y Aadesh Govenkar</p>
             <p>© 2026 Copyright All Rights Reserved</p>
           </div>
         </div>
