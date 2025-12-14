@@ -32,7 +32,7 @@ export default function Header() {
     <div className="sticky top-0 z-50 w-full">
         <header className={cn(
             "w-[90%] mx-auto bg-background/80 backdrop-blur-sm rounded-b-2xl transition-shadow duration-300",
-            isScrolled && "shadow-xl shadow-black/10 dark:shadow-black/50"
+            isScrolled && "shadow-lg shadow-primary/20 dark:shadow-primary/10"
         )}>
         <div className="container mx-auto flex h-[51px] items-center justify-between py-[13px] px-4 md:px-8">
             <Link href="/" className="font-headline font-semibold text-lg text-foreground">
