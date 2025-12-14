@@ -169,7 +169,7 @@ export default function Home() {
                 pillTextColor="var(--foreground)"
                 className="ml-4"
               >
-                  <span>View all Projects</span>
+                  <span>why hire me</span>
                   <ArrowRight />
               </PillButton>
             </div>
