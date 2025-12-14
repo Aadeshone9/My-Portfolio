@@ -10,11 +10,14 @@ const PillButton = ({
   href,
   className = '',
   ease = 'power3.easeOut',
-  baseColor = 'hsl(var(--secondary))',
-  pillColor = 'hsl(var(--primary))',
-  hoveredPillTextColor = 'hsl(var(--primary-foreground))',
+  baseColor,
+  pillColor,
+  hoveredPillTextColor,
   pillTextColor,
 }) => {
+  const resolvedBaseColor = baseColor ?? 'hsl(var(--secondary))';
+  const resolvedPillColor = pillColor ?? 'hsl(var(--primary))';
+  const resolvedHoveredPillTextColor = hoveredPillTextColor ?? 'hsl(var(--primary-foreground))';
   const resolvedPillTextColor = pillTextColor ?? 'hsl(var(--secondary-foreground))';
   const circleRef = useRef(null);
   const tlRef = useRef(null);
@@ -108,9 +111,9 @@ const PillButton = ({
   };
   
   const cssVars = {
-    ['--base']: baseColor,
-    ['--pill-bg']: pillColor,
-    ['--hover-text']: hoveredPillTextColor,
+    ['--base']: resolvedBaseColor,
+    ['--pill-bg']: resolvedPillColor,
+    ['--hover-text']: resolvedHoveredPillTextColor,
     ['--pill-text']: resolvedPillTextColor,
   };
 

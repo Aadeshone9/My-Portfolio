@@ -64,7 +64,7 @@ export default function Home() {
                   textAlign="left"
                 />
                 </div>
-                <PillButton href="#" baseColor="hsl(var(--background))" className="group mt-4 md:mt-0 flex-shrink-0">
+                <PillButton href="#" className="group mt-4 md:mt-0 flex-shrink-0">
                     <span className="group-hover:font-semibold">View all Projects</span>
                     <ArrowRight />
                 </PillButton>
@@ -163,7 +163,6 @@ export default function Home() {
               />
               <PillButton 
                 href="#"
-                baseColor="hsl(var(--background))"
                 className="group"
               >
                   <span className="group-hover:font-semibold">Why Hire Me</span>

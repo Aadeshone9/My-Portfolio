@@ -76,7 +76,6 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                 {i === 0 ? (
                     <PillButton 
                       href="#"
-                      baseColor="hsl(var(--background))"
                       className="group"
                     >
                         <span className="group-hover:font-semibold">Request Access</span>
@@ -85,7 +84,6 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                 ) : (
                     <PillButton 
                       href="#"
-                      baseColor="hsl(var(--background))"
                       className="group"
                     >
                         <span className="group-hover:font-semibold">View project</span>
