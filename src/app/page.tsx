@@ -150,17 +150,18 @@ export default function Home() {
         <Approach />
 
         <div className="w-[90%] mx-auto my-20">
-          <div className="bg-[#F2F2F2] rounded-2xl py-4 px-6 flex items-center">
-             <SplitText
-                text="Find out"
-                tag="h2"
+          <SpotlightCard>
+            <div className="bg-[#F2F2F2] rounded-2xl py-4 px-6 flex items-center">
+              <h2
                 className="font-headline font-semibold text-4xl leading-tight tracking-[0.02em] text-black"
-                textAlign="left"
-              />
-            <Button variant="secondary" className="bg-[#EBEAEB] rounded-[20px] text-black font-medium text-xl px-4 py-2 h-auto ml-2 hover:bg-black hover:text-white">
-              Why you should hire me
-            </Button>
-          </div>
+              >
+                Find out
+              </h2>
+              <Button variant="secondary" className="bg-[#EBEAEB] rounded-[20px] text-black font-medium text-xl px-4 py-2 h-auto ml-2 hover:bg-black hover:text-white">
+                Why you should hire me
+              </Button>
+            </div>
+          </SpotlightCard>
         </div>
 
       </main>
