@@ -1,7 +1,6 @@
 
 import Header from '@/components/Header';
 import ProjectStack from '@/components/ProjectStack';
-import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
@@ -9,6 +8,7 @@ import SpotlightCard from '@/components/SpotlightCard';
 import SplitText from '@/components/SplitText';
 import TiltedCard from '@/components/TiltedCard';
 import Approach from '@/components/Approach';
+import PillButton from '@/components/PillButton';
 
 export default function Home() {
   const mainImage = PlaceHolderImages[0];
@@ -46,7 +46,7 @@ export default function Home() {
             )}
         </div>
 
-        <section className="py-24">
+        <section className="py-16">
           <div className="container mx-auto px-20 relative z-10">
             <div className="flex justify-between items-center">
                 <div>
@@ -64,10 +64,10 @@ export default function Home() {
                   textAlign="left"
                 />
                 </div>
-                <Button variant="outline" className="rounded-full font-medium text-lg px-6 py-3 border-2 border-transparent hover:border-secondary hover:bg-transparent hover:text-secondary-foreground transition-colors duration-300">
-                  View recent projects
-                  <ArrowRight />
-                </Button>
+                <PillButton href="#">
+                    <span>View recent projects</span>
+                    <ArrowRight />
+                </PillButton>
             </div>
           </div>
 
@@ -76,7 +76,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="pt-4 pb-16 container mx-auto px-20">
+        <section className="pt-4 pb-4 container mx-auto px-20">
           <div className="flex flex-col items-start gap-2">
             <div className="w-[8px] h-[8px] border border-muted-foreground rounded-sm"></div>
             <div className="w-[12px] border border-muted-foreground"></div>
@@ -111,7 +111,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="pb-24 pt-0">
+        <section className="pb-16 pt-4">
             <div className="container mx-auto px-20 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <TiltedCard>
                     <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
@@ -148,11 +148,11 @@ export default function Home() {
             </div>
         </section>
         
-        <div className="py-24">
+        <div className="py-16">
             <Approach />
         </div>
         
-        <div className="w-[90%] mx-auto my-24">
+        <div className="w-[90%] mx-auto my-16">
           <SpotlightCard>
             <div className="bg-secondary rounded-2xl py-4 px-6 flex items-center justify-start">
               <SplitText 
@@ -161,10 +161,17 @@ export default function Home() {
                 className="font-headline font-semibold text-2xl leading-tight tracking-[0.02em] text-secondary-foreground"
                 textAlign="left"
               />
-              <Button className="bg-background rounded-[20px] text-foreground font-medium text-xl px-4 py-2 h-auto ml-2 hover:font-semibold border-2 border-transparent hover:border-primary hover:bg-transparent hover:text-primary transition-colors duration-300">
-                View recent projects
-                <ArrowRight />
-              </Button>
+              <PillButton 
+                href="#"
+                baseColor="var(--background)"
+                pillColor="var(--primary)"
+                hoveredPillTextColor="var(--primary-foreground)"
+                pillTextColor="var(--foreground)"
+                className="ml-4"
+              >
+                  <span>View recent projects</span>
+                  <ArrowRight />
+              </PillButton>
             </div>
           </SpotlightCard>
         </div>
