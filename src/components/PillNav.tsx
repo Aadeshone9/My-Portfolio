@@ -210,15 +210,17 @@ const PillNav = ({
           </ul>
         </div>
 
-        <button
-          className="mobile-menu-button mobile-only"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle menu"
-          ref={hamburgerRef}
-        >
-          <span className="hamburger-line" />
-          <span className="hamburger-line" />
-        </button>
+        <div className="mobile-only">
+            <button
+              className="mobile-menu-button"
+              onClick={toggleMobileMenu}
+              aria-label="Toggle menu"
+              ref={hamburgerRef}
+            >
+              <span className="hamburger-line" />
+              <span className="hamburger-line" />
+            </button>
+        </div>
       </nav>
 
       <div className="mobile-menu-popover mobile-only" ref={mobileMenuRef} style={cssVars}>
