@@ -149,7 +149,7 @@ export default function Home() {
         
         <Approach />
 
-        <section className="container mx-auto px-20 my-20">
+        <div className="w-[90%] mx-auto my-20">
           <div className="bg-[#F2F2F2] rounded-2xl py-4 px-6 flex justify-between items-center">
             <h2 className="font-headline font-semibold text-4xl tracking-wide text-black">
               Find out
@@ -159,7 +159,7 @@ export default function Home() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
-        </section>
+        </div>
 
       </main>
       <footer className="bg-[#131313] text-white mt-20">
