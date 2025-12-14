@@ -152,11 +152,12 @@ export default function Home() {
         <div className="w-[90%] mx-auto my-20">
           <SpotlightCard>
             <div className="bg-[#F2F2F2] rounded-2xl py-4 px-6 flex items-center">
-              <h2
+              <SplitText 
+                text="Find out" 
+                tag="h2"
                 className="font-headline font-semibold text-4xl leading-tight tracking-[0.02em] text-black"
-              >
-                Find out
-              </h2>
+                textAlign="left"
+              />
               <Button variant="secondary" className="bg-[#EBEAEB] rounded-[20px] text-black font-medium text-xl px-4 py-2 h-auto ml-2 hover:bg-black hover:text-white">
                 Why you should hire me
               </Button>
@@ -165,25 +166,31 @@ export default function Home() {
         </div>
 
       </main>
-      <footer className="bg-[#131313] text-white mt-20">
-        <div className="container mx-auto px-20 py-16">
-            <div className="grid md:grid-cols-2 gap-16">
-                <div>
-                    <h3 className="font-semibold text-[#757575] text-2xl tracking-wide">Now that you know me better than Earlier, Lets get in Touch....</h3>
-                    <div className="mt-6 space-y-2">
-                        <a href="mailto:Aadesh.one9@gmail.com" className="block text-2xl underline">Aadesh.one9@gmail.com</a>
-                        <p className="text-2xl">+ (91) 8975143018</p>
-                        <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="block text-2xl underline">https://www.linkedin.com/in/aadeshgovenkar/</a>
-                    </div>
-                </div>
-                <div className="font-headline font-semibold text-5xl md:text-8xl lg:text-[160px] leading-tight tracking-wide break-words">
-                    Aadesh. One9.com
-                </div>
+      <footer className="bg-[#131313] text-white mt-20 py-16 px-5">
+        <div className="container mx-auto px-4 md:px-20 flex flex-col gap-10">
+          <div className='flex flex-col gap-6'>
+            <div className='flex flex-col gap-4'>
+              <p className="font-headline font-semibold text-[#757575] text-2xl tracking-[0.02em] leading-[1.2]">
+                Now that you know me better than Earlier, Lets get in Touch....
+              </p>
+              <div className="flex flex-col gap-4">
+                <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold text-2xl tracking-[0.02em] underline leading-[1.2]">Aadesh.one9@gmail.com</a>
+                <p className="font-headline font-semibold text-2xl tracking-[0.02em] leading-[1.2]">+ (91) 8975143018</p>
+                <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold text-2xl tracking-[0.02em] underline leading-[1.2]">
+                  https://www.linkedin.com/in/aadeshgovenkar/
+                </a>
+              </div>
             </div>
-            <div className="mt-24 text-right text-sm">
-                <p>Design In Figma By Aadesh Govenkar Developed in Curser by Harshad Pachore</p>
-                <p>2026 Copyright All Rights Reserved</p>
+            <div className="p-2.5">
+              <p className="font-headline font-semibold text-[160px] leading-[1.3] tracking-[0.02em] break-words">
+                Aadesh. One9.com
+              </p>
             </div>
+          </div>
+          <div className="text-right text-base font-normal tracking-[0.02em] flex flex-col gap-2">
+            <p>Design In Figma By Aadesh Govenkar Developed in Curser by Harshad Pachore</p>
+            <p>2026 Copyright All Rights Reserved</p>
+          </div>
         </div>
       </footer>
     </div>
