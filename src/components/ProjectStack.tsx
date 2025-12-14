@@ -2,8 +2,8 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import PillButton from "./PillButton";
 
 const projects = [
   {
@@ -58,9 +58,14 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
               <CardDescription className="text-xl text-foreground mt-2">
                   {project.description}
               </CardDescription>
-              <Button variant="link" className="p-0 h-auto text-lg mt-4 text-foreground hover:text-primary">
-                  View project <ArrowRight className="w-5 h-5 ml-1"/>
-              </Button>
+              <PillButton 
+                href="#"
+                baseColor="hsl(var(--background))"
+                className="group mt-4"
+              >
+                  <span className="group-hover:font-semibold">View project</span>
+                  <ArrowRight />
+              </PillButton>
           </div>
         </Card>
       </motion.div>
