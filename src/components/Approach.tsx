@@ -29,33 +29,35 @@ const approachData = [
 
 const Approach = () => {
   return (
-    <section className="bg-white py-16 md:py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-x-8 gap-y-12">
-          <div className="lg:col-span-2">
+    <section className="bg-white py-6">
+      <div className="container mx-auto px-20">
+        <div className="flex flex-wrap items-start content-start gap-y-6 gap-x-[26px]">
+          <div className="w-full">
             <h2 className="font-headline font-semibold text-[32px] leading-[58px] tracking-[0.02em] text-black">
               /My Approach Towards Problem Solving
             </h2>
           </div>
-          <div className="flex flex-col justify-end">
+          <div className="w-full lg:w-auto">
             <p className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] mt-2 max-w-md">
               I believe great design is a result of clarity, collaboration, and
               craft.
             </p>
           </div>
-          <div className="w-full">
+          <div className="w-full lg:flex-1">
             <div className="space-y-6 max-h-[404px] overflow-y-auto pr-4">
               {approachData.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-[#BFBFBF] rounded-2xl p-6"
+                  className="bg-white border border-[#BFBFBF] rounded-2xl p-6 space-y-6"
                 >
-                  <h3 className="font-headline font-semibold text-2xl md:text-3xl text-black">
-                    {item.title}
-                  </h3>
-                  <p className="font-headline text-lg md:text-xl text-black mt-2">
-                    {item.description}
-                  </p>
+                  <div className='space-y-2'>
+                    <h3 className="font-headline font-semibold text-2xl md:text-3xl text-black">
+                      {item.title}
+                    </h3>
+                    <p className="font-headline text-lg md:text-xl text-black">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
