@@ -65,8 +65,7 @@ export default function Home() {
                 />
                 </div>
                 <Button variant="secondary" className="bg-[#EBEAEB] rounded-full text-black font-medium text-lg px-6 py-3 hover:bg-black hover:text-white">
-                  View all projects
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  Why you should hire me
                 </Button>
             </div>
           </div>
@@ -131,7 +130,7 @@ export default function Home() {
                 </TiltedCard>
                 <TiltedCard>
                     <div className="bg-white border border-[#BFBFBF] rounded-3xl p-8 h-full w-full">
-                        <h3 className="font-headline font-semibold text-3xl text-black">Building Since 2022</h3>
+                        <h3 className="font-headline fontsemibold text-3xl text-black">Building Since 2022</h3>
                         <p className="font-subtitle text-xl text-black mt-4">
                             For the past few years, I’ve used this blend of psychology & aesthetics to build breakthrough products that are not just usable & memorable.
                         </p>
@@ -156,7 +155,7 @@ export default function Home() {
               <SplitText 
                 text="Find out" 
                 tag="h2"
-                className="font-headline font-semibold text-4xl leading-tight tracking-[0.02em] text-black"
+                className="font-headline font-semibold text-2xl leading-tight tracking-[0.02em] text-black"
                 textAlign="left"
               />
               <Button variant="secondary" className="bg-[#EBEAEB] rounded-[20px] text-black font-medium text-xl px-4 py-2 h-auto ml-2 hover:bg-black hover:text-white">
@@ -189,8 +188,8 @@ export default function Home() {
             </div>
           </div>
           <div className="text-right text-base font-normal tracking-[0.02em] flex flex-col gap-2">
-            <p>Design In Figma & Developed in Firebase studio by y Aadesh Govenkar</p>
-            <p>© 2026 Copyright All Rights Reserved</p>
+            <p>Design In Figma &amp; Developed in Firebase studio by Aadesh Govenkar</p>
+            <p>&copy; 2026 Copyright All Rights Reserved</p>
           </div>
         </div>
       </footer>
