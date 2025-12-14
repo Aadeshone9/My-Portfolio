@@ -38,7 +38,7 @@ const Approach = () => {
             </h2>
           </div>
           <div className="flex flex-col justify-end">
-            <p className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] mt-4 max-w-md">
+            <p className="font-subtitle text-2xl md:text-[32px] leading-snug text-[#757575] mt-2 max-w-md">
               I believe great design is a result of clarity, collaboration, and
               craft.
             </p>
