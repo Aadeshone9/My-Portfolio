@@ -11,6 +11,8 @@ import { Button } from './ui/button';
 import {
   Sheet,
   SheetContent,
+  SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
 
@@ -61,6 +63,9 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
+                <SheetHeader>
+                  <SheetTitle className="sr-only">Mobile Navigation</SheetTitle>
+                </SheetHeader>
                 <nav className="flex flex-col gap-4 mt-8">
                   {navItems.map((item) => (
                     <Link
