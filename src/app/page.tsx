@@ -61,7 +61,7 @@ export default function Home() {
                   text="A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design."
                   tag="p"
                   splitType="words"
-                  className="font-subtitle text-lg md:text-xl lg:text-[28px] leading-normal md:leading-[43px] text-muted-foreground mt-4 max-w-[700px]"
+                  className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground mt-4 max-w-[700px]"
                   textAlign="left"
                 />
                 </div>
