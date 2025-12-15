@@ -108,8 +108,12 @@ const ProjectStack = () => {
     return (
         <div ref={containerRef} className="relative">
             {projects.map((project, i) => {
-                const targetScale = 1 - ((projects.length - i) * 0.05);
-                return <ProjectCard key={i} i={i} {...{project, progress: scrollYProgress, range: [i * .25, 1], targetScale}}/>
+                const totalProjects = projects.length;
+                const rangeStart = i / totalProjects;
+                const rangeEnd = rangeStart + (1 / totalProjects);
+                const range = [rangeStart, rangeEnd];
+                const targetScale = 1 - ((totalProjects - i - 1) * 0.05);
+                return <ProjectCard key={i} i={i} {...{project, progress: scrollYProgress, range, targetScale}}/>
             })}
         </div>
     )
