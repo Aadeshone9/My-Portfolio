@@ -1,17 +1,17 @@
 
 export default function Footer() {
     return (
-        <footer className="bg-[#131313] text-white py-16">
+        <footer className="bg-foreground text-background py-16">
         <div className="container mx-auto px-4 sm:px-8 md:px-20 flex flex-col gap-10">
           <div className='flex flex-col gap-10'>
             <div className='flex flex-col gap-6'>
-              <p className="font-headline font-semibold text-[#757575] text-lg md:text-2xl tracking-[0.02em] leading-normal">
+              <p className="font-headline font-semibold text-muted-foreground text-lg md:text-2xl tracking-[0.02em] leading-normal">
                 Now that you know me better than Earlier, Lets get in Touch....
               </p>
               <div className="flex flex-col gap-4 text-base md:text-2xl">
-                <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-[0.02em] underline leading-normal break-all">Aadesh.one9@gmail.com</a>
+                <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-[0.02em] underline leading-normal break-all hover:text-primary transition-colors">Aadesh.one9@gmail.com</a>
                 <p className="font-headline font-semibold tracking-[0.02em] leading-normal">+ (91) 8975143018</p>
-                <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold tracking-[0.02em] underline leading-normal break-all">
+                <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold tracking-[0.02em] underline leading-normal break-all hover:text-primary transition-colors">
                   https://www.linkedin.com/in/aadeshgovenkar/
                 </a>
               </div>
@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="text-right text-sm md:text-base font-normal tracking-[0.02em] flex flex-col gap-2">
+          <div className="text-right text-sm md:text-base font-normal tracking-[0.02em] flex flex-col gap-2 text-muted-foreground">
             <p>Design In Figma & Developed in Firebase studio by Aadesh Govenkar</p>
             <p>&copy; 2026 Copyright All Rights Reserved</p>
           </div>
