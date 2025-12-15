@@ -64,9 +64,12 @@ export default function ProjectsPage() {
       <Header />
       <main className="container mx-auto px-4 sm:px-8 md:px-20 py-16 md:py-24">
         <div className="flex flex-col items-start gap-6">
-          <h1 className="font-headline font-semibold text-6xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground">
-            Projects
-          </h1>
+          <SplitText 
+            text="Projects"
+            tag="h1"
+            className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground"
+            textAlign="left"
+          />
           <div className="flex flex-wrap gap-4">
             <PillButton href="#" className="is-active">UX Design</PillButton>
             <PillButton href="#" >Visual Design</PillButton>
