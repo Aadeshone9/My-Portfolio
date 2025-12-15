@@ -101,7 +101,21 @@ export default function Home() {
                     />
                     <div className="mt-4">
                         <SplitText
-                            text="I create to solve, and I solve to create. I am a designer, defined by my craft, dedicated to crafting better experiences for my fellow beings."
+                            text="I create to solve, and I solve to create."
+                            tag="p"
+                            splitType="words"
+                            className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-snug md:leading-[43px] text-muted-foreground"
+                            textAlign="left"
+                        />
+                        <SplitText
+                            text="I am a designer, defined by my craft, dedicated to"
+                            tag="p"
+                            splitType="words"
+                            className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-snug md:leading-[43px] text-muted-foreground"
+                            textAlign="left"
+                        />
+                        <SplitText
+                            text="crafting better experiences for my fellow beings."
                             tag="p"
                             splitType="words"
                             className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-snug md:leading-[43px] text-muted-foreground"
