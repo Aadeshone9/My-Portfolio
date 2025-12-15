@@ -58,11 +58,12 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .pill.is-active {
-  color: hsl(var(--foreground));
+  background-color: var(--pill-bg);
+  color: var(--hover-text);
   font-weight: 600;
 }
 
