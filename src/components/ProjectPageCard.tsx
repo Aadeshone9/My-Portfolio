@@ -1,5 +1,5 @@
 
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import PillButton from './PillButton';
 
@@ -46,7 +46,7 @@ export default function ProjectPageCard({ title, description, role, image, comin
       <div className="mt-4">
         <PillButton href="#" className="group">
           <span className='group-hover:font-semibold'>View project</span>
-          <ArrowUpRight className="transform -rotate-45 group-hover:rotate-0 transition-transform" />
+          <ArrowRight />
         </PillButton>
       </div>
     </div>
