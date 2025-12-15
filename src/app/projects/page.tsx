@@ -68,7 +68,7 @@ export default function ProjectsPage() {
             Projects
           </h1>
           <div className="flex flex-wrap gap-4">
-            <PillButton href="#" baseColor='hsl(var(--primary))' pillColor='hsl(var(--background))' pillTextColor='hsl(var(--primary))' hoveredPillTextColor='hsl(var(--primary))'>UX Design</PillButton>
+            <PillButton href="#" baseColor='hsl(var(--primary))' pillColor='hsl(var(--background))' pillTextColor='hsl(var(--primary-foreground))' hoveredPillTextColor='hsl(var(--primary))'>UX Design</PillButton>
             <PillButton href="#" >Visual Design</PillButton>
           </div>
         </div>
