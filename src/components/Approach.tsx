@@ -39,7 +39,7 @@ const Approach = () => {
             </h2>
           </div>
           <div className="w-full lg:w-auto">
-            <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] text-muted-foreground mt-2 max-w-md leading-8">
+            <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] text-muted-foreground mt-2 max-w-md leading-[30px] md:leading-[36px] lg:leading-[44px]">
               I believe great design is a result of clarity, collaboration, and
               craft.
             </p>
