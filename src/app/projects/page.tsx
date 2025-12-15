@@ -1,0 +1,116 @@
+
+import Header from '@/components/Header';
+import PillButton from '@/components/PillButton';
+import ProjectPageCard from '@/components/ProjectPageCard';
+import SpotlightCard from '@/components/SpotlightCard';
+import SplitText from '@/components/SplitText';
+import { ArrowRight } from 'lucide-react';
+import Footer from '@/components/Footer';
+
+const projects = [
+  {
+    title: 'Google',
+    description: 'Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.',
+    role: 'Lead + Individual Contributor',
+    image: '/google-cloud-logo.svg',
+  },
+  {
+    title: 'Microsoft',
+    description: 'Another project description detailing the work done and technologies used.',
+    role: 'Product Designer',
+    image: '/google-cloud-logo.svg',
+  },
+  {
+    title: 'Apple',
+    description: 'A third project description for another great company to showcase skills.',
+    role: 'UX/UI Designer',
+    image: '/google-cloud-logo.svg',
+  },
+  {
+    title: 'Netflix',
+    description: 'Redesigned the content discovery experience, improving user engagement metrics.',
+    role: 'Interaction Designer',
+    image: '/google-cloud-logo.svg',
+  },
+    {
+    title: 'Spotify',
+    description: 'Conducted foundational research to inform the strategy for personalized playlists.',
+    role: 'UX Researcher',
+    image: '/google-cloud-logo.svg',
+  },
+  {
+    title: 'Another Company',
+    description: 'Conducted foundational research to inform the strategy for personalized playlists.',
+    role: 'UX Researcher',
+    image: '/google-cloud-logo.svg',
+  },
+];
+
+const comingSoonProjects = [
+    {
+        title: 'Project Alpha',
+    },
+    {
+        title: 'Project Beta',
+    },
+    {
+        title: 'Project Gamma',
+    },
+]
+
+export default function ProjectsPage() {
+  return (
+    <div className="bg-background">
+      <Header />
+      <main className="container mx-auto px-4 sm:px-8 md:px-20 py-16 md:py-24">
+        <div className="flex flex-col items-start gap-6">
+          <h1 className="font-headline font-semibold text-6xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground">
+            Projects
+          </h1>
+          <div className="flex flex-wrap gap-4">
+            <PillButton href="#" baseColor='hsl(var(--primary))' pillColor='hsl(var(--background))' pillTextColor='hsl(var(--primary))' hoveredPillTextColor='hsl(var(--primary))'>UI/UX Case Study</PillButton>
+            <PillButton href="#" >Visual Design</PillButton>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mt-16">
+          {projects.map((project, index) => (
+            <ProjectPageCard key={index} {...project} />
+          ))}
+        </div>
+
+        <div className='my-24'>
+            <h2 className="font-headline font-semibold text-3xl md:text-5xl text-center text-foreground">New Projects On the way, stay Tuned!</h2>
+            <div className="mt-12 flex flex-col md:flex-row gap-8 overflow-x-auto">
+                {comingSoonProjects.map((project, index) => (
+                    <div key={index} className="flex-shrink-0 w-full md:w-[577px]">
+                         <ProjectPageCard title={project.title} description='' role='' image='' comingSoon />
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <div className="w-full mx-auto my-16 md:my-24">
+          <SpotlightCard>
+            <div className="bg-card border border-border rounded-2xl py-4 px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <SplitText 
+                text="Find out" 
+                tag="h2"
+                className="font-headline font-semibold text-4xl md:text-5xl leading-tight tracking-[0.02em] text-foreground"
+                textAlign="left"
+              />
+              <PillButton 
+                href="#"
+                className="group"
+              >
+                  <span className="group-hover:font-semibold">Why Hire Me</span>
+                  <ArrowRight />
+              </PillButton>
+            </div>
+          </SpotlightCard>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}

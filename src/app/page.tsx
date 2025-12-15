@@ -9,6 +9,7 @@ import SplitText from '@/components/SplitText';
 import TiltedCard from '@/components/TiltedCard';
 import Approach from '@/components/Approach';
 import PillButton from '@/components/PillButton';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   const mainImage = PlaceHolderImages[0];
@@ -64,7 +65,7 @@ export default function Home() {
                   textAlign="left"
                 />
                 </div>
-                <PillButton href="#" className="group mt-4 md:mt-0 flex-shrink-0">
+                <PillButton href="/projects" className="group mt-4 md:mt-0 flex-shrink-0">
                     <span className="group-hover:font-semibold">View all Projects</span>
                     <ArrowRight />
                 </PillButton>
@@ -173,34 +174,7 @@ export default function Home() {
         </div>
 
       </main>
-      <footer className="bg-[#222D41] text-white py-16">
-        <div className="w-[90%] mx-auto flex flex-col gap-10">
-          <div className='flex flex-col gap-10'>
-            <div className='flex flex-col gap-6'>
-              <p className="font-headline font-semibold text-[#A4A4A4] text-lg md:text-2xl tracking-[0.02em] leading-normal">
-                Now that you know me better than Earlier, Lets get in Touch....
-              </p>
-              <div className="flex flex-col gap-4 text-base md:text-2xl">
-                <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-[0.02em] underline leading-normal break-all">Aadesh.one9@gmail.com</a>
-                <p className="font-headline font-semibold tracking-[0.02em] leading-normal">+ (91) 8975143018</p>
-                <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold tracking-[0.02em] underline leading-normal break-all">
-                  https://www.linkedin.com/in/aadeshgovenkar/
-                </a>
-              </div>
-            </div>
-            <div className="p-2.5">
-              <div className="font-headline font-semibold text-5xl sm:text-7xl md:text-9xl lg:text-[160px] leading-[0.8] tracking-tighter flex flex-col gap-6">
-                <span>Aadesh.</span>
-                <span>one9.com</span>
-              </div>
-            </div>
-          </div>
-          <div className="text-right text-sm md:text-base font-normal tracking-[0.02em] flex flex-col gap-2">
-            <p>Design In Figma & Developed in Firebase studio by Aadesh Govenkar</p>
-            <p>&copy; 2026 Copyright All Rights Reserved</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
