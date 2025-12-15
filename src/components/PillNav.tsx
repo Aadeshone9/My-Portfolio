@@ -86,7 +86,9 @@ const PillNav = ({
     return () => window.removeEventListener('resize', onResize);
   }, [items, ease]);
 
-  const handleEnter = i => {
+  const handleEnter = (i: number) => {
+    const pill = circleRefs.current[i]?.parentElement;
+    if (pill?.classList.contains('is-active')) return;
     const tl = tlRefs.current[i];
     if (!tl) return;
     activeTweenRefs.current[i]?.kill();
@@ -97,7 +99,9 @@ const PillNav = ({
     });
   };
 
-  const handleLeave = i => {
+  const handleLeave = (i: number) => {
+    const pill = circleRefs.current[i]?.parentElement;
+    if (pill?.classList.contains('is-active')) return;
     const tl = tlRefs.current[i];
     if (!tl) return;
     activeTweenRefs.current[i]?.kill();
