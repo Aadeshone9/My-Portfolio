@@ -29,7 +29,7 @@ export default function Home() {
                 text="I have contributed to products at scale, Chances are you've used some!"
                 tag="p"
                 splitType="words"
-                className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-relaxed md:leading-loose text-muted-foreground max-w-xl mt-6"
+                className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-7 md:leading-8 text-muted-foreground max-w-xl mt-6"
                 textAlign="left"
               />
             </div>
