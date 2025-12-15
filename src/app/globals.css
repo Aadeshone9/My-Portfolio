@@ -6,6 +6,7 @@
   :root {
     --background: 34 83% 96%; /* Soft Cream */
     --foreground: 220 11% 34%; /* Deep Gray/Blue */
+    --header-background: 34 83% 92%; /* Slightly darker cream */
     --card: 34 83% 96%;
     --card-foreground: 220 11% 34%;
     --popover: 34 83% 96%;
@@ -44,6 +45,7 @@
   .dark {
     --background: 220 40% 5%; /* Deep navy blue */
     --foreground: 210 40% 98%; /* Off-white */
+    --header-background: 220 40% 10%; /* Slightly lighter navy */
     --card: 220 40% 10%;
     --card-foreground: 210 40% 98%;
     --popover: 220 40% 10%;

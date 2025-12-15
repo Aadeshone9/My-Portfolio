@@ -41,7 +41,7 @@ export default function Header() {
     <div className="sticky top-0 z-50 w-full">
       <header
         className={cn(
-          'w-[90%] mx-auto bg-background/80 backdrop-blur-sm rounded-b-2xl transition-shadow duration-300',
+          'w-[90%] mx-auto bg-header-background/80 backdrop-blur-sm rounded-b-2xl transition-shadow duration-300',
           isScrolled && 'shadow-lg shadow-primary/20 dark:shadow-primary/10'
         )}
       >
