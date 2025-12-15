@@ -109,8 +109,9 @@ const ProjectStack = () => {
         <div ref={containerRef} className="relative">
             {projects.map((project, i) => {
                 const totalProjects = projects.length;
-                const rangeStart = i / totalProjects;
-                const rangeEnd = rangeStart + (1 / totalProjects);
+                const step = 1 / totalProjects;
+                const rangeStart = i * step;
+                const rangeEnd = rangeStart + step;
                 const range = [rangeStart, rangeEnd];
                 const targetScale = 1 - ((totalProjects - i - 1) * 0.05);
                 return <ProjectCard key={i} i={i} {...{project, progress: scrollYProgress, range, targetScale}}/>
