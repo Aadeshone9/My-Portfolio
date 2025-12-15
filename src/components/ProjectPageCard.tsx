@@ -14,11 +14,11 @@ type ProjectPageCardProps = {
 export default function ProjectPageCard({ title, description, role, image, comingSoon = false }: ProjectPageCardProps) {
   if (comingSoon) {
     return (
-         <div className="p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between">
+         <div className="p-6 md:p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between">
             <div>
-                <div className="w-full h-72 bg-muted rounded-lg flex items-center justify-center">
+                <div className="w-full aspect-[16/9] bg-muted rounded-lg flex items-center justify-center overflow-hidden">
                     {image && (
-                        <Image src={image} alt={`${title} logo`} width={287} height={287} className="w-36 h-36 md:w-72 md:h-72" />
+                        <Image src={image} alt={`${title} logo`} width={287} height={287} className="w-36 h-36 object-contain" />
                     )}
                 </div>
                  <div className="mt-6">
@@ -30,20 +30,20 @@ export default function ProjectPageCard({ title, description, role, image, comin
   }
     
   return (
-    <div className="p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between">
+    <div className="p-6 md:p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between">
         <div>
-            <div className="w-full h-72 bg-muted rounded-lg flex items-center justify-center">
+            <div className="w-full aspect-[16/9] bg-muted rounded-lg flex items-center justify-center overflow-hidden">
                 {image && (
-                    <Image src={image} alt={`${title} logo`} width={287} height={287} className="w-36 h-36 md:w-48 md:h-48" />
+                    <Image src={image} alt={`${title} logo`} width={287} height={287} className="w-36 h-36 object-contain" />
                 )}
             </div>
             <div className="mt-6">
                 <h3 className="font-headline font-semibold text-xl text-foreground">{title}</h3>
-                <p className="text-muted-foreground mt-2">{description}</p>
+                <p className="text-muted-foreground mt-2 text-base">{description}</p>
                 <p className="text-sm text-muted-foreground mt-4">{role}</p>
             </div>
         </div>
-      <div className="mt-4">
+      <div className="mt-6">
         <PillButton href="#" className="group">
           <span className='group-hover:font-semibold'>View project</span>
           <ArrowRight />
