@@ -29,9 +29,30 @@
 }
 
 .pill-button.is-active {
-  color: hsl(var(--foreground));
+  background: var(--pill-bg);
+  color: var(--hover-text);
+  border-color: var(--pill-bg);
   font-weight: 600;
 }
+
+.pill-button.is-active .pill-label-hover {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.pill-button.is-active .pill-label {
+    transform: translateY(0) !important;
+}
+
+.pill-button:not(.is-active):hover .pill-label {
+    transform: translateY(calc(-100% - 8px));
+}
+
+.pill-button:not(.is-active):hover .pill-label-hover {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 
 .pill-button .hover-circle {
   position: absolute;

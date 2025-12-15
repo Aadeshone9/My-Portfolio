@@ -4,27 +4,35 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import './PillButton.css';
+import { cn } from '@/lib/utils';
 
 const PillButton = ({
   children,
   href,
   className = '',
   ease = 'power3.easeOut',
-  baseColor,
-  pillColor,
-  hoveredPillTextColor,
-  pillTextColor,
 }) => {
-  const resolvedBaseColor = baseColor ?? 'transparent';
-  const resolvedPillColor = pillColor ?? 'hsl(var(--primary))';
-  const resolvedHoveredPillTextColor = hoveredPillTextColor ?? 'hsl(var(--primary-foreground))';
-  const resolvedPillTextColor = pillTextColor ?? 'hsl(var(--primary))';
   const circleRef = useRef(null);
   const tlRef = useRef(null);
   const activeTweenRef = useRef(null);
   const buttonRef = useRef(null);
 
+  const cssVars = {
+    ['--base']: 'transparent',
+    ['--pill-bg']: 'hsl(var(--primary))',
+    ['--hover-text']: 'hsl(var(--primary-foreground))',
+    ['--pill-text']: 'hsl(var(--primary))',
+  };
+
   useEffect(() => {
+    const button = buttonRef.current;
+    if (!button || button.classList.contains('is-active')) {
+      if (tlRef.current) {
+        tlRef.current.progress(0).pause();
+      }
+      return;
+    };
+
     const layout = () => {
       const circle = circleRef.current;
       if (!circle?.parentElement) return;
@@ -39,16 +47,15 @@ const PillButton = ({
       const delta = Math.ceil(R - Math.sqrt(Math.max(0, R * R - (w * w) / 4))) + 1;
       const originY = D - delta;
 
-      circle.style.width = `${D}px`;
-      circle.style.height = `${D}px`;
-      circle.style.bottom = `-${delta}px`;
-
       gsap.set(circle, {
+        width: `${D}px`,
+        height: `${D}px`,
+        bottom: `-${delta}px`,
         xPercent: -50,
         scale: 0,
         transformOrigin: `50% ${originY}px`,
       });
-
+      
       const label = pill.querySelector('.pill-label');
       const white = pill.querySelector('.pill-label-hover');
 
@@ -59,13 +66,13 @@ const PillButton = ({
       const tl = gsap.timeline({ paused: true });
 
       tl.to(circle, { scale: 1.2, xPercent: -50, duration: 2, ease, overwrite: 'auto' }, 0);
-
+      
       if (label) {
         tl.to(label, { y: -(h + 8), duration: 2, ease, overwrite: 'auto' }, 0);
       }
       
       if (white) {
-        gsap.set(white, { y: Math.ceil(h + 100), opacity: 0 });
+        gsap.set(white, { y: Math.ceil(h + 10), opacity: 0 });
         tl.to(white, { y: 0, opacity: 1, duration: 2, ease, overwrite: 'auto' }, 0);
       }
 
@@ -73,7 +80,6 @@ const PillButton = ({
     };
 
     const runLayout = () => {
-      // Delay layout to allow for font loading and rendering
       setTimeout(layout, 100);
     }
 
@@ -86,9 +92,11 @@ const PillButton = ({
     window.addEventListener('resize', runLayout);
 
     return () => window.removeEventListener('resize', runLayout);
-  }, [ease]);
+  }, [ease, className]);
 
   const handleEnter = () => {
+    const button = buttonRef.current;
+    if (!button || button.classList.contains('is-active')) return;
     const tl = tlRef.current;
     if (!tl) return;
     activeTweenRef.current?.kill();
@@ -100,6 +108,8 @@ const PillButton = ({
   };
 
   const handleLeave = () => {
+    const button = buttonRef.current;
+    if (!button || button.classList.contains('is-active')) return;
     const tl = tlRef.current;
     if (!tl) return;
     activeTweenRef.current?.kill();
@@ -110,26 +120,19 @@ const PillButton = ({
     });
   };
   
-  const cssVars = {
-    ['--base']: resolvedBaseColor,
-    ['--pill-bg']: resolvedPillColor,
-    ['--hover-text']: resolvedHoveredPillTextColor,
-    ['--pill-text']: resolvedPillTextColor,
-  };
-
   return (
     <Link
         href={href}
         ref={buttonRef}
-        className={`pill-button ${className}`}
+        className={cn('pill-button', className)}
         style={cssVars}
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
     >
         <span
-        className="hover-circle"
-        aria-hidden="true"
-        ref={circleRef}
+          className="hover-circle"
+          aria-hidden="true"
+          ref={circleRef}
         />
         <span className="label-stack">
             <span className="pill-label">{children}</span>
