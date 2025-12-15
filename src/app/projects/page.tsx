@@ -90,13 +90,13 @@ export default function ProjectsPage() {
             </div>
         </div>
 
-        <div className="w-full mx-auto my-16 md:my-24">
+        <div className="w-[90%] mx-auto my-16 md:my-24">
           <SpotlightCard>
-            <div className="bg-card border border-border rounded-2xl py-4 px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="bg-background border border-border rounded-2xl py-4 px-6 flex flex-col sm:flex-row items-center justify-start gap-4">
               <SplitText 
                 text="Find out" 
                 tag="h2"
-                className="font-headline font-semibold text-4xl md:text-5xl leading-tight tracking-[0.02em] text-foreground"
+                className="font-headline font-semibold text-2xl leading-tight tracking-[0.02em] text-foreground"
                 textAlign="left"
               />
               <PillButton 
