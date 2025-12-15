@@ -136,7 +136,7 @@ const PillButton = ({
         />
         <span className="label-stack">
             <span className="pill-label">{children}</span>
-            <span className="pill-label-hover" aria-hidden="true">
+            <span className="pill-label-hover font-semibold" aria-hidden="true">
                 {children}
             </span>
         </span>
