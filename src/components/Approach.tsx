@@ -1,5 +1,6 @@
 import React from 'react';
 import SplitText from './SplitText';
+import { ScrollArea } from './ui/scroll-area';
 
 const approachData = [
   {
@@ -44,23 +45,25 @@ const Approach = () => {
             </p>
           </div>
           <div className="w-full lg:flex-1 mt-4 lg:mt-0">
-            <div className="space-y-6 max-h-[404px] overflow-y-auto pr-4 scroll-fade">
-              {approachData.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-background border border-border rounded-2xl p-6 w-full flex flex-col justify-center min-h-[140px]"
-                >
-                  <div className="space-y-2">
-                    <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground leading-tight">
-                      {item.title}
-                    </h3>
-                    <p className="font-body text-base md:text-lg text-foreground leading-relaxed">
-                      {item.description}
-                    </p>
+            <ScrollArea className="h-[404px] w-full">
+              <div className="space-y-6 pr-4">
+                {approachData.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-background border border-border rounded-2xl p-6 w-full flex flex-col justify-center min-h-[140px]"
+                  >
+                    <div className="space-y-2">
+                      <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground leading-tight">
+                        {item.title}
+                      </h3>
+                      <p className="font-body text-base md:text-lg text-foreground leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </ScrollArea>
           </div>
         </div>
       </div>
