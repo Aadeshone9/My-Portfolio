@@ -76,9 +76,9 @@
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 220 40% 15%;
     --sidebar-ring: 26 90% 60%;
-    --footer: 220 40% 2%; /* Very Dark Blue */
-    --footer-foreground: 210 40% 98%;
-    --footer-muted-foreground: 210 40% 60%;
+    --footer: 220 40% 10%; /* Dark Blue */
+    --footer-foreground: 210 40% 98%; /* Off-white */
+    --footer-muted-foreground: 210 40% 70%;
   }
 }
 
