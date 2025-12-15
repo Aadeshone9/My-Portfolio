@@ -94,7 +94,7 @@ export default function ProjectsPage() {
             </div>
         </div>
 
-        <div className="w-[90%] mx-auto my-16 md:my-24">
+        <div className="mx-auto my-16 md:my-24">
           <SpotlightCard>
             <div className="bg-background border border-border rounded-2xl py-4 px-6 flex flex-col sm:flex-row items-center justify-start gap-4">
               <SplitText 
