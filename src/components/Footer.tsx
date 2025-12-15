@@ -1,11 +1,11 @@
 
 export default function Footer() {
     return (
-        <footer className="bg-secondary text-secondary-foreground py-16">
+        <footer className="bg-card-foreground text-card py-16">
         <div className="container mx-auto px-4 sm:px-8 md:px-20 flex flex-col gap-10">
           <div className='flex flex-col gap-10'>
             <div className='flex flex-col gap-6'>
-              <p className="font-headline font-semibold text-secondary-foreground/80 text-lg md:text-2xl tracking-[0.02em] leading-normal">
+              <p className="font-headline font-semibold text-muted-foreground text-lg md:text-2xl tracking-[0.02em] leading-normal">
                 Now that you know me better than Earlier, Lets get in Touch....
               </p>
               <div className="flex flex-col gap-4 text-base md:text-2xl">
@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="text-right text-sm md:text-base font-normal tracking-[0.02em] flex flex-col gap-2 text-secondary-foreground/80">
+          <div className="text-right text-sm md:text-base font-normal tracking-[0.02em] flex flex-col gap-2 text-muted-foreground">
             <p>Design In Figma & Developed in Firebase studio by Aadesh Govenkar</p>
             <p>&copy; 2026 Copyright All Rights Reserved</p>
           </div>
