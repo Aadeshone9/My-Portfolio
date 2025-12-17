@@ -83,7 +83,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                     </PillButton>
                 ) : (
                     <PillButton 
-                      href="#"
+                      href={project.title === 'Spotify' ? '/projects/spotify' : '#'}
                       className="group"
                     >
                         <span className="group-hover:font-semibold">View project</span>
