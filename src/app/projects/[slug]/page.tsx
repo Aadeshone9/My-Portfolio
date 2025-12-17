@@ -4,7 +4,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import SplitText from '@/components/SplitText';
 import Footer from '@/components/Footer';
-import PillButton from '@/components/PillButton';
+import { Button } from '@/components/ui/button';
 
 const testimonials = [
     {
@@ -158,9 +158,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
                         The result is a more intuitive and personalized Headspace experience. By focusing on user intent and context, we designed a system that surfaces the right content at the right time, helping users build a consistent mindfulness practice that fits their life.
                     </p>
-                    <PillButton href="#" className="group mt-8">
-                        <span className="group-hover:font-semibold">View Live Site</span>
-                    </PillButton>
+                    <Button variant="link" className="group mt-8 px-0 text-foreground text-lg hover:text-primary">
+                        View Live Site
+                    </Button>
                 </div>
                 {resultFaceImage && (
                     <div className="relative w-full aspect-square max-w-sm mx-auto">
@@ -256,7 +256,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="py-16 md:py-24 bg-card">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                  {vdlImage1 && (
-                    <div className="relative w-full h-96 bg-yellow-400 rounded-2xl overflow-hidden p-8 flex items-center justify-center">
+                    <div className="relative w-full h-96 bg-[#F9C900] rounded-2xl overflow-hidden p-8 flex items-center justify-center">
                         <div className="relative w-48 h-80">
                          <Image
                             src={vdlImage1.imageUrl}
@@ -317,3 +317,5 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     </div>
   );
 }
+
+    
