@@ -5,6 +5,66 @@
       "description": "Abstract hero image for portfolio",
       "imageUrl": "https://images.unsplash.com/photo-1684158100445-8e6926faf964?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGxpbmVzfGVufDB8fHx8MTc2NTY0NzQxMnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract lines"
+    },
+    {
+      "id": "project-hero",
+      "description": "Smartphone mockup on a textured blue background, showcasing a vibrant orange app screen.",
+      "imageUrl": "https://images.unsplash.com/photo-1631016800686-1b3524982956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhcHAlMjBtb2NrdXB8ZW58MHx8fHwxNzY1OTA2OTExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app mockup"
+    },
+    {
+      "id": "project-gallery-1",
+      "description": "Web browser interface on a purple background, displaying a profile page with an ocean view.",
+      "imageUrl": "https://images.unsplash.com/photo-1741721816797-4141f1decd87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3ZWIlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzY1ODUwNzI2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "web interface"
+    },
+    {
+      "id": "project-gallery-2",
+      "description": "A person's legs and running shoes, with colorful geometric shapes overlaid, suggesting activity and movement.",
+      "imageUrl": "https://images.unsplash.com/photo-1469395446868-fb6a048d5ca3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxydW5uaW5nJTIwc2hvZXN8ZW58MHx8fHwxNzY1ODU1NTYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "running shoes"
+    },
+    {
+      "id": "project-gallery-3",
+      "description": "App screen showing a cartoon illustration in a dark UI, with a play button.",
+      "imageUrl": "https://images.unsplash.com/photo-1730818874937-888014e2fb15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YXBwJTIwc2NyZWVufGVufDB8fHx8MTc2NTg4MzIwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app screen"
+    },
+    {
+      "id": "project-gallery-4",
+      "description": "Close-up of a carton of eggs, with an app notification overlay.",
+      "imageUrl": "https://images.unsplash.com/photo-1609162554108-6490759499ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxub3RpZmljYXRpb24lMjBvdmVybGF5fGVufDB8fHx8MTc2NTk0ODI5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "notification overlay"
+    },
+    {
+      "id": "project-moodboard-1",
+      "description": "Smiling yellow character illustration against a blue background.",
+      "imageUrl": "https://images.unsplash.com/photo-1761064864552-198d926acfb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaGFyYWN0ZXIlMjBpbGx1c3RyYXRpb258ZW58MHx8fHwxNzY1ODQ2ODI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "character illustration"
+    },
+    {
+      "id": "project-moodboard-2",
+      "description": "Abstract illustration of a duck-like character with geometric shapes.",
+      "imageUrl": "https://images.unsplash.com/photo-1638871700565-c84cfca9e78a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGlsbHVzdHJhdGlvbnxlbnwwfHx8fDE3NjU5NDc5NjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract illustration"
+    },
+    {
+      "id": "project-moodboard-3",
+      "description": "Laptop and smartphone displaying a user profile and app interface, held against a blue sky.",
+      "imageUrl": "https://images.unsplash.com/photo-1654764450213-f9ac2d1f307a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcHAlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzY1ODg5NDA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app interface"
+    },
+    {
+      "id": "project-moodboard-4",
+      "description": "UI color palette and components on a yellow and white background.",
+      "imageUrl": "https://images.unsplash.com/photo-1730692504752-c411cf0306ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxVSSUyMGNvbXBvbmVudHN8ZW58MHx8fHwxNzY1OTQ4Mjk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "UI components"
+    },
+    {
+      "id": "project-final-screens",
+      "description": "A grid of various app screens showing different articles and content layouts.",
+      "imageUrl": "https://images.unsplash.com/photo-1644143155332-2ae7baf7d32f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcHAlMjBzY3JlZW5zfGVufDB8fHx8MTc2NTk0ODI5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app screens"
     }
   ]
 }
