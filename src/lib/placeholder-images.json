@@ -7,6 +7,90 @@
       "imageHint": "abstract lines"
     },
     {
+      "id": "headspace-hero",
+      "description": "Smartphone on a dark blue textured couch, displaying a bright yellow app screen with colorful illustrations.",
+      "imageUrl": "https://images.unsplash.com/photo-1585060282215-39a72f82385c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhcHAlMjBtb2NrdXB8ZW58MHx8fHwxNzY1OTA2OTExfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app mockup"
+    },
+    {
+      "id": "headspace-challenge",
+      "description": "Woman lying on a rooftop with a laptop showing a website homepage with the text 'It's time to be kind to your mind'.",
+      "imageUrl": "https://images.unsplash.com/photo-1658958705525-cbfa52dd71f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsYXB0b3AlMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzY1OTQ5MTk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "laptop lifestyle"
+    },
+    {
+      "id": "headspace-gallery-1",
+      "description": "App screen with a cartoon illustration of a bear-like creature in a dark UI, with a play button.",
+      "imageUrl": "https://images.unsplash.com/photo-1654764450213-f9ac2d1f307a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcHAlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzY1ODg5NDA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app interface"
+    },
+    {
+      "id": "headspace-gallery-2",
+      "description": "A person's legs and running shoes, with colorful geometric shapes overlaid, suggesting activity and movement.",
+      "imageUrl": "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxydW5uaW5nJTIwc2hvZXN8ZW58MHx8fHwxNzY1ODU1NTYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "running shoes"
+    },
+    {
+      "id": "headspace-gallery-3",
+      "description": "App notification overlay on a close-up of a carton of eggs.",
+      "imageUrl": "https://images.unsplash.com/photo-1762690717850-d006c1416a15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhcHAlMjBub3RpZmljYXRpb258ZW58MHx8fHwxNzY1OTQ5MTk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app notification"
+    },
+    {
+      "id": "headspace-articles",
+      "description": "A collage of various app screens showing different articles and content layouts.",
+      "imageUrl": "https://images.unsplash.com/photo-1759765299418-02dfc7a6ad75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhcHAlMjBzY3JlZW5zfGVufDB8fHx8MTc2NTk0ODI5NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app screens"
+    },
+    {
+      "id": "headspace-result-face",
+      "description": "A simple yellow circle with a content smile on a bright blue background.",
+      "imageUrl": "https://images.unsplash.com/photo-1599113615507-13f78150fb2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzbWlsZXklMjBmYWNlfGVufDB8fHx8MTc2NTk0OTE5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smiley face"
+    },
+    {
+      "id": "headspace-final-design-1",
+      "description": "A smartphone screen showing a menu with items like 'Meditation', 'Sleep', 'Move', 'Focus'.",
+      "imageUrl": "https://images.unsplash.com/photo-1605600659802-1353d7fd3732?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxhcHAlMjBtZW51fGVufDB8fHx8MTc2NTk0OTE5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app menu"
+    },
+    {
+      "id": "headspace-final-design-2",
+      "description": "An illustration of a yellow character in a blue bowl, resembling a duck.",
+      "imageUrl": "https://images.unsplash.com/photo-1739513275763-84d4393a84ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2hhcmFjdGVyJTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc2NTg0NjgyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "character illustration"
+    },
+    {
+      "id": "headspace-visual-1",
+      "description": "A laptop screen showing a user profile page, held against a blue sky.",
+      "imageUrl": "https://images.unsplash.com/photo-1725131481715-f0aa4357665d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjBwcm9maWxlfGVufDB8fHx8MTc2NTk0OTE5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "laptop profile"
+    },
+    {
+      "id": "headspace-visual-2",
+      "description": "A hand holding a smartphone, displaying a music or meditation app interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1494366222322-387658a1a976?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwaG9uZSUyMHNjcmVlbnxlbnwwfHx8fDE3NjU4NzAyNTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "phone screen"
+    },
+    {
+      "id": "headspace-vdl-1",
+      "description": "App UI for a timer on a bright yellow background.",
+      "imageUrl": "https://images.unsplash.com/photo-1604419254059-8b62131c8c59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhcHAlMjB0aW1lcnxlbnwwfHx8fDE3NjU5NDkxOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "app timer"
+    },
+    {
+      "id": "headspace-vdl-2",
+      "description": "UI component showing a color picker with an orange block and hex codes.",
+      "imageUrl": "https://images.unsplash.com/photo-1589829100333-e215933ccd67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjb2xvciUyMHBpY2tlcnxlbnwwfHx8fDE3NjU5NDkxOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "color picker"
+    },
+    {
+      "id": "headspace-testimonial-bg",
+      "description": "A black and white portrait of a woman's face, looking at the camera.",
+      "imageUrl": "https://images.unsplash.com/photo-1557053908-4793c484d06f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NTkwMjk0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
       "id": "project-hero",
       "description": "Smartphone mockup on a textured blue background, showcasing a vibrant orange app screen.",
       "imageUrl": "https://images.unsplash.com/photo-1631016800686-1b3524982956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhcHAlMjBtb2NrdXB8ZW58MHx8fHwxNzY1OTA2OTExfDA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -57,7 +141,7 @@
     {
       "id": "project-moodboard-4",
       "description": "UI color palette and components on a yellow and white background.",
-      "imageUrl": "https://images.unsplash.com/photo-1730692504752-c411cf0306ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxVSSUyMGNvbXBvbmVudHN8ZW58MHx8fHwxNzY1OTQ4Mjk0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1730692504752-c411cf0306ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxVSSUyMGNvbXBvbmVudHN8ZW58MHx8fHwxNzY1OTQ4Mjk0fDA&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "UI components"
     },
     {

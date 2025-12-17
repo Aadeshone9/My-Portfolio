@@ -4,145 +4,116 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import SplitText from '@/components/SplitText';
 import Footer from '@/components/Footer';
+import PillButton from '@/components/PillButton';
+
+const testimonials = [
+    {
+      quote: "It's like having a little pocket of peace with me at all times. I've never felt more centered.",
+      author: 'Aarav Sharma'
+    },
+    {
+      quote: "The sleep stories are magical. I'm sleeping better than I have in years. Highly recommended!",
+      author: 'Priya Patel'
+    },
+    {
+      quote: 'I was skeptical at first, but the guided meditations have genuinely reduced my daily stress levels.',
+      author: 'Rohan Mehta'
+    },
+    {
+      quote: "A beautiful, intuitive app that makes mindfulness accessible to everyone. It's a game-changer.",
+      author: 'Ananya Rao'
+    },
+     {
+      quote: "The focus exercises helped me get through my finals. I couldn't have done it without Headspace.",
+      author: 'Vikram Singh'
+    },
+  ];
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'project-hero');
+  const heroImage = PlaceHolderImages.find(p => p.id === 'headspace-hero');
+  const challengeImage = PlaceHolderImages.find(p => p.id === 'headspace-challenge');
+  
   const galleryImages = [
-    PlaceHolderImages.find(p => p.id === 'project-gallery-1'),
-    PlaceHolderImages.find(p => p.id === 'project-gallery-2'),
-    PlaceHolderImages.find(p => p.id === 'project-gallery-3'),
-    PlaceHolderImages.find(p => p.id === 'project-gallery-4'),
+    PlaceHolderImages.find(p => p.id === 'headspace-gallery-1'),
+    PlaceHolderImages.find(p => p.id === 'headspace-gallery-2'),
+    PlaceHolderImages.find(p => p.id === 'headspace-gallery-3'),
   ].filter(Boolean);
 
-  const moodboardImages = [
-    PlaceHolderImages.find(p => p.id === 'project-moodboard-1'),
-    PlaceHolderImages.find(p => p.id === 'project-moodboard-2'),
-    PlaceHolderImages.find(p => p.id === 'project-moodboard-3'),
-    PlaceHolderImages.find(p => p.id === 'project-moodboard-4'),
-  ].filter(Boolean);
+  const articlesImage = PlaceHolderImages.find(p => p.id === 'headspace-articles');
+  const resultFaceImage = PlaceHolderImages.find(p => p.id === 'headspace-result-face');
+  const finalDesignImage1 = PlaceHolderImages.find(p => p.id === 'headspace-final-design-1');
+  const finalDesignImage2 = PlaceHolderImages.find(p => p.id === 'headspace-final-design-2');
+  const visualImage1 = PlaceHolderImages.find(p => p.id === 'headspace-visual-1');
+  const visualImage2 = PlaceHolderImages.find(p => p.id === 'headspace-visual-2');
+  const vdlImage1 = PlaceHolderImages.find(p => p.id === 'headspace-vdl-1');
+  const vdlImage2 = PlaceHolderImages.find(p => p.id === 'headspace-vdl-2');
+  const testimonialBgImage = PlaceHolderImages.find(p => p.id === 'headspace-testimonial-bg');
 
-  const finalScreenImage = PlaceHolderImages.find(p => p.id === 'project-final-screens');
 
   return (
-    <div className="bg-background">
+    <div className="bg-background text-foreground">
       <Header />
-      <main className="container mx-auto px-4 sm:px-8 md:px-20 py-16 md:py-24">
+      <main>
         {/* Hero Section */}
-        <section className="flex flex-col items-center text-center">
-          <SplitText
-            text="Spotify"
-            tag="h1"
-            className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground"
-          />
-          <SplitText
-            text="A fresh take on the music streaming experience, focusing on intuitive discovery and personalized playlists."
-            tag="p"
-            splitType="words"
-            className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground max-w-3xl mt-6"
-          />
-          {heroImage && (
-            <div className="relative w-full h-[300px] md:h-[500px] rounded-2xl overflow-hidden mt-12">
-              <Image
-                src={heroImage.imageUrl}
-                alt={heroImage.description}
-                fill
-                className="object-cover"
-                data-ai-hint={heroImage.imageHint}
-              />
+        <section className="bg-background py-16 md:py-24">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 text-center">
+                <SplitText
+                    text="Headspace"
+                    tag="h1"
+                    className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide"
+                />
+                {heroImage && (
+                    <div className="relative w-full max-w-4xl mx-auto h-[300px] md:h-[500px] rounded-2xl overflow-hidden mt-12">
+                    <Image
+                        src={heroImage.imageUrl}
+                        alt={heroImage.description}
+                        fill
+                        className="object-contain"
+                        data-ai-hint={heroImage.imageHint}
+                    />
+                    </div>
+                )}
             </div>
-          )}
         </section>
 
-        {/* Intro Section */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 mt-24">
-          <div className="md:col-span-1">
-            <h2 className="font-headline font-semibold text-2xl text-foreground">The Challenge</h2>
-          </div>
-          <div className="md:col-span-2">
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
-              Spotify, a leader in the music streaming industry, faced challenges with user engagement and retention. While the platform offered a vast library of music, users often felt overwhelmed by choice and struggled to discover new music that resonated with their tastes. The existing recommendation algorithms, though powerful, sometimes led to a filter bubble, limiting exposure to diverse genres and artists.
-            </p>
-          </div>
-        </section>
-
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 mt-16">
-            <div className="md:col-span-1">
-                <h2 className="font-headline font-semibold text-2xl text-foreground">My Role</h2>
-            </div>
-            <div className="md:col-span-2">
-                 <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
-                    As the Lead UX Researcher, I was tasked with conducting foundational research to understand user behaviors, pain points, and motivations related to music discovery. My responsibilities included designing and executing a multi-faceted research plan, synthesizing findings into actionable insights, and collaborating with designers and product managers to inform the strategy for personalized playlists and content discovery features.
-                </p>
+        {/* Challenge Section */}
+        <section className="py-16 md:py-24 bg-background">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+                <div>
+                    <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Challenge</h2>
+                    <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
+                    Headspace, the global leader in mindfulness and meditation, had a mission to improve the health and happiness of the world. But with over 70 million users, they faced the challenge of keeping the experience fresh, personal, and engaging. We helped them move beyond a one-size-fits-all approach to a more dynamic and personalized user journey.
+                    </p>
+                    <div className="mt-8">
+                        <h3 className="font-headline font-semibold text-2xl text-foreground">My Role</h3>
+                        <ul className="list-disc list-inside text-muted-foreground text-lg md:text-xl leading-relaxed mt-4 space-y-2">
+                            <li>Lead UX Researcher</li>
+                            <li>User Interview & Synthesis</li>
+                            <li>Workshop Facilitation</li>
+                            <li>Design Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+                 {challengeImage && (
+                    <div className="relative w-full h-[300px] md:h-[450px] rounded-2xl overflow-hidden">
+                        <Image
+                            src={challengeImage.imageUrl}
+                            alt={challengeImage.description}
+                            fill
+                            className="object-cover"
+                            data-ai-hint={challengeImage.imageHint}
+                        />
+                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+                )}
             </div>
         </section>
 
         {/* Gallery Section */}
-        <section className="mt-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {galleryImages.map((img, index) => img && (
-              <div key={index} className="relative w-full h-[300px] md:h-[400px] bg-muted rounded-2xl overflow-hidden">
-                <Image
-                  src={img.imageUrl}
-                  alt={img.description}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={img.imageHint}
-                />
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Process Section */}
-        <section className="mt-24">
-           <div className="text-center">
-             <SplitText
-                text="/Our Process"
-                tag="h2"
-                className="font-headline font-semibold text-3xl md:text-5xl leading-tight tracking-wide text-foreground"
-              />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
-            <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-2xl mb-4">1</div>
-              <h3 className="font-headline font-semibold text-xl text-foreground mb-2">Discovery</h3>
-              <p className="text-muted-foreground text-base">We started with stakeholder interviews and competitive analysis to understand the business goals and landscape.</p>
-            </div>
-             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-2xl mb-4">2</div>
-              <h3 className="font-headline font-semibold text-xl text-foreground mb-2">Research</h3>
-              <p className="text-muted-foreground text-base">Conducted user surveys and in-depth interviews to gather qualitative and quantitative data on listening habits.</p>
-            </div>
-             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-2xl mb-4">3</div>
-              <h3 className="font-headline font-semibold text-xl text-foreground mb-2">Ideation</h3>
-              <p className="text-muted-foreground text-base">Held brainstorming sessions and created user personas and journey maps to guide our design concepts.</p>
-            </div>
-             <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-2xl mb-4">4</div>
-              <h3 className="font-headline font-semibold text-xl text-foreground mb-2">Design & Test</h3>
-              <p className="text-muted-foreground text-base">Developed wireframes and prototypes, followed by usability testing to refine the user experience.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Moodboard Section */}
-        <section className="mt-24">
-             <div className="text-center">
-                 <SplitText
-                    text="/Moodboard"
-                    tag="h2"
-                    className="font-headline font-semibold text-3xl md:text-5xl leading-tight tracking-wide text-foreground"
-                  />
-                  <SplitText
-                    text="A visual exploration of the feelings and aesthetics that guided our design direction."
-                    tag="p"
-                    splitType="words"
-                    className="font-subtitle text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mt-4"
-                  />
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-                 {moodboardImages.map((img, index) => img && (
+        <section className="py-16 md:py-24 bg-background">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {galleryImages.map((img, index) => img && (
                     <div key={index} className="relative w-full aspect-square bg-muted rounded-2xl overflow-hidden">
                         <Image
                         src={img.imageUrl}
@@ -152,36 +123,193 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         data-ai-hint={img.imageHint}
                         />
                     </div>
-                ))}
+                    ))}
+                </div>
+            </div>
+        </section>
+        
+        {/* All Articles Section */}
+        {articlesImage && (
+             <section className="py-16 md:py-24 bg-card">
+                <div className="container mx-auto px-4 sm:px-8 md:px-20 text-center">
+                     <SplitText
+                        text="All articles"
+                        tag="h2"
+                        className="font-headline font-semibold text-4xl md:text-6xl text-foreground"
+                    />
+                    <div className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden mt-12">
+                        <Image
+                            src={articlesImage.imageUrl}
+                            alt={articlesImage.description}
+                            fill
+                            className="object-contain"
+                            data-ai-hint={articlesImage.imageHint}
+                        />
+                    </div>
+                </div>
+            </section>
+        )}
+
+        {/* Result Section */}
+        <section className="py-16 md:py-24 bg-background">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+                <div>
+                    <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Result</h2>
+                    <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
+                        The result is a more intuitive and personalized Headspace experience. By focusing on user intent and context, we designed a system that surfaces the right content at the right time, helping users build a consistent mindfulness practice that fits their life.
+                    </p>
+                    <PillButton href="#" className="group mt-8">
+                        <span className="group-hover:font-semibold">View Live Site</span>
+                    </PillButton>
+                </div>
+                {resultFaceImage && (
+                    <div className="relative w-full aspect-square max-w-sm mx-auto">
+                        <Image
+                            src={resultFaceImage.imageUrl}
+                            alt={resultFaceImage.description}
+                            fill
+                            className="object-contain"
+                            data-ai-hint={resultFaceImage.imageHint}
+                        />
+                    </div>
+                )}
             </div>
         </section>
 
-        {/* Final Screens Section */}
-        <section className="mt-24">
-            <div className="text-center">
-                <SplitText
-                text="/Final Screens"
-                tag="h2"
-                className="font-headline font-semibold text-3xl md:text-5xl leading-tight tracking-wide text-foreground"
-                />
-                <SplitText
-                text="The culmination of our research and design efforts, showcasing the refined user interface."
-                tag="p"
-                splitType="words"
-                className="font-subtitle text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mt-4"
-                />
-            </div>
-            {finalScreenImage && (
-                <div className="relative w-full h-[400px] md:h-[700px] bg-muted rounded-2xl overflow-hidden mt-12">
-                <Image
-                    src={finalScreenImage.imageUrl}
-                    alt={finalScreenImage.description}
-                    fill
-                    className="object-cover object-top"
-                    data-ai-hint={finalScreenImage.imageHint}
-                />
+        {/* Final Design Section */}
+        <section className="py-16 md:py-24 bg-card">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20">
+                <div className="text-center">
+                     <SplitText
+                        text="Final design"
+                        tag="h2"
+                        className="font-headline font-semibold text-4xl md:text-6xl text-foreground"
+                    />
+                     <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mt-4">
+                        We developed a dynamic content system that adapts to user's goals, from managing stress to improving sleep.
+                    </p>
                 </div>
-            )}
+                <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8">
+                    {finalDesignImage1 && (
+                        <div className="relative w-full max-w-[250px] h-[500px]">
+                             <Image
+                                src={finalDesignImage1.imageUrl}
+                                alt={finalDesignImage1.description}
+                                fill
+                                className="object-contain"
+                                data-ai-hint={finalDesignImage1.imageHint}
+                            />
+                        </div>
+                    )}
+                     {finalDesignImage2 && (
+                        <div className="relative w-48 h-48">
+                             <Image
+                                src={finalDesignImage2.imageUrl}
+                                alt={finalDesignImage2.description}
+                                fill
+                                className="object-contain"
+                                data-ai-hint={finalDesignImage2.imageHint}
+                            />
+                        </div>
+                    )}
+                </div>
+            </div>
+        </section>
+        
+        {/* Visuals Section */}
+        <section className="py-16 md:py-24 bg-background">
+             <div className="container mx-auto px-4 sm:px-8 md:px-20">
+                 <div className="text-center mb-12">
+                     <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Visuals</h2>
+                      <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mt-4">
+                        The visual language of Headspace is a key part of its appeal. We worked to evolve the existing brand, introducing new layouts, typographic styles, and interactive elements to create a more engaging and cohesive experience across the platform.
+                    </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {visualImage1 && (
+                         <div className="relative w-full h-[300px] md:h-[450px] bg-muted rounded-2xl overflow-hidden">
+                            <Image
+                                src={visualImage1.imageUrl}
+                                alt={visualImage1.description}
+                                fill
+                                className="object-cover"
+                                data-ai-hint={visualImage1.imageHint}
+                            />
+                        </div>
+                    )}
+                    {visualImage2 && (
+                         <div className="relative w-full h-[300px] md:h-[450px] bg-muted rounded-2xl overflow-hidden">
+                            <Image
+                                src={visualImage2.imageUrl}
+                                alt={visualImage2.description}
+                                fill
+                                className="object-cover"
+                                data-ai-hint={visualImage2.imageHint}
+                            />
+                        </div>
+                    )}
+                </div>
+            </div>
+        </section>
+
+         {/* Visual Design Language Section */}
+        <section className="py-16 md:py-24 bg-card">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                 {vdlImage1 && (
+                    <div className="relative w-full h-96 bg-yellow-400 rounded-2xl overflow-hidden p-8 flex items-center justify-center">
+                        <div className="relative w-48 h-80">
+                         <Image
+                            src={vdlImage1.imageUrl}
+                            alt={vdlImage1.description}
+                            fill
+                            className="object-contain"
+                            data-ai-hint={vdlImage1.imageHint}
+                        />
+                        </div>
+                    </div>
+                )}
+                 <div>
+                    <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">Visual Design Language</h2>
+                     <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
+                        Our goal was to create a design system that felt friendly, accessible, and unmistakably Headspace. We established a clear typography system, a versatile color palette, and a library of reusable components that allowed for consistency and scalability.
+                    </p>
+                     {vdlImage2 && (
+                        <div className="relative w-full h-48 mt-8">
+                             <Image
+                                src={vdlImage2.imageUrl}
+                                alt={vdlImage2.description}
+                                fill
+                                className="object-contain"
+                                data-ai-hint={vdlImage2.imageHint}
+                            />
+                        </div>
+                    )}
+                </div>
+            </div>
+        </section>
+
+
+        {/* Testimonials Section */}
+        <section className="relative py-16 md:py-36 bg-background">
+             {testimonialBgImage && (
+                <Image
+                    src={testimonialBgImage.imageUrl}
+                    alt={testimonialBgImage.description}
+                    fill
+                    className="object-cover opacity-10 dark:opacity-5"
+                    data-ai-hint={testimonialBgImage.imageHint}
+                />
+             )}
+            <div className="relative container mx-auto px-4 sm:px-8 md:px-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                     {testimonials.map((item, index) => (
+                        <div key={index} className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-lg p-6">
+                            <p className="text-foreground">"{item.quote}"</p>
+                            <p className="text-muted-foreground text-sm mt-4">- {item.author}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </section>
 
       </main>
