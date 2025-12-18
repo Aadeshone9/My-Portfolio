@@ -1,10 +1,12 @@
 
+'use client';
 import Header from '@/components/Header';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
 import SplitText from '@/components/SplitText';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 
 const testimonials = [
     {
@@ -28,6 +30,13 @@ const testimonials = [
       author: 'Vikram Singh'
     },
   ];
+
+const motionProps = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.5, ease: "easeOut" },
+};
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const heroImage = PlaceHolderImages.find(p => p.id === 'headspace-hero');
@@ -63,7 +72,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide"
                 />
                 {heroImage && (
-                    <div className="relative w-full max-w-4xl mx-auto h-[300px] md:h-[500px] rounded-2xl overflow-hidden mt-12">
+                    <motion.div {...motionProps} className="relative w-full max-w-4xl mx-auto h-[300px] md:h-[500px] rounded-2xl overflow-hidden mt-12">
                     <Image
                         src={heroImage.imageUrl}
                         alt={heroImage.description}
@@ -71,14 +80,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         className="object-contain"
                         data-ai-hint={heroImage.imageHint}
                     />
-                    </div>
+                    </motion.div>
                 )}
             </div>
         </section>
 
         {/* Challenge Section */}
         <section className="py-16 md:py-24 bg-background">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div>
                     <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Challenge</h2>
                     <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
@@ -106,13 +115,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
                 )}
-            </div>
+            </motion.div>
         </section>
 
         {/* Gallery Section */}
         <section className="py-16 md:py-24 bg-background">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <motion.div {...motionProps} className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {galleryImages.map((img, index) => img && (
                     <div key={index} className="relative w-full aspect-square bg-muted rounded-2xl overflow-hidden">
                         <Image
@@ -124,14 +133,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         />
                     </div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
         
         {/* All Articles Section */}
         {articlesImage && (
              <section className="py-16 md:py-24 bg-card">
-                <div className="container mx-auto px-4 sm:px-8 md:px-20 text-center">
+                <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 text-center">
                      <SplitText
                         text="All articles"
                         tag="h2"
@@ -146,13 +155,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                             data-ai-hint={articlesImage.imageHint}
                         />
                     </div>
-                </div>
+                </motion.div>
             </section>
         )}
 
         {/* Result Section */}
         <section className="py-16 md:py-24 bg-background">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+            <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
                 <div>
                     <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Result</h2>
                     <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
@@ -173,12 +182,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         />
                     </div>
                 )}
-            </div>
+            </motion.div>
         </section>
 
         {/* Final Design Section */}
         <section className="py-16 md:py-24 bg-card">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20">
+            <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20">
                 <div className="text-center">
                      <SplitText
                         text="Final design"
@@ -213,12 +222,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         </div>
                     )}
                 </div>
-            </div>
+            </motion.div>
         </section>
         
         {/* Visuals Section */}
         <section className="py-16 md:py-24 bg-background">
-             <div className="container mx-auto px-4 sm:px-8 md:px-20">
+             <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20">
                  <div className="text-center mb-12">
                      <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Visuals</h2>
                       <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mt-4">
@@ -249,12 +258,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         </div>
                     )}
                 </div>
-            </div>
+            </motion.div>
         </section>
 
          {/* Visual Design Language Section */}
         <section className="py-16 md:py-24 bg-card">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                  {vdlImage1 && (
                     <div className="relative w-full h-96 bg-[#F9C900] rounded-2xl overflow-hidden p-8 flex items-center justify-center">
                         <div className="relative w-48 h-80">
@@ -285,7 +294,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         </div>
                     )}
                 </div>
-            </div>
+            </motion.div>
         </section>
 
 
@@ -303,10 +312,17 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <div className="relative container mx-auto px-4 sm:px-8 md:px-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
                      {testimonials.map((item, index) => (
-                        <div key={index} className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-lg p-6">
+                        <motion.div
+                            key={index}
+                            className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-lg p-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                        >
                             <p className="text-foreground">"{item.quote}"</p>
                             <p className="text-muted-foreground text-sm mt-4">- {item.author}</p>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
