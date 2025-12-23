@@ -7,6 +7,13 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
+const motionProps = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.5, ease: "easeOut" },
+};
+
 const testimonials = [
     {
       quote: "It's like having a little pocket of peace with me at all times. I've never felt more centered.",
@@ -29,13 +36,6 @@ const testimonials = [
       author: 'Vikram Singh'
     },
   ];
-
-const motionProps = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.5, ease: "easeOut" },
-};
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const heroImage = PlaceHolderImages.find(p => p.id === 'headspace-hero');
@@ -69,7 +69,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                <SplitText
                 text="Driving Loyalty & Efficiency in EV Mobility with VIDA"
                 tag="h1"
-                className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-center md:text-left max-w-4xl mx-auto md:mx-0 leading-tight md:leading-snug"
+                className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-center md:text-left max-w-4xl mx-auto md:mx-0 leading-[1.1]"
                 textAlign="left"
               />
               <SplitText
@@ -357,8 +357,3 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     </div>
   );
 }
-
-    
-    
-
-    
