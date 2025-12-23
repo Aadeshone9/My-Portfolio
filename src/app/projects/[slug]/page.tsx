@@ -67,9 +67,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="bg-background">
           <motion.div {...motionProps} className="bg-footer text-footer-foreground py-16 md:py-24">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
-              <h1 className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight text-center md:text-left max-w-4xl mx-auto md:mx-0">
-                Driving Loyalty & Efficiency in EV Mobility with VIDA
-              </h1>
+               <SplitText
+                text="Driving Loyalty & Efficiency in EV Mobility with VIDA"
+                tag="h1"
+                className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight text-center md:text-left max-w-4xl mx-auto md:mx-0"
+                textAlign="left"
+              />
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mt-12 max-w-4xl mx-auto md:mx-0">
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-footer-muted-foreground">Project Type</h3>
