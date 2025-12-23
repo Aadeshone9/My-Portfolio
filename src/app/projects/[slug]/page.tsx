@@ -67,9 +67,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="bg-background py-16 md:py-24">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 text-center">
                 <SplitText
-                    text="Headspace"
+                    text="Driving Loyalty & Efficiency in EV Mobility with VIDA"
                     tag="h1"
-                    className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide"
+                    className="font-headline font-semibold text-4xl md:text-6xl lg:text-7xl leading-tight tracking-wide"
                 />
                 {heroImage && (
                     <motion.div {...motionProps} className="relative w-full max-w-4xl mx-auto h-[300px] md:h-[500px] rounded-2xl overflow-hidden mt-12">
