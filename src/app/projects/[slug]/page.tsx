@@ -109,6 +109,16 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
+        {/* Project Focus Section */}
+        <section className="py-16 md:py-24 bg-background">
+            <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20">
+                <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">Project Focus</h2>
+                <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4 max-w-4xl">
+                    End-to-end connected vehicle platform experience for the launch of the Vida EV.
+                </p>
+            </motion.div>
+        </section>
+
         {/* Challenge Section */}
         <section className="py-16 md:py-24 bg-background">
             <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
