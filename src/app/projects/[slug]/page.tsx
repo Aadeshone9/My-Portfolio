@@ -69,7 +69,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <SplitText
                     text="Driving Loyalty & Efficiency in EV Mobility with VIDA"
                     tag="h1"
-                    className="font-headline font-semibold text-4xl md:text-6xl lg:text-7xl leading-tight tracking-wide"
+                    className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide"
+                />
+                 <SplitText
+                    text="Behavioural UX case Study"
+                    tag="p"
+                    className="mt-4 text-lg md:text-xl text-muted-foreground"
                 />
                 {heroImage && (
                     <motion.div {...motionProps} className="relative w-full max-w-4xl mx-auto h-[300px] md:h-[500px] rounded-2xl overflow-hidden mt-12">
@@ -333,3 +338,5 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     </div>
   );
 }
+
+    
