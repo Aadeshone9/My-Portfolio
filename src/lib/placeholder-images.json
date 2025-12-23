@@ -8,9 +8,9 @@
     },
     {
       "id": "headspace-hero",
-      "description": "Person using a mobile app in a car interior.",
-      "imageUrl": "https://images.unsplash.com/photo-1557762043-34e08c37c469?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjYXIlMjBpbnRlcmllciUyMHBob25lfGVufDB8fHx8MTcyODk1MDI5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "car interior phone"
+      "description": "VIDA EV mobile application screenshots",
+      "imageUrl": "https://storage.googleapis.com/aif-starlabs-dev/public/project_images/e8c9a3d1-38e2-4c6e-9311-9a749f96c2a1.png",
+      "imageHint": "mobile app ev"
     },
     {
       "id": "headspace-challenge",
