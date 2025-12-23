@@ -64,7 +64,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       <main>
         {/* Hero Section */}
         <section className="bg-background">
-          <motion.div {...motionProps} className="bg-footer text-footer-foreground py-16 md:py-24">
+          <motion.div {...motionProps} className="bg-footer text-footer-foreground py-24 md:py-32">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
                <SplitText
                 text="Driving Loyalty & Efficiency in EV Mobility with VIDA"
