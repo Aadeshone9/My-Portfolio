@@ -92,6 +92,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   <p className="text-lg mt-2">Product Strategy, UX, Visual design</p>
                 </div>
               </div>
+              <div className='mt-12'>
+                <h2 className="font-headline font-semibold text-xl md:text-2xl text-footer-foreground">Project Focus</h2>
+                <p className="text-footer-muted-foreground text-lg md:text-xl leading-relaxed mt-2 max-w-4xl">
+                    End-to-end connected vehicle platform experience for the launch of the Vida EV.
+                </p>
+            </div>
             </div>
           </motion.div>
           <div className="container mx-auto px-4 sm:px-8 md:px-20 py-8 md:py-12">
@@ -107,16 +113,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </motion.div>
             )}
           </div>
-        </section>
-
-        {/* Project Focus Section */}
-        <section className="py-16 md:py-24 bg-background">
-            <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20">
-                <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">Project Focus</h2>
-                <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4 max-w-4xl">
-                    End-to-end connected vehicle platform experience for the launch of the Vida EV.
-                </p>
-            </motion.div>
         </section>
 
         {/* Challenge Section */}
