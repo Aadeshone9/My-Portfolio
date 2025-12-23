@@ -69,7 +69,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                <SplitText
                 text="Driving Loyalty & Efficiency in EV Mobility with VIDA"
                 tag="h1"
-                className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-center md:text-left max-w-4xl mx-auto md:mx-0 leading-normal"
+                className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-center md:text-left max-w-4xl mx-auto md:mx-0 leading-snug"
                 textAlign="left"
               />
               <SplitText
