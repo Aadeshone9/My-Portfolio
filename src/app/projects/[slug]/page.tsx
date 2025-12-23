@@ -120,10 +120,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     <div className="mt-8">
                         <h3 className="font-headline font-semibold text-2xl text-foreground">My Role</h3>
                         <ul className="list-disc list-inside text-muted-foreground text-lg md:text-xl leading-relaxed mt-4 space-y-2">
-                            <li>Lead UX Researcher</li>
                             <li>User Interview & Synthesis</li>
                             <li>Workshop Facilitation</li>
-                            <li>Design Strategy</li>
+                            <li>Design</li>
+                            <li>Strategy Research</li>
+                            <li>Strategy</li>
+                            <li>Design</li>
+                            <li>Design System</li>
                         </ul>
                     </div>
                 </div>
