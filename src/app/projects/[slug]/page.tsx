@@ -65,7 +65,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       <main>
         {/* Hero Section */}
         <section className="bg-background">
-          <div className="bg-footer text-footer-foreground py-16 md:py-24">
+          <motion.div {...motionProps} className="bg-footer text-footer-foreground py-16 md:py-24">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
               <h1 className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight text-center md:text-left max-w-4xl mx-auto md:mx-0">
                 Driving Loyalty & Efficiency in EV Mobility with VIDA
@@ -85,7 +85,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
           <div className="container mx-auto px-4 sm:px-8 md:px-20 py-8 md:py-12">
             {heroImage && (
                 <motion.div {...motionProps} className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden">
@@ -325,7 +325,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     data-ai-hint={testimonialBgImage.imageHint}
                 />
              )}
-            <div className="relative container mx-auto px-4 sm:px-8 md:px-20">
+            <motion.div {...motionProps} className="relative container mx-auto px-4 sm:px-8 md:px-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
                      {testimonials.map((item, index) => (
                         <motion.div
@@ -341,7 +341,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         </motion.div>
                     ))}
                 </div>
-            </div>
+            </motion.div>
         </section>
 
       </main>
