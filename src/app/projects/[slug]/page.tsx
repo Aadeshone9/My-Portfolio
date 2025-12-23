@@ -77,7 +77,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-footer-muted-foreground">Stage</h3>
-                  <p className="text-lg mt-2">Concept to launch</p>
+                  <p className="text-lg mt-2">Research to Launch</p>
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-footer-muted-foreground">Deliverables</h3>
