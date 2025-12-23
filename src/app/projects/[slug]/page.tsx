@@ -115,7 +115,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <div>
                     <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Challenge</h2>
                     <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
-                    Headspace, the global leader in mindfulness and meditation, had a mission to improve the health and happiness of the world. But with over 70 million users, they faced the challenge of keeping the experience fresh, personal, and engaging. We helped them move beyond a one-size-fits-all approach to a more dynamic and personalized user journey.
+                    Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value.
                     </p>
                     <div className="mt-8">
                         <h3 className="font-headline font-semibold text-2xl text-foreground">My Role</h3>
