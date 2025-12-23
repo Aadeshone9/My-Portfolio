@@ -64,30 +64,41 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="bg-background py-16 md:py-24">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20 text-center">
-                <SplitText
-                    text="Driving Loyalty & Efficiency in EV Mobility with VIDA"
-                    tag="h1"
-                    className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-wide"
-                />
-                 <SplitText
-                    text="Behavioural UX case Study"
-                    tag="p"
-                    className="mt-4 text-lg md:text-xl text-muted-foreground"
-                />
-                {heroImage && (
-                    <motion.div {...motionProps} className="relative w-full max-w-4xl mx-auto h-[300px] md:h-[500px] rounded-2xl overflow-hidden mt-12">
-                    <Image
-                        src={heroImage.imageUrl}
-                        alt={heroImage.description}
-                        fill
-                        className="object-contain"
-                        data-ai-hint={heroImage.imageHint}
-                    />
-                    </motion.div>
-                )}
+        <section className="bg-background">
+          <div className="bg-footer text-footer-foreground py-16 md:py-24">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20">
+              <h1 className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight text-center md:text-left max-w-4xl mx-auto md:mx-0">
+                Driving Loyalty & Efficiency in EV Mobility with VIDA
+              </h1>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mt-12 max-w-4xl mx-auto md:mx-0">
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-footer-muted-foreground">Project Type</h3>
+                  <p className="text-lg mt-2">Behavioural UX case Study</p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-footer-muted-foreground">Stage</h3>
+                  <p className="text-lg mt-2">Concept to launch</p>
+                </div>
+                <div>
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-footer-muted-foreground">Deliverables</h3>
+                  <p className="text-lg mt-2">Product Strategy, UX, Visual design</p>
+                </div>
+              </div>
             </div>
+          </div>
+          <div className="container mx-auto px-4 sm:px-8 md:px-20 py-8 md:py-12">
+            {heroImage && (
+                <motion.div {...motionProps} className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden">
+                <Image
+                    src={heroImage.imageUrl}
+                    alt={heroImage.description}
+                    fill
+                    className="object-cover"
+                    data-ai-hint={heroImage.imageHint}
+                />
+                </motion.div>
+            )}
+          </div>
         </section>
 
         {/* Challenge Section */}
@@ -338,5 +349,3 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     </div>
   );
 }
-
-    
