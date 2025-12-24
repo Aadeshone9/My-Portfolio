@@ -60,7 +60,7 @@ const comingSoonProjects = [
         image: '/google-cloud-logo.svg',
     },
     {
-        title: 'Project Gamma',
+        title: 'Club ITC - ITC In-Hotel Guest Experience',
         description: 'A short description about this upcoming project.',
         role: 'Lead | Individual Contributor',
         image: '/google-cloud-logo.svg',
