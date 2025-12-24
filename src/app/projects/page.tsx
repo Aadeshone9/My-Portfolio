@@ -10,12 +10,6 @@ import Footer from '@/components/Footer';
 
 const projects = [
   {
-    title: 'Google',
-    description: 'Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.',
-    role: 'Lead + Individual Contributor',
-    image: '/google-cloud-logo.svg',
-  },
-  {
     title: 'Thermax Global - Edge Platform',
     description: 'Defined UX improvements that increased error visibility and user adoption by 25%.',
     role: 'Product Designer',
@@ -33,10 +27,16 @@ const projects = [
     role: 'UX Design Consultant',
     image: '/google-cloud-logo.svg',
   },
-    {
-    title: 'Spotify',
-    description: 'Conducted foundational research to inform the strategy for personalized playlists.',
-    role: 'UX Researcher',
+  {
+    title: 'Google Cloud Security',
+    description: 'Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.',
+    role: 'Partner Product & UX Design consultant',
+    image: '/google-cloud-logo.svg',
+  },
+  {
+    title: 'Hero Motocorp Vida App',
+    description: 'End-to-end connected vehicle platform experience for the launch of the Vida EV.',
+    role: 'UX Design Consultant',
     image: '/google-cloud-logo.svg',
   },
   {
