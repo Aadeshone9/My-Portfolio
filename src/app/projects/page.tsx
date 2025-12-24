@@ -22,7 +22,7 @@ const projects = [
     image: '/google-cloud-logo.svg',
   },
   {
-    title: 'Apple',
+    title: 'Maplegeni',
     description: 'A third project description for another great company to showcase skills.',
     role: 'UX/UI Designer',
     image: '/google-cloud-logo.svg',

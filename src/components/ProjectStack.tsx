@@ -15,7 +15,7 @@ const projects = [
     imageBgColor: "bg-muted",
   },
   {
-    title: "Apple",
+    title: "Maplegeni",
     role: "UX/UI Designer",
     description: "A third project description for another great company to showcase skills.",
     bgColor: "bg-background",
