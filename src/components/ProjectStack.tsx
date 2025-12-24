@@ -41,7 +41,7 @@ const projects = [
     description: "End-to-end connected vehicle platform experience for the launch of the Vida EV.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
-    isBigger: true,
+    isBigger: false,
   },
 ];
 
