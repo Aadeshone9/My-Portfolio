@@ -54,7 +54,7 @@ const comingSoonProjects = [
         image: '/google-cloud-logo.svg',
     },
     {
-        title: 'Project Beta',
+        title: 'SKoda Automobiles India Website Revamp',
         description: 'A short description about this upcoming project.',
         role: 'Lead | Individual Contributor',
         image: '/google-cloud-logo.svg',
