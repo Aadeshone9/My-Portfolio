@@ -39,6 +39,12 @@ const projects = [
     role: 'Partner Product & UX Design consultant | Co-Designer',
     image: '/google-cloud-logo.svg',
   },
+  {
+    title: 'Dummy Security Project',
+    description: 'This is a placeholder description for a duplicated project, showcasing a similar achievement in efficiency and user satisfaction.',
+    role: 'UX Design Consultant | Co-Designer',
+    image: '/google-cloud-logo.svg',
+  },
 ];
 
 const comingSoonProjects = [
