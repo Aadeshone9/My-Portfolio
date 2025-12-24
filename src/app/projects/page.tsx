@@ -110,7 +110,7 @@ export default function ProjectsPage() {
         </div>
 
         <div className='my-24'>
-            <h2 className="font-headline font-semibold text-3xl md:text-5xl text-center text-foreground">New Projects On the way, stay Tuned!</h2>
+            <h2 className="font-headline font-semibold text-3xl md:text-5xl text-center text-foreground">stay tuned for new Projects</h2>
             <div className="mt-12 flex overflow-x-auto gap-8 pb-8">
                 {comingSoonProjects.map((project, index) => (
                     <div key={index} className="flex-shrink-0 w-[80vw] md:w-[40vw] lg:w-[30vw]">
