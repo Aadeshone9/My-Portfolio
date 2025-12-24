@@ -28,7 +28,7 @@ const projects = [
     image: '/google-cloud-logo.svg',
   },
   {
-    title: 'Netflix',
+    title: 'Mahindra Finance',
     description: 'Redesigned the content discovery experience, improving user engagement metrics.',
     role: 'Interaction Designer',
     image: '/google-cloud-logo.svg',

@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -21,7 +22,7 @@ const projects = [
     imageBgColor: "bg-muted",
   },
   {
-    title: "Netflix",
+    title: "Mahindra Finance",
     role: "Interaction Designer",
     description: "Redesigned the content discovery experience, improving user engagement metrics.",
     bgColor: "bg-background",
