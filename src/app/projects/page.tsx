@@ -10,37 +10,31 @@ import Footer from '@/components/Footer';
 const projects = [
   {
     title: 'Hero Motocorp Vida App',
-    description: 'End-to-end connected vehicle platform experience for the launch of the Vida EV.',
     role: 'UX Design Consultant | Co-Designer',
     image: '/google-cloud-logo.svg',
   },
   {
     title: 'Thermax Global - Edge Platform',
-    description: 'Defined UX improvements that increased error visibility and user adoption by 25%.',
     role: 'UX Design Consultant | Co-Designer',
     image: '/google-cloud-logo.svg',
   },
   {
     title: 'Maplegeni',
-    description: 'Led B2C website product design, boosting mobile-first engagement by 35%.',
     role: 'Product Designer | Co-Designer',
     image: '/google-cloud-logo.svg',
   },
   {
     title: 'Mahindra Finance',
-    description: 'Increased customer retention by 30% and cross-selling by 25% by integrating "Design for Trust and Growth" principles.',
     role: 'UX Design Consultant | Co-Designer',
     image: '/google-cloud-logo.svg',
   },
   {
     title: 'Google Cloud Security',
-    description: 'Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.',
     role: 'Partner Product & UX Design consultant | Co-Designer',
     image: '/google-cloud-logo.svg',
   },
   {
     title: 'JIO Reliance',
-    description: 'Unified design processes for 300+ designers, achieving a 50% increase in design iteration speed.',
     role: 'UX Design Consultant | Co-Designer',
     image: '/google-cloud-logo.svg',
   },
@@ -49,25 +43,21 @@ const projects = [
 const comingSoonProjects = [
     {
         title: 'ITC Hotels LTD Website Revamp',
-        description: 'A short description about this upcoming project.',
         role: 'Lead | Individual Contributor',
         image: '/google-cloud-logo.svg',
     },
     {
         title: 'SKoda Automobiles India Website Revamp',
-        description: 'A short description about this upcoming project.',
         role: 'Lead | Individual Contributor',
         image: '/google-cloud-logo.svg',
     },
     {
         title: 'Club ITC - ITC In-Hotel Guest Experience',
-        description: 'A short description about this upcoming project.',
         role: 'Lead | Individual Contributor',
         image: '/google-cloud-logo.svg',
     },
     {
         title: 'MyIFB App',
-        description: 'A short description about this upcoming project.',
         role: 'Lead | Individual Contributor',
         image: '/google-cloud-logo.svg',
     },

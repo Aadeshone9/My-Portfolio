@@ -5,7 +5,7 @@ import PillButton from './PillButton';
 
 type ProjectPageCardProps = {
   title: string;
-  description: string;
+  description?: string;
   role: string;
   image?: string;
   comingSoon?: boolean;
@@ -20,7 +20,7 @@ export default function ProjectPageCard({ title, description, role, image, comin
         </div>
         <div className="mt-6">
           <h3 className="font-headline font-semibold text-xl text-foreground">{title}</h3>
-          <p className="text-muted-foreground mt-2 text-base">{description}</p>
+          {description && <p className="text-muted-foreground mt-2 text-base">{description}</p>}
           <p className="text-sm text-muted-foreground mt-4">{role}</p>
         </div>
       </div>
