@@ -35,7 +35,7 @@ const projects = [
     imageBgColor: "bg-muted",
   },
   {
-    title: "Spotify",
+    title: "Hero Motocorp Vida App",
     role: "UX Researcher",
     description: "Conducted foundational research to inform the strategy for personalized playlists.",
     bgColor: "bg-background",
@@ -83,7 +83,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                     </PillButton>
                 ) : (
                     <PillButton 
-                      href={project.title === 'Spotify' ? '/projects/spotify' : '#'}
+                      href={project.title === 'Hero Motocorp Vida App' ? '/projects/vida-app' : '#'}
                       className="group"
                     >
                         <span className="group-hover:font-semibold">View project</span>
