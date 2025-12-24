@@ -50,37 +50,37 @@ const comingSoonProjects = [
     {
         title: 'Project Alpha',
         description: 'A short description about this upcoming project.',
-        role: 'UX/UI Designer',
+        role: 'Lead | Individual Contributor',
         image: '/google-cloud-logo.svg',
     },
     {
         title: 'Project Beta',
         description: 'A short description about this upcoming project.',
-        role: 'Product Designer',
+        role: 'Lead | Individual Contributor',
         image: '/google-cloud-logo.svg',
     },
     {
         title: 'Project Gamma',
         description: 'A short description about this upcoming project.',
-        role: 'UX Consultant',
+        role: 'Lead | Individual Contributor',
         image: '/google-cloud-logo.svg',
     },
     {
         title: 'Project Delta',
         description: 'A short description about this upcoming project.',
-        role: 'UX/UI Designer',
+        role: 'Lead | Individual Contributor',
         image: '/google-cloud-logo.svg',
     },
     {
         title: 'Project Epsilon',
         description: 'A short description about this upcoming project.',
-        role: 'Product Designer',
+        role: 'Lead | Individual Contributor',
         image: '/google-cloud-logo.svg',
     },
     {
         title: 'Project Zeta',
         description: 'A short description about this upcoming project.',
-        role: 'UX Consultant',
+        role: 'Lead | Individual Contributor',
         image: '/google-cloud-logo.svg',
     },
 ]
