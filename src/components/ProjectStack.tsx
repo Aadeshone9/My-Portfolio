@@ -37,7 +37,7 @@ const projects = [
   {
     title: "Hero Motocorp Vida App",
     role: "UX Design Consultant",
-    description: "Conducted foundational research to inform the strategy for personalized playlists.",
+    description: "End-to-end connected vehicle platform experience for the launch of the Vida EV.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
   },
