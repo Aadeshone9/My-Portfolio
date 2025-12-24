@@ -41,7 +41,7 @@ const projects = [
   },
   {
     title: 'JIO Reliance',
-    description: 'This is a placeholder description for a duplicated project, showcasing a similar achievement in efficiency and user satisfaction.',
+    description: 'Unified design processes for 300+ designers, achieving a 50% increase in design iteration speed.',
     role: 'UX Design Consultant | Co-Designer',
     image: '/google-cloud-logo.svg',
   },
