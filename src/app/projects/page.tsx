@@ -1,5 +1,4 @@
 
-
 import Header from '@/components/Header';
 import PillButton from '@/components/PillButton';
 import ProjectPageCard from '@/components/ProjectPageCard';
@@ -115,7 +114,7 @@ export default function ProjectsPage() {
             <div className="mt-12 flex overflow-x-auto gap-8 pb-8">
                 {comingSoonProjects.map((project, index) => (
                     <div key={index} className="flex-shrink-0 w-[80vw] md:w-[40vw] lg:w-[30vw]">
-                        <ProjectPageCard {...project} />
+                        <ProjectPageCard {...project} comingSoon={true} />
                     </div>
                 ))}
             </div>
