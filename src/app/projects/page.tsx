@@ -48,7 +48,7 @@ const projects = [
 
 const comingSoonProjects = [
     {
-        title: 'Project Alpha',
+        title: 'ITC Hotels LTD Website Revamp',
         description: 'A short description about this upcoming project.',
         role: 'Lead | Individual Contributor',
         image: '/google-cloud-logo.svg',
