@@ -24,7 +24,7 @@ const projects = [
   {
     title: "Mahindra Finance",
     role: "Interaction Designer",
-    description: "Redesigned the content discovery experience, improving user engagement metrics.",
+    description: "Increased customer retention by 30% and cross-selling by 25% by integrating \"Design for Trust and Growth\" principles.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
   },

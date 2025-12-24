@@ -29,7 +29,7 @@ const projects = [
   },
   {
     title: 'Mahindra Finance',
-    description: 'Redesigned the content discovery experience, improving user engagement metrics.',
+    description: 'Increased customer retention by 30% and cross-selling by 25% by integrating "Design for Trust and Growth" principles.',
     role: 'Interaction Designer',
     image: '/google-cloud-logo.svg',
   },
