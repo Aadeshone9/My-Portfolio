@@ -16,8 +16,8 @@ const projects = [
     image: '/google-cloud-logo.svg',
   },
   {
-    title: 'Microsoft',
-    description: 'Another project description detailing the work done and technologies used.',
+    title: 'Thermax Edge Ticketing Platform',
+    description: 'Defined UX improvements that increased error visibility and user adoption by 25%.',
     role: 'Product Designer',
     image: '/google-cloud-logo.svg',
   },

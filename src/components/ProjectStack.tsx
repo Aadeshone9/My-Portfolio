@@ -8,9 +8,9 @@ import PillButton from "./PillButton";
 
 const projects = [
   {
-    title: "Microsoft",
+    title: "Thermax Edge Ticketing Platform",
     role: "Product Designer",
-    description: "Another project description detailing the work done and technologies used.",
+    description: "Defined UX improvements that increased error visibility and user adoption by 25%.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
   },
