@@ -7,16 +7,16 @@ import PillButton from "./PillButton";
 
 const projects = [
   {
-    title: "Google Cloud Security",
-    role: "Partner Product & UX Design consultant",
-    description: "Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.",
+    title: "Microsoft",
+    role: "Product Designer",
+    description: "Another project description detailing the work done and technologies used.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
   },
   {
-    title: "Microsoft",
-    role: "Product Designer",
-    description: "Another project description detailing the work done and technologies used.",
+    title: "Google Cloud Security",
+    role: "Partner Product & UX Design consultant",
+    description: "Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
   },
@@ -57,7 +57,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
       >
         <Card className={`p-6 ${project.bgColor} border-border rounded-2xl w-full mx-auto`}>
           <div className={`${project.imageBgColor} w-full h-64 md:h-96 rounded-lg flex items-center justify-center`}>
-            {i === 0 && (
+            {project.title === 'Google Cloud Security' && (
               <svg width="100" height="100" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[70px] h-[70px] md:w-[140px] md:h-[140px]">
                   <path d="M49.2599 23.6001C49.2599 21.6801 49.0999 19.8801 48.7599 18.1401H25.0001V28.3201H38.7999C38.2199 31.4201 36.6199 33.9601 34.0599 35.6801V42.5001H42.0299C46.5199 38.3401 49.2599 31.6401 49.2599 23.6001Z" fill="#1976D2"/>
                   <path d="M25.0001 49.9998C31.9201 49.9998 37.7601 47.6798 42.0299 42.4998L34.0601 35.6798C31.7801 37.2198 28.6601 38.1398 25.0001 38.1398C18.4201 38.1398 12.8601 33.7998 11.0201 27.9998H2.78003V34.9998C7.02003 44.0198 15.3601 49.9998 25.0001 49.9998Z" fill="#4CAF50"/>
@@ -73,7 +73,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                   {project.description}
               </CardDescription>
               <div className="flex items-center gap-2 mt-4">
-                {i === 0 ? (
+                {project.title === 'Google Cloud Security' ? (
                     <PillButton 
                       href="#"
                       className="group"
