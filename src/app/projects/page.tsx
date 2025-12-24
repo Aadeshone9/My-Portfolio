@@ -16,7 +16,7 @@ const projects = [
     image: '/google-cloud-logo.svg',
   },
   {
-    title: 'Thermax Edge Ticketing Platform',
+    title: 'Thermax Global - Edge Platform',
     description: 'Defined UX improvements that increased error visibility and user adoption by 25%.',
     role: 'Product Designer',
     image: '/google-cloud-logo.svg',
