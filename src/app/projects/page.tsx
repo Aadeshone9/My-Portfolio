@@ -44,12 +44,21 @@ const projects = [
 const comingSoonProjects = [
     {
         title: 'Project Alpha',
+        description: 'A short description about this upcoming project.',
+        role: 'UX/UI Designer',
+        image: '/google-cloud-logo.svg',
     },
     {
         title: 'Project Beta',
+        description: 'A short description about this upcoming project.',
+        role: 'Product Designer',
+        image: '/google-cloud-logo.svg',
     },
     {
         title: 'Project Gamma',
+        description: 'A short description about this upcoming project.',
+        role: 'UX Consultant',
+        image: '/google-cloud-logo.svg',
     },
 ]
 
@@ -79,11 +88,9 @@ export default function ProjectsPage() {
 
         <div className='my-24'>
             <h2 className="font-headline font-semibold text-3xl md:text-5xl text-center text-foreground">New Projects On the way, stay Tuned!</h2>
-            <div className="mt-12 flex flex-col md:flex-row gap-8 overflow-x-auto">
+            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {comingSoonProjects.map((project, index) => (
-                    <div key={index} className="flex-shrink-0 w-full md:w-[577px]">
-                         <ProjectPageCard title={project.title} description='' role='' image='' comingSoon />
-                    </div>
+                    <ProjectPageCard key={index} {...project} />
                 ))}
             </div>
         </div>
