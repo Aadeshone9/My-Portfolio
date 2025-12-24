@@ -66,18 +66,6 @@ const comingSoonProjects = [
         image: '/google-cloud-logo.svg',
     },
     {
-        title: 'Project Delta',
-        description: 'A short description about this upcoming project.',
-        role: 'Lead | Individual Contributor',
-        image: '/google-cloud-logo.svg',
-    },
-    {
-        title: 'Project Epsilon',
-        description: 'A short description about this upcoming project.',
-        role: 'Lead | Individual Contributor',
-        image: '/google-cloud-logo.svg',
-    },
-    {
         title: 'MyIFB App',
         description: 'A short description about this upcoming project.',
         role: 'Lead | Individual Contributor',
