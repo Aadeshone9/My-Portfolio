@@ -36,7 +36,7 @@ const projects = [
   },
   {
     title: "Hero Motocorp Vida App",
-    role: "UX Researcher",
+    role: "UX Design Consultant",
     description: "Conducted foundational research to inform the strategy for personalized playlists.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
