@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Maplegeni",
     role: "Product Designer",
-    description: "A third project description for another great company to showcase skills.",
+    description: "Led B2C website product design, boosting mobile-first engagement by 35%.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
   },

@@ -23,7 +23,7 @@ const projects = [
   },
   {
     title: 'Maplegeni',
-    description: 'A third project description for another great company to showcase skills.',
+    description: 'Led B2C website product design, boosting mobile-first engagement by 35%.',
     role: 'Product Designer',
     image: '/google-cloud-logo.svg',
   },
