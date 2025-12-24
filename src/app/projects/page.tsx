@@ -18,7 +18,7 @@ const projects = [
   {
     title: 'Thermax Global - Edge Platform',
     description: 'Defined UX improvements that increased error visibility and user adoption by 25%.',
-    role: 'Product Designer',
+    role: 'UX Design Consultant',
     image: '/google-cloud-logo.svg',
   },
   {
@@ -37,12 +37,6 @@ const projects = [
     title: 'Google Cloud Security',
     description: 'Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.',
     role: 'Partner Product & UX Design consultant',
-    image: '/google-cloud-logo.svg',
-  },
-  {
-    title: 'Another Company',
-    description: 'Conducted foundational research to inform the strategy for personalized playlists.',
-    role: 'UX Researcher',
     image: '/google-cloud-logo.svg',
   },
 ];

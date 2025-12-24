@@ -9,7 +9,7 @@ import PillButton from "./PillButton";
 const projects = [
   {
     title: "Thermax Global - Edge Platform",
-    role: "Product Designer",
+    role: "UX Design Consultant",
     description: "Defined UX improvements that increased error visibility and user adoption by 25%.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
