@@ -14,13 +14,6 @@ const projects = [
     imageBgColor: "bg-muted",
   },
   {
-    title: "Google Cloud Security",
-    role: "Partner Product & UX Design consultant",
-    description: "Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.",
-    bgColor: "bg-background",
-    imageBgColor: "bg-muted",
-  },
-  {
     title: "Apple",
     role: "UX/UI Designer",
     description: "A third project description for another great company to showcase skills.",
@@ -31,6 +24,13 @@ const projects = [
     title: "Netflix",
     role: "Interaction Designer",
     description: "Redesigned the content discovery experience, improving user engagement metrics.",
+    bgColor: "bg-background",
+    imageBgColor: "bg-muted",
+  },
+  {
+    title: "Google Cloud Security",
+    role: "Partner Product & UX Design consultant",
+    description: "Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
   },
