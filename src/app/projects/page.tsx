@@ -60,6 +60,18 @@ const comingSoonProjects = [
         role: 'UX Consultant',
         image: '/google-cloud-logo.svg',
     },
+    {
+        title: 'Project Delta',
+        description: 'A short description about this upcoming project.',
+        role: 'UX/UI Designer',
+        image: '/google-cloud-logo.svg',
+    },
+    {
+        title: 'Project Epsilon',
+        description: 'A short description about this upcoming project.',
+        role: 'Product Designer',
+        image: '/google-cloud-logo.svg',
+    },
 ]
 
 export default function ProjectsPage() {
