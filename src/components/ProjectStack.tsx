@@ -16,7 +16,7 @@ const projects = [
   },
   {
     title: "Maplegeni",
-    role: "UX/UI Designer",
+    role: "Product Designer",
     description: "A third project description for another great company to showcase skills.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",

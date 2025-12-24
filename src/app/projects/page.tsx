@@ -24,7 +24,7 @@ const projects = [
   {
     title: 'Maplegeni',
     description: 'A third project description for another great company to showcase skills.',
-    role: 'UX/UI Designer',
+    role: 'Product Designer',
     image: '/google-cloud-logo.svg',
   },
   {
