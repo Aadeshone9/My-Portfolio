@@ -3,91 +3,91 @@
     {
       "id": "hero-image",
       "description": "Abstract hero image for portfolio",
-      "imageUrl": "https://images.unsplash.com/photo-1684158100445-8e6926faf964?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGxpbmVzfGVufDB8fHx8MTc2NTY0NzQxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/hero-image.jpg",
       "imageHint": "abstract lines"
     },
     {
       "id": "headspace-hero",
       "description": "VIDA EV mobile application screenshots",
-      "imageUrl": "https://storage.googleapis.com/aif-starlabs-dev/public/project_images/916d7a48-8f0a-429d-b40f-9022e3995873.png",
+      "imageUrl": "/images/vida-ev-hero.png",
       "imageHint": "mobile app ev"
     },
     {
       "id": "headspace-challenge",
-      "description": "Woman lying on a rooftop with a laptop showing a website homepage with the text 'It's time to be kind to your mind'.",
-      "imageUrl": "https://images.unsplash.com/photo-1727132527785-8723dd852a84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxsYXB0b3AlMjBsaWZlc3R5bGV8ZW58MHx8fHwxNzY1OTQ5MTk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "Woman lying on a rooftop with a laptop",
+      "imageUrl": "/images/laptop-lifestyle.jpg",
       "imageHint": "laptop lifestyle"
     },
     {
       "id": "headspace-gallery-1",
-      "description": "App screen with a cartoon illustration of a bear-like creature in a dark UI, with a play button.",
-      "imageUrl": "https://images.unsplash.com/photo-1752055340594-4eb0eda11a64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhcHAlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzY1OTgzNTUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "App screen with a cartoon illustration",
+      "imageUrl": "/images/app-interface-1.jpg",
       "imageHint": "app interface"
     },
     {
       "id": "headspace-gallery-2",
-      "description": "A person's legs and running shoes, with colorful geometric shapes overlaid, suggesting activity and movement.",
-      "imageUrl": "https://images.unsplash.com/photo-1571008887538-b36bb32f4571?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxydW5uaW5nJTIwc2hvZXN8ZW58MHx8fHwxNzY1OTYyODg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A person's legs and running shoes",
+      "imageUrl": "/images/running-shoes.jpg",
       "imageHint": "running shoes"
     },
     {
       "id": "headspace-gallery-3",
-      "description": "App notification overlay on a close-up of a carton of eggs.",
-      "imageUrl": "https://images.unsplash.com/photo-1764744380393-765a33f792d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhcHAlMjBub3RpZmljYXRpb258ZW58MHx8fHwxNzY1OTQ5MTk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "App notification overlay",
+      "imageUrl": "/images/app-notification.jpg",
       "imageHint": "app notification"
     },
     {
       "id": "headspace-articles",
-      "description": "A collage of various app screens showing different articles and content layouts.",
-      "imageUrl": "https://images.unsplash.com/photo-1570894808314-677b57f25e45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YXBwJTIwc2NyZWVuc3xlbnwwfHx8fDE3NjU5NDgyOTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A collage of various app screens",
+      "imageUrl": "/images/app-screens-collage.jpg",
       "imageHint": "app screens"
     },
     {
       "id": "headspace-result-face",
-      "description": "A simple yellow circle with a content smile on a bright blue background.",
-      "imageUrl": "https://images.unsplash.com/photo-1624887009213-040347b804c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzbWlsZXklMjBmYWNlfGVufDB8fHx8MTc2NTk0OTE5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A simple yellow smiley face",
+      "imageUrl": "/images/smiley-face.jpg",
       "imageHint": "smiley face"
     },
     {
       "id": "headspace-final-design-1",
-      "description": "A smartphone screen showing a menu with items like 'Meditation', 'Sleep', 'Move', 'Focus'.",
-      "imageUrl": "https://images.unsplash.com/photo-1634964485521-27c4276c10ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhcHAlMjBtZW51fGVufDB8fHx8MTc2NTk0OTE5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A smartphone screen showing a menu",
+      "imageUrl": "/images/app-menu.jpg",
       "imageHint": "app menu"
     },
     {
       "id": "headspace-final-design-2",
-      "description": "An illustration of a yellow character in a blue bowl, resembling a duck.",
-      "imageUrl": "https://images.unsplash.com/photo-1695173184180-6e3919fde201?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2hhcmFjdGVyJTIwaWxsdXN0cmF0aW9ufGVufDB8fHx8MTc2NjAzMjAwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "An illustration of a yellow character",
+      "imageUrl": "/images/character-illustration.jpg",
       "imageHint": "character illustration"
     },
     {
       "id": "headspace-visual-1",
-      "description": "A laptop screen showing a user profile page, held against a blue sky.",
-      "imageUrl": "https://images.unsplash.com/photo-1743548043284-d75e2a3a2a3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsYXB0b3AlMjBwcm9maWxlfGVufDB8fHx8MTc2NTk0OTE5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A laptop screen showing a user profile page",
+      "imageUrl": "/images/laptop-profile.jpg",
       "imageHint": "laptop profile"
     },
     {
       "id": "headspace-visual-2",
-      "description": "A hand holding a smartphone, displaying a music or meditation app interface.",
-      "imageUrl": "https://images.unsplash.com/photo-1627542557169-5ed71c66ed85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaG9uZSUyMHNjcmVlbnxlbnwwfHx8fDE3NjU5ODQ3ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A hand holding a smartphone",
+      "imageUrl": "/images/phone-screen.jpg",
       "imageHint": "phone screen"
     },
     {
       "id": "headspace-vdl-1",
-      "description": "App UI for a timer on a bright yellow background.",
-      "imageUrl": "https://images.unsplash.com/photo-1750045144291-b4beb519d660?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhcHAlMjB0aW1lcnxlbnwwfHx8fDE3NjU5NDkxOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "App UI for a timer",
+      "imageUrl": "/images/app-timer.jpg",
       "imageHint": "app timer"
     },
     {
       "id": "headspace-vdl-2",
-      "description": "UI component showing a color picker with an orange block and hex codes.",
-      "imageUrl": "https://images.unsplash.com/photo-1600869009101-653092676c4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2xvciUyMHBpY2tlcnxlbnwwfHx8fDE3NjU5NDkxOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "UI component showing a color picker",
+      "imageUrl": "/images/color-picker.jpg",
       "imageHint": "color picker"
     },
     {
       "id": "headspace-testimonial-bg",
-      "description": "A black and white portrait of a woman's face, looking at the camera.",
-      "imageUrl": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NjAxMjI0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A black and white portrait of a woman's face",
+      "imageUrl": "/images/woman-portrait.jpg",
       "imageHint": "woman portrait"
     }
   ]
