@@ -58,14 +58,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
       >
         <Card className={`${project.bgColor} border-border rounded-2xl w-full h-full mx-auto flex flex-col overflow-hidden`}>
           <div className={`relative ${project.imageBgColor} w-full h-full rounded-lg flex items-center justify-center`}>
-            {project.title === 'Google Cloud Security' ? (
-              <svg width="100" height="100" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[70px] h-[70px] md:w-[140px] md:h-[140px]">
-                  <path d="M49.2599 23.6001C49.2599 21.6801 49.0999 19.8801 48.7599 18.1401H25.0001V28.3201H38.7999C38.2199 31.4201 36.6199 33.9601 34.0599 35.6801V42.5001H42.0299C46.5199 38.3401 49.2599 31.6401 49.2599 23.6001Z" fill="#1976D2"/>
-                  <path d="M25.0001 49.9998C31.9201 49.9998 37.7601 47.6798 42.0299 42.4998L34.0601 35.6798C31.7801 37.2198 28.6601 38.1398 25.0001 38.1398C18.4201 38.1398 12.8601 33.7998 11.0201 27.9998H2.78003V34.9998C7.02003 44.0198 15.3601 49.9998 25.0001 49.9998Z" fill="#4CAF50"/>
-                  <path d="M11.0199 28.0001C10.5199 26.5401 10.26 24.9801 10.26 23.3401C10.26 21.7001 10.52 20.1401 11.0199 18.6801V11.6801H2.78003C0.980029 15.3401 0 19.1801 0 23.3401C0 27.5001 0.980029 31.3401 2.78003 35.0001L11.0199 28.0001Z" fill="#FFC107"/>
-                  <path d="M25.0001 10.86C28.1601 10.86 30.9201 11.94 33.2801 14.16L42.2201 5.22C37.7601 1.98 31.9201 0 25.0001 0C15.3601 0 7.02003 5.98 2.78003 15L11.0201 22C12.8601 16.2 18.4201 10.86 25.0001 10.86Z" fill="#FF3D00"/>
-              </svg>
-            ) : project.title === 'Hero Motocorp Vida App' ? (
+            {project.title === 'Hero Motocorp Vida App' ? (
                 <svg width="232" height="40" viewBox="0 0 232 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[150px] h-auto md:w-[232px]">
                     <path d="M0 40V0H9.33333V40H0Z" fill="#F36F2D"/>
                     <path d="M26.6667 40V0H36V40H26.6667Z" fill="#231F20"/>
