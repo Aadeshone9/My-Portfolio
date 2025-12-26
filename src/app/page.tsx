@@ -50,7 +50,7 @@ export default function Home() {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div className="flex-1">
+                <div className="flex-1 flex flex-col">
                 <SplitText
                   text="/Recent Projects"
                   tag="h2"

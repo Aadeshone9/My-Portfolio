@@ -54,9 +54,9 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
           scale,
           top: `calc(-5vh + ${i * 25}px)`
         }} 
-        className={`relative w-[90%] md:w-[70%] lg:w-[55%] transform-gpu`}
+        className={`relative h-[80vh] w-[90vw] md:w-auto md:h-[70vh] aspect-square transform-gpu`}
       >
-        <Card className={`p-6 ${project.bgColor} border-border rounded-2xl w-full mx-auto`}>
+        <Card className={`p-6 ${project.bgColor} border-border rounded-2xl w-full h-full mx-auto flex flex-col`}>
           <div className={`${project.imageBgColor} w-full aspect-square rounded-lg flex items-center justify-center`}>
             {project.title === 'Google Cloud Security' && (
               <svg width="100" height="100" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-[70px] h-[70px] md:w-[140px] md:h-[140px]">
