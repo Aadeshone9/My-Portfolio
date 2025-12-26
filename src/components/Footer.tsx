@@ -18,8 +18,7 @@ export default function Footer() {
             </div>
             <div className="p-2.5">
               <div className="font-headline font-semibold text-5xl sm:text-7xl md:text-9xl lg:text-[160px] leading-[0.8] tracking-tighter flex flex-col gap-6">
-                <span>Aadesh.</span>
-                <span>one9.com</span>
+                <span>Aadeshone9.com</span>
               </div>
             </div>
           </div>
