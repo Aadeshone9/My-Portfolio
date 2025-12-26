@@ -40,7 +40,7 @@ const DevNoticeBanner = () => {
         >
           <div className="bg-card border border-border shadow-2xl rounded-lg p-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <p className="text-sm text-foreground flex-grow">
-              This website is under development. Soon all the projects and data will be updated.
+              This portfolio is a living showcase of my work and is actively being updated with my latest projects. Thanks for visiting!
             </p>
             <Button onClick={handleAccept} size="sm" className="flex-shrink-0 w-full sm:w-auto">
               Got it
