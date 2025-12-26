@@ -12,7 +12,7 @@ import PillButton from '@/components/PillButton';
 import Footer from '@/components/Footer';
 
 export default function Home() {
-  const mainImage = PlaceHolderImages[0];
+  const mainImage = PlaceHolderImages.find(p => p.id === 'hero-image');
   return (
     <div className="bg-background">
       <Header />
@@ -50,7 +50,7 @@ export default function Home() {
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div>
+                <div className="flex-1">
                 <SplitText
                   text="/Recent Projects"
                   tag="h2"
