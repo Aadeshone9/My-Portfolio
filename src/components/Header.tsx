@@ -52,7 +52,7 @@ export default function Header() {
       >
         <div className="container mx-auto flex h-[51px] items-center justify-between py-[13px] px-4 md:px-8">
           <Link href="/" className="font-headline font-semibold text-lg text-foreground">
-            Aadesh.one9.com
+            Aadeshone9.com
           </Link>
           <div className="hidden md:flex items-center gap-2">
             <PillNav items={navItems} activeHref={pathname} />
