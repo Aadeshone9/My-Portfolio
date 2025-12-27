@@ -4,39 +4,37 @@ import PillButton from '@/components/PillButton';
 import ProjectPageCard from '@/components/ProjectPageCard';
 import SpotlightCard from '@/components/SpotlightCard';
 import SplitText from '@/components/SplitText';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Lock } from 'lucide-react';
 import Footer from '@/components/Footer';
 
 const projects = [
   {
     title: 'Hero Motocorp Vida App',
     role: 'UX Design Consultant | Co-Designer',
-    image: '/google-cloud-logo.svg',
   },
   {
     title: 'Thermax - Edge Platform',
     role: 'UX Researcher and strategist',
-    image: '/google-cloud-logo.svg',
   },
   {
     title: 'Maplegeni',
     role: 'Product Designer | Co-Designer',
-    image: '/google-cloud-logo.svg',
   },
   {
     title: 'Mahindra Finance',
     role: 'UX Design Consultant | Co-Designer',
-    image: '/google-cloud-logo.svg',
   },
   {
     title: 'Google Cloud Security',
     role: 'Partner Product & UX Design consultant | Co-Designer',
-    image: '/google-cloud-logo.svg',
   },
   {
     title: 'JIO Reliance',
     role: 'UX Design Consultant | Co-Designer',
-    image: '/google-cloud-logo.svg',
+  },
+  {
+    title: 'New Project',
+    role: 'Product Designer',
   },
 ];
 
@@ -44,22 +42,18 @@ const comingSoonProjects = [
     {
         title: 'ITC Hotels LTD Website Revamp',
         role: 'Lead | Individual Contributor',
-        image: '/google-cloud-logo.svg',
     },
     {
         title: 'SKoda Automobiles India Website Revamp',
         role: 'Lead | Individual Contributor',
-        image: '/google-cloud-logo.svg',
     },
     {
         title: 'Club ITC - ITC In-Hotel Guest Experience',
         role: 'Lead | Individual Contributor',
-        image: '/google-cloud-logo.svg',
     },
     {
         title: 'MyIFB App',
         role: 'Lead | Individual Contributor',
-        image: '/google-cloud-logo.svg',
     },
 ]
 
