@@ -33,7 +33,7 @@ const projects = [
     role: 'UX Design Consultant | Co-Designer',
   },
   {
-    title: 'General Motors Enterprise Security Restrictions For Mobile Devices',
+    title: 'General Motors - Enterprise Security Restriction For Mobile Devices',
     role: 'UX Design Consultant | Individual Contributor',
   },
 ];
