@@ -8,27 +8,10 @@ import { ArrowRight } from 'lucide-react';
 import PillButton from '@/components/PillButton';
 
 const colors = [
-    { name: 'Background', variable: '--background', className: 'bg-background' },
-    { name: 'Foreground', variable: '--foreground', className: 'bg-foreground' },
-    { name: 'Card', variable: '--card', className: 'bg-card' },
-    { name: 'Card Foreground', variable: '--card-foreground', className: 'bg-card-foreground' },
-    { name: 'Popover', variable: '--popover', className: 'bg-popover' },
-    { name: 'Popover Foreground', variable: '--popover-foreground', className: 'bg-popover-foreground' },
     { name: 'Primary', variable: '--primary', className: 'bg-primary' },
     { name: 'Primary Foreground', variable: '--primary-foreground', className: 'bg-primary-foreground' },
     { name: 'Secondary', variable: '--secondary', className: 'bg-secondary' },
     { name: 'Secondary Foreground', variable: '--secondary-foreground', className: 'bg-secondary-foreground' },
-    { name: 'Muted', variable: '--muted', className: 'bg-muted' },
-    { name: 'Muted Foreground', variable: '--muted-foreground', className: 'bg-muted-foreground' },
-    { name: 'Accent', variable: '--accent', className: 'bg-accent' },
-    { name: 'Accent Foreground', variable: '--accent-foreground', className: 'bg-accent-foreground' },
-    { name: 'Destructive', variable: '--destructive', className: 'bg-destructive' },
-    { name: 'Destructive Foreground', variable: '--destructive-foreground', className: 'bg-destructive-foreground' },
-    { name: 'Border', variable: '--border', className: 'bg-border' },
-    { name: 'Input', variable: '--input', className: 'bg-input' },
-    { name: 'Ring', variable: '--ring', className: 'bg-ring' },
-    { name: 'Footer', variable: '--footer', className: 'bg-footer' },
-    { name: 'Footer Foreground', variable: '--footer-foreground', className: 'bg-footer-foreground' },
 ];
 
 const typography = [
@@ -57,15 +40,19 @@ export default function DesignSystemPage() {
 
         <section className="mt-16">
           <h2 className="font-headline text-3xl md:text-4xl font-semibold mb-8">Colors</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="flex flex-wrap gap-8">
             {colors.map(color => (
-              <Card key={color.name} className="overflow-hidden">
-                <div className={`${color.className} h-24 w-full border-b`}></div>
-                <CardContent className="p-4">
+              <div key={color.name} className="flex flex-col items-center gap-4">
+                <div className={`relative w-32 h-32 rounded-full ${color.className} border-2 ${color.name.includes('Foreground') ? 'border-muted' : 'border-border'}`}>
+                    {(color.name === 'Primary Foreground' || color.name === 'Secondary Foreground') && (
+                        <div className={`absolute inset-0 rounded-full ${color.name === 'Primary Foreground' ? 'bg-primary' : 'bg-secondary'} -z-10`}></div>
+                    )}
+                </div>
+                <div className="text-center">
                   <p className="font-semibold">{color.name}</p>
                   <p className="text-sm text-muted-foreground">{color.variable}</p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </section>
