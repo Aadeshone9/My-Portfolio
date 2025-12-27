@@ -49,7 +49,7 @@ export default function Showreel({ imageUrl, alt, aiHint }: ShowreelProps) {
       >
         <motion.div
           className={cn(
-            'relative w-full h-full bg-secondary overflow-hidden cursor-pointer',
+            'relative w-full h-full bg-muted overflow-hidden cursor-pointer',
             isHovered && (isPlaying ? 'cursor-pause' : 'cursor-play')
           )}
           style={{ scale, borderRadius }}
