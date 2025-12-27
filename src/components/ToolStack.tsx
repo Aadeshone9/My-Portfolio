@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
 
 const designTools = [
   { name: 'Figma' },
@@ -14,8 +13,8 @@ const designTools = [
 ];
 
 const analyticalTools = [
-  { name: 'Mouseflow - User behaviour' },
-  { name: 'Google Analytics - Page Analytics' },
+  { name: 'Mouseflow' },
+  { name: 'Google Analytics' },
 ];
 
 const allTools = [...designTools, ...analyticalTools];
@@ -38,13 +37,11 @@ const ToolStack = () => {
         <div className="flex animate-looping-scroll">
           {[...allTools, ...allTools].map((tool, index) => (
             <div key={index} className="flex-shrink-0 mx-4">
-              <Card className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28 w-60">
-                <CardContent className="p-0">
-                  <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground whitespace-nowrap">
-                    {tool.name}
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28 w-60">
+                <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground whitespace-nowrap">
+                  {tool.name}
+                </p>
+              </div>
             </div>
           ))}
         </div>
