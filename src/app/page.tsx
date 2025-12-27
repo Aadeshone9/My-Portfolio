@@ -13,6 +13,7 @@ import PillButton from '@/components/PillButton';
 import Footer from '@/components/Footer';
 import ToolStack from '@/components/ToolStack';
 import { motion } from 'framer-motion';
+import AnimatedShape from '@/components/AnimatedShape';
 
 export default function Home() {
   const mainImage = PlaceHolderImages.find(p => p.id === 'hero-image');
@@ -82,13 +83,7 @@ export default function Home() {
 
         <section id="know-me-better" className="pt-4 pb-4 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
           <div className="flex flex-col items-start gap-4">
-            <motion.div 
-              className="w-[84px] h-[84px] border-2 border-border rounded-[8px]"
-              initial={{ borderColor: 'hsl(var(--border))' }}
-              whileInView={{ borderColor: 'hsl(var(--primary))' }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              viewport={{ once: true, amount: 0.8 }}
-            ></motion.div>
+            <AnimatedShape shape="square" />
             <SplitText
               text="Know me better..."
               tag="h2"
