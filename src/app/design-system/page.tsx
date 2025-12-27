@@ -106,30 +106,45 @@ export default function DesignSystemPage() {
             <div className="space-y-12">
                 <div>
                     <h3 className="font-headline text-2xl font-semibold mb-4">Buttons</h3>
-                    <div className="space-y-4">
-                        <p className="text-muted-foreground">Default</p>
-                        <div className="flex flex-wrap gap-4 items-center">
-                             <Button className="rounded-full">Button</Button>
-                             <PillButton href="#" className="group">
-                                <span className="group-hover:font-semibold">Pill Button</span>
-                                <ArrowRight />
-                            </PillButton>
+                    <div className="space-y-8">
+                        {/* Standard Button Row */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                            <div className="flex flex-col items-start gap-2">
+                                <p className="text-muted-foreground text-sm">Default</p>
+                                <Button className="rounded-full">Button</Button>
+                            </div>
+                            <div className="flex flex-col items-start gap-2">
+                                <p className="text-muted-foreground text-sm">Hover (simulated)</p>
+                                <Button className="rounded-full bg-primary/90">Button</Button>
+                            </div>
+                            <div className="flex flex-col items-start gap-2">
+                                <p className="text-muted-foreground text-sm">Disabled</p>
+                                <Button className="rounded-full" disabled>Button</Button>
+                            </div>
                         </div>
-                        <p className="text-muted-foreground">Hover (simulated)</p>
-                        <div className="flex flex-wrap gap-4 items-center">
-                             <Button className="rounded-full bg-primary/90">Button</Button>
-                             <PillButton href="#" className="group is-active">
-                                <span className="group-hover:font-semibold">Pill Button</span>
-                                <ArrowRight />
-                            </PillButton>
-                        </div>
-                        <p className="text-muted-foreground">Disabled</p>
-                        <div className="flex flex-wrap gap-4 items-center">
-                             <Button className="rounded-full" disabled>Button</Button>
-                             <PillButton href="#" className="group opacity-50 pointer-events-none">
-                                <span className="group-hover:font-semibold">Pill Button</span>
-                                <ArrowRight />
-                            </PillButton>
+                        {/* Pill Button Row */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                             <div className="flex flex-col items-start gap-2">
+                                <p className="text-muted-foreground text-sm">Default</p>
+                                <PillButton href="#" className="group">
+                                    <span className="group-hover:font-semibold">Pill Button</span>
+                                    <ArrowRight />
+                                </PillButton>
+                            </div>
+                             <div className="flex flex-col items-start gap-2">
+                                <p className="text-muted-foreground text-sm">Hover (simulated)</p>
+                                <PillButton href="#" className="group is-active">
+                                    <span className="group-hover:font-semibold">Pill Button</span>
+                                    <ArrowRight />
+                                </PillButton>
+                            </div>
+                             <div className="flex flex-col items-start gap-2">
+                                <p className="text-muted-foreground text-sm">Disabled</p>
+                                <PillButton href="#" className="group opacity-50 pointer-events-none">
+                                    <span className="group-hover:font-semibold">Pill Button</span>
+                                    <ArrowRight />
+                                </PillButton>
+                            </div>
                         </div>
                     </div>
                 </div>
