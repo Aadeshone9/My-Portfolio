@@ -129,7 +129,7 @@ const ToolStack = () => {
             </p>
           </div>
           <div className="mt-8">
-            <div className="w-16 h-16 rounded-full bg-primary"></div>
+            <div className="w-[84px] h-[84px] rounded-full bg-primary"></div>
           </div>
         </div>
       </div>
