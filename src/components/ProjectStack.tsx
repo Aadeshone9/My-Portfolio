@@ -84,9 +84,6 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
       >
         <Card className={`${project.bgColor} border-border rounded-2xl w-full h-full mx-auto flex flex-col overflow-hidden`}>
           <div className={`relative ${project.imageBgColor} w-full h-full rounded-lg flex items-center justify-center`}>
-            {project.title === 'Hero Motocorp Vida App' ? (
-                <PhoneMockup />
-            ) : null }
              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-6 flex flex-col justify-end">
                 <div className="text-white">
                   <CardTitle className="text-2xl md:text-3xl font-headline font-semibold text-white">{project.title}</CardTitle>
