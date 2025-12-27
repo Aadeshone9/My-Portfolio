@@ -152,20 +152,14 @@ export default function DesignSystemPage() {
                 <div>
                     <h3 className="font-headline text-2xl font-semibold mb-4">Cards</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <p className="text-muted-foreground mb-4">Project Card</p>
-                            <ProjectPageCard 
-                                title="Maplegeni"
-                                role="Product Designer | Co-Designer"
-                            />
-                        </div>
-                        <div>
-                            <p className="text-muted-foreground mb-4">Project Card</p>
-                            <ProjectPageCard 
-                                title="Google Cloud Security"
-                                role="Partner Product & UX Design consultant"
-                            />
-                        </div>
+                        <ProjectPageCard 
+                            title="Maplegeni"
+                            role="Product Designer | Co-Designer"
+                        />
+                        <ProjectPageCard 
+                            title="Google Cloud Security"
+                            role="Partner Product & UX Design consultant"
+                        />
                     </div>
                 </div>
 
