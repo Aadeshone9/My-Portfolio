@@ -79,9 +79,8 @@ export default function Home() {
         </section>
 
         <section id="know-me-better" className="pt-4 pb-4 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
-          <div className="flex flex-col items-start gap-2">
-            <div className="w-[8px] h-[8px] border border-muted-foreground rounded-sm"></div>
-            <div className="w-[12px] border border-muted-foreground"></div>
+          <div className="flex flex-col items-start gap-4">
+            <div className="w-[84px] h-[84px] border-2 border-[#757575] rounded-[8px]"></div>
             <SplitText
               text="Know me better..."
               tag="h2"
