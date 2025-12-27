@@ -31,7 +31,7 @@ export default function ProjectPageCard({ title, description, role, image, comin
             <span>Coming soon</span>
           </div>
         ) : (
-          <PillButton href="#" className="group">
+          <PillButton href="https://www.linkedin.com/in/aadeshgovenkar/" className="group">
             <span className="group-hover:font-semibold">Request Access</span>
             <Lock />
           </PillButton>

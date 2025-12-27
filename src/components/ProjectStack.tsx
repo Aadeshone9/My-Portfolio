@@ -40,7 +40,7 @@ const projects = [
   },
   {
     title: "Hero Motocorp Vida App",
-    role: "UX Design Consultant | Co-Designer",
+    role: "UX Researcher and strategist",
     description: "End-to-end connected vehicle platform experience for the launch of the Vida EV.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
@@ -94,7 +94,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                   </CardDescription>
                   <div className="flex items-center gap-2 mt-4">
                     <PillButton 
-                      href="#"
+                      href="https://www.linkedin.com/in/aadeshgovenkar/"
                       className="group !text-white !border-white"
                     >
                         <span className="group-hover:font-semibold">Request Access</span>
