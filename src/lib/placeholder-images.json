@@ -89,6 +89,12 @@
       "description": "A black and white portrait of a woman's face",
       "imageUrl": "/images/woman-portrait.jpg",
       "imageHint": "woman portrait"
+    },
+    {
+      "id": "vida-app-screen",
+      "description": "Screenshot of the VIDA mobile application",
+      "imageUrl": "/images/vida-ev-hero.png",
+      "imageHint": "mobile app ev"
     }
   ]
 }

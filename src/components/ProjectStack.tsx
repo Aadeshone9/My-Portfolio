@@ -5,6 +5,8 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { Card, CardTitle, CardDescription } from "@/components/ui/card";
 import { ArrowRight, Lock } from "lucide-react";
 import PillButton from "./PillButton";
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const projects = [
   {
@@ -44,6 +46,30 @@ const projects = [
   },
 ];
 
+const PhoneMockup = () => {
+    const vidaAppImage = PlaceHolderImages.find(p => p.id === 'vida-app-screen');
+    return (
+      <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-[2.5rem] h-[450px] w-[220px] shadow-xl">
+          <div className="w-[100px] h-[12px] bg-gray-800 top-0 rounded-b-[1rem] left-1/2 -translate-x-1/2 absolute"></div>
+          <div className="h-[32px] w-[2px] bg-gray-800 absolute -left-2 top-[72px] rounded-l-lg"></div>
+          <div className="h-[32px] w-[2px] bg-gray-800 absolute -left-2 top-[124px] rounded-l-lg"></div>
+          <div className="h-[48px] w-[2px] bg-gray-800 absolute -right-2 top-[100px] rounded-r-lg"></div>
+          <div className="rounded-[2rem] overflow-hidden w-full h-full bg-white dark:bg-gray-800">
+              {vidaAppImage && (
+                <Image 
+                    src={vidaAppImage.imageUrl} 
+                    className="w-full h-full object-cover" 
+                    alt={vidaAppImage.description}
+                    data-ai-hint={vidaAppImage.imageHint}
+                    width={204}
+                    height={434}
+                />
+              )}
+          </div>
+      </div>
+    )
+}
+
 const ProjectCard = ({ project, i, progress, range, targetScale }: { project: any, i: number, progress: any, range: number[], targetScale: number }) => {
   const scale = useTransform(progress, range, [1, targetScale]);
 
@@ -59,7 +85,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
         <Card className={`${project.bgColor} border-border rounded-2xl w-full h-full mx-auto flex flex-col overflow-hidden`}>
           <div className={`relative ${project.imageBgColor} w-full h-full rounded-lg flex items-center justify-center`}>
             {project.title === 'Hero Motocorp Vida App' ? (
-                null
+                <PhoneMockup />
             ) : null }
              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-6 flex flex-col justify-end">
                 <div className="text-white">
