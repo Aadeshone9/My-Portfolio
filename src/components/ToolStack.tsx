@@ -86,6 +86,14 @@ const ToolStack = () => {
               User Flows | Concept Sketches | Wireframes & mock ups | Design System
             </p>
           </div>
+           <div className='mt-8'>
+            <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-4">
+              Prototyping
+            </h3>
+            <p className="font-subtitle text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Rapid Prototyping | Advanced Prototyping | Microinteractions | Motion Design
+            </p>
+          </div>
         </div>
       </div>
     </section>
