@@ -111,7 +111,7 @@ export default function Home() {
                             text="I am a designer, defined by my craft, dedicated to"
                             tag="p"
                             splitType="words"
-                            className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-snug md:leading-[43px] text-muted-foreground"
+                            className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-[snug] md:leading-[43px] text-muted-foreground"
                             textAlign="left"
                         />
                         <SplitText
@@ -165,26 +165,6 @@ export default function Home() {
         
         <div className="py-16 md:py-24">
             <Approach />
-        </div>
-        
-        <div className="w-[90%] mx-auto my-16 md:my-24">
-          <SpotlightCard>
-            <div className="bg-background border border-border rounded-2xl py-4 px-6 flex flex-col sm:flex-row items-center justify-start gap-4">
-              <SplitText 
-                text="Find out" 
-                tag="h2"
-                className="font-headline font-semibold text-2xl leading-tight tracking-[0.02em] text-foreground"
-                textAlign="left"
-              />
-              <PillButton 
-                href="#"
-                className="group"
-              >
-                  <span className="group-hover:font-semibold">Why Hire Me</span>
-                  <ArrowRight />
-              </PillButton>
-            </div>
-          </SpotlightCard>
         </div>
 
       </main>

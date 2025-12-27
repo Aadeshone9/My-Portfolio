@@ -97,25 +97,6 @@ export default function ProjectsPage() {
             </div>
         </div>
 
-        <div className="mx-auto my-16 md:my-24">
-          <SpotlightCard>
-            <div className="bg-background border border-border rounded-2xl py-4 px-6 flex flex-col sm:flex-row items-center justify-start gap-4">
-              <SplitText 
-                text="Find out" 
-                tag="h2"
-                className="font-headline font-semibold text-2xl leading-tight tracking-[0.02em] text-foreground"
-                textAlign="left"
-              />
-              <PillButton 
-                href="#"
-                className="group"
-              >
-                  <span className="group-hover:font-semibold">Why Hire Me</span>
-                  <ArrowRight />
-              </PillButton>
-            </div>
-          </SpotlightCard>
-        </div>
       </main>
       <Footer />
     </div>
