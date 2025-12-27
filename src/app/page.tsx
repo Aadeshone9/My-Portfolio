@@ -24,7 +24,7 @@ export default function Home() {
       <Header />
       <main className="flex flex-col">
         <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-10">
-            <div className="pt-10 md:pt-20 pb-7 md:pb-14">
+            <div className="pt-10 md:pt-20 pb-5 md:pb-11">
               <SplitText 
                 text="Hi, I’m Aadesh" 
                 tag="h1"
