@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import SplitText from '@/components/SplitText';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronRight, Lock, Menu, Search, Settings } from 'lucide-react';
+import { ArrowRight, Lock, Menu } from 'lucide-react';
 import PillButton from '@/components/PillButton';
 import SpotlightCard from '@/components/SpotlightCard';
 import TiltedCard from '@/components/TiltedCard';
@@ -31,9 +31,6 @@ const icons = [
     { icon: <ArrowRight />, name: 'ArrowRight' },
     { icon: <Lock />, name: 'Lock' },
     { icon: <Menu />, name: 'Menu' },
-    { icon: <ChevronRight />, name: 'ChevronRight' },
-    { icon: <Search />, name: 'Search' },
-    { icon: <Settings />, name: 'Settings' },
 ]
 
 export default function DesignSystemPage() {
