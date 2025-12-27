@@ -15,6 +15,7 @@ import ToolStack from '@/components/ToolStack';
 import { motion } from 'framer-motion';
 import AnimatedShape from '@/components/AnimatedShape';
 import DesignSystemCTA from '@/components/DesignSystemCTA';
+import Showreel from '@/components/Showreel';
 
 export default function Home() {
   const mainImage = PlaceHolderImages.find(p => p.id === 'hero-image');
@@ -38,19 +39,15 @@ export default function Home() {
                 textAlign="left"
               />
             </div>
-
-            {mainImage && (
-            <div className="relative w-full h-[300px] md:h-[696px] bg-secondary rounded-2xl overflow-hidden">
-                <Image
-                src={mainImage.imageUrl}
-                alt={mainImage.description}
-                fill
-                className="object-cover"
-                data-ai-hint={mainImage.imageHint}
-                />
-            </div>
-            )}
         </div>
+
+        {mainImage && (
+          <Showreel
+            imageUrl={mainImage.imageUrl}
+            alt={mainImage.description}
+            aiHint={mainImage.imageHint}
+          />
+        )}
 
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4 sm:px:8 md:px-20 relative z-10">
