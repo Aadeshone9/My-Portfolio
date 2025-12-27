@@ -33,7 +33,7 @@ const projects = [
     role: 'UX Design Consultant | Co-Designer',
   },
   {
-    title: 'New Project',
+    title: 'General Motors Enterprise Security Restrictions For Mobile Devices',
     role: 'Product Designer',
   },
 ];
