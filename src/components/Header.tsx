@@ -40,6 +40,7 @@ export default function Header() {
     { href: '/projects', label: 'Projects' },
     { href: '/#know-me-better', label: 'Know me better' },
     { href: '/learnings', label: 'Learnings & Reflection' },
+    { href: '/design-system', label: 'Design System' },
   ];
 
   return (
