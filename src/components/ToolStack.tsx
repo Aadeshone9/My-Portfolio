@@ -17,8 +17,6 @@ const analyticalTools = [
   { name: 'Google Analytics' },
 ];
 
-const allTools = [...designTools, ...analyticalTools];
-
 const ToolStack = () => {
   return (
     <section className="pb-16 md:pb-24 bg-background">
@@ -40,7 +38,26 @@ const ToolStack = () => {
             </h3>
         </div>
         <div className="flex animate-looping-scroll">
-          {[...allTools, ...allTools].map((tool, index) => (
+          {[...designTools, ...designTools].map((tool, index) => (
+            <div key={index} className="flex-shrink-0 mx-4">
+              <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28 w-60">
+                <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground whitespace-nowrap">
+                  {tool.name}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      <div className="mt-12 w-full overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-8 md:px-20">
+            <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-8">
+                Analytical tools
+            </h3>
+        </div>
+        <div className="flex animate-looping-scroll">
+          {[...analyticalTools, ...analyticalTools].map((tool, index) => (
             <div key={index} className="flex-shrink-0 mx-4">
               <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28 w-60">
                 <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground whitespace-nowrap">
