@@ -1,21 +1,17 @@
 
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SplitText from '@/components/SplitText';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Menu } from 'lucide-react';
+import { ArrowRight, ChevronRight, Lock, Menu, Search, Settings } from 'lucide-react';
 import PillButton from '@/components/PillButton';
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
-import Link from 'next/link';
-import ProjectPageCard from '@/components/ProjectPageCard';
+import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Label } from '@/components/ui/label';
+import SpotlightCard from '@/components/SpotlightCard';
+import TiltedCard from '@/components/TiltedCard';
 
 const colors = [
     { name: 'Primary', light: 'bg-primary', dark: 'dark:bg-primary' },
@@ -23,21 +19,26 @@ const colors = [
     { name: 'Background', light: 'bg-background', dark: 'dark:bg-background' },
     { name: 'Foreground', light: 'bg-foreground', dark: 'dark:bg-foreground' },
     { name: 'Card', light: 'bg-card', dark: 'dark:bg-card' },
-    { name: 'Popover', light: 'bg-popover', dark: 'dark:bg-popover' },
+    { name: 'Border', light: 'bg-border', dark: 'dark:bg-border' },
 ];
 
 const typography = [
-    { name: 'Headline', className: 'font-headline text-5xl', text: 'Poppins', size: '5xl (3rem)' },
-    { name: 'Subtitle', className: 'font-subtitle text-4xl', text: 'Playfair Display', size: '4xl (2.25rem)' },
-    { name: 'Body', className: 'font-body text-3xl', text: 'Poppins', size: '3xl (1.875rem)' },
-]
+    { name: 'Headline 1 (H1)', className: 'font-headline text-5xl font-bold', text: 'Poppins Bold' },
+    { name: 'Headline 2 (H2)', className: 'font-headline text-4xl font-semibold', text: 'Poppins SemiBold' },
+    { name: 'Headline 3 (H3)', className: 'font-headline text-2xl font-semibold', text: 'Poppins SemiBold' },
+    { name: 'Subtitle', className: 'font-subtitle text-2xl', text: 'Playfair Display' },
+    { name: 'Body', className: 'font-body text-base', text: 'Poppins Regular' },
+    { name: 'Caption', className: 'font-body text-sm text-muted-foreground', text: 'Poppins Regular' },
+];
 
-const navItems = [
-    { href: '/projects', label: 'Projects' },
-    { href: '/#know-me-better', label: 'Know me better' },
-    { href: '/learnings', label: 'Learnings & Reflection' },
-    { href: '/design-system', label: 'Design System' },
-  ];
+const icons = [
+    { icon: <ArrowRight />, name: 'ArrowRight' },
+    { icon: <Lock />, name: 'Lock' },
+    { icon: <Menu />, name: 'Menu' },
+    { icon: <ChevronRight />, name: 'ChevronRight' },
+    { icon: <Search />, name: 'Search' },
+    { icon: <Settings />, name: 'Settings' },
+]
 
 export default function DesignSystemPage() {
   return (
@@ -56,12 +57,12 @@ export default function DesignSystemPage() {
           </p>
         </div>
 
-        {/* Atoms Section */}
+        {/* Phase A: Atoms */}
         <section className="mt-16">
-          <h2 className="font-headline text-3xl md:text-4xl font-semibold mb-8">Atoms</h2>
+          <h2 className="font-headline text-4xl font-semibold mb-8">Phase A: Atoms</h2>
           <div className="space-y-12">
             <div>
-              <h3 className="font-headline text-2xl font-semibold mb-4">Colors</h3>
+              <h3 className="font-headline text-2xl font-semibold mb-4">Color Palette</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
                 {colors.map(color => (
                   <div key={color.name}>
@@ -86,33 +87,94 @@ export default function DesignSystemPage() {
               <div className="space-y-8">
                   {typography.map(type => (
                       <div key={type.name}>
-                          <p className="text-sm text-muted-foreground mb-2">{type.name} - {type.size}</p>
+                          <p className="text-sm text-muted-foreground mb-2">{type.name}</p>
                           <p className={type.className}>{type.text}</p>
                       </div>
                   ))}
               </div>
             </div>
-
+            
             <div>
-                <h3 className="font-headline text-2xl font-semibold mb-4">Buttons</h3>
-                <div className="flex flex-wrap gap-4 items-center">
-                     <Button className="rounded-full">Button</Button>
-                     <PillButton href="#" className="group">
-                        <span className="group-hover:font-semibold">Button</span>
-                        <ArrowRight />
-                    </PillButton>
-                </div>
+              <h3 className="font-headline text-2xl font-semibold mb-4">Iconography</h3>
+              <div className="flex flex-wrap gap-8 items-center">
+                {icons.map(icon => (
+                  <div key={icon.name} className="flex flex-col items-center gap-2 text-muted-foreground">
+                    <div className="w-16 h-16 bg-card border border-border rounded-lg flex items-center justify-center">
+                      {icon.icon}
+                    </div>
+                    <p className="text-xs">{icon.name}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Molecules Section */}
+        {/* Phase B: Molecules */}
         <section className="mt-16">
-            <h2 className="font-headline text-3xl md:text-4xl font-semibold mb-8">Molecules</h2>
+            <h2 className="font-headline text-4xl font-semibold mb-8">Phase B: Molecules & Interactions</h2>
             <div className="space-y-12">
                 <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4">Card</h3>
-                     <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+                    <h3 className="font-headline text-2xl font-semibold mb-4">Buttons</h3>
+                    <div className="space-y-4">
+                        <p className="text-muted-foreground">Default</p>
+                        <div className="flex flex-wrap gap-4 items-center">
+                             <Button className="rounded-full">Button</Button>
+                             <PillButton href="#" className="group">
+                                <span className="group-hover:font-semibold">Pill Button</span>
+                                <ArrowRight />
+                            </PillButton>
+                        </div>
+                        <p className="text-muted-foreground">Hover (simulated)</p>
+                        <div className="flex flex-wrap gap-4 items-center">
+                             <Button className="rounded-full bg-primary/90">Button</Button>
+                             <PillButton href="#" className="group is-active">
+                                <span className="group-hover:font-semibold">Pill Button</span>
+                                <ArrowRight />
+                            </PillButton>
+                        </div>
+                        <p className="text-muted-foreground">Disabled</p>
+                        <div className="flex flex-wrap gap-4 items-center">
+                             <Button className="rounded-full" disabled>Button</Button>
+                             <PillButton href="#" className="group opacity-50 pointer-events-none">
+                                <span className="group-hover:font-semibold">Pill Button</span>
+                                <ArrowRight />
+                            </PillButton>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 className="font-headline text-2xl font-semibold mb-4">Input Fields</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="space-y-4">
+                            <Input placeholder="Text input field" />
+                            <div className="flex items-center space-x-2">
+                                <Checkbox id="terms" />
+                                <label
+                                htmlFor="terms"
+                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                >
+                                Checkbox
+                                </label>
+                            </div>
+                            <RadioGroup defaultValue="comfortable">
+                                <div className="flex items-center space-x-2">
+                                    <RadioGroupItem value="default" id="r1" />
+                                    <Label htmlFor="r1">Radio option 1</Label>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <RadioGroupItem value="comfortable" id="r2" />
+                                    <Label htmlFor="r2">Radio option 2</Label>
+                                </div>
+                            </RadioGroup>
+                        </div>
+                    </div>
+                </div>
+
+                 <div>
+                    <h3 className="font-headline text-2xl font-semibold mb-4">Cards</h3>
+                     <div className='max-w-sm'>
                         <Card>
                             <CardHeader>
                                 <CardTitle>Card Title</CardTitle>
@@ -121,35 +183,31 @@ export default function DesignSystemPage() {
                                 <p>This is the content of the card. It can hold text, images, or other components.</p>
                             </CardContent>
                         </Card>
-                        <ProjectPageCard 
-                            title="Sample Project"
-                            role="UX/UI Designer"
-                            description="This is a sample description for a project card to demonstrate its appearance in the design system."
-                        />
+                    </div>
+                </div>
+
+                <div>
+                    <h3 className="font-headline text-2xl font-semibold mb-4">Interactions & Animations</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                      <div className="flex flex-col gap-4">
+                        <p className="text-muted-foreground">Spotlight Card</p>
+                        <SpotlightCard className="p-8 rounded-2xl border border-border bg-card">
+                          <h4 className="font-headline font-semibold text-lg text-foreground">Spotlight Effect</h4>
+                          <p className="text-sm text-muted-foreground mt-2">Move your mouse over this card to see the spotlight effect.</p>
+                        </SpotlightCard>
+                      </div>
+                      <div className="flex flex-col gap-4">
+                        <p className="text-muted-foreground">Tilted Card</p>
+                        <TiltedCard>
+                          <div className="p-8 rounded-2xl border border-border bg-card">
+                            <h4 className="font-headline font-semibold text-lg text-foreground">3D Tilt Effect</h4>
+                            <p className="text-sm text-muted-foreground mt-2">Move your mouse over this card to see the tilt effect.</p>
+                          </div>
+                        </TiltedCard>
+                      </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        {/* Organisms Section */}
-        <section className="mt-16">
-            <h2 className="font-headline text-3xl md:text-4xl font-semibold mb-8">Organisms</h2>
-             <div className="space-y-12">
-                <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4">Header</h3>
-                    <p className="text-muted-foreground mb-4">The header contains the primary navigation and theme toggle.</p>
-                     <div className="relative border border-border rounded-lg p-4">
-                        <Header />
-                    </div>
-                </div>
-                 <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4">Footer</h3>
-                    <p className="text-muted-foreground mb-4">The footer contains contact information and site credits.</p>
-                     <div className="relative border border-border rounded-lg">
-                        <Footer />
-                    </div>
-                </div>
-             </div>
         </section>
 
       </main>
