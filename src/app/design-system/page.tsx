@@ -17,9 +17,9 @@ const colors = [
 ];
 
 const typography = [
-    { name: 'Headline', className: 'font-headline text-5xl', text: 'Poppins' },
-    { name: 'Subtitle', className: 'font-subtitle text-4xl', text: 'Playfair Display' },
-    { name: 'Body', className: 'font-body text-3xl', text: 'Poppins' },
+    { name: 'Headline', className: 'font-headline text-5xl', text: 'Poppins', size: '5xl (3rem)' },
+    { name: 'Subtitle', className: 'font-subtitle text-4xl', text: 'Playfair Display', size: '4xl (2.25rem)' },
+    { name: 'Body', className: 'font-body text-3xl', text: 'Poppins', size: '3xl (1.875rem)' },
 ]
 
 export default function DesignSystemPage() {
@@ -65,7 +65,7 @@ export default function DesignSystemPage() {
             <div className="space-y-8">
                 {typography.map(type => (
                     <div key={type.name}>
-                        <p className="text-sm text-muted-foreground mb-2">{type.name}</p>
+                        <p className="text-sm text-muted-foreground mb-2">{type.name} - {type.size}</p>
                         <p className={type.className}>{type.text}</p>
                     </div>
                 ))}
