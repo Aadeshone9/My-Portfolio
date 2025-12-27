@@ -14,7 +14,7 @@ const projects = [
     image: '/google-cloud-logo.svg',
   },
   {
-    title: 'Thermax Global - Edge Platform',
+    title: 'Thermax - Edge Platform',
     role: 'UX Design Consultant | Co-Designer',
     image: '/google-cloud-logo.svg',
   },

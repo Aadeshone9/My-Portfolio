@@ -10,7 +10,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const projects = [
   {
-    title: "Thermax Global - Edge Platform",
+    title: "Thermax - Edge Platform",
     role: "UX Design Consultant | Co-Designer",
     description: "Defined UX improvements that increased error visibility and user adoption by 25%.",
     bgColor: "bg-background",
