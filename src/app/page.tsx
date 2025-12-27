@@ -99,7 +99,7 @@ export default function Home() {
            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                 <div className="flex flex-col items-start w-full">
                     <SplitText
-                      text="/Let’s Break some ice"
+                      text="/ Let’s break some ice"
                       tag="h2"
                       className="font-headline font-semibold text-2xl md:text-[32px] leading-[58px] tracking-[0.02em] text-foreground flex items-center"
                       textAlign="left"
