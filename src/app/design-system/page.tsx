@@ -25,7 +25,6 @@ const typography = [
     { name: 'Headline 3 (H3)', className: 'font-headline text-2xl font-semibold', text: 'Poppins SemiBold' },
     { name: 'Subtitle', className: 'font-subtitle text-2xl', text: 'Playfair Display' },
     { name: 'Body', className: 'font-body text-base', text: 'Poppins Regular' },
-    { name: 'Caption', className: 'font-body text-sm text-muted-foreground', text: 'Poppins Regular' },
 ];
 
 const icons = [
