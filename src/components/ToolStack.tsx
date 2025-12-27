@@ -132,9 +132,12 @@ const ToolStack = () => {
             <div className="w-[84px] h-[84px] rounded-full bg-primary"></div>
           </div>
           <div className='mt-8'>
-             <p className="font-headline font-semibold text-muted-foreground text-lg md:text-2xl tracking-[0.02em] leading-normal">
-                Now that you know me better than Earlier,
-              </p>
+             <SplitText
+                text="Now that you know me better than Earlier,"
+                tag="p"
+                className="font-headline font-semibold text-5xl sm:text-7xl md:text-9xl lg:text-[160px] leading-[0.8] tracking-tighter text-foreground"
+                textAlign="left"
+              />
           </div>
         </div>
       </div>

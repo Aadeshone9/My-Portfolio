@@ -1,3 +1,4 @@
+import SplitText from "./SplitText";
 
 export default function Footer() {
     return (
@@ -5,9 +6,12 @@ export default function Footer() {
         <div className="container mx-auto px-4 sm:px-8 md:px-20 flex flex-col gap-10">
           <div className='flex flex-col gap-10'>
             <div className='flex flex-col gap-6'>
-              <p className="font-headline font-semibold text-muted-foreground text-lg md:text-2xl tracking-[0.02em] leading-normal">
-                Lets get in Touch....
-              </p>
+              <SplitText 
+                text="Lets get in Touch...."
+                tag="p"
+                className="font-headline font-semibold text-5xl sm:text-7xl md:text-9xl lg:text-[160px] leading-[0.8] tracking-tighter text-muted-foreground"
+                textAlign="left"
+              />
               <div className="flex flex-col gap-4 text-base md:text-2xl">
                 <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-[0.02em] underline leading-normal break-all hover:text-primary transition-colors">Aadesh.one9@gmail.com</a>
                 <p className="font-headline font-semibold tracking-[0.02em] leading-normal">+ (91) 8975143018</p>
