@@ -35,7 +35,7 @@ const ToolStack = () => {
         <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-8">
             Design softwares
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
           {designTools.map((tool, index) => (
             <div key={index}>
               <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28">
@@ -52,7 +52,7 @@ const ToolStack = () => {
         <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-8">
             Analytical tools
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
           {analyticalTools.map((tool, index) => (
             <div key={index}>
               <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28">
@@ -62,6 +62,22 @@ const ToolStack = () => {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="mt-16 md:mt-24 container mx-auto px-4 sm:px-8 md:px-20">
+        <div className="flex flex-col items-start gap-4">
+          <h2 className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground">
+            / Skill
+          </h2>
+          <div className='mt-4'>
+            <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-4">
+              Research
+            </h3>
+            <p className="font-subtitle text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Design Research | Data Analytics | User Behaviour Analytics | Task Analysis & Persona Hypothesis | Information Architecture | Heuristics
+            </p>
+          </div>
         </div>
       </div>
     </section>
