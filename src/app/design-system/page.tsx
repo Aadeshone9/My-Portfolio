@@ -153,11 +153,11 @@ export default function DesignSystemPage() {
                     <h3 className="font-headline text-2xl font-semibold mb-4">Cards</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <ProjectPageCard 
-                            title="Maplegeni"
+                            title="Sample Project Title"
                             role="Product Designer | Co-Designer"
                         />
                         <ProjectPageCard 
-                            title="Google Cloud Security"
+                            title="Another Sample Project"
                             role="Partner Product & UX Design consultant"
                         />
                     </div>
