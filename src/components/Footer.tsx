@@ -9,7 +9,7 @@ export default function Footer() {
               <SplitText 
                 text="Lets get in Touch...."
                 tag="p"
-                className="font-headline font-semibold text-5xl sm:text-7xl md:text-9xl lg:text-[160px] leading-[0.8] tracking-tighter text-muted-foreground"
+                className="font-headline font-semibold text-3xl md:text-4xl text-muted-foreground"
                 textAlign="left"
               />
               <div className="flex flex-col gap-4 text-base md:text-2xl">
