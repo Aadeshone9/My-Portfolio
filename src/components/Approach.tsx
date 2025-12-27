@@ -3,6 +3,7 @@ import React from 'react';
 import SplitText from './SplitText';
 import { ScrollArea } from './ui/scroll-area';
 import { motion } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 
 const approachData = [
   {
@@ -31,6 +32,14 @@ const approachData = [
 ];
 
 const Approach = () => {
+  const [hasScrolled, setHasScrolled] = React.useState(false);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    if (e.currentTarget.scrollTop > 10) {
+      setHasScrolled(true);
+    }
+  };
+
   return (
     <section className="bg-background">
       <div className="container mx-auto px-4 sm:px-8 md:px-20">
@@ -52,8 +61,8 @@ const Approach = () => {
               textAlign="left"
             />
           </div>
-          <div className="w-full lg:flex-1 mt-4 lg:mt-0">
-            <ScrollArea className="h-[404px] w-full">
+          <div className="w-full lg:flex-1 mt-4 lg:mt-0 relative">
+            <ScrollArea className="h-[404px] w-full" onScroll={handleScroll}>
               <div className="space-y-6 pr-4">
                 {approachData.map((item, index) => (
                   <div
@@ -72,6 +81,20 @@ const Approach = () => {
                 ))}
               </div>
             </ScrollArea>
+             <motion.div
+              className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 pointer-events-none"
+              initial={{ opacity: 1 }}
+              animate={{ opacity: hasScrolled ? 0 : 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <p className="text-xs text-muted-foreground">Scroll down</p>
+              <motion.div
+                animate={{ y: [0, 5, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              >
+                <ChevronDown className="w-5 h-5 text-muted-foreground" />
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>
