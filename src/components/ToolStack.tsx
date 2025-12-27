@@ -32,7 +32,7 @@ const ToolStack = () => {
         <div className="flex flex-col items-start gap-y-4">
           <div className="w-[84px] h-[84px] border-2 border-[#757575] rounded-full"></div>
           <h2 className="font-headline font-semibold text-5xl leading-[58px] tracking-[0.02em] text-foreground">
-            we are almost done
+            we are almost done...
           </h2>
         </div>
       </div>
@@ -121,7 +121,7 @@ const ToolStack = () => {
               className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground"
               textAlign="left"
             />
-          <div className='mt-4'>
+          <div className="mt-8">
             <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-2">
               Research
             </h3>
@@ -129,7 +129,7 @@ const ToolStack = () => {
               Design Research | Data Analytics | User Behaviour Analytics | Task Analysis & Persona Hypothesis | Information Architecture | Heuristics
             </p>
           </div>
-          <div className='mt-8'>
+          <div className="mt-8">
             <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-2">
               Design
             </h3>
@@ -137,7 +137,7 @@ const ToolStack = () => {
               User Flows | Concept Sketches | Wireframes & mock ups | Design System
             </p>
           </div>
-           <div className='mt-8'>
+           <div className="mt-8">
             <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-2">
               Prototyping
             </h3>
