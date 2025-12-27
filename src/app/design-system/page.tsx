@@ -22,7 +22,6 @@ const colors = [
 const typography = [
     { name: 'Headline 1 (H1)', className: 'font-headline text-5xl font-bold', text: 'Poppins Bold' },
     { name: 'Headline 2 (H2)', className: 'font-headline text-4xl font-semibold', text: 'Poppins SemiBold' },
-    { name: 'Headline 3 (H3)', className: 'font-headline text-2xl font-semibold', text: 'Poppins SemiBold' },
     { name: 'Subtitle', className: 'font-subtitle text-2xl', text: 'Playfair Display' },
     { name: 'Body', className: 'font-body text-base', text: 'Poppins Regular' },
 ];
