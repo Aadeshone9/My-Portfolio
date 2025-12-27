@@ -24,7 +24,7 @@ const approachData = [
   {
     title: 'Test & Deliver',
     description:
-      'Hand off Every element is for implementation with clarity, consistency, and attention to detail.',
+      'Hand off every element is for implementation with clarity, consistency, and attention to detail.',
   },
 ];
 
