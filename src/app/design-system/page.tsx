@@ -27,7 +27,7 @@ const colors = [
 const typography = [
     { name: 'Headline', className: 'font-headline text-5xl', text: 'Poppins', size: '5xl (3rem)' },
     { name: 'Subtitle', className: 'font-subtitle text-4xl', text: 'Playfair Display', size: '4xl (2.25rem)' },
-    { name 'Body', className: 'font-body text-3xl', text: 'Poppins', size: '3xl (1.875rem)' },
+    { name: 'Body', className: 'font-body text-3xl', text: 'Poppins', size: '3xl (1.875rem)' },
 ]
 
 const navItems = [
