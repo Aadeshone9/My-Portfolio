@@ -2,6 +2,7 @@
 import React from 'react';
 import SplitText from './SplitText';
 import { ScrollArea } from './ui/scroll-area';
+import { motion } from 'framer-motion';
 
 const approachData = [
   {
