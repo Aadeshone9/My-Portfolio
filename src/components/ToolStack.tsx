@@ -3,19 +3,20 @@ import React from 'react';
 import SplitText from './SplitText';
 import { Card, CardContent } from '@/components/ui/card';
 
-const tools = [
+const designTools = [
   { name: 'Figma' },
+  { name: 'Adobe XD' },
+  { name: 'Axure' },
+  { name: 'Sketch' },
   { name: 'Adobe Illustrator' },
+  { name: 'Adobe After Effects' },
   { name: 'Adobe Photoshop' },
-  { name: 'Protopie' },
-  { name: 'Miro' },
-  { name: 'Jira' },
-  { name: 'Confluence' },
-  { name: 'React' },
-  { name: 'Next.js' },
-  { name: 'Firebase' },
-  { name: 'VS Code' },
-  { name: 'GSAP' },
+  { name: 'Adobe Premiere Pro' },
+];
+
+const analyticalTools = [
+    { name: 'Mouseflow - User behaviour' },
+    { name: 'Google Analytics - Page Analytics' },
 ];
 
 const ToolStack = () => {
@@ -31,16 +32,34 @@ const ToolStack = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 mt-12">
-          {tools.map((tool, index) => (
-            <Card key={index} className="bg-card border border-border rounded-xl aspect-square flex items-center justify-center p-4">
-              <CardContent className="p-0">
-                <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground">
-                  {tool.name}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="mt-12">
+            <h3 className="font-headline font-semibold text-2xl text-foreground mb-6">Design tools</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+            {designTools.map((tool, index) => (
+                <Card key={index} className="bg-card border border-border rounded-xl aspect-square flex items-center justify-center p-4">
+                <CardContent className="p-0">
+                    <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground">
+                    {tool.name}
+                    </p>
+                </CardContent>
+                </Card>
+            ))}
+            </div>
+        </div>
+
+        <div className="mt-12">
+            <h3 className="font-headline font-semibold text-2xl text-foreground mb-6">Analytical tools</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+            {analyticalTools.map((tool, index) => (
+                <Card key={index} className="bg-card border border-border rounded-xl flex items-center justify-center p-6 min-h-[120px]">
+                <CardContent className="p-0">
+                    <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground">
+                    {tool.name}
+                    </p>
+                </CardContent>
+                </Card>
+            ))}
+            </div>
         </div>
       </div>
     </section>
