@@ -1,3 +1,4 @@
+import PillButton from "./PillButton";
 import SplitText from "./SplitText";
 
 export default function Footer() {
@@ -12,11 +13,12 @@ export default function Footer() {
                 className="font-headline font-semibold text-3xl md:text-4xl text-muted-foreground"
                 textAlign="left"
               />
-              <div className="flex flex-col gap-4 text-base md:text-2xl">
-                <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-[0.02em] underline leading-normal break-all hover:text-primary transition-colors">Aadesh.one9@gmail.com</a>
-                <p className="font-headline font-semibold tracking-[0.02em] leading-normal">+ (91) 8975143018</p>
-                <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold tracking-[0.02em] underline leading-normal break-all hover:text-primary transition-colors">
-                  https://www.linkedin.com/in/aadeshgovenkar/
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-base md:text-lg">
+                <PillButton href="#" className="text-sm">View Resume</PillButton>
+                <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-tight underline leading-normal break-all hover:text-primary transition-colors">Aadesh.one9@gmail.com</a>
+                <p className="font-headline font-semibold tracking-tight leading-normal">+ (91) 8975143018</p>
+                <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold tracking-tight underline leading-normal break-all hover:text-primary transition-colors">
+                  LinkedIn
                 </a>
               </div>
             </div>
