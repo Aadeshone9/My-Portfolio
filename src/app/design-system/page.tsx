@@ -6,10 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ChevronRight, Lock, Menu, Search, Settings } from 'lucide-react';
 import PillButton from '@/components/PillButton';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Label } from '@/components/ui/label';
 import SpotlightCard from '@/components/SpotlightCard';
 import TiltedCard from '@/components/TiltedCard';
 
@@ -140,34 +136,6 @@ export default function DesignSystemPage() {
                                 <span className="group-hover:font-semibold">Pill Button</span>
                                 <ArrowRight />
                             </PillButton>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4">Input Fields</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className="space-y-4">
-                            <Input placeholder="Text input field" />
-                            <div className="flex items-center space-x-2">
-                                <Checkbox id="terms" />
-                                <label
-                                htmlFor="terms"
-                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                                >
-                                Checkbox
-                                </label>
-                            </div>
-                            <RadioGroup defaultValue="comfortable">
-                                <div className="flex items-center space-x-2">
-                                    <RadioGroupItem value="default" id="r1" />
-                                    <Label htmlFor="r1">Radio option 1</Label>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <RadioGroupItem value="comfortable" id="r2" />
-                                    <Label htmlFor="r2">Radio option 2</Label>
-                                </div>
-                            </RadioGroup>
                         </div>
                     </div>
                 </div>
