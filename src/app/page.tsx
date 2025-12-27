@@ -88,7 +88,7 @@ export default function Home() {
               textAlign="left"
             />
           </div>
-          <div className="w-32 md:w-48 h-[1px] bg-border my-8"></div>
+          <div className="w-32 h-[2px] bg-border my-8"></div>
         </section>
 
         <section className="pt-8 pb-16 container mx-auto px-4 sm:px-8 md:px-20">
