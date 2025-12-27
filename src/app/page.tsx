@@ -24,7 +24,7 @@ export default function Home() {
       <Header />
       <main className="flex flex-col">
         <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-10">
-            <div className="pt-10 md:pt-20 pb-5 md:pb-11">
+            <div className="pt-10 md:pt-20 pb-10 md:pb-20">
               <SplitText 
                 text="Hi, I’m Aadesh" 
                 tag="h1"
@@ -49,7 +49,7 @@ export default function Home() {
           />
         )}
 
-        <section className="py-16 md:py-24">
+        <section className="py-20 md:py-32">
           <div className="container mx-auto px-4 sm:px:8 md:px-20 relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="flex-1 flex flex-col">
@@ -74,7 +74,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mt-12 md:mt-16">
+          <div className="relative mt-16 md:mt-20">
             <ProjectStack />
           </div>
         </section>
@@ -89,11 +89,11 @@ export default function Home() {
               textAlign="left"
             />
           </div>
-          <div className="w-32 h-[2px] bg-border my-8"></div>
+          <div className="w-32 h-[2px] bg-border my-10"></div>
         </section>
 
-        <section className="pt-8 pb-16 container mx-auto px-4 sm:px-8 md:px-20">
-           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <section className="pt-8 pb-20 container mx-auto px-4 sm:px-8 md:px-20">
+           <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 <div className="flex flex-col items-start w-full">
                     <SplitText
                       text="/ Let’s break some ice"
@@ -128,8 +128,8 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="pb-16 pt-4">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section className="pb-20 pt-4">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <TiltedCard>
                     <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
                         <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">Visual Roots</h3>
@@ -165,7 +165,7 @@ export default function Home() {
             </div>
         </section>
         
-        <div className="py-16 md:py-24">
+        <div className="py-20 md:py-32">
             <Approach />
         </div>
 

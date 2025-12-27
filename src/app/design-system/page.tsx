@@ -36,8 +36,8 @@ export default function DesignSystemPage() {
   return (
     <div className="bg-background">
       <Header />
-      <main className="container mx-auto px-4 sm:px-8 md:px-20 py-16 md:py-24">
-        <div className="flex flex-col items-start gap-6">
+      <main className="container mx-auto px-4 sm:px-8 md:px-20 py-20 md:py-32">
+        <div className="flex flex-col items-start gap-8">
           <SplitText 
             text="Design System"
             tag="h1"
@@ -49,12 +49,12 @@ export default function DesignSystemPage() {
           </p>
         </div>
 
-        <section className="mt-16">
-          <h2 className="font-headline text-4xl font-semibold mb-8">Atoms</h2>
-          <div className="space-y-12">
+        <section className="mt-20">
+          <h2 className="font-headline text-4xl font-semibold mb-10">Atoms</h2>
+          <div className="space-y-16">
             <div>
-              <h3 className="font-headline text-2xl font-semibold mb-4">Color Palette</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
+              <h3 className="font-headline text-2xl font-semibold mb-6">Color Palette</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10">
                 {colors.map(color => (
                   <div key={color.name}>
                     <h4 className="font-headline text-xl font-semibold mb-4 text-foreground">{color.name}</h4>
@@ -74,8 +74,8 @@ export default function DesignSystemPage() {
             </div>
 
             <div>
-              <h3 className="font-headline text-2xl font-semibold mb-4">Typography</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <h3 className="font-headline text-2xl font-semibold mb-6">Typography</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   {typography.map(type => (
                       <div key={type.name}>
                           <p className="text-sm text-muted-foreground mb-2">{type.name}</p>
@@ -86,8 +86,8 @@ export default function DesignSystemPage() {
             </div>
             
             <div>
-              <h3 className="font-headline text-2xl font-semibold mb-4">Iconography</h3>
-              <div className="flex flex-wrap gap-8 items-center">
+              <h3 className="font-headline text-2xl font-semibold mb-6">Iconography</h3>
+              <div className="flex flex-wrap gap-10 items-center">
                 {icons.map(icon => (
                   <div key={icon.name} className="flex flex-col items-center gap-2 text-muted-foreground">
                     <div className="w-16 h-16 bg-card border border-border rounded-lg flex items-center justify-center">
@@ -101,14 +101,14 @@ export default function DesignSystemPage() {
           </div>
         </section>
 
-        <section className="mt-16">
-            <h2 className="font-headline text-4xl font-semibold mb-8">Molecules & Interactions</h2>
-            <div className="space-y-12">
+        <section className="mt-20">
+            <h2 className="font-headline text-4xl font-semibold mb-10">Molecules & Interactions</h2>
+            <div className="space-y-16">
                 <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4">Buttons</h3>
-                    <div className="space-y-8">
+                    <h3 className="font-headline text-2xl font-semibold mb-6">Buttons</h3>
+                    <div className="space-y-10">
                         {/* Standard Button Row */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
                             <div className="flex flex-col items-start gap-2">
                                 <p className="text-muted-foreground text-sm">Default</p>
                                 <Button className="rounded-full">Button</Button>
@@ -123,7 +123,7 @@ export default function DesignSystemPage() {
                             </div>
                         </div>
                         {/* Pill Button Row */}
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
                              <div className="flex flex-col items-start gap-2">
                                 <p className="text-muted-foreground text-sm">Default</p>
                                 <PillButton href="#" className="group">
@@ -150,8 +150,8 @@ export default function DesignSystemPage() {
                 </div>
 
                 <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4">Cards</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <h3 className="font-headline text-2xl font-semibold mb-6">Cards</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                         <ProjectPageCard 
                             title="Sample Project Title"
                             role="Product Designer | Co-Designer"
@@ -165,8 +165,8 @@ export default function DesignSystemPage() {
 
 
                 <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4">Interactions & Animations</h3>
-                    <div className="space-y-8">
+                    <h3 className="font-headline text-2xl font-semibold mb-6">Interactions & Animations</h3>
+                    <div className="space-y-10">
                         <div className="flex flex-col gap-4">
                             <p className="text-muted-foreground">Text Reveal Animation</p>
                              <SplitText 
@@ -176,7 +176,7 @@ export default function DesignSystemPage() {
                                 textAlign="left"
                             />
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
                         <div className="flex flex-col gap-4">
                             <p className="text-muted-foreground">Spotlight Card</p>
                             <SpotlightCard className="p-8 rounded-2xl border border-border bg-card">

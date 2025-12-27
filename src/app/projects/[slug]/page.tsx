@@ -64,7 +64,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       <main>
         {/* Hero Section */}
         <section className="bg-background">
-          <motion.div {...motionProps} className="bg-footer text-footer-foreground py-10 md:py-20">
+          <motion.div {...motionProps} className="bg-footer text-footer-foreground py-12 md:py-24">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
                <SplitText
                 text="Driving Loyalty & Efficiency in EV Mobility with VIDA"
@@ -78,7 +78,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   className="font-headline font-semibold text-lg md:text-xl text-footer-muted-foreground mt-4 text-center md:text-left max-w-4xl mx-auto md:mx-0"
                   textAlign="left"
                 />
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mt-12 max-w-4xl mx-auto md:mx-0">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 mt-16 max-w-4xl mx-auto md:mx-0">
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-footer-muted-foreground">Project Type</h3>
                   <p className="text-lg mt-2">Behavioural UX case Study</p>
@@ -92,7 +92,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   <p className="text-lg mt-2">Product Strategy, UX, Visual design</p>
                 </div>
               </div>
-              <div className='mt-12'>
+              <div className='mt-16'>
                 <h2 className="font-headline font-semibold text-xl md:text-2xl text-footer-foreground">Project Focus</h2>
                 <p className="text-footer-muted-foreground text-lg md:text-xl leading-relaxed mt-2 max-w-4xl">
                     End-to-end connected vehicle platform experience for the launch of the Vida EV.
@@ -100,7 +100,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
             </div>
           </motion.div>
-          <div className="container mx-auto px-4 sm:px-8 md:px-20 py-8 md:py-12">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20 py-10 md:py-16">
             {heroImage && (
                 <motion.div {...motionProps} className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden">
                 <Image
@@ -116,14 +116,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Challenge Section */}
-        <section className="py-16 md:py-24 bg-background">
-            <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <section className="py-20 md:py-32 bg-background">
+            <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
                 <div>
                     <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Challenge</h2>
                     <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
                     Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value.
                     </p>
-                    <div className="mt-8">
+                    <div className="mt-10">
                         <h3 className="font-headline font-semibold text-2xl text-foreground">My Role</h3>
                         <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-2">
                             Consultant : CX & UX Design
@@ -146,9 +146,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Gallery Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-20 md:py-32 bg-background">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                <motion.div {...motionProps} className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <motion.div {...motionProps} className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {galleryImages.map((img, index) => img && (
                     <div key={index} className="relative w-full aspect-square bg-muted rounded-2xl overflow-hidden">
                         <Image
@@ -166,14 +166,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         
         {/* All Articles Section */}
         {articlesImage && (
-             <section className="py-16 md:py-24 bg-card">
+             <section className="py-20 md:py-32 bg-card">
                 <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 text-center">
                      <SplitText
                         text="All articles"
                         tag="h2"
                         className="font-headline font-semibold text-4xl md:text-6xl text-foreground"
                     />
-                    <div className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden mt-12">
+                    <div className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden mt-16">
                         <Image
                             src={articlesImage.imageUrl}
                             alt={articlesImage.description}
@@ -187,14 +187,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         )}
 
         {/* Result Section */}
-        <section className="py-16 md:py-24 bg-background">
-            <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+        <section className="py-20 md:py-32 bg-background">
+            <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 items-center">
                 <div>
                     <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Result</h2>
                     <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
                         The result is a more intuitive and personalized Headspace experience. By focusing on user intent and context, we designed a system that surfaces the right content at the right time, helping users build a consistent mindfulness practice that fits their life.
                     </p>
-                    <Button variant="link" className="group mt-8 px-0 text-foreground text-lg hover:text-primary">
+                    <Button variant="link" className="group mt-10 px-0 text-foreground text-lg hover:text-primary">
                         View Live Site
                     </Button>
                 </div>
@@ -213,7 +213,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Final Design Section */}
-        <section className="py-16 md:py-24 bg-card">
+        <section className="py-20 md:py-32 bg-card">
             <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20">
                 <div className="text-center">
                      <SplitText
@@ -225,7 +225,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         We developed a dynamic content system that adapts to user's goals, from managing stress to improving sleep.
                     </p>
                 </div>
-                <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8">
+                <div className="mt-16 flex flex-col md:flex-row justify-center items-center gap-10">
                     {finalDesignImage1 && (
                         <div className="relative w-full max-w-[250px] h-[500px]">
                              <Image
@@ -253,15 +253,15 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
         
         {/* Visuals Section */}
-        <section className="py-16 md:py-24 bg-background">
+        <section className="py-20 md:py-32 bg-background">
              <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20">
-                 <div className="text-center mb-12">
+                 <div className="text-center mb-16">
                      <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Visuals</h2>
                       <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mt-4">
                         The visual language of Headspace is a key part of its appeal. We worked to evolve the existing brand, introducing new layouts, typographic styles, and interactive elements to create a more engaging and cohesive experience across the platform.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     {visualImage1 && (
                          <div className="relative w-full h-[300px] md:h-[450px] bg-muted rounded-2xl overflow-hidden">
                             <Image
@@ -289,8 +289,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
          {/* Visual Design Language Section */}
-        <section className="py-16 md:py-24 bg-card">
-            <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <section className="py-20 md:py-32 bg-card">
+            <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                  {vdlImage1 && (
                     <div className="relative w-full h-96 bg-[#F9C900] rounded-2xl overflow-hidden p-8 flex items-center justify-center">
                         <div className="relative w-48 h-80">
@@ -310,7 +310,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         Our goal was to create a design system that felt friendly, accessible, and unmistakably Headspace. We established a clear typography system, a versatile color palette, and a library of reusable components that allowed for consistency and scalability.
                     </p>
                      {vdlImage2 && (
-                        <div className="relative w-full h-48 mt-8">
+                        <div className="relative w-full h-48 mt-10">
                              <Image
                                 src={vdlImage2.imageUrl}
                                 alt={vdlImage2.description}
@@ -326,7 +326,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
 
         {/* Testimonials Section */}
-        <section className="relative py-16 md:py-36 bg-background">
+        <section className="relative py-20 md:py-44 bg-background">
              {testimonialBgImage && (
                 <Image
                     src={testimonialBgImage.imageUrl}
@@ -337,7 +337,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 />
              )}
             <motion.div {...motionProps} className="relative container mx-auto px-4 sm:px-8 md:px-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
                      {testimonials.map((item, index) => (
                         <motion.div
                             key={index}

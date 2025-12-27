@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SplitText from '@/components/SplitText';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Lanyard from '@/components/Lanyard';
 
 const learnings = [
   {
@@ -35,8 +36,8 @@ export default function LearningsPage() {
   return (
     <div className="bg-background">
       <Header />
-      <main className="container mx-auto px-4 sm:px-8 md:px-20 py-16 md:py-24">
-        <div className="flex flex-col items-start gap-6">
+      <main className="container mx-auto px-4 sm:px-8 md:px-20 py-20 md:py-32">
+        <div className="flex flex-col items-start gap-8">
           <SplitText 
             text="Learnings & Reflection"
             tag="h1"
@@ -52,7 +53,9 @@ export default function LearningsPage() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+        {/* <Lanyard /> */}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
           {learnings.map((learning, index) => (
             <Card key={index} className="flex flex-col border border-border bg-card">
               <CardHeader>
@@ -63,7 +66,7 @@ export default function LearningsPage() {
                 <div>
                     <p className="text-muted-foreground">{learning.reflection}</p>
                 </div>
-                <div className='mt-6'>
+                <div className='mt-8'>
                     <p className="font-semibold text-foreground">Key Takeaway:</p>
                     <p className="text-foreground italic">"{learning.takeaway}"</p>
                 </div>

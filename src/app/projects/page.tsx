@@ -61,8 +61,8 @@ export default function ProjectsPage() {
   return (
     <div className="bg-background">
       <Header />
-      <main className="container mx-auto px-4 sm:px-8 md:px-20 py-16 md:py-24">
-        <div className="flex flex-col items-start gap-6">
+      <main className="container mx-auto px-4 sm:px-8 md:px-20 py-20 md:py-32">
+        <div className="flex flex-col items-start gap-8">
            <SplitText 
             text="Projects"
             tag="h1"
@@ -75,20 +75,20 @@ export default function ProjectsPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 mt-20">
           {projects.map((project, index) => (
             <ProjectPageCard key={index} {...project} />
           ))}
         </div>
 
-        <div className='my-24'>
+        <div className='my-32'>
             <SplitText
               text="stay tuned for new Projects"
               tag="h2"
               className="font-headline font-semibold text-3xl md:text-5xl text-left text-foreground"
               textAlign="left"
             />
-            <div className="mt-12 flex overflow-x-auto gap-8 pb-8">
+            <div className="mt-16 flex overflow-x-auto gap-10 pb-10">
                 {comingSoonProjects.map((project, index) => (
                     <div key={index} className="flex-shrink-0 w-[80vw] md:w-[40vw] lg:w-[30vw]">
                         <ProjectPageCard {...project} comingSoon={true} />

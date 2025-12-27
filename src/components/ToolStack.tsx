@@ -23,14 +23,14 @@ const analyticalTools = [
 
 const ToolStack = () => {
   return (
-    <section className="pb-16 md:pb-24 bg-background">
-      <div className="mb-16 md:mb-24 container mx-auto px-4 sm:px-8 md:px-20">
+    <section className="pb-20 md:pb-32 bg-background">
+      <div className="mb-20 md:mb-32 container mx-auto px-4 sm:px-8 md:px-20">
         <div className="flex flex-col items-start gap-y-4">
           <AnimatedShape shape="circle" />
           <h2 className="font-headline font-semibold text-5xl leading-[58px] tracking-[0.02em] text-foreground">
             we are almost done...
           </h2>
-          <div className="w-32 h-[2px] bg-border my-4"></div>
+          <div className="w-32 h-[2px] bg-border my-6"></div>
         </div>
       </div>
 
@@ -52,8 +52,8 @@ const ToolStack = () => {
         </div>
       </div>
 
-      <div className="mt-12 container mx-auto px-4 sm:px-8 md:px-20">
-        <div className="mb-8">
+      <div className="mt-16 container mx-auto px-4 sm:px-8 md:px-20">
+        <div className="mb-10">
             <SplitText
                 text="Design softwares"
                 tag="h3"
@@ -61,7 +61,7 @@ const ToolStack = () => {
                 textAlign="left"
             />
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
           {designTools.map((tool, index) => (
             <div key={index}>
               <div className="bg-card border border-border rounded-xl flex items-center justify-center p-4 h-24">
@@ -74,8 +74,8 @@ const ToolStack = () => {
         </div>
       </div>
       
-      <div className="mt-12 container mx-auto px-4 sm:px-8 md:px-20">
-         <div className="mb-8">
+      <div className="mt-16 container mx-auto px-4 sm:px-8 md:px-20">
+         <div className="mb-10">
             <SplitText
                 text="Analytical tools"
                 tag="h3"
@@ -83,7 +83,7 @@ const ToolStack = () => {
                 textAlign="left"
             />
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
           {analyticalTools.map((tool, index) => (
             <div key={index}>
               <div className="bg-card border border-border rounded-xl flex items-center justify-center p-4 h-24">
@@ -96,15 +96,15 @@ const ToolStack = () => {
         </div>
       </div>
 
-      <div className="mt-16 md:mt-24 container mx-auto px-4 sm:px-8 md:px-20">
-        <div className="flex flex-col items-start gap-4">
+      <div className="mt-20 md:mt-32 container mx-auto px-4 sm:px-8 md:px-20">
+        <div className="flex flex-col items-start gap-6">
            <SplitText
               text="/ Skills"
               tag="h2"
               className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground"
               textAlign="left"
             />
-          <div className="mt-8">
+          <div className="mt-10">
             <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-2">
               Research
             </h3>
@@ -112,7 +112,7 @@ const ToolStack = () => {
               Design Research | Data Analytics | User Behaviour Analytics | Task Analysis & Persona Hypothesis | Information Architecture | Heuristics
             </p>
           </div>
-          <div className="mt-8" id="design-skills-trigger">
+          <div className="mt-10" id="design-skills-trigger">
             <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-2">
               Design
             </h3>
@@ -120,7 +120,7 @@ const ToolStack = () => {
               User Flows | Concept Sketches | Wireframes & mock ups | Design System
             </p>
           </div>
-           <div className="mt-8">
+           <div className="mt-10">
             <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-2">
               Prototyping
             </h3>
@@ -128,10 +128,10 @@ const ToolStack = () => {
                 Rapid Prototyping | Advanced Prototyping | Microinteractions | Motion Design
             </p>
           </div>
-          <div className="mt-8">
+          <div className="mt-10">
             <div className="w-[84px] h-[84px] rounded-full bg-primary"></div>
           </div>
-          <div className='mt-8'>
+          <div className='mt-10'>
              <SplitText
                 text="Now that you know me better"
                 tag="p"

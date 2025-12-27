@@ -4,16 +4,16 @@ import ScrollToTopButton from "./ScrollToTopButton";
 
 export default function Footer() {
     return (
-        <footer className="bg-footer text-footer-foreground py-16">
-        <div className="container mx-auto px-4 sm:px-8 md:px-20 flex flex-col gap-10">
-          <div className='flex flex-col gap-10'>
-            <div className='flex flex-col gap-6'>
+        <footer className="bg-footer text-footer-foreground py-20">
+        <div className="container mx-auto px-4 sm:px-8 md:px-20 flex flex-col gap-12">
+          <div className='flex flex-col gap-12'>
+            <div className='flex flex-col gap-8'>
               <p 
                 className="font-headline font-semibold text-xl md:text-2xl text-footer-muted-foreground"
               >
                 Lets get in Touch....
               </p>
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-base md:text-lg">
+              <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-base md:text-lg">
                 <PillButton href="#" className="text-sm">View Resume</PillButton>
                 <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-tight underline leading-normal break-all hover:text-primary transition-colors">Aadesh.one9@gmail.com</a>
                 <p className="font-headline font-semibold tracking-tight leading-normal">+ (91) 8975143018</p>
@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="p-2.5 flex justify-between items-end">
-              <div className="font-headline font-semibold text-5xl sm:text-7xl md:text-9xl lg:text-[160px] leading-[0.8] tracking-tighter flex flex-col gap-6">
+              <div className="font-headline font-semibold text-5xl sm:text-7xl md:text-9xl lg:text-[160px] leading-[0.8] tracking-tighter flex flex-col gap-8">
                 <span>Aadesh</span>
                 <span>one9.com</span>
               </div>
