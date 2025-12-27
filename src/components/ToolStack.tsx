@@ -131,6 +131,11 @@ const ToolStack = () => {
           <div className="mt-8">
             <div className="w-[84px] h-[84px] rounded-full bg-primary"></div>
           </div>
+          <div className='mt-8'>
+             <p className="font-headline font-semibold text-muted-foreground text-lg md:text-2xl tracking-[0.02em] leading-normal">
+                Now that you know me better than Earlier, Lets get in Touch....
+              </p>
+          </div>
         </div>
       </div>
     </section>
