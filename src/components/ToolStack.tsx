@@ -40,9 +40,14 @@ const ToolStack = () => {
       </div>
 
       <div className="mt-12 container mx-auto px-4 sm:px-8 md:px-20">
-        <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-8">
-            Design softwares
-        </h3>
+        <div className="mb-8">
+            <SplitText
+                text="Design softwares"
+                tag="h3"
+                className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground"
+                textAlign="left"
+            />
+        </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
           {designTools.map((tool, index) => (
             <div key={index}>
@@ -57,9 +62,14 @@ const ToolStack = () => {
       </div>
       
       <div className="mt-12 container mx-auto px-4 sm:px-8 md:px-20">
-        <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-8">
-            Analytical tools
-        </h3>
+         <div className="mb-8">
+            <SplitText
+                text="Analytical tools"
+                tag="h3"
+                className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground"
+                textAlign="left"
+            />
+        </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
           {analyticalTools.map((tool, index) => (
             <div key={index}>
