@@ -30,7 +30,13 @@ const ToolStack = () => {
     <section className="pb-16 md:pb-24 bg-background">
       <div className="mb-16 md:mb-24 container mx-auto px-4 sm:px-8 md:px-20">
         <div className="flex flex-col items-start gap-y-4">
-          <div className="w-[84px] h-[84px] border-2 border-border rounded-full"></div>
+          <motion.div 
+            className="w-[84px] h-[84px] border-2 border-border rounded-full"
+            initial={{ borderColor: 'hsl(var(--border))' }}
+            whileInView={{ borderColor: 'hsl(var(--primary))' }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.8 }}
+          ></motion.div>
           <h2 className="font-headline font-semibold text-5xl leading-[58px] tracking-[0.02em] text-foreground">
             we are almost done...
           </h2>
