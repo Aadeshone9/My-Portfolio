@@ -19,7 +19,7 @@ const approachData = [
   {
     title: 'Design',
     description:
-      'Shape Strategies & Design thoughtful design and always rooted in purpose and simplicity.',
+      'Shape Strategies & Design thoughtful design with purpose and simplicity.',
   },
   {
     title: 'Test & Deliver',
