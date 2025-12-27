@@ -77,7 +77,7 @@ export default function DesignSystemPage() {
             <div>
                 <h3 className="font-headline text-2xl font-semibold mb-4">Call to Actions (CTAs)</h3>
                 <div className="flex flex-wrap gap-4 items-center">
-                     <Button>Button</Button>
+                     <Button className="rounded-full">Button</Button>
                      <PillButton href="#" className="group">
                         <span className="group-hover:font-semibold">CTA</span>
                         <ArrowRight />
