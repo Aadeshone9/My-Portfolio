@@ -8,6 +8,7 @@ import { ArrowRight, Lock, Menu } from 'lucide-react';
 import PillButton from '@/components/PillButton';
 import SpotlightCard from '@/components/SpotlightCard';
 import TiltedCard from '@/components/TiltedCard';
+import ProjectPageCard from '@/components/ProjectPageCard';
 
 const colors = [
     { name: 'Primary', light: 'bg-primary', dark: 'dark:bg-primary' },
@@ -137,39 +138,61 @@ export default function DesignSystemPage() {
                     </div>
                 </div>
 
-                 <div>
+                <div>
                     <h3 className="font-headline text-2xl font-semibold mb-4">Cards</h3>
-                     <div className='max-w-sm'>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle>Card Title</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p>This is the content of the card. It can hold text, images, or other components.</p>
-                            </CardContent>
-                        </Card>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className='max-w-sm'>
+                            <p className="text-muted-foreground mb-4">Standard Card</p>
+                            <Card>
+                                <CardHeader>
+                                    <CardTitle>Card Title</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p>This is the content of the card. It can hold text, images, or other components.</p>
+                                </CardContent>
+                            </Card>
+                        </div>
+                        <div className='max-w-sm'>
+                            <p className="text-muted-foreground mb-4">Project Card</p>
+                            <ProjectPageCard 
+                                title="Sample Project"
+                                role="UX/UI Designer"
+                            />
+                        </div>
                     </div>
                 </div>
 
+
                 <div>
                     <h3 className="font-headline text-2xl font-semibold mb-4">Interactions & Animations</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                      <div className="flex flex-col gap-4">
-                        <p className="text-muted-foreground">Spotlight Card</p>
-                        <SpotlightCard className="p-8 rounded-2xl border border-border bg-card">
-                          <h4 className="font-headline font-semibold text-lg text-foreground">Spotlight Effect</h4>
-                          <p className="text-sm text-muted-foreground mt-2">Move your mouse over this card to see the spotlight effect.</p>
-                        </SpotlightCard>
-                      </div>
-                      <div className="flex flex-col gap-4">
-                        <p className="text-muted-foreground">Tilted Card</p>
-                        <TiltedCard>
-                          <div className="p-8 rounded-2xl border border-border bg-card">
-                            <h4 className="font-headline font-semibold text-lg text-foreground">3D Tilt Effect</h4>
-                            <p className="text-sm text-muted-foreground mt-2">Move your mouse over this card to see the tilt effect.</p>
-                          </div>
-                        </TiltedCard>
-                      </div>
+                    <div className="space-y-8">
+                        <div className="flex flex-col gap-4">
+                            <p className="text-muted-foreground">Text Reveal Animation</p>
+                             <SplitText 
+                                text="Animated Text"
+                                tag="h4"
+                                className="font-headline font-semibold text-3xl text-foreground"
+                                textAlign="left"
+                            />
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                        <div className="flex flex-col gap-4">
+                            <p className="text-muted-foreground">Spotlight Card</p>
+                            <SpotlightCard className="p-8 rounded-2xl border border-border bg-card">
+                            <h4 className="font-headline font-semibold text-lg text-foreground">Spotlight Effect</h4>
+                            <p className="text-sm text-muted-foreground mt-2">Move your mouse over this card to see the spotlight effect.</p>
+                            </SpotlightCard>
+                        </div>
+                        <div className="flex flex-col gap-4">
+                            <p className="text-muted-foreground">Tilted Card</p>
+                            <TiltedCard>
+                            <div className="p-8 rounded-2xl border border-border bg-card">
+                                <h4 className="font-headline font-semibold text-lg text-foreground">3D Tilt Effect</h4>
+                                <p className="text-sm text-muted-foreground mt-2">Move your mouse over this card to see the tilt effect.</p>
+                            </div>
+                            </TiltedCard>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
