@@ -79,7 +79,7 @@ export default function DesignSystemPage() {
                 <div className="flex flex-wrap gap-4 items-center">
                      <Button>Button</Button>
                      <PillButton href="#" className="group">
-                        <span className="group-hover:font-semibold">Pill Button</span>
+                        <span className="group-hover:font-semibold">CTA</span>
                         <ArrowRight />
                     </PillButton>
                 </div>
