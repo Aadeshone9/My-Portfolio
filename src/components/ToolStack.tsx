@@ -31,15 +31,13 @@ const ToolStack = () => {
         </div>
       </div>
 
-      <div className="mt-12 w-full overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-8">
-                Design softwares
-            </h3>
-        </div>
-        <div className="flex animate-looping-scroll">
-          {[...designTools, ...designTools].map((tool, index) => (
-            <div key={index} className="flex-shrink-0 mx-4">
+      <div className="mt-12 container mx-auto px-4 sm:px-8 md:px-20">
+        <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-8">
+            Design softwares
+        </h3>
+        <div className="flex flex-wrap gap-4">
+          {designTools.map((tool, index) => (
+            <div key={index} className="flex-shrink-0">
               <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28 w-60">
                 <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground whitespace-nowrap">
                   {tool.name}
@@ -50,15 +48,13 @@ const ToolStack = () => {
         </div>
       </div>
       
-      <div className="mt-12 w-full overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-8">
-                Analytical tools
-            </h3>
-        </div>
-        <div className="flex animate-looping-scroll">
-          {[...analyticalTools, ...analyticalTools].map((tool, index) => (
-            <div key={index} className="flex-shrink-0 mx-4">
+      <div className="mt-12 container mx-auto px-4 sm:px-8 md:px-20">
+        <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-8">
+            Analytical tools
+        </h3>
+        <div className="flex flex-wrap gap-4">
+          {analyticalTools.map((tool, index) => (
+            <div key={index} className="flex-shrink-0">
               <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28 w-60">
                 <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground whitespace-nowrap">
                   {tool.name}
