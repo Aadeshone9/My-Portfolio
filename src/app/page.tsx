@@ -10,6 +10,7 @@ import TiltedCard from '@/components/TiltedCard';
 import Approach from '@/components/Approach';
 import PillButton from '@/components/PillButton';
 import Footer from '@/components/Footer';
+import ToolStack from '@/components/ToolStack';
 
 export default function Home() {
   const mainImage = PlaceHolderImages.find(p => p.id === 'hero-image');
@@ -166,6 +167,8 @@ export default function Home() {
         <div className="py-16 md:py-24">
             <Approach />
         </div>
+
+        <ToolStack />
 
       </main>
       <Footer />
