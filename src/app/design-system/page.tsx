@@ -1,4 +1,5 @@
 
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SplitText from '@/components/SplitText';
@@ -14,6 +15,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import Link from 'next/link';
+import ProjectPageCard from '@/components/ProjectPageCard';
 
 const colors = [
     { name: 'Primary', light: 'bg-[#F26302]', dark: 'bg-[#F57A1B]' },
@@ -111,6 +113,16 @@ export default function DesignSystemPage() {
                                 <p>This is the content of the card. It can hold text, images, or other components.</p>
                             </CardContent>
                         </Card>
+                    </div>
+                </div>
+                <div>
+                    <h3 className="font-headline text-2xl font-semibold mb-4">Project Cards</h3>
+                    <div className='max-w-sm'>
+                        <ProjectPageCard 
+                            title="Sample Project"
+                            role="UX/UI Designer"
+                            description="This is a sample description for a project card to demonstrate its appearance in the design system."
+                        />
                     </div>
                 </div>
                  <div>
