@@ -105,6 +105,18 @@ const ToolStack = () => {
       </div>
 
       <div className="mt-16 md:mt-24 container mx-auto px-4 sm:px-8 md:px-20">
+        <div className="flex flex-col items-start gap-y-4">
+          <div className="w-[84px] h-[84px] border-2 border-[#757575] rounded-full"></div>
+          <SplitText
+            text="we are almost done"
+            tag="h2"
+            className="font-headline font-semibold text-5xl leading-[58px] tracking-[0.02em] text-foreground"
+            textAlign="left"
+          />
+        </div>
+      </div>
+
+      <div className="mt-16 md:mt-24 container mx-auto px-4 sm:px-8 md:px-20">
         <div className="flex flex-col items-start gap-4">
            <SplitText
               text="/ Skills"
