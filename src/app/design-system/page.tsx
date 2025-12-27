@@ -17,7 +17,7 @@ const colors = [
 const typography = [
     { name: 'Headline', className: 'font-headline text-5xl', text: 'Poppins' },
     { name: 'Subtitle', className: 'font-subtitle text-4xl', text: 'Playfair Display' },
-    { name: 'Body', className: 'font-body text-3xl', text: 'Inter' },
+    { name: 'Body', className: 'font-body text-3xl', text: 'Poppins' },
     { name: 'Code', className: 'font-code text-2xl', text: 'Monospace' },
 ]
 
