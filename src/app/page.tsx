@@ -57,7 +57,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="flex-1 flex flex-col">
                 <SplitText
-                  text="/Recent Projects"
+                  text="/ Recent Projects"
                   tag="h2"
                   className="font-headline font-semibold text-3xl md:text-[32px] leading-snug tracking-[0.02em] text-foreground"
                   textAlign="left"
