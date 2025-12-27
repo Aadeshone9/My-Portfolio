@@ -62,11 +62,17 @@ export default function Showreel({ imageUrl, alt, aiHint }: ShowreelProps) {
             animate={{ opacity: isHovered ? 1 : 0, scale: isHovered ? 1 : 0.8 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="bg-black/50 backdrop-blur-sm rounded-full p-4">
+            <div className="bg-black/50 backdrop-blur-sm rounded-full p-4 flex items-center gap-4 px-8">
               {isPlaying ? (
-                <Pause className="h-12 w-12 text-white" />
+                <>
+                  <Pause className="h-12 w-12 text-white" />
+                  <span className="text-white text-2xl font-headline">Pause</span>
+                </>
               ) : (
-                <Play className="h-12 w-12 text-white" />
+                <>
+                  <Play className="h-12 w-12 text-white" />
+                   <span className="text-white text-2xl font-headline">Play</span>
+                </>
               )}
             </div>
           </motion.div>
