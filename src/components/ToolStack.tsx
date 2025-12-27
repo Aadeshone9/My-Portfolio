@@ -1,8 +1,8 @@
 
 'use client';
 import React from 'react';
-import SplitText from './SplitText';
 import { motion } from 'framer-motion';
+import SplitText from './SplitText';
 
 const designTools = [
   { name: 'Figma' },
@@ -34,6 +34,7 @@ const ToolStack = () => {
           <h2 className="font-headline font-semibold text-5xl leading-[58px] tracking-[0.02em] text-foreground">
             we are almost done...
           </h2>
+          <div className="w-32 h-[2px] bg-[#757575] my-4"></div>
         </div>
       </div>
 
