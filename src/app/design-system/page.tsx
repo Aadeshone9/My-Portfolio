@@ -18,12 +18,10 @@ import Link from 'next/link';
 import ProjectPageCard from '@/components/ProjectPageCard';
 
 const colors = [
-    { name: 'Primary', light: 'bg-[#F26302]', dark: 'bg-[#F57A1B]' },
-    { name: 'Secondary', light: 'bg-[#84C5E3]', dark: 'bg-[#92D1ED]' },
-    { name: 'Background', light: 'bg-[#F9F3F0]', dark: 'bg-[#111827]' },
-    { name: 'Foreground', light: 'bg-[#31363F]', dark: 'bg-[#F9FAFB]' },
-    { name: 'Card', light: 'bg-[#F9F3F0]', dark: 'bg-[#1C2433]' },
-    { name: 'Footer', light: 'bg-[#1C2433]', dark: 'bg-[#1C2433]' },
+    { name: 'Primary', light: 'bg-primary', dark: 'dark:bg-primary' },
+    { name: 'Secondary', light: 'bg-secondary', dark: 'dark:bg-secondary' },
+    { name: 'Background', light: 'bg-background', dark: 'dark:bg-background' },
+    { name: 'Foreground', light: 'bg-foreground', dark: 'dark:bg-foreground' },
 ];
 
 const typography = [
@@ -52,59 +50,67 @@ export default function DesignSystemPage() {
             textAlign="left"
           />
           <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground max-w-2xl">
-            The foundational elements of the visual identity.
+            The foundational elements of the visual identity, organized by atomic design principles.
           </p>
         </div>
 
+        {/* Atoms Section */}
         <section className="mt-16">
-          <h2 className="font-headline text-3xl md:text-4xl font-semibold mb-8">Colors</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {colors.map(color => (
-              <div key={color.name}>
-                <h3 className="font-headline text-xl font-semibold mb-4 text-foreground">{color.name}</h3>
-                <div className="flex gap-4">
-                  <div className="flex flex-col items-center gap-2">
-                    <div className={`w-24 h-24 rounded-full ${color.light} border-2 border-border`}></div>
-                    <p className="text-sm text-muted-foreground">Light</p>
+          <h2 className="font-headline text-3xl md:text-4xl font-semibold mb-8">Atoms</h2>
+          <div className="space-y-12">
+            <div>
+              <h3 className="font-headline text-2xl font-semibold mb-4">Colors</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+                {colors.map(color => (
+                  <div key={color.name}>
+                    <h4 className="font-headline text-xl font-semibold mb-4 text-foreground">{color.name}</h4>
+                    <div className="flex gap-4">
+                      <div className="flex flex-col items-center gap-2">
+                        <div className={`w-24 h-24 rounded-full ${color.light} border-2 border-border`}></div>
+                        <p className="text-sm text-muted-foreground">Light</p>
+                      </div>
+                       <div className="flex flex-col items-center gap-2">
+                        <div className={`w-24 h-24 rounded-full ${color.dark} border-2 border-border`}></div>
+                        <p className="text-sm text-muted-foreground">Dark</p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex flex-col items-center gap-2">
-                    <div className={`w-24 h-24 rounded-full ${color.dark} border-2 border-border`}></div>
-                    <p className="text-sm text-muted-foreground">Dark</p>
-                  </div>
-                </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            <div>
+              <h3 className="font-headline text-2xl font-semibold mb-4">Typography</h3>
+              <div className="space-y-8">
+                  {typography.map(type => (
+                      <div key={type.name}>
+                          <p className="text-sm text-muted-foreground mb-2">{type.name} - {type.size}</p>
+                          <p className={type.className}>{type.text}</p>
+                      </div>
+                  ))}
+              </div>
+            </div>
+
+            <div>
+                <h3 className="font-headline text-2xl font-semibold mb-4">Buttons</h3>
+                <div className="flex flex-wrap gap-4 items-center">
+                     <Button className="rounded-full">Button</Button>
+                     <PillButton href="#" className="group">
+                        <span className="group-hover:font-semibold">Button</span>
+                        <ArrowRight />
+                    </PillButton>
+                </div>
+            </div>
           </div>
         </section>
 
+        {/* Molecules Section */}
         <section className="mt-16">
-            <h2 className="font-headline text-3xl md:text-4xl font-semibold mb-8">Typography</h2>
-            <div className="space-y-8">
-                {typography.map(type => (
-                    <div key={type.name}>
-                        <p className="text-sm text-muted-foreground mb-2">{type.name} - {type.size}</p>
-                        <p className={type.className}>{type.text}</p>
-                    </div>
-                ))}
-            </div>
-        </section>
-
-        <section className="mt-16">
-            <h2 className="font-headline text-3xl md:text-4xl font-semibold mb-8">Components</h2>
-            <div className="space-y-8">
+            <h2 className="font-headline text-3xl md:text-4xl font-semibold mb-8">Molecules</h2>
+            <div className="space-y-12">
                 <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4">Call to Actions (CTAs)</h3>
-                    <div className="flex flex-wrap gap-4 items-center">
-                         <Button className="rounded-full">Button</Button>
-                         <PillButton href="#" className="group">
-                            <span className="group-hover:font-semibold">Button</span>
-                            <ArrowRight />
-                        </PillButton>
-                    </div>
-                </div>
-                <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4">Cards</h3>
-                    <div className='max-w-sm'>
+                    <h3 className="font-headline text-2xl font-semibold mb-4">Card</h3>
+                     <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                         <Card>
                             <CardHeader>
                                 <CardTitle>Card Title</CardTitle>
@@ -113,11 +119,6 @@ export default function DesignSystemPage() {
                                 <p>This is the content of the card. It can hold text, images, or other components.</p>
                             </CardContent>
                         </Card>
-                    </div>
-                </div>
-                <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4">Project Cards</h3>
-                    <div className='max-w-sm'>
                         <ProjectPageCard 
                             title="Sample Project"
                             role="UX/UI Designer"
@@ -125,35 +126,21 @@ export default function DesignSystemPage() {
                         />
                     </div>
                 </div>
-                 <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4">Mobile Elements</h3>
-                    <p className="text-muted-foreground mb-4">This demonstrates the slide-out menu used on mobile devices.</p>
-                     <Sheet>
-                        <SheetTrigger asChild>
-                        <Button variant="outline" size="icon" className="rounded-full">
-                            <Menu className="h-[1.2rem] w-[1.2rem]" />
-                            <span className="sr-only">Open menu</span>
-                        </Button>
-                        </SheetTrigger>
-                        <SheetContent side="right">
-                        <SheetHeader>
-                            <SheetTitle className="sr-only">Mobile Navigation</SheetTitle>
-                        </SheetHeader>
-                        <nav className="flex flex-col gap-4 mt-8">
-                            {navItems.map((item) => (
-                            <Link
-                                key={item.href}
-                                href={item.href}
-                                className={"text-lg font-medium text-foreground"}
-                            >
-                                {item.label}
-                            </Link>
-                            ))}
-                        </nav>
-                        </SheetContent>
-                    </Sheet>
-                </div>
             </div>
+        </section>
+
+        {/* Organisms Section */}
+        <section className="mt-16">
+            <h2 className="font-headline text-3xl md:text-4xl font-semibold mb-8">Organisms</h2>
+             <div className="space-y-12">
+                <div>
+                    <h3 className="font-headline text-2xl font-semibold mb-4">Header</h3>
+                    <p className="text-muted-foreground mb-4">The header contains the primary navigation and theme toggle.</p>
+                     <div className="relative border border-border rounded-lg p-4">
+                        <Header />
+                    </div>
+                </div>
+             </div>
         </section>
 
       </main>
