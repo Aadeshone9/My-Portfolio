@@ -37,7 +37,7 @@ const Approach = () => {
         <div className="flex flex-col lg:flex-row flex-wrap items-start content-start gap-y-8 gap-x-[26px]">
           <div className="w-full">
             <SplitText
-              text="/My Approach Towards Problem Solving"
+              text="My Approach Towards Problem Solving"
               tag="h2"
               className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground"
               textAlign="left"
