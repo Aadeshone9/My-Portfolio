@@ -62,11 +62,11 @@ export default function DesignSystemPage() {
                     <h4 className="font-headline text-xl font-semibold mb-4 text-foreground">{color.name}</h4>
                     <div className="flex flex-col gap-4">
                       <div className="flex flex-col items-center gap-2">
-                        <div className={`w-24 h-24 rounded-full ${color.light} border-2 border-border`}></div>
+                        <div className={`w-16 h-16 rounded-full ${color.light} border-2 border-border`}></div>
                         <p className="text-sm text-muted-foreground">Light</p>
                       </div>
                        <div className="flex flex-col items-center gap-2">
-                        <div className={`w-24 h-24 rounded-full ${color.dark} border-2 border-border`}></div>
+                        <div className={`w-16 h-16 rounded-full ${color.dark} border-2 border-border`}></div>
                         <p className="text-sm text-muted-foreground">Dark</p>
                       </div>
                     </div>
