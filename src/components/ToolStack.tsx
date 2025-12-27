@@ -1,6 +1,5 @@
 
 import React from 'react';
-import SplitText from './SplitText';
 import { Card, CardContent } from '@/components/ui/card';
 
 const designTools = [
@@ -15,9 +14,11 @@ const designTools = [
 ];
 
 const analyticalTools = [
-    { name: 'Mouseflow - User behaviour' },
-    { name: 'Google Analytics - Page Analytics' },
+  { name: 'Mouseflow - User behaviour' },
+  { name: 'Google Analytics - Page Analytics' },
 ];
+
+const allTools = [...designTools, ...analyticalTools];
 
 const ToolStack = () => {
   return (
@@ -31,35 +32,21 @@ const ToolStack = () => {
             A collection of my favorite tools that help me to create and deliver the best results.
           </p>
         </div>
+      </div>
 
-        <div className="mt-12">
-            <h3 className="font-headline font-semibold text-2xl text-foreground mb-6">Design tools</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
-            {designTools.map((tool, index) => (
-                <Card key={index} className="bg-card border border-border rounded-xl aspect-square flex items-center justify-center p-4">
+      <div className="mt-12 w-full overflow-hidden">
+        <div className="flex animate-looping-scroll">
+          {[...allTools, ...allTools].map((tool, index) => (
+            <div key={index} className="flex-shrink-0 mx-4">
+              <Card className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28 w-60">
                 <CardContent className="p-0">
-                    <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground">
+                  <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground whitespace-nowrap">
                     {tool.name}
-                    </p>
+                  </p>
                 </CardContent>
-                </Card>
-            ))}
+              </Card>
             </div>
-        </div>
-
-        <div className="mt-12">
-            <h3 className="font-headline font-semibold text-2xl text-foreground mb-6">Analytical tools</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            {analyticalTools.map((tool, index) => (
-                <Card key={index} className="bg-card border border-border rounded-xl flex items-center justify-center p-6 min-h-[120px]">
-                <CardContent className="p-0">
-                    <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground">
-                    {tool.name}
-                    </p>
-                </CardContent>
-                </Card>
-            ))}
-            </div>
+          ))}
         </div>
       </div>
     </section>
