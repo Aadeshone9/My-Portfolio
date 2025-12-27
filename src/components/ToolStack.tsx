@@ -35,10 +35,10 @@ const ToolStack = () => {
         <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-8">
             Design softwares
         </h3>
-        <div className="flex flex-wrap gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {designTools.map((tool, index) => (
-            <div key={index} className="flex-shrink-0">
-              <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28 w-60">
+            <div key={index}>
+              <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28">
                 <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground whitespace-nowrap">
                   {tool.name}
                 </p>
@@ -52,10 +52,10 @@ const ToolStack = () => {
         <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-8">
             Analytical tools
         </h3>
-        <div className="flex flex-wrap gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {analyticalTools.map((tool, index) => (
-            <div key={index} className="flex-shrink-0">
-              <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28 w-60">
+            <div key={index}>
+              <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28">
                 <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground whitespace-nowrap">
                   {tool.name}
                 </p>
