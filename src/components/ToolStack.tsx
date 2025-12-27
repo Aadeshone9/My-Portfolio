@@ -68,7 +68,7 @@ const ToolStack = () => {
       <div className="mt-16 md:mt-24 container mx-auto px-4 sm:px-8 md:px-20">
         <div className="flex flex-col items-start gap-4">
           <h2 className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground">
-            / Skill
+            / Skills
           </h2>
           <div className='mt-4'>
             <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-4">
