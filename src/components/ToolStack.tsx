@@ -34,9 +34,11 @@ const ToolStack = () => {
       </div>
 
       <div className="mt-12 w-full overflow-hidden">
-        <h3 className="font-headline font-semibold text-xl md:text-2xl text-center text-foreground mb-8">
-            Design softwares
-        </h3>
+        <div className="container mx-auto px-4 sm:px-8 md:px-20">
+            <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-8">
+                Design softwares
+            </h3>
+        </div>
         <div className="flex animate-looping-scroll">
           {[...allTools, ...allTools].map((tool, index) => (
             <div key={index} className="flex-shrink-0 mx-4">
