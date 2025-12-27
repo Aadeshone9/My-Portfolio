@@ -14,6 +14,7 @@ import Footer from '@/components/Footer';
 import ToolStack from '@/components/ToolStack';
 import { motion } from 'framer-motion';
 import AnimatedShape from '@/components/AnimatedShape';
+import DesignSystemCTA from '@/components/DesignSystemCTA';
 
 export default function Home() {
   const mainImage = PlaceHolderImages.find(p => p.id === 'hero-image');
@@ -175,6 +176,7 @@ export default function Home() {
 
       </main>
       <Footer />
+      <DesignSystemCTA />
     </div>
   );
 }
