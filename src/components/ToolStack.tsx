@@ -30,11 +30,11 @@ const ToolStack = () => {
     <section className="pb-16 md:pb-24 bg-background">
       <div className="mb-16 md:mb-24 container mx-auto px-4 sm:px-8 md:px-20">
         <div className="flex flex-col items-start gap-y-4">
-          <div className="w-[84px] h-[84px] border-2 border-[#757575] rounded-full"></div>
+          <div className="w-[84px] h-[84px] border-2 border-border rounded-full"></div>
           <h2 className="font-headline font-semibold text-5xl leading-[58px] tracking-[0.02em] text-foreground">
             we are almost done...
           </h2>
-          <div className="w-32 h-[2px] bg-[#757575] my-4"></div>
+          <div className="w-32 h-[2px] bg-border my-4"></div>
         </div>
       </div>
 
