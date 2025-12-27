@@ -38,7 +38,7 @@ export default function Header() {
 
   const navItems = [
     { href: '/projects', label: 'Projects' },
-    { href: '/know-me-better', label: 'Know me better' },
+    { href: '/#know-me-better', label: 'Know me better' },
     { href: '/learnings', label: 'Learnings & Reflection' },
   ];
 
