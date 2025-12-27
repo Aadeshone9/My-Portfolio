@@ -2,10 +2,18 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import SplitText from '@/components/SplitText';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Menu } from 'lucide-react';
 import PillButton from '@/components/PillButton';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import Link from 'next/link';
 
 const colors = [
     { name: 'Primary', light: 'bg-[#F26302]', dark: 'bg-[#F57A1B]' },
@@ -21,6 +29,13 @@ const typography = [
     { name: 'Subtitle', className: 'font-subtitle text-4xl', text: 'Playfair Display', size: '4xl (2.25rem)' },
     { name: 'Body', className: 'font-body text-3xl', text: 'Poppins', size: '3xl (1.875rem)' },
 ]
+
+const navItems = [
+    { href: '/projects', label: 'Projects' },
+    { href: '/#know-me-better', label: 'Know me better' },
+    { href: '/learnings', label: 'Learnings & Reflection' },
+    { href: '/design-system', label: 'Design System' },
+  ];
 
 export default function DesignSystemPage() {
   return (
@@ -74,14 +89,57 @@ export default function DesignSystemPage() {
 
         <section className="mt-16">
             <h2 className="font-headline text-3xl md:text-4xl font-semibold mb-8">Components</h2>
-            <div>
-                <h3 className="font-headline text-2xl font-semibold mb-4">Call to Actions (CTAs)</h3>
-                <div className="flex flex-wrap gap-4 items-center">
-                     <Button className="rounded-full">Button</Button>
-                     <PillButton href="#" className="group">
-                        <span className="group-hover:font-semibold">CTA</span>
-                        <ArrowRight />
-                    </PillButton>
+            <div className="space-y-8">
+                <div>
+                    <h3 className="font-headline text-2xl font-semibold mb-4">Call to Actions (CTAs)</h3>
+                    <div className="flex flex-wrap gap-4 items-center">
+                         <Button className="rounded-full">Button</Button>
+                         <PillButton href="#" className="group">
+                            <span className="group-hover:font-semibold">CTA</span>
+                            <ArrowRight />
+                        </PillButton>
+                    </div>
+                </div>
+                <div>
+                    <h3 className="font-headline text-2xl font-semibold mb-4">Cards</h3>
+                    <div className='max-w-sm'>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle>Card Title</CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <p>This is the content of the card. It can hold text, images, or other components.</p>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
+                 <div>
+                    <h3 className="font-headline text-2xl font-semibold mb-4">Mobile Elements</h3>
+                    <p className="text-muted-foreground mb-4">This demonstrates the slide-out menu used on mobile devices.</p>
+                     <Sheet>
+                        <SheetTrigger asChild>
+                        <Button variant="outline" size="icon" className="rounded-full">
+                            <Menu className="h-[1.2rem] w-[1.2rem]" />
+                            <span className="sr-only">Open menu</span>
+                        </Button>
+                        </SheetTrigger>
+                        <SheetContent side="right">
+                        <SheetHeader>
+                            <SheetTitle className="sr-only">Mobile Navigation</SheetTitle>
+                        </SheetHeader>
+                        <nav className="flex flex-col gap-4 mt-8">
+                            {navItems.map((item) => (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className={"text-lg font-medium text-foreground"}
+                            >
+                                {item.label}
+                            </Link>
+                            ))}
+                        </nav>
+                        </SheetContent>
+                    </Sheet>
                 </div>
             </div>
         </section>
