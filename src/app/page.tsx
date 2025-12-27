@@ -80,7 +80,7 @@ export default function Home() {
 
         <section id="know-me-better" className="pt-4 pb-4 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
           <div className="flex flex-col items-start gap-4">
-            <div className="w-[84px] h-[84px] border-2 border-[#757575] rounded-[8px]"></div>
+            <div className="w-[84px] h-[84px] border-2 border-border rounded-[8px]"></div>
             <SplitText
               text="Know me better..."
               tag="h2"
@@ -88,6 +88,7 @@ export default function Home() {
               textAlign="left"
             />
           </div>
+          <div className="w-full h-[1px] bg-border my-8"></div>
         </section>
 
         <section className="pt-8 pb-16 container mx-auto px-4 sm:px-8 md:px-20">
