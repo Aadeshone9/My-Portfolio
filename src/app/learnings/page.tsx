@@ -36,7 +36,7 @@ export default function LearningsPage() {
   return (
     <div className="bg-background">
       <Header />
-      <main className="container mx-auto px-4 sm:px-8 md:px-20 py-20 md:py-32">
+      <main className="container mx-auto px-4 sm:px-8 md:px-20 py-24 md:py-40">
         <div className="flex flex-col items-start gap-8">
           <SplitText 
             text="Learnings & Reflection"
@@ -55,7 +55,7 @@ export default function LearningsPage() {
 
         {/* <Lanyard /> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-24">
           {learnings.map((learning, index) => (
             <Card key={index} className="flex flex-col border border-border bg-card">
               <CardHeader>
