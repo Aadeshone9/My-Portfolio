@@ -1,6 +1,8 @@
 
+'use client';
 import React from 'react';
 import SplitText from './SplitText';
+import { motion } from 'framer-motion';
 
 const designTools = [
   { name: 'Figma' },
@@ -17,6 +19,11 @@ const analyticalTools = [
   { name: 'Mouseflow' },
   { name: 'Google Analytics' },
 ];
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const ToolStack = () => {
   return (
@@ -50,13 +57,20 @@ const ToolStack = () => {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
           {designTools.map((tool, index) => (
-            <div key={index}>
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
               <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28">
                 <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground whitespace-nowrap">
                   {tool.name}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -72,13 +86,20 @@ const ToolStack = () => {
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
           {analyticalTools.map((tool, index) => (
-            <div key={index}>
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
               <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28">
                 <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground whitespace-nowrap">
                   {tool.name}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
