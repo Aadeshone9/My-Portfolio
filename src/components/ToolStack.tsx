@@ -64,8 +64,8 @@ const ToolStack = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
           {designTools.map((tool, index) => (
             <div key={index}>
-              <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28">
-                <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground whitespace-nowrap">
+              <div className="bg-card border border-border rounded-xl flex items-center justify-center p-4 h-24">
+                <p className="font-headline text-center font-semibold text-base md:text-lg text-foreground whitespace-nowrap">
                   {tool.name}
                 </p>
               </div>
@@ -86,8 +86,8 @@ const ToolStack = () => {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
           {analyticalTools.map((tool, index) => (
             <div key={index}>
-              <div className="bg-card border border-border rounded-xl flex items-center justify-center p-6 h-28">
-                <p className="font-headline text-center font-semibold text-lg md:text-xl text-foreground whitespace-nowrap">
+              <div className="bg-card border border-border rounded-xl flex items-center justify-center p-4 h-24">
+                <p className="font-headline text-center font-semibold text-base md:text-lg text-foreground whitespace-nowrap">
                   {tool.name}
                 </p>
               </div>
