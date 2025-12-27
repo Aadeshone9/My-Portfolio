@@ -145,6 +145,9 @@ const ToolStack = () => {
                 Rapid Prototyping | Advanced Prototyping | Microinteractions | Motion Design
             </p>
           </div>
+          <div className="mt-8">
+            <div className="w-16 h-16 rounded-full bg-primary"></div>
+          </div>
         </div>
       </div>
     </section>
