@@ -49,9 +49,8 @@ export default function DesignSystemPage() {
           </p>
         </div>
 
-        {/* Phase A: Atoms */}
         <section className="mt-16">
-          <h2 className="font-headline text-4xl font-semibold mb-8">Phase A: Atoms</h2>
+          <h2 className="font-headline text-4xl font-semibold mb-8">Atoms</h2>
           <div className="space-y-12">
             <div>
               <h3 className="font-headline text-2xl font-semibold mb-4">Color Palette</h3>
@@ -102,9 +101,8 @@ export default function DesignSystemPage() {
           </div>
         </section>
 
-        {/* Phase B: Molecules */}
         <section className="mt-16">
-            <h2 className="font-headline text-4xl font-semibold mb-8">Phase B: Molecules & Interactions</h2>
+            <h2 className="font-headline text-4xl font-semibold mb-8">Molecules & Interactions</h2>
             <div className="space-y-12">
                 <div>
                     <h3 className="font-headline text-2xl font-semibold mb-4">Buttons</h3>
