@@ -151,8 +151,8 @@ export default function DesignSystemPage() {
 
                 <div>
                     <h3 className="font-headline text-2xl font-semibold mb-4">Cards</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div className='max-w-sm'>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div>
                             <p className="text-muted-foreground mb-4">Standard Card</p>
                             <Card>
                                 <CardHeader>
@@ -163,11 +163,18 @@ export default function DesignSystemPage() {
                                 </CardContent>
                             </Card>
                         </div>
-                        <div className='max-w-sm'>
+                        <div>
                             <p className="text-muted-foreground mb-4">Project Card</p>
                             <ProjectPageCard 
-                                title="Sample Project"
-                                role="UX/UI Designer"
+                                title="Hero Motocorp Vida App"
+                                role="UX Design Consultant | Co-Designer"
+                            />
+                        </div>
+                        <div>
+                            <p className="text-muted-foreground mb-4">Project Card</p>
+                            <ProjectPageCard 
+                                title="Thermax - Edge Platform"
+                                role="UX Researcher and strategist"
                             />
                         </div>
                     </div>
