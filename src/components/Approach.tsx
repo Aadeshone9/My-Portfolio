@@ -15,7 +15,7 @@ const approachData = [
   {
     title: 'The Experience Layout',
     description:
-      'Crafting MVP with Speed, Precision with adherence to standard Design System Approach',
+      'Crafting MVP with speed, precision with adherence to standard Design System approach',
   },
   {
     title: 'Design',
