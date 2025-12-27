@@ -1,3 +1,4 @@
+
 import React from 'react';
 import SplitText from './SplitText';
 import { ScrollArea } from './ui/scroll-area';
@@ -19,7 +20,7 @@ const approachData = [
   {
     title: 'Design',
     description:
-      'Shape Strategies & Design thoughtful design with purpose and simplicity.',
+      'Shape Strategies & Design with thoughtful purpose and simplicity.',
   },
   {
     title: 'Test & Deliver',
