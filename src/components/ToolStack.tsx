@@ -133,7 +133,7 @@ const ToolStack = () => {
           </div>
           <div className='mt-8'>
              <p className="font-headline font-semibold text-muted-foreground text-lg md:text-2xl tracking-[0.02em] leading-normal">
-                Now that you know me better than Earlier, Lets get in Touch....
+                Now that you know me better than Earlier,
               </p>
           </div>
         </div>
