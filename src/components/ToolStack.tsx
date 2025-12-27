@@ -78,6 +78,14 @@ const ToolStack = () => {
               Design Research | Data Analytics | User Behaviour Analytics | Task Analysis & Persona Hypothesis | Information Architecture | Heuristics
             </p>
           </div>
+          <div className='mt-8'>
+            <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-4">
+              Design
+            </h3>
+            <p className="font-subtitle text-lg md:text-xl text-muted-foreground leading-relaxed">
+              User Flows | Concept Sketches | Wireframes & mock ups | Design System
+            </p>
+          </div>
         </div>
       </div>
     </section>
