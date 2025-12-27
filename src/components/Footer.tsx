@@ -1,6 +1,6 @@
+
 import PillButton from "./PillButton";
 import ScrollToTopButton from "./ScrollToTopButton";
-import SplitText from "./SplitText";
 
 export default function Footer() {
     return (
@@ -8,12 +8,11 @@ export default function Footer() {
         <div className="container mx-auto px-4 sm:px-8 md:px-20 flex flex-col gap-10">
           <div className='flex flex-col gap-10'>
             <div className='flex flex-col gap-6'>
-              <SplitText 
-                text="Lets get in Touch...."
-                tag="p"
-                className="font-headline font-semibold text-3xl md:text-4xl text-muted-foreground"
-                textAlign="left"
-              />
+              <p 
+                className="font-headline font-semibold text-xl md:text-2xl text-footer-muted-foreground"
+              >
+                Lets get in Touch....
+              </p>
               <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-base md:text-lg">
                 <PillButton href="#" className="text-sm">View Resume</PillButton>
                 <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-tight underline leading-normal break-all hover:text-primary transition-colors">Aadesh.one9@gmail.com</a>
