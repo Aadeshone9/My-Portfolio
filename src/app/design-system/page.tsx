@@ -166,15 +166,15 @@ export default function DesignSystemPage() {
                         <div>
                             <p className="text-muted-foreground mb-4">Project Card</p>
                             <ProjectPageCard 
-                                title="Hero Motocorp Vida App"
-                                role="UX Design Consultant | Co-Designer"
+                                title="Maplegeni"
+                                role="Product Designer | Co-Designer"
                             />
                         </div>
                         <div>
                             <p className="text-muted-foreground mb-4">Project Card</p>
                             <ProjectPageCard 
-                                title="Thermax - Edge Platform"
-                                role="UX Researcher and strategist"
+                                title="Google Cloud Security"
+                                role="Partner Product & UX Design consultant"
                             />
                         </div>
                     </div>
