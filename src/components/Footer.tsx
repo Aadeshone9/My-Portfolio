@@ -1,4 +1,5 @@
 import PillButton from "./PillButton";
+import ScrollToTopButton from "./ScrollToTopButton";
 import SplitText from "./SplitText";
 
 export default function Footer() {
@@ -22,11 +23,12 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <div className="p-2.5">
+            <div className="p-2.5 flex justify-between items-end">
               <div className="font-headline font-semibold text-5xl sm:text-7xl md:text-9xl lg:text-[160px] leading-[0.8] tracking-tighter flex flex-col gap-6">
                 <span>Aadesh</span>
                 <span>one9.com</span>
               </div>
+              <ScrollToTopButton />
             </div>
           </div>
           <div className="text-right text-sm md:text-base font-normal tracking-[0.02em] flex flex-col gap-2 text-footer-muted-foreground">
