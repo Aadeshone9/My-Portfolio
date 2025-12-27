@@ -35,13 +35,11 @@ const ScrollToTopButton = () => {
     <div className={cn('transition-opacity duration-300', isVisible ? 'opacity-100' : 'opacity-0')}>
         <Button
             onClick={scrollToTop}
-            variant="link"
-            className="p-0 h-auto text-footer-foreground hover:text-primary transition-colors"
+            variant="outline"
+            className="rounded-full border-footer-muted-foreground text-footer-muted-foreground hover:bg-footer-foreground hover:text-footer hover:border-footer-foreground"
         >
-            <div className="flex items-center gap-2">
-                <span className="font-headline font-semibold tracking-tight">Go up</span>
-                <ArrowUp size={16} />
-            </div>
+            <span className="font-headline font-semibold tracking-tight">Go up</span>
+            <ArrowUp size={16} />
         </Button>
     </div>
   );
