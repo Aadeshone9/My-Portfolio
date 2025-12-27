@@ -1,5 +1,6 @@
 
-import { ArrowRight, Timer } from 'lucide-react';
+
+import { ArrowRight, Lock, Timer } from 'lucide-react';
 import Image from 'next/image';
 import PillButton from './PillButton';
 
@@ -32,8 +33,8 @@ export default function ProjectPageCard({ title, description, role, image, comin
           </div>
         ) : (
           <PillButton href="#" className="group">
-            <span className="group-hover:font-semibold">View project</span>
-            <ArrowRight />
+            <span className="group-hover:font-semibold">Request Access</span>
+            <Lock />
           </PillButton>
         )}
       </div>

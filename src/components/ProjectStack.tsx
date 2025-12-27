@@ -1,4 +1,5 @@
 
+
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -92,23 +93,13 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                       {project.description}
                   </CardDescription>
                   <div className="flex items-center gap-2 mt-4">
-                    {project.title === 'Google Cloud Security' ? (
-                        <PillButton 
-                          href="#"
-                          className="group !text-white !border-white"
-                        >
-                            <span className="group-hover:font-semibold">Request Access</span>
-                            <Lock />
-                        </PillButton>
-                    ) : (
-                        <PillButton 
-                          href={project.title === 'Hero Motocorp Vida App' ? '/projects/vida-app' : '#'}
-                          className="group !text-white !border-white"
-                        >
-                            <span className="group-hover:font-semibold">View project</span>
-                            <ArrowRight />
-                        </PillButton>
-                    )}
+                    <PillButton 
+                      href="#"
+                      className="group !text-white !border-white"
+                    >
+                        <span className="group-hover:font-semibold">Request Access</span>
+                        <Lock />
+                    </PillButton>
                   </div>
                 </div>
             </div>
