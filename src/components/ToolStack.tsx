@@ -1,5 +1,6 @@
 
 import React from 'react';
+import SplitText from './SplitText';
 
 const designTools = [
   { name: 'Figma' },
@@ -22,12 +23,19 @@ const ToolStack = () => {
     <section className="pb-16 md:pb-24 bg-background">
       <div className="container mx-auto px-4 sm:px-8 md:px-20">
         <div className="flex flex-col items-start gap-4">
-          <h2 className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground">
-            / My Tool Stack
-          </h2>
-          <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] text-muted-foreground mt-2 max-w-2xl leading-[30px] md:leading-[36px] lg:leading-[44px]">
-            A collection of my favorite tools that help me to create and deliver the best results.
-          </p>
+           <SplitText
+              text="/ My Tool Stack"
+              tag="h2"
+              className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground"
+              textAlign="left"
+            />
+            <SplitText
+              text="A collection of my favorite tools that help me to create and deliver the best results."
+              tag="p"
+              splitType='words'
+              className="font-subtitle text-lg md:text-2xl lg:text-[32px] text-muted-foreground mt-2 max-w-2xl leading-[30px] md:leading-[36px] lg:leading-[44px]"
+              textAlign="left"
+            />
         </div>
       </div>
 
@@ -67,9 +75,12 @@ const ToolStack = () => {
 
       <div className="mt-16 md:mt-24 container mx-auto px-4 sm:px-8 md:px-20">
         <div className="flex flex-col items-start gap-4">
-          <h2 className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground">
-            / Skills
-          </h2>
+           <SplitText
+              text="/ Skills"
+              tag="h2"
+              className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground"
+              textAlign="left"
+            />
           <div className='mt-4'>
             <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-2">
               Research
