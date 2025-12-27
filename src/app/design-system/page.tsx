@@ -8,17 +8,18 @@ import { ArrowRight } from 'lucide-react';
 import PillButton from '@/components/PillButton';
 
 const colors = [
-    { name: 'Primary', variable: '--primary', className: 'bg-primary' },
-    { name: 'Primary Foreground', variable: '--primary-foreground', className: 'bg-primary-foreground' },
-    { name: 'Secondary', variable: '--secondary', className: 'bg-secondary' },
-    { name: 'Secondary Foreground', variable: '--secondary-foreground', className: 'bg-secondary-foreground' },
+    { name: 'Primary', light: 'bg-[#F26302]', dark: 'bg-[#F57A1B]' },
+    { name: 'Secondary', light: 'bg-[#84C5E3]', dark: 'bg-[#92D1ED]' },
+    { name: 'Background', light: 'bg-[#F9F3F0]', dark: 'bg-[#111827]' },
+    { name: 'Foreground', light: 'bg-[#31363F]', dark: 'bg-[#F9FAFB]' },
+    { name: 'Card', light: 'bg-[#F9F3F0]', dark: 'bg-[#1C2433]' },
+    { name: 'Footer', light: 'bg-[#1C2433]', dark: 'bg-[#1C2433]' },
 ];
 
 const typography = [
     { name: 'Headline', className: 'font-headline text-5xl', text: 'Poppins' },
     { name: 'Subtitle', className: 'font-subtitle text-4xl', text: 'Playfair Display' },
     { name: 'Body', className: 'font-body text-3xl', text: 'Poppins' },
-    { name: 'Code', className: 'font-code text-2xl', text: 'Monospace' },
 ]
 
 export default function DesignSystemPage() {
@@ -40,17 +41,19 @@ export default function DesignSystemPage() {
 
         <section className="mt-16">
           <h2 className="font-headline text-3xl md:text-4xl font-semibold mb-8">Colors</h2>
-          <div className="flex flex-wrap gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {colors.map(color => (
-              <div key={color.name} className="flex flex-col items-center gap-4">
-                <div className={`relative w-32 h-32 rounded-full ${color.className} border-2 ${color.name.includes('Foreground') ? 'border-muted' : 'border-border'}`}>
-                    {(color.name === 'Primary Foreground' || color.name === 'Secondary Foreground') && (
-                        <div className={`absolute inset-0 rounded-full ${color.name === 'Primary Foreground' ? 'bg-primary' : 'bg-secondary'} -z-10`}></div>
-                    )}
-                </div>
-                <div className="text-center">
-                  <p className="font-semibold">{color.name}</p>
-                  <p className="text-sm text-muted-foreground">{color.variable}</p>
+              <div key={color.name}>
+                <h3 className="font-headline text-xl font-semibold mb-4 text-foreground">{color.name}</h3>
+                <div className="flex gap-4">
+                  <div className="flex flex-col items-center gap-2">
+                    <div className={`w-24 h-24 rounded-full ${color.light} border-2 border-border`}></div>
+                    <p className="text-sm text-muted-foreground">Light</p>
+                  </div>
+                  <div className="flex flex-col items-center gap-2">
+                    <div className={`w-24 h-24 rounded-full ${color.dark} border-2 border-border`}></div>
+                    <p className="text-sm text-muted-foreground">Dark</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -71,21 +74,14 @@ export default function DesignSystemPage() {
 
         <section className="mt-16">
             <h2 className="font-headline text-3xl md:text-4xl font-semibold mb-8">Components</h2>
-            <div className="space-y-8">
-                <div>
-                    <h3 className="font-headline text-2xl font-semibold mb-4">Buttons</h3>
-                    <div className="flex flex-wrap gap-4 items-center">
-                         <Button>Default Button</Button>
-                         <Button variant="secondary">Secondary</Button>
-                         <Button variant="destructive">Destructive</Button>
-                         <Button variant="ghost">Ghost</Button>
-                         <Button variant="link">Link</Button>
-                         <Button variant="outline">Outline</Button>
-                         <PillButton href="#" className="group">
-                            <span className="group-hover:font-semibold">Pill Button</span>
-                            <ArrowRight />
-                        </PillButton>
-                    </div>
+            <div>
+                <h3 className="font-headline text-2xl font-semibold mb-4">Call to Actions (CTAs)</h3>
+                <div className="flex flex-wrap gap-4 items-center">
+                     <Button>Default Button</Button>
+                     <PillButton href="#" className="group">
+                        <span className="group-hover:font-semibold">Pill Button</span>
+                        <ArrowRight />
+                    </PillButton>
                 </div>
             </div>
         </section>
