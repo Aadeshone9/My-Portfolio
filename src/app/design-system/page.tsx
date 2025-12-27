@@ -22,6 +22,8 @@ const colors = [
     { name: 'Secondary', light: 'bg-secondary', dark: 'dark:bg-secondary' },
     { name: 'Background', light: 'bg-background', dark: 'dark:bg-background' },
     { name: 'Foreground', light: 'bg-foreground', dark: 'dark:bg-foreground' },
+    { name: 'Card', light: 'bg-card', dark: 'dark:bg-card' },
+    { name: 'Popover', light: 'bg-popover', dark: 'dark:bg-popover' },
 ];
 
 const typography = [
@@ -60,11 +62,11 @@ export default function DesignSystemPage() {
           <div className="space-y-12">
             <div>
               <h3 className="font-headline text-2xl font-semibold mb-4">Colors</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
                 {colors.map(color => (
                   <div key={color.name}>
                     <h4 className="font-headline text-xl font-semibold mb-4 text-foreground">{color.name}</h4>
-                    <div className="flex gap-4">
+                    <div className="flex flex-col gap-4">
                       <div className="flex flex-col items-center gap-2">
                         <div className={`w-24 h-24 rounded-full ${color.light} border-2 border-border`}></div>
                         <p className="text-sm text-muted-foreground">Light</p>
@@ -138,6 +140,13 @@ export default function DesignSystemPage() {
                     <p className="text-muted-foreground mb-4">The header contains the primary navigation and theme toggle.</p>
                      <div className="relative border border-border rounded-lg p-4">
                         <Header />
+                    </div>
+                </div>
+                 <div>
+                    <h3 className="font-headline text-2xl font-semibold mb-4">Footer</h3>
+                    <p className="text-muted-foreground mb-4">The footer contains contact information and site credits.</p>
+                     <div className="relative border border-border rounded-lg">
+                        <Footer />
                     </div>
                 </div>
              </div>
