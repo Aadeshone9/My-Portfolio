@@ -76,7 +76,7 @@ export default function DesignSystemPage() {
 
             <div>
               <h3 className="font-headline text-2xl font-semibold mb-4">Typography</h3>
-              <div className="space-y-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {typography.map(type => (
                       <div key={type.name}>
                           <p className="text-sm text-muted-foreground mb-2">{type.name}</p>
