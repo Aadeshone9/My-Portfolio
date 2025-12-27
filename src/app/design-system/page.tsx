@@ -151,18 +151,7 @@ export default function DesignSystemPage() {
 
                 <div>
                     <h3 className="font-headline text-2xl font-semibold mb-4">Cards</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div>
-                            <p className="text-muted-foreground mb-4">Standard Card</p>
-                            <Card>
-                                <CardHeader>
-                                    <CardTitle>Card Title</CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                    <p>This is the content of the card. It can hold text, images, or other components.</p>
-                                </CardContent>
-                            </Card>
-                        </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
                             <p className="text-muted-foreground mb-4">Project Card</p>
                             <ProjectPageCard 
