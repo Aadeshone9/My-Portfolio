@@ -135,6 +135,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                             Consultant : CX & UX Design
                         </p>
                     </div>
+                    <div className="mt-12">
+                        <h3 className="font-headline font-semibold text-2xl text-foreground">Primary Goal</h3>
+                        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-2">
+                            Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value (LTV).
+                        </p>
+                    </div>
                 </div>
                  {challengeImage && (
                     <div className="relative w-full h-[300px] md:h-[450px] rounded-2xl overflow-hidden">
