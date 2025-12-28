@@ -4,8 +4,9 @@ import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Search, Target, User } from 'lucide-react';
+import { Search, Target, User, TrendingUp } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const motionProps = {
   initial: { opacity: 0, y: 20 },
@@ -379,6 +380,54 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
           </div>
         </section>
+
+        {/* Quantifiable Outcomes & Impact Section */}
+        <section className="py-24 md:py-32 bg-background text-foreground">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20">
+                <div className="max-w-4xl mx-auto">
+                    <motion.div {...motionProps} className="flex items-center gap-4 mb-4">
+                        <TrendingUp className="w-8 h-8 text-primary" />
+                        <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">
+                        Quantifiable Outcomes & Impact
+                        </h2>
+                    </motion.div>
+                    <motion.p
+                        {...motionProps}
+                        transition={{ ...motionProps.transition, delay: 0.1 }}
+                        className="text-lg md:text-xl text-muted-foreground mb-16"
+                    >
+                        The strategic, data-driven design interventions resulted in the following measurable customer and business impact.
+                    </motion.p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.2 }}>
+                            <Card className="bg-card border-border p-6 h-full flex flex-col">
+                                <CardHeader className="p-0">
+                                <CardTitle className="font-headline text-lg text-muted-foreground">Charging Efficiency</CardTitle>
+                                </CardHeader>
+                                <CardContent className="p-0 mt-4 flex-grow flex flex-col justify-center">
+                                    <p className="font-headline font-bold text-5xl md:text-6xl text-primary">50%</p>
+                                    <p className="text-lg text-foreground mt-2">Reduction in the average time to locate a charging station.</p>
+                                    <p className="text-base text-muted-foreground mt-4">Directly reduced Range Anxiety and improved trip planning.</p>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
+                        <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.3 }}>
+                            <Card className="bg-card border-border p-6 h-full flex flex-col">
+                                <CardHeader className="p-0">
+                                <CardTitle className="font-headline text-lg text-muted-foreground">Customer Retention</CardTitle>
+                                </CardHeader>
+                                <CardContent className="p-0 mt-4 flex-grow flex flex-col justify-center">
+                                    <p className="font-headline font-bold text-5xl md:text-6xl text-primary">20%</p>
+                                    <p className="text-lg text-foreground mt-2">Increase in re-subscription rates.</p>
+                                    <p className="text-base text-muted-foreground mt-4">Validated the strategy of building trust through transparent ownership.</p>
+                                </CardContent>
+                            </Card>
+                        </motion.div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
       </main>
       <Footer />
