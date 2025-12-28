@@ -705,14 +705,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <div className="w-[84px] h-[84px] rounded-full bg-primary"></div>
             <div>
               <p
-                  className="font-headline font-semibold text-3xl md:text-5xl tracking-normal text-muted-foreground"
-                  style={{ lineHeight: '1.24' }}
+                  className="font-headline font-semibold text-2xl md:text-4xl tracking-normal text-muted-foreground"
+                  style={{ lineHeight: '1.0' }}
                 >
                   You've seen the case study.
                 </p>
                 <p
-                  className="font-headline font-semibold text-3xl md:text-5xl tracking-normal text-muted-foreground"
-                   style={{ lineHeight: '1.24' }}
+                  className="font-headline font-semibold text-2xl md:text-4xl tracking-normal text-muted-foreground"
+                   style={{ lineHeight: '1.0' }}
                 >
                   Let's connect and discuss the project in detail.
                 </p>
