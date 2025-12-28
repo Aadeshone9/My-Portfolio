@@ -18,22 +18,13 @@ const motionProps = {
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const heroImage = PlaceHolderImages.find(p => p.id === 'uber-hero');
-  const image1 = PlaceHolderImages.find(p => p.id === 'uber-image-1');
-  const image2 = PlaceHolderImages.find(p => p.id === 'uber-image-2');
-  const image3 = PlaceHolderImages.find(p => p.id === 'uber-image-3');
-  const image4 = PlaceHolderImages.find(p => p.id === 'uber-image-4');
-  const image5 = PlaceHolderImages.find(p => p.id === 'uber-image-5');
-  const image6 = PlaceHolderImages.find(p => p.id === 'uber-image-6');
-  const image7 = PlaceHolderImages.find(p => p.id === 'uber-image-7');
-  const image8 = PlaceHolderImages.find(p => p.id === 'uber-image-8');
-  const image9 = PlaceHolderImages.find(p => p.id === 'uber-image-9');
+  const projectImage1 = PlaceHolderImages.find(p => p.id === 'project1-image-1');
+  const projectImage2 = PlaceHolderImages.find(p => p.id === 'project1-image-2');
+  const projectImage3 = PlaceHolderImages.find(p => p.id === 'project1-image-3');
+  const projectImage4 = PlaceHolderImages.find(p => p.id === 'project1-image-4');
+  const projectImage5 = PlaceHolderImages.find(p => p.id === 'project1-image-5');
+  const projectImage6 = PlaceHolderImages.find(p => p.id === 'project1-image-6');
   
-  const mentalModelImage1 = PlaceHolderImages.find(p => p.id === 'mental-model-1');
-  const mentalModelImage2 = PlaceHolderImages.find(p => p.id === 'mental-model-2');
-  const avatar1 = PlaceHolderImages.find(p => p.id === 'mental-model-avatar-1');
-  const avatar2 = PlaceHolderImages.find(p => p.id === 'mental-model-avatar-2');
-  const avatar3 = PlaceHolderImages.find(p => p.id === 'mental-model-avatar-3');
-
 
   const outcomes = [
     {
@@ -374,13 +365,33 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
-        {/* Dummy Slide 6 */}
-        <section className="py-20 md:py-24 bg-background">
-          <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
-              <p className="text-muted-foreground">Dummy Slide</p>
+        <section className="py-10 md:py-12 bg-background">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {projectImage1 && (
+                        <motion.div {...motionProps} className="w-full aspect-[4/3] relative rounded-2xl overflow-hidden">
+                            <Image
+                                src={projectImage1.imageUrl}
+                                alt={projectImage1.description}
+                                fill
+                                className="object-cover"
+                                data-ai-hint={projectImage1.imageHint}
+                            />
+                        </motion.div>
+                    )}
+                    {projectImage2 && (
+                        <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.1 }} className="w-full aspect-[4/3] relative rounded-2xl overflow-hidden">
+                            <Image
+                                src={projectImage2.imageUrl}
+                                alt={projectImage2.description}
+                                fill
+                                className="object-cover"
+                                data-ai-hint={projectImage2.imageHint}
+                            />
+                        </motion.div>
+                    )}
+                </div>
             </div>
-          </div>
         </section>
 
         {/* Design Process & Strategic Solutions Section */}
@@ -407,12 +418,19 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
         
-        {/* Dummy Slide 8 */}
-        <section className="py-20 md:py-24 bg-background">
+        <section className="py-10 md:py-12 bg-background">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
-              <p className="text-muted-foreground">Dummy Slide</p>
-            </div>
+             {projectImage3 && (
+                <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden">
+                    <Image
+                        src={projectImage3.imageUrl}
+                        alt={projectImage3.description}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={projectImage3.imageHint}
+                    />
+                </motion.div>
+            )}
           </div>
         </section>
 
@@ -446,21 +464,19 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
-        {/* Dummy Slide 10 */}
-        <section className="py-20 md:py-24 bg-background">
+        <section className="py-10 md:py-12 bg-background">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
-              <p className="text-muted-foreground">Dummy Slide</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Dummy Slide 11 */}
-        <section className="py-20 md:py-24 bg-background">
-          <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
-              <p className="text-muted-foreground">Dummy Slide</p>
-            </div>
+             {projectImage4 && (
+                <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden">
+                    <Image
+                        src={projectImage4.imageUrl}
+                        alt={projectImage4.description}
+                        fill
+                        className="object-contain p-8 sm:p-12 md:p-20 bg-muted"
+                        data-ai-hint={projectImage4.imageHint}
+                    />
+                </motion.div>
+            )}
           </div>
         </section>
 
@@ -494,22 +510,35 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
-        {/* Dummy Slide 13 */}
-        <section className="py-20 md:py-24 bg-background">
-          <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
-              <p className="text-muted-foreground">Dummy Slide</p>
+        <section className="py-10 md:py-12 bg-background">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {projectImage5 && (
+                        <motion.div {...motionProps} className="w-full aspect-[4/3] relative rounded-2xl overflow-hidden bg-muted flex items-center justify-center p-8">
+                            <Image
+                                src={projectImage5.imageUrl}
+                                alt={projectImage5.description}
+                                width={300}
+                                height={300}
+                                className="object-contain"
+                                data-ai-hint={projectImage5.imageHint}
+                            />
+                        </motion.div>
+                    )}
+                    {projectImage6 && (
+                        <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.1 }} className="w-full aspect-[4/3] relative rounded-2xl overflow-hidden bg-muted flex items-center justify-center p-8">
+                            <Image
+                                src={projectImage6.imageUrl}
+                                alt={projectImage6.description}
+                                width={300}
+                                height={300}
+                                className="object-contain"
+                                data-ai-hint={projectImage6.imageHint}
+                            />
+                        </motion.div>
+                    )}
+                </div>
             </div>
-          </div>
-        </section>
-
-        {/* Dummy Slide 14 */}
-        <section className="py-20 md:py-24 bg-background">
-          <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
-              <p className="text-muted-foreground">Dummy Slide</p>
-            </div>
-          </div>
         </section>
 
         {/* Quantifiable Outcomes & Impact Section */}

@@ -185,6 +185,42 @@
       "description": "Avatar of a user",
       "imageUrl": "/images/avatar-3.png",
       "imageHint": "person avatar"
+    },
+    {
+      "id": "project1-image-1",
+      "description": "Project 1 Image 1",
+      "imageUrl": "/images/project1/image1.png",
+      "imageHint": "app screen"
+    },
+    {
+      "id": "project1-image-2",
+      "description": "Project 1 Image 2",
+      "imageUrl": "/images/project1/image2.png",
+      "imageHint": "app screen"
+    },
+    {
+      "id": "project1-image-3",
+      "description": "Project 1 Image 3",
+      "imageUrl": "/images/project1/image3.png",
+      "imageHint": "app screen"
+    },
+    {
+      "id": "project1-image-4",
+      "description": "Project 1 Image 4",
+      "imageUrl": "/images/project1/image4.png",
+      "imageHint": "app screen"
+    },
+    {
+      "id": "project1-image-5",
+      "description": "Project 1 Image 5",
+      "imageUrl": "/images/project1/image5.png",
+      "imageHint": "app screen"
+    },
+    {
+      "id": "project1-image-6",
+      "description": "Project 1 Image 6",
+      "imageUrl": "/images/project1/image6.png",
+      "imageHint": "app screen"
     }
   ]
 }
