@@ -1,5 +1,6 @@
 
 import PillButton from "./PillButton";
+import ResumeViewer from "./ResumeViewer";
 import ScrollToTopButton from "./ScrollToTopButton";
 
 export default function Footer() {
@@ -14,7 +15,7 @@ export default function Footer() {
                 Lets get in Touch....
               </p>
               <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-base md:text-lg">
-                <PillButton href="#" className="text-sm">View Resume</PillButton>
+                <ResumeViewer />
                 <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-tight underline leading-normal break-all hover:text-primary transition-colors">Aadesh.one9@gmail.com</a>
                 <p className="font-headline font-semibold tracking-tight leading-normal">+ (91) 8975143018</p>
                 <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold tracking-tight underline leading-normal break-all hover:text-primary transition-colors">
