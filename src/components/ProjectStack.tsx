@@ -90,25 +90,27 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
         }} 
         className={`relative h-[80vh] w-[80vh] md:h-[70vh] md:w-[70vh] transform-gpu`}
       >
-        <Card className={`${project.bgColor} border-border rounded-2xl w-full h-full mx-auto flex flex-col overflow-hidden`}>
-          <div className={`relative ${project.imageBgColor} w-full h-full rounded-lg flex items-center justify-center overflow-hidden`}>
-             <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 via-transparent to-primary/20 opacity-50 dark:opacity-30 group-hover:opacity-100 transition-opacity duration-500"></div>
-             {project.img && (
+        <Card className={`${project.bgColor} border-border rounded-2xl w-full h-full mx-auto flex flex-col p-6 md:p-8`}>
+            <div className="w-full aspect-[16/9] bg-background dark:bg-zinc-800/50 rounded-lg flex items-center justify-center overflow-hidden relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 via-transparent to-primary/20 opacity-50 dark:opacity-30 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {project.img && (
                 <Image 
                   src={project.img} 
                   alt={project.title} 
                   fill 
-                  className="object-contain p-8 md:p-16 z-10" 
+                  className="object-contain p-8 z-10" 
                 />
               )}
-             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/30 to-transparent p-6 flex flex-col justify-end z-20">
-                <div className="text-foreground">
-                  <CardTitle className="text-2xl md:text-3xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
-                  <p className="text-base md:text-lg text-muted-foreground mt-1">{project.role}</p>
-                  <CardDescription className="text-lg md:text-xl text-foreground/80 mt-2">
-                      {project.description}
-                  </CardDescription>
-                  <div className="flex items-center gap-2 mt-4">
+            </div>
+            <div className="flex flex-col flex-grow justify-between mt-6">
+                <div>
+                    <CardTitle className="text-xl md:text-2xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
+                    <p className="text-sm md:text-base text-muted-foreground mt-1">{project.role}</p>
+                    <CardDescription className="text-base md:text-lg text-foreground/80 mt-2">
+                        {project.description}
+                    </CardDescription>
+                </div>
+                <div className="flex items-center gap-2 mt-4">
                     {project.cta === 'View Project' ? (
                       <PillButton 
                         href={project.href || '#'}
@@ -126,10 +128,8 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                           <Lock />
                       </PillButton>
                     )}
-                  </div>
                 </div>
             </div>
-          </div>
         </Card>
       </motion.div>
     </div>
