@@ -36,7 +36,7 @@ const ScrollToTopButton = () => {
         <Button
             onClick={scrollToTop}
             variant="outline"
-            className="rounded-full border-footer-muted-foreground text-footer-muted-foreground hover:bg-footer-foreground hover:text-footer hover:border-footer-foreground"
+            className="rounded-full border-footer-muted-foreground text-footer-muted-foreground hover:text-footer-foreground hover:border-footer-foreground"
         >
             <span className="font-headline font-semibold tracking-tight">Go up</span>
             <ArrowUp size={16} />
