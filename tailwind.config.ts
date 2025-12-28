@@ -85,8 +85,8 @@ export default {
           foreground: 'hsl(var(--footer-foreground))',
           'muted-foreground': 'hsl(var(--footer-muted-foreground))',
         },
-        'light-primary': 'hsl(26 87% 53%)',
-        'light-secondary': 'hsl(198 62% 66%)',
+        'gradient-start': '#FFF5E1',
+        'gradient-end': '#E1F5FF',
       },
       borderRadius: {
         lg: 'var(--radius)',
