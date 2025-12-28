@@ -221,6 +221,12 @@
       "description": "Project 1 Image 6",
       "imageUrl": "/images/project1/14.jpg",
       "imageHint": "app screen"
+    },
+    {
+      "id": "project1-image-7",
+      "description": "Project 1 Image 7",
+      "imageUrl": "/images/project1/13.jpg",
+      "imageHint": "app screen"
     }
   ]
 }
