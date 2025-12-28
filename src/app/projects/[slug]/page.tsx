@@ -63,6 +63,25 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     },
   ];
 
+  const rangeAnxietySolutions = [
+    {
+      title: 'Inefficient Journey',
+      description: 'Finding a charging station typically required five inefficient steps in existing systems.',
+    },
+    {
+      title: 'Design Solution',
+      description: 'We drastically simplified the charging station flow from five steps to just two by intelligently sharing contextual charging stations based on planned or daily commuted routes.',
+    },
+    {
+      title: 'Design Rationale (Map vs. List)',
+      description: 'We used a combined Map View (for quick spatial context/familiarity) and List View (optimized for detailed comparison of price/connector type) to maximize user trust and efficiency.',
+    },
+    {
+      title: 'Testing & Iteration',
+      description: 'Initial usability tests showed users struggled to verify station compatibility. We iterated by simplifying and highlighting the connector type and status on the information card, which was crucial to achieving the final efficiency gains.',
+    },
+  ];
+
   return (
     <div className="bg-background text-foreground">
       <Header />
@@ -241,6 +260,36 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
               <p className="text-muted-foreground">Dummy Slide</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Solving Range Anxiety Section */}
+        <section className="py-24 md:py-32 bg-background text-foreground">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20">
+            <div className="max-w-4xl mx-auto">
+              <motion.h2
+                {...motionProps}
+                className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-12"
+              >
+                Solving Range Anxiety (Resource Findability):
+              </motion.h2>
+              <ul className="space-y-8">
+                {rangeAnxietySolutions.map((solution, index) => (
+                  <motion.li
+                    key={index}
+                    {...motionProps}
+                    transition={{ ...motionProps.transition, delay: 0.1 * (index + 1) }}
+                    className="flex items-start"
+                  >
+                    <span className="text-primary mr-4 mt-1">&#8226;</span>
+                    <p className="text-lg md:text-xl text-muted-foreground">
+                      <span className="font-semibold text-primary">{solution.title}: </span>
+                      {solution.description}
+                    </p>
+                  </motion.li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
