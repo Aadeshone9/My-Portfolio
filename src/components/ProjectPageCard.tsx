@@ -14,7 +14,6 @@ type ProjectPageCardProps = {
 
 export default function ProjectPageCard({ title, description, role, img, comingSoon = false }: ProjectPageCardProps) {
   const isVidaProject = title === 'Hero Motocorp Vida App';
-  const isMaplegeniProject = title === 'Maplegeni';
 
   return (
     <div className="p-6 md:p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between">
@@ -44,11 +43,6 @@ export default function ProjectPageCard({ title, description, role, img, comingS
           </div>
         ) : isVidaProject ? (
            <PillButton href="/projects/vida" className="group !text-foreground !border-foreground">
-            <span className="group-hover:font-semibold">View Project</span>
-            <ArrowRight />
-          </PillButton>
-        ) : isMaplegeniProject ? (
-          <PillButton href="/projects/maplegeni" className="group !text-foreground !border-foreground">
             <span className="group-hover:font-semibold">View Project</span>
             <ArrowRight />
           </PillButton>
