@@ -357,8 +357,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Problem Definition Section */}
         <section className="py-24 md:py-32 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.div {...motionProps} className="flex items-center justify-center gap-4">
+            <div className="max-w-4xl">
+              <motion.div {...motionProps} className="flex items-center gap-4">
                 <Target className="w-8 h-8 text-primary" />
                 <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">
                   Problem Definition &amp; Strategic Gap
