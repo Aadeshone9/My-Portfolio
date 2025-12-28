@@ -3,7 +3,6 @@
 import { ArrowRight, Lock, Timer } from 'lucide-react';
 import Image from 'next/image';
 import PillButton from './PillButton';
-import DarkVeil from './DarkVeil';
 
 type ProjectPageCardProps = {
   title: string;
@@ -20,8 +19,8 @@ export default function ProjectPageCard({ title, description, role, img, comingS
   return (
     <div className="p-6 md:p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between">
       <div>
-        <div className="w-full aspect-[16/9] bg-muted rounded-lg flex items-center justify-center overflow-hidden relative">
-          <DarkVeil speed={0.2} hueShift={220} noiseIntensity={0.03} />
+        <div className="w-full aspect-[16/9] bg-background dark:bg-zinc-800/50 rounded-lg flex items-center justify-center overflow-hidden relative group">
+          <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 via-transparent to-primary/20 opacity-50 dark:opacity-30 group-hover:opacity-100 transition-opacity duration-500"></div>
           {img && (
             <Image 
               src={img} 

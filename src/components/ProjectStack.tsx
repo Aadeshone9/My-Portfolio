@@ -8,7 +8,6 @@ import { ArrowRight, Lock } from "lucide-react";
 import PillButton from "./PillButton";
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import DarkVeil from './DarkVeil';
 
 const projects = [
   {
@@ -93,7 +92,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
       >
         <Card className={`${project.bgColor} border-border rounded-2xl w-full h-full mx-auto flex flex-col overflow-hidden`}>
           <div className={`relative ${project.imageBgColor} w-full h-full rounded-lg flex items-center justify-center overflow-hidden`}>
-             <DarkVeil speed={0.2} hueShift={220} noiseIntensity={0.03} />
+             <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 via-transparent to-primary/20 opacity-50 dark:opacity-30 group-hover:opacity-100 transition-opacity duration-500"></div>
              {project.img && (
                 <Image 
                   src={project.img} 
