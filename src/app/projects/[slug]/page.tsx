@@ -69,19 +69,19 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                <SplitText
                   text="Behavioural UX case Study"
                   tag="p"
-                  className="font-headline font-semibold text-lg md:text-xl text-footer-muted-foreground text-center md:text-left max-w-4xl mx-auto md:mx-0 mt-8"
+                  className="font-headline font-semibold text-lg md:text-xl text-footer-muted-foreground text-center md:text-left max-w-4xl mx-auto md:mx-0"
                   textAlign="left"
                 />
                <SplitText
                 text="Driving Loyalty & Efficiency in"
                 tag="h1"
-                className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-center md:text-left max-w-4xl mx-auto md:mx-0 leading-tight mt-4"
+                className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-center md:text-left max-w-4xl mx-auto md:mx-0 leading-tight mt-8"
                 textAlign="left"
               />
               <SplitText
                 text="EV Mobility with VIDA"
                 tag="h1"
-                className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-center md:text-left max-w-4xl mx-auto md:mx-0 leading-tight"
+                className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-center md:text-left max-w-4xl mx-auto md:mx-0 leading-tight mt-4"
                 textAlign="left"
               />
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 mt-24 max-w-4xl mx-auto md:mx-0">
