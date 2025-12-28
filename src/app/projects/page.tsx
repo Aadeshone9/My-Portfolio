@@ -11,26 +11,32 @@ const projects = [
   {
     title: 'Hero Motocorp Vida App',
     role: 'UX Design Consultant | Co-Designer',
+    img: '/images/hero.svg',
   },
   {
     title: 'Thermax - Edge Platform',
     role: 'UX Researcher and strategist',
+    img: '/images/edge.png',
   },
   {
     title: 'Maplegeni',
     role: 'Product Designer | Co-Designer',
+    img: '/images/maplegenix.webp',
   },
   {
     title: 'Mahindra Finance',
     role: 'UX Design Consultant | Co-Designer',
+    img: '/images/mahindra-finance.svg',
   },
   {
     title: 'Google Cloud Security',
     role: 'Partner Product & UX Design consultant | Co-Designer',
+    img: '/images/google-cloud-logo.svg',
   },
   {
     title: 'JIO Reliance',
     role: 'UX Design Consultant | Co-Designer',
+    img: '/images/jio.png',
   },
   {
     title: 'General Motors - Enterprise Security Restriction For Mobile Devices',

@@ -8,18 +8,26 @@ type ProjectPageCardProps = {
   title: string;
   description?: string;
   role: string;
-  image?: string;
+  img?: string;
   comingSoon?: boolean;
 };
 
-export default function ProjectPageCard({ title, description, role, image, comingSoon = false }: ProjectPageCardProps) {
+export default function ProjectPageCard({ title, description, role, img, comingSoon = false }: ProjectPageCardProps) {
   const isVidaProject = title === 'Hero Motocorp Vida App';
   const isMaplegeniProject = title === 'Maplegeni';
 
   return (
     <div className="p-6 md:p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between">
       <div>
-        <div className="w-full aspect-[16/9] bg-muted rounded-lg flex items-center justify-center overflow-hidden">
+        <div className="w-full aspect-[16/9] bg-muted rounded-lg flex items-center justify-center overflow-hidden relative">
+          {img && (
+            <Image 
+              src={img} 
+              alt={title} 
+              fill 
+              className="object-contain p-4" 
+            />
+          )}
         </div>
         <div className="mt-6">
           <h3 className="font-headline font-semibold text-xl text-foreground">{title}</h3>
