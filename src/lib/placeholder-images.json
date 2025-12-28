@@ -7,9 +7,9 @@
       "imageHint": "abstract lines"
     },
     {
-      "id": "headspace-hero",
+      "id": "vida-hero",
       "description": "VIDA EV mobile application screenshots",
-      "imageUrl": "/images/vida-ev-hero.png",
+      "imageUrl": "https://images.unsplash.com/photo-1765272088039-a6f6b9188199?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2JpbGUlMjBhcHAlMjBldnxlbnwwfHx8fDE3NjY5MTI4MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "mobile app ev"
     },
     {
@@ -95,6 +95,60 @@
       "description": "Screenshot of the VIDA mobile application",
       "imageUrl": "/images/vida-ev-hero.png",
       "imageHint": "mobile app ev"
+    },
+    {
+      "id": "project-image-1",
+      "description": "Close up of a phone showing an app interface",
+      "imageUrl": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwaG9uZSUyMGFwcHxlbnwwfHx8fDE3NjY4NTU4NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "phone app"
+    },
+    {
+      "id": "project-image-2",
+      "description": "Overhead view of a highway",
+      "imageUrl": "https://images.unsplash.com/photo-1710330540650-ee3c3f4769f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxoaWdod2F5JTIwdHJhZmZpY3xlbnwwfHx8fDE3NjY5MTI1Njh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "highway traffic"
+    },
+    {
+      "id": "project-image-3",
+      "description": "Phone held in hand showing a map",
+      "imageUrl": "https://images.unsplash.com/photo-1610985725707-bb0766bf123b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGhvbmUlMjBtYXB8ZW58MHx8fHwxNzY2OTEyNTY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "phone map"
+    },
+    {
+      "id": "project-image-4",
+      "description": "Person sitting in the back of a car using a phone",
+      "imageUrl": "https://images.unsplash.com/photo-1619190375868-3adc7d6c51ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjYXIlMjBwaG9uZXxlbnwwfHx8fDE3NjY5MTI4MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "car phone"
+    },
+    {
+      "id": "project-image-5",
+      "description": "Person's hands typing on a phone",
+      "imageUrl": "https://images.unsplash.com/photo-1766218318751-d624f1a11904?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0eXBpbmclMjBwaG9uZXxlbnwwfHx8fDE3NjY5MTI4MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "typing phone"
+    },
+    {
+      "id": "project-image-6",
+      "description": "A vibrant neon sign for a craft store",
+      "imageUrl": "https://images.unsplash.com/photo-1543332164-6e82f355badc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxuZW9uJTIwc2lnbnxlbnwwfHx8fDE3NjY4NjI1MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neon sign"
+    },
+    {
+      "id": "project-image-7",
+      "description": "A map interface on a phone screen",
+      "imageUrl": "https://images.unsplash.com/photo-1695632231361-7468689ed9a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXAlMjBpbnRlcmZhY2V8ZW58MHx8fHwxNzY2ODUxODMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "map interface"
+    },
+    {
+      "id": "project-image-8",
+      "description": "Cozy interior of a modern apartment",
+      "imageUrl": "https://images.unsplash.com/photo-1648536474504-7bbf8a1ee3ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb2Rlcm4lMjBpbnRlcmlvcnxlbnwwfHx8fDE3NjY4ODgyOTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern interior"
+    },
+    {
+      "id": "project-image-9",
+      "description": "A person looking out of a car window",
+      "imageUrl": "https://images.unsplash.com/photo-1486991387396-63844f1f0bfb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjYXIlMjB3aW5kb3d8ZW58MHx8fHwxNzY2OTEyODE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "car window"
     }
   ]
 }
