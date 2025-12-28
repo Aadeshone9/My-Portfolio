@@ -73,7 +73,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <motion.h1
               {...motionProps}
               transition={{ ...motionProps.transition, delay: 0.2 }}
-              className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-4"
+              className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-2"
             >
               EV Mobility with VIDA
             </motion.h1>
@@ -105,12 +105,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Key Outcomes Section */}
-        <section className="py-24 md:py-40 bg-footer text-footer-foreground relative">
-            <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(to_bottom,white_10%,transparent_70%)]"></div>
+        <section className="py-24 md:py-40 bg-background text-foreground relative">
+            <div className="absolute inset-0 bg-grid-zinc-500/10 [mask-image:linear-gradient(to_bottom,white_10%,transparent_70%)] dark:bg-grid-white/10"></div>
             <div className="container mx-auto px-4 sm:px-8 md:px-20 relative">
                 <motion.h2 
                     {...motionProps}
-                    className="font-headline font-semibold text-3xl md:text-4xl text-footer-foreground mb-20"
+                    className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-20"
                 >
                     Key Outcomes
                 </motion.h2>
@@ -123,7 +123,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                             className="flex items-start gap-6"
                         >
                             <span className="font-headline font-bold text-5xl md:text-6xl text-primary">{outcome.value}</span>
-                            <p className="text-lg md:text-xl text-footer-muted-foreground mt-2">{outcome.description}</p>
+                            <p className="text-lg md:text-xl text-muted-foreground mt-2">{outcome.description}</p>
                         </motion.div>
                     ))}
                 </div>
