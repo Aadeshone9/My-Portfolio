@@ -147,7 +147,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Problem Definition Section */}
-        <section className="py-24 md:py-40 bg-background text-foreground relative">
+        <section className="py-32 md:py-48 bg-background text-foreground relative">
           <div className="absolute inset-0 bg-grid-zinc-500/10 [mask-image:linear-gradient(to_bottom,transparent,white_40%,white_60%,transparent)] dark:bg-grid-white/10"></div>
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl mx-auto">
@@ -160,7 +160,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               <motion.p
                 {...motionProps}
                 transition={{ ...motionProps.transition, delay: 0.1 }}
-                className="font-headline text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-tight mt-8"
+                className="font-headline text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-normal md:leading-relaxed mt-8"
               >
                 Our research identified significant gaps in the emerging EV market that fueled user anxiety and distrust.
               </motion.p>
