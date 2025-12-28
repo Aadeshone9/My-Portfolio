@@ -46,7 +46,7 @@ export default function Home() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <div className="cursor-pointer">
+                <div className="cursor-pointer pt-18">
                   <Showreel
                     imageUrl={mainImage.imageUrl}
                     alt={mainImage.description}
