@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Search, Target, User, TrendingUp } from 'lucide-react';
+import { Search, Target, User, TrendingUp, ShieldCheck, Navigation, Phone, ShieldPlus, MapPin, BarChartBig } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -99,6 +99,59 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     {
       title: 'Maintenance Transparency',
       description: 'We addressed the trust gap by designing an Easy, Quick, and Transparent Maintenance Process with proactive alerts and upfront pricing, directly combating the after-sales inconvenience seen in competitors.',
+    },
+  ];
+
+  const experienceEnhancers = [
+    {
+      icon: <ShieldCheck className="w-8 h-8 text-primary" />,
+      title: 'Services and Subscriptions',
+      description: 'Drive subscriptions and show value with contextual nudges for pre-paid services.',
+    },
+    {
+      icon: <BarChartBig className="w-8 h-8 text-primary" />,
+      title: 'Reports and Analytics',
+      description: 'Provided client with performance data tracking, analytics, and insightful reports.',
+    },
+    {
+      icon: <Navigation className="w-8 h-8 text-primary" />,
+      title: 'Tailored Navigation',
+      description: 'Personalized navigation to increase user engagement.',
+    },
+    {
+      icon: <Phone className="w-8 h-8 text-primary" />,
+      title: 'Roadside Assistance',
+      description: 'Dependable roadside assistance for emergencies and breakdowns.',
+    },
+    {
+      icon: (
+        <svg
+          className="w-8 h-8 text-primary"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M12 21.5c-2.4 0-4-1.6-4-3.5 0-1.4.9-2.5 2-2.5h4c1.1 0 2 1.1 2 2.5 0 1.9-1.6 3.5-4 3.5zm-5-3.5H5c-1.1 0-2 .9-2 2v1h18v-1c0-1.1-.9-2-2-2h-2m-8-5.5h-3m14 0h-3m-9.5-4.5H5.5c-.8 0-1.5.7-1.5 1.5v3c0 .8.7 1.5 1.5 1.5h1.5m10-6h1.5c.8 0 1.5.7 1.5 1.5v3c0 .8-.7 1.5-1.5 1.5h-1.5"
+          ></path>
+        </svg>
+      ),
+      title: 'Custom Riding Mode',
+      description: 'Streamline journeys with our centralized route planner and access.',
+    },
+    {
+      icon: <ShieldPlus className="w-8 h-8 text-primary" />,
+      title: 'Priority Safety and Security',
+      description: 'Enhanced user control and visibility of vehicle usage and status for safer and more secure driving.',
+    },
+    {
+      icon: <MapPin className="w-8 h-8 text-primary" />,
+      title: 'Geo-Fencing',
+      description: 'Boost sales by offering informative content to aid decision-making on website and app.',
     },
   ];
 
@@ -428,9 +481,65 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
         </section>
 
+        {/* Key Experience Enhancers Section */}
+        <section className="py-24 md:py-32 bg-background text-foreground">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20">
+            <motion.h2
+              {...motionProps}
+              className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-4"
+            >
+              Key Experience Enhancers
+            </motion.h2>
+            <motion.p
+              {...motionProps}
+              transition={{ ...motionProps.transition, delay: 0.1 }}
+              className="text-lg md:text-xl text-muted-foreground mb-16 max-w-2xl"
+            >
+              A user journey that fulfils user needs and expectations.
+            </motion.p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+              {experienceEnhancers.slice(0, 6).map((enhancer, index) => (
+                <motion.div
+                  key={index}
+                  {...motionProps}
+                  transition={{ ...motionProps.transition, delay: 0.2 + index * 0.1 }}
+                  className="flex items-start gap-4"
+                >
+                  <div className="flex-shrink-0">{enhancer.icon}</div>
+                  <div>
+                    <h3 className="font-headline font-semibold text-xl text-foreground">
+                      {enhancer.title}
+                    </h3>
+                    <p className="text-muted-foreground mt-1">
+                      {enhancer.description}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            <motion.div
+              {...motionProps}
+              transition={{ ...motionProps.transition, delay: 0.8 }}
+              className="flex items-start gap-4 mt-12 md:mt-12 md:max-w-[50%] md:mx-auto"
+            >
+              <div className="flex-shrink-0">{experienceEnhancers[6].icon}</div>
+              <div>
+                <h3 className="font-headline font-semibold text-xl text-foreground">
+                  {experienceEnhancers[6].title}
+                </h3>
+                <p className="text-muted-foreground mt-1">
+                  {experienceEnhancers[6].description}
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
 
       </main>
       <Footer />
     </div>
   );
 }
+
+    
