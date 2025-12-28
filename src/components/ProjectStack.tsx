@@ -8,6 +8,7 @@ import { ArrowRight, Lock } from "lucide-react";
 import PillButton from "./PillButton";
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import DarkVeil from './DarkVeil';
 
 const projects = [
   {
@@ -91,16 +92,17 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
         className={`relative h-[80vh] w-[80vh] md:h-[70vh] md:w-[70vh] transform-gpu`}
       >
         <Card className={`${project.bgColor} border-border rounded-2xl w-full h-full mx-auto flex flex-col overflow-hidden`}>
-          <div className={`relative ${project.imageBgColor} w-full h-full rounded-lg flex items-center justify-center`}>
+          <div className={`relative ${project.imageBgColor} w-full h-full rounded-lg flex items-center justify-center overflow-hidden`}>
+             <DarkVeil speed={0.2} hueShift={220} noiseIntensity={0.03} />
              {project.img && (
                 <Image 
                   src={project.img} 
                   alt={project.title} 
                   fill 
-                  className="object-contain p-8 md:p-16" 
+                  className="object-contain p-8 md:p-16 z-10" 
                 />
               )}
-             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/30 to-transparent p-6 flex flex-col justify-end">
+             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/30 to-transparent p-6 flex flex-col justify-end z-20">
                 <div className="text-foreground">
                   <CardTitle className="text-2xl md:text-3xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
                   <p className="text-base md:text-lg text-muted-foreground mt-1">{project.role}</p>
@@ -118,7 +120,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                       </PillButton>
                     ) : (
                       <PillButton 
-                        href="https://www.linkedin.com/in/aadeshgovenkar/"
+                        href="https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar"
                         className="group !text-foreground !border-foreground"
                       >
                           <span className="group-hover:font-semibold">Request Access</span>

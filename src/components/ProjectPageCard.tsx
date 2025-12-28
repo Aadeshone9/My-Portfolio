@@ -3,6 +3,7 @@
 import { ArrowRight, Lock, Timer } from 'lucide-react';
 import Image from 'next/image';
 import PillButton from './PillButton';
+import DarkVeil from './DarkVeil';
 
 type ProjectPageCardProps = {
   title: string;
@@ -20,12 +21,13 @@ export default function ProjectPageCard({ title, description, role, img, comingS
     <div className="p-6 md:p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between">
       <div>
         <div className="w-full aspect-[16/9] bg-muted rounded-lg flex items-center justify-center overflow-hidden relative">
+          <DarkVeil speed={0.2} hueShift={220} noiseIntensity={0.03} />
           {img && (
             <Image 
               src={img} 
               alt={title} 
               fill 
-              className="object-contain p-4" 
+              className="object-contain p-4 z-10" 
             />
           )}
         </div>
@@ -52,7 +54,7 @@ export default function ProjectPageCard({ title, description, role, img, comingS
             <ArrowRight />
           </PillButton>
         ) : (
-          <PillButton href="https://www.linkedin.com/in/aadeshgovenkar/" className="group !text-foreground !border-foreground">
+          <PillButton href="https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar" className="group !text-foreground !border-foreground">
             <span className="group-hover:font-semibold">Request Access</span>
             <Lock />
           </PillButton>
