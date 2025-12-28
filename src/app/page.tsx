@@ -16,6 +16,12 @@ import { motion } from 'framer-motion';
 import AnimatedShape from '@/components/AnimatedShape';
 import DesignSystemCTA from '@/components/DesignSystemCTA';
 import Showreel from '@/components/Showreel';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
 
 export default function Home() {
   const mainImage = PlaceHolderImages.find(p => p.id === 'hero-image');
@@ -23,7 +29,7 @@ export default function Home() {
     <div className="bg-background">
       <Header />
       <main className="flex flex-col">
-        <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-16">
+        <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-24 pb-24">
             <div className="pb-1 md:pb-2">
               <SplitText 
                 text="Hi, I’m Aadesh" 
@@ -42,16 +48,16 @@ export default function Home() {
         </div>
 
         {mainImage && (
-          <div className="pt-16">
-            <Showreel
-              imageUrl={mainImage.imageUrl}
-              alt={mainImage.description}
-              aiHint={mainImage.imageHint}
-            />
+          <div className="pb-24">
+              <Showreel
+                imageUrl={mainImage.imageUrl}
+                alt={mainImage.description}
+                aiHint={mainImage.imageHint}
+              />
           </div>
         )}
 
-        <section className="py-4 md:py-6">
+        <section className="py-20 md:py-32">
           <div className="container mx-auto px-4 sm:px:8 md:px-20 relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="flex-1 flex flex-col">
@@ -76,12 +82,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mt-3 md:mt-4">
+          <div className="relative mt-16">
             <ProjectStack />
           </div>
         </section>
 
-        <section id="know-me-better" className="pt-0.5 pb-0.5 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
+        <section id="know-me-better" className="py-20 md:py-32 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
           <div className="flex flex-col items-start gap-4">
             <AnimatedShape shape="square" />
             <SplitText
@@ -91,10 +97,10 @@ export default function Home() {
               textAlign="left"
             />
           </div>
-          <div className="w-32 h-[2px] bg-border my-1"></div>
+          <div className="w-32 h-[2px] bg-border my-8"></div>
         </section>
 
-        <section className="pt-1 pb-2 container mx-auto px-4 sm:px-8 md:px-20">
+        <section className="pb-20 md:pb-32 container mx-auto px-4 sm:px-8 md:px-20">
            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 <div className="flex flex-col items-start w-full">
                     <SplitText
@@ -103,7 +109,7 @@ export default function Home() {
                       className="font-headline font-semibold text-2xl md:text-[32px] leading-[58px] tracking-[0.02em] text-foreground flex items-center"
                       textAlign="left"
                     />
-                    <div className="mt-2">
+                    <div className="mt-8 space-y-4">
                         <SplitText
                             text="I create to solve, and I solve to create."
                             tag="p"
@@ -130,7 +136,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="py-2">
+        <section className="pb-20 md:pb-32">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <TiltedCard>
                     <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
@@ -167,7 +173,7 @@ export default function Home() {
             </div>
         </section>
         
-        <div className="py-4 md:py-6">
+        <div className="pb-20 md:pb-32">
             <Approach />
         </div>
 
