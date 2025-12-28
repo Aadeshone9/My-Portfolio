@@ -367,12 +367,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="py-10 md:py-12 bg-background">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
                 {projectImage1 && (
-                    <motion.div {...motionProps} className="w-full aspect-[16/9] relative rounded-2xl overflow-hidden bg-muted">
+                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
                         <Image
                             src={projectImage1.imageUrl}
                             alt={projectImage1.description}
-                            fill
-                            className="object-cover"
+                            width={1280}
+                            height={720}
+                            className="w-full h-auto object-contain"
                             data-ai-hint={projectImage1.imageHint}
                         />
                     </motion.div>
@@ -407,12 +408,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="py-10 md:py-12 bg-background">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
              {projectImage2 && (
-                <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden bg-muted">
+                <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
                     <Image
                         src={projectImage2.imageUrl}
                         alt={projectImage2.description}
-                        fill
-                        className="object-cover"
+                        width={1280}
+                        height={720}
+                        className="w-full h-auto object-contain"
                         data-ai-hint={projectImage2.imageHint}
                     />
                 </motion.div>
@@ -453,12 +455,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="py-10 md:py-12 bg-background">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
              {projectImage3 && (
-                <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden bg-muted">
+                <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
                     <Image
                         src={projectImage3.imageUrl}
                         alt={projectImage3.description}
-                        fill
-                        className="object-cover"
+                        width={1280}
+                        height={720}
+                        className="w-full h-auto object-contain"
                         data-ai-hint={projectImage3.imageHint}
                     />
                 </motion.div>
@@ -499,12 +502,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="py-10 md:py-12 bg-background">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
                 {projectImage4 && (
-                    <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden bg-muted">
+                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
                         <Image
                             src={projectImage4.imageUrl}
                             alt={projectImage4.description}
-                            fill
-                            className="object-cover"
+                            width={1280}
+                            height={720}
+                            className="w-full h-auto object-contain"
                             data-ai-hint={projectImage4.imageHint}
                         />
                     </motion.div>
@@ -515,12 +519,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="py-10 md:py-12 bg-background">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
                 {projectImage5 && (
-                    <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden bg-muted">
+                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
                         <Image
                             src={projectImage5.imageUrl}
                             alt={projectImage5.description}
-                            fill
-                            className="object-cover"
+                            width={1280}
+                            height={720}
+                            className="w-full h-auto object-contain"
                             data-ai-hint={projectImage5.imageHint}
                         />
                     </motion.div>
