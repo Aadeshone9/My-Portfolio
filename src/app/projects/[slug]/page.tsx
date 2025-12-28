@@ -251,7 +251,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           stroke="currentColor"
           strokeWidth="2"
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="http://www.w3org/2000/svg"
         >
           <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
           <circle cx="9" cy="7" r="4" />
@@ -311,7 +311,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
               <motion.div {...motionProps}>
                 <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">My Contribution</h2>
-                <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">UX Research User Journeys Strategy Design Conceptualisation Design System</p>
+                 <div className="text-primary text-lg md:text-xl leading-relaxed mt-4">
+                  <p>UX Research</p>
+                  <p>User Journeys</p>
+                  <p>Strategy & Design Conceptualisation</p>
+                  <p>Design System</p>
+                </div>
               </motion.div>
               <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.1 }}>
                 <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">My Role</h2>
