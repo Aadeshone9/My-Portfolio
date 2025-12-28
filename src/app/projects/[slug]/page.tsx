@@ -82,6 +82,26 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     },
   ];
 
+  const saferBehaviourPoints = [
+    {
+      title: 'Strategic Gap Addressed',
+      description: 'The need for personalized riding tips and transparent maintenance.',
+    },
+    {
+      title: 'Design Rationale (Behavioral Nudges)',
+      description: 'We used Behavioral Design (Nudges) by providing actionable tips (e.g., "Tips on Harsh-braking") instead of just a raw score. This personalized, supportive approach successfully drove better habits.',
+    },
+    {
+      title: 'Data Hierarchy',
+      description: "On the 'My Rides' screen, we prioritized functional metrics like Distance and Avg Speed over the subjective star rating, reflecting our focus on utility and safety improvement.",
+    },
+    {
+      title: 'Maintenance Transparency',
+      description: 'We addressed the trust gap by designing an Easy, Quick, and Transparent Maintenance Process with proactive alerts and upfront pricing, directly combating the after-sales inconvenience seen in competitors.',
+    },
+  ];
+
+
   return (
     <div className="bg-background text-foreground">
       <Header />
@@ -308,6 +328,36 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
               <p className="text-muted-foreground">Dummy Slide</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Driving Safer Behaviour & Trust Section */}
+        <section className="py-24 md:py-32 bg-background text-foreground">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20">
+            <div className="max-w-4xl mx-auto">
+              <motion.h2
+                {...motionProps}
+                className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-12"
+              >
+                Driving Safer Behaviour &amp; Trust (Maintenance &amp; Tips):
+              </motion.h2>
+              <ul className="space-y-8">
+                {saferBehaviourPoints.map((point, index) => (
+                  <motion.li
+                    key={index}
+                    {...motionProps}
+                    transition={{ ...motionProps.transition, delay: 0.1 * (index + 1) }}
+                    className="flex items-start"
+                  >
+                    <span className="text-primary mr-4 mt-1">&#8226;</span>
+                    <p className="text-lg md:text-xl text-muted-foreground">
+                      <span className="font-semibold text-primary">{point.title}: </span>
+                      {point.description}
+                    </p>
+                  </motion.li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
