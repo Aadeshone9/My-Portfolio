@@ -69,13 +69,19 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                <SplitText
                   text="Behavioural UX case Study"
                   tag="p"
-                  className="font-headline font-semibold text-lg md:text-xl text-footer-muted-foreground text-center md:text-left max-w-4xl mx-auto md:mx-0"
+                  className="font-headline font-semibold text-lg md:text-xl text-footer-muted-foreground text-center md:text-left max-w-4xl mx-auto md:mx-0 mt-8"
                   textAlign="left"
                 />
                <SplitText
-                text="Driving Loyalty & Efficiency in EV Mobility with VIDA"
+                text="Driving Loyalty & Efficiency in"
                 tag="h1"
                 className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-center md:text-left max-w-4xl mx-auto md:mx-0 leading-tight mt-4"
+                textAlign="left"
+              />
+              <SplitText
+                text="EV Mobility with VIDA"
+                tag="h1"
+                className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-center md:text-left max-w-4xl mx-auto md:mx-0 leading-tight"
                 textAlign="left"
               />
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 mt-24 max-w-4xl mx-auto md:mx-0">
@@ -100,7 +106,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
             </div>
           </motion.div>
-          <div className="container mx-auto px-4 sm:px-8 md:px-20 py-16 md:py-24">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20 py-24 md:py-48">
             {heroImage && (
                 <motion.div {...motionProps} className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden">
                 <Image
