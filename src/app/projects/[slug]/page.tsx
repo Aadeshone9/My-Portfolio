@@ -760,6 +760,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Call to Action Section */}
         <section className="pb-20 container mx-auto px-4 sm:px-8 md:px-20">
           <div className="flex flex-col items-start gap-6">
+            <div className="w-[84px] h-[84px] rounded-full bg-primary mb-6"></div>
             <SplitText
               tag="p"
               text="you made it to the end of the scroll! Let's discuss the project in detail."
