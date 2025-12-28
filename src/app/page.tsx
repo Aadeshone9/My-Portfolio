@@ -24,8 +24,8 @@ export default function Home() {
     <div className="bg-background">
       <Header />
       <main className="flex flex-col">
-        <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-2">
-            <div className="pt-1 md:pt-2 pb-1 md:pb-2">
+        <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-16">
+            <div className="pb-1 md:pb-2">
               <SplitText 
                 text="Hi, I’m Aadesh" 
                 tag="h1"
@@ -46,7 +46,7 @@ export default function Home() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <div className="cursor-pointer pt-32">
+                <div className="cursor-pointer pt-16">
                   <Showreel
                     imageUrl={mainImage.imageUrl}
                     alt={mainImage.description}
