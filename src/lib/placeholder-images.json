@@ -9,7 +9,7 @@
     {
       "id": "vida-hero",
       "description": "VIDA EV mobile application screenshots",
-      "imageUrl": "https://images.unsplash.com/photo-1765272088039-a6f6b9188199?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtb2JpbGUlMjBhcHAlMjBldnxlbnwwfHx8fDE3NjY5MTI4MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/vida-hero.png",
       "imageHint": "mobile app ev"
     },
     {
@@ -99,91 +99,91 @@
     {
       "id": "uber-hero",
       "description": "Uber app hero image",
-      "imageUrl": "https://images.unsplash.com/photo-1761662826596-43d78c3652c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx1cmJhbiUyMG1vYmlsaXR5JTIwbmlnaHR8ZW58MHx8fHwxNzY2OTE2Njg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/vida-hero.png",
       "imageHint": "urban mobility night"
     },
     {
       "id": "uber-image-1",
       "description": "Uber app screen 1",
-      "imageUrl": "https://images.unsplash.com/photo-1730818027503-1116dc7a27ee?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YXBwJTIwc2NyZWVufGVufDB8fHx8MTc2NjkxMjU2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/charge-station.png",
       "imageHint": "app screen"
     },
     {
       "id": "uber-image-2",
       "description": "Uber app screen 2",
-      "imageUrl": "https://images.unsplash.com/photo-1631016800696-5ea8801b3c2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhcHAlMjBtYXB8ZW58MHx8fHwxNzY2OTE2Njg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/maintenance.png",
       "imageHint": "app map"
     },
     {
       "id": "uber-image-3",
       "description": "Uber app screen 3",
-      "imageUrl": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx1cmJhbiUyMHN0cmVldHxlbnwwfHx8fDE3NjY5MTY2ODd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/my-rides.png",
       "imageHint": "urban street"
     },
     {
       "id": "uber-image-4",
       "description": "Uber app screen 4",
-      "imageUrl": "https://images.unsplash.com/photo-1597762333765-cbcd63dd8acc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaXR5JTIwdHJhZmZpY3xlbnwwfHx8fDE3NjY4MTQ3MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/my-vehicle.png",
       "imageHint": "city traffic"
     },
     {
       "id": "uber-image-5",
       "description": "Uber app screen 5",
-      "imageUrl": "https://images.unsplash.com/photo-1606224103857-e4c74b0139df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjYXIlMjBpbnRlcmlvcnxlbnwwfHx8fDE3NjY4OTg0Mjl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/subscription.png",
       "imageHint": "car interior"
     },
     {
       "id": "uber-image-6",
       "description": "Uber app screen 6",
-      "imageUrl": "https://images.unsplash.com/photo-1593789198788-8b21805d5fdb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwaG9uZSUyMHNjcmVlbnxlbnwwfHx8fDE3NjY4Nzc5NDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/vida-app-screen.png",
       "imageHint": "phone screen"
     },
     {
       "id": "uber-image-7",
       "description": "Uber app screen 7",
-      "imageUrl": "https://images.unsplash.com/photo-1494989615690-9900562a5b20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb24lMjB3YWxraW5nfGVufDB8fHx8MTc2Njg0NzAzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/my-rides-2.png",
       "imageHint": "person walking"
     },
     {
       "id": "uber-image-8",
       "description": "Uber app screen 8",
-      "imageUrl": "https://images.unsplash.com/photo-1493134799591-2c9eed26201a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaXR5JTIwc2t5bGluZXxlbnwwfHx8fDE3NjY4MTYyMTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/my-rides-3.png",
       "imageHint": "city skyline"
     },
     {
       "id": "uber-image-9",
       "description": "Uber app screen 9",
-      "imageUrl": "https://images.unsplash.com/photo-1596032855412-169ab090dd8d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxuaWdodCUyMGRyaXZlfGVufDB8fHx8MTc2Njg2NDIxNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/trip-history.png",
       "imageHint": "night drive"
     },
     {
       "id": "mental-model-1",
       "description": "Portrait of a man",
-      "imageUrl": "https://images.unsplash.com/photo-1522556189639-b150ed9c4330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4ODE2NTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/mental-model-1.png",
       "imageHint": "man portrait"
     },
     {
       "id": "mental-model-2",
       "description": "Portrait of a woman",
-      "imageUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjY4MzUxNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/mental-model-2.png",
       "imageHint": "woman portrait"
     },
     {
       "id": "mental-model-avatar-1",
       "description": "Avatar of a user",
-      "imageUrl": "https://images.unsplash.com/photo-1569913486515-b74bf7751574?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwZXJzb24lMjBhdmF0YXJ8ZW58MHx8fHwxNzY2ODMyMTIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/avatar-1.png",
       "imageHint": "person avatar"
     },
     {
       "id": "mental-model-avatar-2",
       "description": "Avatar of a user",
-      "imageUrl": "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZXJzb24lMjBhdmF0YXJ8ZW58MHx8fHwxNzY2ODMyMTIyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/avatar-2.png",
       "imageHint": "person avatar"
     },
     {
       "id": "mental-model-avatar-3",
       "description": "Avatar of a user",
-      "imageUrl": "https://images.unsplash.com/photo-1750535135659-7a0c8878a8fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVyc29uJTIwYXZhdGFyfGVufDB8fHx8MTc2NjgzMjEyMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/avatar-3.png",
       "imageHint": "person avatar"
     }
   ]

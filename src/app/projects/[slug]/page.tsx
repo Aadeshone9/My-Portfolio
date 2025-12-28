@@ -105,52 +105,37 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   const experienceEnhancers = [
     {
-      icon: <ShieldCheck className="w-8 h-8 text-primary" />,
+      icon: <Image src="/images/subscriptions.svg" width={32} height={32} alt="Subscriptions" />,
       title: 'Services and Subscriptions',
       description: 'Drive subscriptions and show value with contextual nudges for pre-paid services.',
     },
     {
-      icon: <BarChartBig className="w-8 h-8 text-primary" />,
+      icon: <Image src="/images/reports.svg" width={32} height={32} alt="Reports" />,
       title: 'Reports and Analytics',
       description: 'Provided client with performance data tracking, analytics, and insightful reports.',
     },
     {
-      icon: <Navigation className="w-8 h-8 text-primary" />,
+      icon: <Image src="/images/navigation.svg" width={32} height={32} alt="Navigation" />,
       title: 'Tailored Navigation',
       description: 'Personalized navigation to increase user engagement.',
     },
     {
-      icon: <Phone className="w-8 h-8 text-primary" />,
+      icon: <Image src="/images/roadside.svg" width={32} height={32} alt="Roadside Assistance" />,
       title: 'Roadside Assistance',
       description: 'Dependable roadside assistance for emergencies and breakdowns.',
     },
     {
-      icon: (
-        <svg
-          className="w-8 h-8 text-primary"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M12 21.5c-2.4 0-4-1.6-4-3.5 0-1.4.9-2.5 2-2.5h4c1.1 0 2 1.1 2 2.5 0 1.9-1.6 3.5-4 3.5zm-5-3.5H5c-1.1 0-2 .9-2 2v1h18v-1c0-1.1-.9-2-2-2h-2m-8-5.5h-3m14 0h-3m-9.5-4.5H5.5c-.8 0-1.5.7-1.5 1.5v3c0 .8.7 1.5 1.5 1.5h1.5m10-6h1.5c.8 0 1.5.7 1.5 1.5v3c0 .8-.7 1.5-1.5 1.5h-1.5"
-          ></path>
-        </svg>
-      ),
+      icon: <Image src="/images/riding-mode.svg" width={32} height={32} alt="Custom Riding Mode" />,
       title: 'Custom Riding Mode',
       description: 'Streamline journeys with our centralized route planner and access.',
     },
     {
-      icon: <ShieldPlus className="w-8 h-8 text-primary" />,
+      icon: <Image src="/images/safety.svg" width={32} height={32} alt="Safety and Security" />,
       title: 'Priority Safety and Security',
       description: 'Enhanced user control and visibility of vehicle usage and status for safer and more secure driving.',
     },
     {
-      icon: <MapPin className="w-8 h-8 text-primary" />,
+      icon: <Image src="/images/geo-fencing.svg" width={32} height={32} alt="Geo-Fencing" />,
       title: 'Geo-Fencing',
       description: 'Boost sales by offering informative content to aid decision-making on website and app.',
     },
@@ -173,91 +158,31 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   const customerExperienceImpact = [
     {
-      icon: (
-        <svg
-          className="w-8 h-8 text-primary"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-          <circle cx="8.5" cy="7" r="4" />
-          <path d="M20 8v6" />
-          <path d="M23 11h-6" />
-        </svg>
-      ),
+      icon: <Image src="/images/bigger-picture.svg" width={32} height={32} alt="Bigger Picture" />,
       title: 'The Bigger Picture',
       description:
         'Empowering users to engage and participate in a larger community for a sense of inclusivity and involvement.',
     },
     {
-      icon: (
-        <svg
-          className="w-8 h-8 text-primary"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-          <circle cx="9" cy="7" r="4" />
-          <path d="m21.7 16.4-.9-.3" />
-          <path d="m15.2 13.9-.9-.3" />
-          <path d="m16.6 18.7.3-.9" />
-          <path d="m13.1 12.2.3-.9" />
-          <path d="m19.5 14.3.9.3" />
-          <path d="m12.3 16.7.9.3" />
-          <path d="m18 11.7-.3.9" />
-          <path d="m14.5 19.8-.3.9" />
-        </svg>
-      ),
+      icon: <Image src="/images/maintenance-icon.svg" width={32} height={32} alt="Easy and Quick Maintenance" />,
       title: 'Easy and Quick Maintenance',
       description:
         'Using an advanced system that proactively alerts users of potential issues and simplifies maintenance with easy booking, door-to-door pickup and drop-off, and other convenient services.',
     },
     {
-      icon: (
-         <svg
-          className="w-8 h-8 text-primary"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-            <path d="M8 18a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4v-3a4 4 0 0 0-4-4h-4a4 4 0 0 0-4 4Z"/>
-            <path d="M12 11v-2a4 4 0 0 1 4-4h2"/>
-            <path d="M4 14v-2a4 4 0 0 1 4-4h2"/>
-        </svg>
-      ),
+      icon: <Image src="/images/assistance.svg" width={32} height={32} alt="Assistance and Support" />,
       title: 'Assistance and Support',
       description:
         "Providing a comprehensive and supportive experience as a dependable companion for the user's journey.",
     },
     {
-      icon: <Cloud className="w-8 h-8 text-primary" />,
+      icon: <Image src="/images/eco-friendly.svg" width={32} height={32} alt="Eco-friendly Tools" />,
       title: 'Eco-friendly Tools',
       description:
         "Promoting eco-conscious choices by displaying users' eco-footprint as earth points, creating awareness, and offering brands an opportunity to make a positive impact in e-commerce.",
     },
     {
-      icon: (
-        <svg
-          className="w-8 h-8 text-primary"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-          <circle cx="9" cy="7" r="4" />
-          <path d="m16 11 2 2 4-4" />
-        </svg>
-      ),
+      icon: <Image src="/images/hassle-free.svg" width={32} height={32} alt="Hassle Free Ownership" />,
       title: 'Hassle Free Ownership',
       description:
         'Leveraging intelligent technology for personalized and relevant recommendations and insights, delivering a smooth and effortless ownership experience.',
