@@ -40,6 +40,21 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     },
   ];
 
+    const designChallenges = [
+    {
+      title: 'User Pain Point',
+      description: 'Frustration with Range Anxiety and the lack of verified information for charging, Vehicle adaptation.',
+    },
+    {
+      title: 'Business Challenge',
+      description: 'Lack of convenience and transparency in after-sales services, leading to high potential subscriber churn.',
+    },
+    {
+      title: 'Competitive Gap',
+      description: 'Competitors lacked a clear, personalized system for proactive maintenance alerts and data-driven riding feedback, Safety of Vehicle.',
+    },
+  ];
+
   return (
     <div className="bg-background text-foreground">
       <Header />
@@ -153,6 +168,35 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
+        {/* Core Design Challenge Section */}
+        <section className="py-24 md:py-40 bg-background text-foreground relative">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
+            <div className="max-w-4xl mx-auto">
+              <motion.h2 
+                {...motionProps} 
+                className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-12"
+              >
+                This led to our core design challenge:
+              </motion.h2>
+              <ul className="space-y-8">
+                {designChallenges.map((challenge, index) => (
+                  <motion.li 
+                    key={index}
+                    {...motionProps}
+                    transition={{ ...motionProps.transition, delay: 0.1 * (index + 1) }}
+                    className="flex items-start"
+                  >
+                    <span className="text-primary mr-4">&#8226;</span>
+                    <p className="text-lg md:text-xl text-foreground/80">
+                      <span className="font-semibold text-primary">{challenge.title}: </span>
+                      {challenge.description}
+                    </p>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
