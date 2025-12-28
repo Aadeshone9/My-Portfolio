@@ -38,26 +38,7 @@ const testimonials = [
   ];
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'headspace-hero');
-  const challengeImage = PlaceHolderImages.find(p => p.id === 'headspace-challenge');
   
-  const galleryImages = [
-    PlaceHolderImages.find(p => p.id === 'headspace-gallery-1'),
-    PlaceHolderImages.find(p => p.id === 'headspace-gallery-2'),
-    PlaceHolderImages.find(p => p.id === 'headspace-gallery-3'),
-  ].filter(Boolean);
-
-  const articlesImage = PlaceHolderImages.find(p => p.id === 'headspace-articles');
-  const resultFaceImage = PlaceHolderImages.find(p => p.id === 'headspace-result-face');
-  const finalDesignImage1 = PlaceHolderImages.find(p => p.id === 'headspace-final-design-1');
-  const finalDesignImage2 = PlaceHolderImages.find(p => p.id === 'headspace-final-design-2');
-  const visualImage1 = PlaceHolderImages.find(p => p.id === 'headspace-visual-1');
-  const visualImage2 = PlaceHolderImages.find(p => p.id === 'headspace-visual-2');
-  const vdlImage1 = PlaceHolderImages.find(p => p.id === 'headspace-vdl-1');
-  const vdlImage2 = PlaceHolderImages.find(p => p.id === 'headspace-vdl-2');
-  const testimonialBgImage = PlaceHolderImages.find(p => p.id === 'headspace-testimonial-bg');
-
-
   return (
     <div className="bg-background text-foreground">
       <Header />
@@ -109,27 +90,27 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Challenge Section */}
-        <section className="py-28 md:py-48 bg-background">
-            <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
-                <div>
-                    <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Challenge</h2>
-                    <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
-                    Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value.
-                    </p>
-                    <div className="mt-12">
-                        <h3 className="font-headline font-semibold text-2xl text-foreground">My Role</h3>
-                        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-2">
-                            Consultant : CX & UX Design
-                        </p>
-                    </div>
-                    <div className="mt-12">
-                        <h3 className="font-headline font-semibold text-2xl text-foreground">Primary Goal</h3>
-                        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-2">
-                            Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value (LTV).
-                        </p>
-                    </div>
-                </div>
-            </motion.div>
+        <section className="py-36 md:py-56 bg-background">
+          <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 items-start">
+              <div>
+                  <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">The Challenge</h2>
+                  <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
+                  Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value.
+                  </p>
+              </div>
+              <div>
+                  <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">My Role</h3>
+                  <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
+                      Consultant : CX & UX Design
+                  </p>
+              </div>
+              <div>
+                  <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">Primary Goal</h3>
+                  <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
+                      Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value (LTV).
+                  </p>
+              </div>
+          </motion.div>
         </section>
 
         {/* Gallery Section */}
