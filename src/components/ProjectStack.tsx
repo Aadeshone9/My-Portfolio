@@ -16,6 +16,7 @@ const projects = [
     description: "Defined UX improvements that increased error visibility and user adoption by 25%.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
+    img: '/images/edge.png',
   },
   {
     title: "Maplegeni",
@@ -23,6 +24,7 @@ const projects = [
     description: "Led B2C website product design, boosting mobile-first engagement by 35%.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
+    img: '/images/maplegenix.webp',
   },
   {
     title: "Mahindra Finance",
@@ -30,6 +32,7 @@ const projects = [
     description: "Increased customer retention by 30% and cross-selling by 25% by integrating \"Design for Trust and Growth\" principles.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
+    img: '/images/mahindra-finance.svg',
   },
   {
     title: "Google Cloud Security",
@@ -37,6 +40,7 @@ const projects = [
     description: "Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
+    img: '/images/google-cloud-logo.svg',
   },
   {
     title: "Hero Motocorp Vida App",
@@ -45,7 +49,8 @@ const projects = [
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
     cta: 'View Project',
-    href: '/projects/vida'
+    href: '/projects/vida',
+    img: '/images/hero.svg'
   },
 ];
 
@@ -87,6 +92,14 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
       >
         <Card className={`${project.bgColor} border-border rounded-2xl w-full h-full mx-auto flex flex-col overflow-hidden`}>
           <div className={`relative ${project.imageBgColor} w-full h-full rounded-lg flex items-center justify-center`}>
+             {project.img && (
+                <Image 
+                  src={project.img} 
+                  alt={project.title} 
+                  fill 
+                  className="object-contain p-8 md:p-16" 
+                />
+              )}
              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/30 to-transparent p-6 flex flex-col justify-end">
                 <div className="text-foreground">
                   <CardTitle className="text-2xl md:text-3xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
