@@ -758,18 +758,11 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Call to Action Section */}
-        <section className="pb-20 md:pb-24 container mx-auto px-4 sm:px-8 md:px-20">
+        <section className="pb-20 container mx-auto px-4 sm:px-8 md:px-20">
           <div className="flex flex-col items-start gap-6">
             <SplitText
               tag="p"
-              text="you made it to the end of the scroll!"
-              className="font-headline font-semibold text-xl md:text-2xl tracking-normal text-muted-foreground mb-6"
-              textAlign='left'
-            />
-            <div className="w-[84px] h-[84px] rounded-full bg-primary"></div>
-            <SplitText
-              tag="p"
-              text="Let's connect and discuss the project in detail."
+              text="you made it to the end of the scroll! Let's discuss the project in detail."
               className="font-headline font-semibold text-xl md:text-2xl tracking-normal text-muted-foreground"
               textAlign='left'
             />
