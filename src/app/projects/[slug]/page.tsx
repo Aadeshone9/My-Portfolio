@@ -7,6 +7,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Search, Target, User, TrendingUp, ShieldCheck, Navigation, Phone, ShieldPlus, MapPin, BarChartBig, Lightbulb, Users, Cog, Ear, Cloud, UserCheck } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import SplitText from '@/components/SplitText';
 
 const motionProps = {
   initial: { opacity: 0, y: 20 },
@@ -710,6 +711,27 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   </div>
                 ))}
               </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Call to Action Section */}
+        <section className="py-20 md:py-32 container mx-auto px-4 sm:px-8 md:px-20">
+          <div className="flex flex-col items-start gap-6">
+            <div className="w-[84px] h-[84px] rounded-full bg-primary"></div>
+            <div>
+              <SplitText
+                  text="You've seen the case study."
+                  tag="p"
+                  className="font-headline font-semibold text-4xl md:text-6xl leading-tight tracking-tighter text-muted-foreground"
+                  textAlign="left"
+                />
+                <SplitText
+                  text="Let's connect and discuss the project in detail."
+                  tag="p"
+                  className="font-headline font-semibold text-4xl md:text-6xl leading-tight tracking-tighter text-muted-foreground"
+                  textAlign="left"
+                />
             </div>
           </div>
         </section>
