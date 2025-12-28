@@ -683,34 +683,33 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Customer Experience Impact Section */}
         <section className="py-24 md:py-32 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-              <motion.div {...motionProps}>
-                <h2 className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-4">
-                  Customer Experience Impact
-                </h2>
-                <p className="text-lg md:text-xl text-muted-foreground">
-                  Performing data analysis to uncover insights and develop effective strategies, collaborating with cross-functional teams for seamless company-wide growth and communication.
-                </p>
-              </motion.div>
-              <motion.div 
-                {...motionProps} 
-                transition={{...motionProps.transition, delay: 0.2}}
-                className="bg-card border border-border rounded-2xl p-8 md:p-10 space-y-8"
-              >
-                {customerExperienceImpact.map((item, index) => (
-                  <div key={index} className="flex items-start gap-6">
-                    <div className="flex-shrink-0 mt-1">{item.icon}</div>
-                    <div>
-                      <h3 className="font-headline font-semibold text-xl text-foreground">
-                        {item.title}
-                      </h3>
-                      <p className="text-muted-foreground mt-1">
-                        {item.description}
-                      </p>
-                    </div>
+            <motion.div {...motionProps} className="max-w-4xl mx-auto mb-16">
+              <h2 className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-4">
+                Customer Experience Impact
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground">
+                Performing data analysis to uncover insights and develop effective strategies, collaborating with cross-functional teams for seamless company-wide growth and communication.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {customerExperienceImpact.map((item, index) => (
+                <motion.div 
+                  key={index}
+                  {...motionProps} 
+                  transition={{...motionProps.transition, delay: 0.2 + (index * 0.1)}}
+                  className="bg-card border border-border rounded-2xl p-8 space-y-4"
+                >
+                  <div className="flex-shrink-0">{item.icon}</div>
+                  <div>
+                    <h3 className="font-headline font-semibold text-xl text-foreground">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground mt-1">
+                      {item.description}
+                    </p>
                   </div>
-                ))}
-              </motion.div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
