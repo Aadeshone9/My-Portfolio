@@ -2,7 +2,6 @@
 import Header from '@/components/Header';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import Image from 'next/image';
-import SplitText from '@/components/SplitText';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
@@ -15,19 +14,19 @@ const motionProps = {
 };
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'vida-hero');
-  const image1 = PlaceHolderImages.find(p => p.id === 'project-image-1');
-  const image2 = PlaceHolderImages.find(p => p.id === 'project-image-2');
-  const image3 = PlaceHolderImages.find(p => p.id === 'project-image-3');
-  const image4 = PlaceHolderImages.find(p => p.id === 'project-image-4');
-  const image5 = PlaceHolderImages.find(p => p.id === 'project-image-5');
-  const image6 = PlaceHolderImages.find(p => p.id === 'project-image-6');
-  const image7 = PlaceHolderImages.find(p => p.id === 'project-image-7');
-  const image8 = PlaceHolderImages.find(p => p.id === 'project-image-8');
-  const image9 = PlaceHolderImages.find(p => p.id === 'project-image-9');
+  const heroImage = PlaceHolderImages.find(p => p.id === 'uber-hero');
+  const image1 = PlaceHolderImages.find(p => p.id === 'uber-image-1');
+  const image2 = PlaceHolderImages.find(p => p.id === 'uber-image-2');
+  const image3 = PlaceHolderImages.find(p => p.id === 'uber-image-3');
+  const image4 = PlaceHolderImages.find(p => p.id === 'uber-image-4');
+  const image5 = PlaceHolderImages.find(p => p.id === 'uber-image-5');
+  const image6 = PlaceHolderImages.find(p => p.id === 'uber-image-6');
+  const image7 = PlaceHolderImages.find(p => p.id === 'uber-image-7');
+  const image8 = PlaceHolderImages.find(p => p.id === 'uber-image-8');
+  const image9 = PlaceHolderImages.find(p => p.id === 'uber-image-9');
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-background text-foreground">
       <Header />
       <main>
         {/* Hero Section */}
@@ -54,31 +53,38 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     transition={{ ...motionProps.transition, delay: 0.1 }}
                     className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-2"
                 >
-                    Driving Loyalty & Efficiency in EV Mobility with VIDA
+                   Driving Loyalty & Efficiency in 
+                </motion.h1>
+                 <motion.h1 
+                    {...motionProps}
+                    transition={{ ...motionProps.transition, delay: 0.2 }}
+                    className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-2"
+                >
+                   EV Mobility with VIDA
                 </motion.h1>
             </div>
         </section>
 
         {/* Intro Section */}
-        <section className="py-24 md:py-40 bg-black">
+        <section className="py-24 md:py-40 bg-background text-foreground">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                 <motion.div {...motionProps} className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 text-white/90">
+                 <motion.div {...motionProps} className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20">
                     <div>
-                    <h3 className="text-sm font-semibold uppercase tracking-wider text-white/60">Project Type</h3>
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Project Type</h3>
                     <p className="text-lg mt-2">Behavioural UX case Study</p>
                     </div>
                     <div>
-                    <h3 className="text-sm font-semibold uppercase tracking-wider text-white/60">Stage</h3>
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Stage</h3>
                     <p className="text-lg mt-2">Research to Launch</p>
                     </div>
                     <div>
-                    <h3 className="text-sm font-semibold uppercase tracking-wider text-white/60">Deliverables</h3>
+                    <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Deliverables</h3>
                     <p className="text-lg mt-2">Product Strategy, UX, Visual design</p>
                     </div>
                 </motion.div>
                 <motion.div {...motionProps} transition={{...motionProps.transition, delay: 0.2}} className='mt-24 max-w-4xl'>
-                    <h2 className="font-headline font-semibold text-xl md:text-2xl text-white">Project Focus</h2>
-                    <p className="text-white/80 text-lg md:text-xl leading-relaxed mt-4">
+                    <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">Project Focus</h2>
+                    <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
                         End-to-end connected vehicle platform experience for the launch of the Vida EV.
                     </p>
                 </motion.div>
@@ -86,35 +92,33 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Challenge, Role, Goal Section */}
-        <section className="py-24 md:py-40 bg-black">
+        <section className="py-24 md:py-40 bg-background text-foreground">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                <motion.div {...motionProps} className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <motion.div {...motionProps} className="grid grid-cols-1 md:grid-cols-3 gap-16 items-start">
                     <div className="max-w-lg">
-                        <h2 className="font-headline font-semibold text-3xl md:text-4xl text-white">The Challenge</h2>
-                        <p className="text-white/80 text-lg md:text-xl leading-relaxed mt-6">
+                        <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Challenge</h2>
+                        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-6">
                         Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value.
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 gap-12">
-                         <div>
-                            <h3 className="font-headline font-semibold text-2xl md:text-3xl text-white">My Role</h3>
-                            <p className="text-white/80 text-lg md:text-xl leading-relaxed mt-4">
-                                Consultant : CX & UX Design
-                            </p>
-                        </div>
-                        <div>
-                            <h3 className="font-headline font-semibold text-2xl md:text-3xl text-white">Primary Goal</h3>
-                            <p className="text-white/80 text-lg md:text-xl leading-relaxed mt-4">
-                                Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value (LTV).
-                            </p>
-                        </div>
+                     <div>
+                        <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">My Role</h3>
+                        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
+                            Consultant : CX & UX Design
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">Primary Goal</h3>
+                        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
+                            Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value (LTV).
+                        </p>
                     </div>
                 </motion.div>
             </div>
         </section>
 
         {/* Image Grid 1 */}
-        <section className="py-10 bg-black">
+        <section className="py-10 bg-background">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
                 {image1 && (
                     <motion.div {...motionProps} className="aspect-[2/3] relative rounded-lg overflow-hidden">
@@ -130,7 +134,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Image Grid 2 */}
-        <section className="py-10 bg-black">
+        <section className="py-10 bg-background">
              <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-10">
                  {image6 && (
                     <motion.div {...motionProps} className="aspect-[4/3] relative rounded-lg overflow-hidden">
@@ -147,7 +151,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
         
         {/* Image Grid 3 */}
-        <section className="py-10 bg-black">
+        <section className="py-10 bg-background">
              <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-3 gap-10">
                  {image8 && (
                     <motion.div {...motionProps} className="aspect-[4/3] relative rounded-lg overflow-hidden">
@@ -168,7 +172,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Full width image */}
-        <section className="py-10 bg-black">
+        <section className="py-10 bg-background">
              {image4 && (
                 <motion.div {...motionProps} className="h-[90vh] w-full relative">
                     <Image src={image4.imageUrl} alt={image4.description} fill className="object-cover" data-ai-hint={image4.imageHint}/>
@@ -177,14 +181,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
         
         {/* Result Section */}
-        <section className="py-24 md:py-48 bg-black">
+        <section className="py-24 md:py-48 bg-background">
             <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
                 <div>
-                    <h2 className="font-headline font-semibold text-3xl md:text-4xl text-white">The Result</h2>
-                    <p className="text-white/80 text-lg md:text-xl leading-relaxed mt-4">
+                    <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Result</h2>
+                    <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
                         The result is a more intuitive and personalized Headspace experience. By focusing on user intent and context, we designed a system that surfaces the right content at the right time, helping users build a consistent mindfulness practice that fits their life.
                     </p>
-                    <Button variant="link" className="group mt-12 px-0 text-white text-lg hover:text-primary">
+                    <Button variant="link" className="group mt-12 px-0 text-lg hover:text-primary text-primary">
                         View Live Site
                     </Button>
                 </div>
