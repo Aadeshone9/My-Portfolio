@@ -23,8 +23,8 @@ export default function Home() {
     <div className="bg-background">
       <Header />
       <main className="flex flex-col">
-        <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-10">
-            <div className="pt-10 md:pt-20 pb-10 md:pb-20">
+        <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-6">
+            <div className="pt-6 md:pt-12 pb-6 md:pb-12">
               <SplitText 
                 text="Hi, I’m Aadesh" 
                 tag="h1"
@@ -49,7 +49,7 @@ export default function Home() {
           />
         )}
 
-        <section className="py-20 md:py-32">
+        <section className="py-12 md:py-20">
           <div className="container mx-auto px-4 sm:px:8 md:px-20 relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="flex-1 flex flex-col">
@@ -74,12 +74,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mt-16 md:mt-20">
+          <div className="relative mt-10 md:mt-12">
             <ProjectStack />
           </div>
         </section>
 
-        <section id="know-me-better" className="pt-4 pb-4 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
+        <section id="know-me-better" className="pt-2 pb-2 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
           <div className="flex flex-col items-start gap-4">
             <AnimatedShape shape="square" />
             <SplitText
@@ -89,10 +89,10 @@ export default function Home() {
               textAlign="left"
             />
           </div>
-          <div className="w-32 h-[2px] bg-border my-10"></div>
+          <div className="w-32 h-[2px] bg-border my-6"></div>
         </section>
 
-        <section className="pt-8 pb-20 container mx-auto px-4 sm:px-8 md:px-20">
+        <section className="pt-4 pb-12 container mx-auto px-4 sm:px-8 md:px-20">
            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 <div className="flex flex-col items-start w-full">
                     <SplitText
@@ -128,7 +128,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="pb-20 pt-4">
+        <section className="pb-12 pt-2">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <TiltedCard>
                     <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
@@ -165,7 +165,7 @@ export default function Home() {
             </div>
         </section>
         
-        <div className="py-20 md:py-32">
+        <div className="py-12 md:py-20">
             <Approach />
         </div>
 
