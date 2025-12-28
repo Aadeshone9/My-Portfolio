@@ -17,13 +17,12 @@ const motionProps = {
 };
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const heroImage = PlaceHolderImages.find(p => p.id === 'uber-hero');
-  const projectImage1 = PlaceHolderImages.find(p => p.id === 'project1-image-1');
-  const projectImage2 = PlaceHolderImages.find(p => p.id === 'project1-image-2');
-  const projectImage3 = PlaceHolderImages.find(p => p.id === 'project1-image-3');
-  const projectImage4 = PlaceHolderImages.find(p => p.id === 'project1-image-4');
-  const projectImage5 = PlaceHolderImages.find(p => p.id === 'project1-image-5');
-  const projectImage6 = PlaceHolderImages.find(p => p.id === 'project1-image-6');
+  const heroImage = PlaceHolderImages.find(p => p.id === 'project1-image-1');
+  const projectImage1 = PlaceHolderImages.find(p => p.id === 'project1-image-2');
+  const projectImage2 = PlaceHolderImages.find(p => p.id === 'project1-image-3');
+  const projectImage3 = PlaceHolderImages.find(p => p.id === 'project1-image-4');
+  const projectImage4 = PlaceHolderImages.find(p => p.id === 'project1-image-5');
+  const projectImage5 = PlaceHolderImages.find(p => p.id === 'project1-image-6');
   
 
   const outcomes = [
@@ -523,22 +522,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                             fill
                             className="object-cover"
                             data-ai-hint={projectImage5.imageHint}
-                        />
-                    </motion.div>
-                )}
-            </div>
-        </section>
-
-        <section className="py-10 md:py-12 bg-background">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
-                {projectImage6 && (
-                    <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden bg-muted">
-                        <Image
-                            src={projectImage6.imageUrl}
-                            alt={projectImage6.description}
-                            fill
-                            className="object-cover"
-                            data-ai-hint={projectImage6.imageHint}
                         />
                     </motion.div>
                 )}
