@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Search, Target, User, TrendingUp, ShieldCheck, Navigation, Phone, ShieldPlus, MapPin, BarChartBig, Lightbulb } from 'lucide-react';
+import { Search, Target, User, TrendingUp, ShieldCheck, Navigation, Phone, ShieldPlus, MapPin, BarChartBig, Lightbulb, Users, Cog, Ear, Cloud, UserCheck } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -167,6 +167,99 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     {
       title: 'Iteration is Impact',
       description: 'Simple changes, like refining the information hierarchy of the charging card based on feedback, can yield outsized results (the 50% efficiency gain) in critical, high-anxiety user flows.',
+    },
+  ];
+
+  const customerExperienceImpact = [
+    {
+      icon: (
+        <svg
+          className="w-8 h-8 text-primary"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="8.5" cy="7" r="4" />
+          <path d="M20 8v6" />
+          <path d="M23 11h-6" />
+        </svg>
+      ),
+      title: 'The Bigger Picture',
+      description:
+        'Empowering users to engage and participate in a larger community for a sense of inclusivity and involvement.',
+    },
+    {
+      icon: (
+        <svg
+          className="w-8 h-8 text-primary"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="m21.7 16.4-.9-.3" />
+          <path d="m15.2 13.9-.9-.3" />
+          <path d="m16.6 18.7.3-.9" />
+          <path d="m13.1 12.2.3-.9" />
+          <path d="m19.5 14.3.9.3" />
+          <path d="m12.3 16.7.9.3" />
+          <path d="m18 11.7-.3.9" />
+          <path d="m14.5 19.8-.3.9" />
+        </svg>
+      ),
+      title: 'Easy and Quick Maintenance',
+      description:
+        'Using an advanced system that proactively alerts users of potential issues and simplifies maintenance with easy booking, door-to-door pickup and drop-off, and other convenient services.',
+    },
+    {
+      icon: (
+         <svg
+          className="w-8 h-8 text-primary"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+            <path d="M8 18a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4v-3a4 4 0 0 0-4-4h-4a4 4 0 0 0-4 4Z"/>
+            <path d="M12 11v-2a4 4 0 0 1 4-4h2"/>
+            <path d="M4 14v-2a4 4 0 0 1 4-4h2"/>
+        </svg>
+      ),
+      title: 'Assistance and Support',
+      description:
+        "Providing a comprehensive and supportive experience as a dependable companion for the user's journey.",
+    },
+    {
+      icon: <Cloud className="w-8 h-8 text-primary" />,
+      title: 'Eco-friendly Tools',
+      description:
+        "Promoting eco-conscious choices by displaying users' eco-footprint as earth points, creating awareness, and offering brands an opportunity to make a positive impact in e-commerce.",
+    },
+    {
+      icon: (
+        <svg
+          className="w-8 h-8 text-primary"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="m16 11 2 2 4-4" />
+        </svg>
+      ),
+      title: 'Hassle Free Ownership',
+      description:
+        'Leveraging intelligent technology for personalized and relevant recommendations and insights, delivering a smooth and effortless ownership experience.',
     },
   ];
 
@@ -586,11 +679,42 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
-
+        {/* Customer Experience Impact Section */}
+        <section className="py-24 md:py-32 bg-background text-foreground">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+              <motion.div {...motionProps}>
+                <h2 className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-4">
+                  Customer Experience Impact
+                </h2>
+                <p className="text-lg md:text-xl text-muted-foreground">
+                  Performing data analysis to uncover insights and develop effective strategies, collaborating with cross-functional teams for seamless company-wide growth and communication.
+                </p>
+              </motion.div>
+              <motion.div 
+                {...motionProps} 
+                transition={{...motionProps.transition, delay: 0.2}}
+                className="bg-card border border-border rounded-2xl p-8 md:p-10 space-y-8"
+              >
+                {customerExperienceImpact.map((item, index) => (
+                  <div key={index} className="flex items-start gap-6">
+                    <div className="flex-shrink-0 mt-1">{item.icon}</div>
+                    <div>
+                      <h3 className="font-headline font-semibold text-xl text-foreground">
+                        {item.title}
+                      </h3>
+                      <p className="text-muted-foreground mt-1">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
   );
 }
-
-    
