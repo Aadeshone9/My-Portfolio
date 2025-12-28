@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { cn } from '@/lib/utils';
 import './Showreel.css';
@@ -12,6 +12,7 @@ type ShowreelProps = {
 export default function Showreel({ videoUrl }: ShowreelProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -21,6 +22,19 @@ export default function Showreel({ videoUrl }: ShowreelProps) {
   const scale = useTransform(scrollYProgress, [0.1, 0.25, 0.75, 0.9], [0.9, 1, 1, 0.9]);
   const borderRadius = useTransform(scrollYProgress, [0.1, 0.25], [16, 0]);
   const margin = useTransform(scrollYProgress, [0.1, 0.25], [20, 0]);
+
+  const togglePlay = () => {
+    const video = videoRef.current;
+    if (video) {
+      if (video.paused) {
+        video.play();
+        setIsPlaying(true);
+      } else {
+        video.pause();
+        setIsPlaying(false);
+      }
+    }
+  };
 
   return (
     <motion.div
@@ -36,9 +50,11 @@ export default function Showreel({ videoUrl }: ShowreelProps) {
       >
         <motion.div
           className={cn(
-            'relative w-full h-full bg-muted overflow-hidden'
+            'relative w-full h-full bg-muted overflow-hidden',
+             isPlaying ? 'cursor-pause' : 'cursor-play'
           )}
           style={{ scale, borderRadius }}
+          onClick={togglePlay}
         >
           <video
             ref={videoRef}
