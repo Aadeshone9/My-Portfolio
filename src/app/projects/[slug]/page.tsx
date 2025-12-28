@@ -306,7 +306,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Contribution Section */}
-        <section className="py-24 md:py-32 bg-background text-foreground relative">
+        <section className="py-20 md:py-24 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
               <motion.div {...motionProps}>
@@ -330,7 +330,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Key Outcomes Section */}
-        <section className="py-24 md:py-32 bg-background text-foreground relative">
+        <section className="py-20 md:py-24 bg-background text-foreground relative">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 relative">
                 <motion.h2 
                     {...motionProps}
@@ -355,7 +355,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
         
         {/* Problem Definition Section */}
-        <section className="py-24 md:py-32 bg-background text-foreground relative">
+        <section className="py-20 md:py-24 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl">
               <motion.div {...motionProps} className="flex items-center gap-4">
@@ -376,7 +376,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Core Design Challenge Section */}
-        <section className="py-24 md:py-32 bg-background text-foreground relative">
+        <section className="py-20 md:py-24 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
@@ -406,7 +406,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Dummy Slide 6 */}
-        <section className="py-24 md:py-32 bg-background">
+        <section className="py-20 md:py-24 bg-background">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
               <p className="text-muted-foreground">Dummy Slide</p>
@@ -415,7 +415,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Design Process & Strategic Solutions Section */}
-        <section className="py-24 md:py-32 bg-background text-foreground relative">
+        <section className="py-20 md:py-24 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl">
               <motion.div {...motionProps} className="flex items-center gap-3">
@@ -436,7 +436,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
         
         {/* Dummy Slide 8 */}
-        <section className="py-24 md:py-32 bg-background">
+        <section className="py-20 md:py-24 bg-background">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
               <p className="text-muted-foreground">Dummy Slide</p>
@@ -445,7 +445,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Solving Range Anxiety Section */}
-        <section className="py-24 md:py-32 bg-background text-foreground">
+        <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="max-w-4xl mx-auto">
               <motion.h2
@@ -475,7 +475,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Dummy Slide 10 */}
-        <section className="py-24 md:py-32 bg-background">
+        <section className="py-20 md:py-24 bg-background">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
               <p className="text-muted-foreground">Dummy Slide</p>
@@ -484,7 +484,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Dummy Slide 11 */}
-        <section className="py-24 md:py-32 bg-background">
+        <section className="py-20 md:py-24 bg-background">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
               <p className="text-muted-foreground">Dummy Slide</p>
@@ -493,7 +493,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Driving Safer Behaviour & Trust Section */}
-        <section className="py-24 md:py-32 bg-background text-foreground">
+        <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="max-w-4xl mx-auto">
               <motion.h2
@@ -523,7 +523,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Dummy Slide 13 */}
-        <section className="py-24 md:py-32 bg-background">
+        <section className="py-20 md:py-24 bg-background">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
               <p className="text-muted-foreground">Dummy Slide</p>
@@ -532,7 +532,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Dummy Slide 14 */}
-        <section className="py-24 md:py-32 bg-background">
+        <section className="py-20 md:py-24 bg-background">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
               <p className="text-muted-foreground">Dummy Slide</p>
@@ -541,7 +541,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Quantifiable Outcomes & Impact Section */}
-        <section className="py-24 md:py-32 bg-background text-foreground">
+        <section className="py-20 md:py-24 bg-background text-foreground">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
                 <div className="max-w-4xl mx-auto">
                     <motion.div {...motionProps} className="flex items-center gap-4 mb-4">
@@ -588,7 +588,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Key Experience Enhancers Section */}
-        <section className="py-24 md:py-32 bg-background text-foreground">
+        <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <motion.h2
               {...motionProps}
@@ -627,7 +627,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Key Learnings & Reflection Section */}
-        <section className="py-24 md:py-32 bg-background text-foreground">
+        <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="max-w-4xl mx-auto">
               <motion.div {...motionProps} className="flex items-center gap-4 mb-8">
@@ -664,7 +664,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Customer Experience Impact Section */}
-        <section className="py-24 md:py-32 bg-background text-foreground">
+        <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <motion.div {...motionProps} className="max-w-4xl mx-auto mb-16">
               <h2 className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-4">
@@ -698,7 +698,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Call to Action Section */}
-        <section className="py-20 md:py-32 container mx-auto px-4 sm:px-8 md:px-20">
+        <section className="py-20 md:py-24 container mx-auto px-4 sm:px-8 md:px-20">
           <div className="flex flex-col items-start gap-6">
             <p
               className="font-headline font-semibold text-2xl md:text-4xl tracking-normal text-muted-foreground mb-6"
