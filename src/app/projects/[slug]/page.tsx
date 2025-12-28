@@ -22,8 +22,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   const projectImage2 = PlaceHolderImages.find(p => p.id === 'project1-image-3');
   const projectImage3 = PlaceHolderImages.find(p => p.id === 'project1-image-4');
   const projectImage4 = PlaceHolderImages.find(p => p.id === 'project1-image-5');
-  const projectImage5 = PlaceHolderImages.find(p => p.id === 'project1-image-6');
-  const projectImage6 = PlaceHolderImages.find(p => p.id === 'project1-image-7');
+  const projectImage6 = PlaceHolderImages.find(p => p.id === 'project1-image-6');
+  const projectImage5 = PlaceHolderImages.find(p => p.id === 'project1-image-7');
   
 
   const outcomes = [
@@ -470,6 +470,23 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
+        <section className="py-10 md:py-12 bg-background">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
+                {projectImage4 && (
+                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                        <Image
+                            src={projectImage4.imageUrl}
+                            alt={projectImage4.description}
+                            width={1280}
+                            height={720}
+                            className="w-full h-auto object-contain"
+                            data-ai-hint={projectImage4.imageHint}
+                        />
+                    </motion.div>
+                )}
+            </div>
+        </section>
+
         {/* Driving Safer Behaviour & Trust Section */}
         <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
@@ -500,22 +517,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
-        <section className="py-10 md:py-12 bg-background">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
-                {projectImage4 && (
-                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                        <Image
-                            src={projectImage4.imageUrl}
-                            alt={projectImage4.description}
-                            width={1280}
-                            height={720}
-                            className="w-full h-auto object-contain"
-                            data-ai-hint={projectImage4.imageHint}
-                        />
-                    </motion.div>
-                )}
-            </div>
-        </section>
+   
         
         <section className="py-10 md:py-12 bg-background">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
