@@ -311,7 +311,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
               <motion.div {...motionProps}>
                 <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">My Contribution</h2>
-                <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">Research, Strategy, Design, Design System</p>
+                <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">UX Research, User Journeys, Strategy, Design Conceptualisation, Design System</p>
               </motion.div>
               <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.1 }}>
                 <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">My Role</h2>
