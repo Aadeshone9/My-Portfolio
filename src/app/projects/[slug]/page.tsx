@@ -51,72 +51,51 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <motion.h1 
                     {...motionProps}
                     transition={{ ...motionProps.transition, delay: 0.1 }}
-                    className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-2"
+                    className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight"
                 >
                    Driving Loyalty & Efficiency in 
                 </motion.h1>
                  <motion.h1 
                     {...motionProps}
                     transition={{ ...motionProps.transition, delay: 0.2 }}
-                    className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-2"
+                    className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-4"
                 >
                    EV Mobility with VIDA
                 </motion.h1>
             </div>
         </section>
 
-        {/* Intro Section */}
-        <section className="py-24 md:py-40 bg-background text-foreground">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                 <motion.div {...motionProps} className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20">
-                    <div>
-                    <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Project Type</h3>
-                    <p className="text-lg mt-2">Behavioural UX case Study</p>
+        {/* Contribution Section */}
+        <section className="py-24 md:py-40 bg-black text-white relative">
+            <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute -right-[20%] -top-[20%] w-[50vw] h-[50vw] border-2 border-primary/20 rounded-full" />
+            </div>
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl">
+                    <div className="space-y-12">
+                        <motion.div {...motionProps}>
+                            <h2 className="font-headline font-semibold text-3xl md:text-4xl text-white">Contribution in Project</h2>
+                            <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">Research, Strategy, Design, Design System</p>
+                        </motion.div>
+                        <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.1 }}>
+                            <h2 className="font-headline font-semibold text-3xl md:text-4xl text-white">My Role</h2>
+                            <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">Consultant: CX & UX Design</p>
+                        </motion.div>
                     </div>
-                    <div>
-                    <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Stage</h3>
-                    <p className="text-lg mt-2">Research to Launch</p>
+                     <div className="space-y-12">
+                        <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.2 }}>
+                            <h2 className="font-headline font-semibold text-3xl md:text-4xl text-white">Project Focus</h2>
+                            <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">End-to-end connected vehicle platform experience for the launch of the Vida EV.</p>
+                        </motion.div>
+                        <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.3 }}>
+                            <h2 className="font-headline font-semibold text-3xl md:text-4xl text-white">Primary Goal</h2>
+                            <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value (LTV).</p>
+                        </motion.div>
                     </div>
-                    <div>
-                    <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Deliverables</h3>
-                    <p className="text-lg mt-2">Product Strategy, UX, Visual design</p>
-                    </div>
-                </motion.div>
-                <motion.div {...motionProps} transition={{...motionProps.transition, delay: 0.2}} className='mt-24 max-w-4xl'>
-                    <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">Project Focus</h2>
-                    <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
-                        End-to-end connected vehicle platform experience for the launch of the Vida EV.
-                    </p>
-                </motion.div>
+                </div>
             </div>
         </section>
-
-        {/* Challenge, Role, Goal Section */}
-        <section className="py-24 md:py-40 bg-background text-foreground">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                <motion.div {...motionProps} className="grid grid-cols-1 md:grid-cols-3 gap-16 items-start">
-                    <div className="max-w-lg">
-                        <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Challenge</h2>
-                        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-6">
-                        Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value.
-                        </p>
-                    </div>
-                     <div>
-                        <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">My Role</h3>
-                        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
-                            Consultant : CX & UX Design
-                        </p>
-                    </div>
-                    <div>
-                        <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">Primary Goal</h3>
-                        <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
-                            Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value (LTV).
-                        </p>
-                    </div>
-                </motion.div>
-            </div>
-        </section>
-
+        
         {/* Image Grid 1 */}
         <section className="py-10 bg-background">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
