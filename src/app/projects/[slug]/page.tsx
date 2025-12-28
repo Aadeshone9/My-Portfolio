@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Search, Target, User, TrendingUp, ShieldCheck, Navigation, Phone, ShieldPlus, MapPin, BarChartBig } from 'lucide-react';
+import { Search, Target, User, TrendingUp, ShieldCheck, Navigation, Phone, ShieldPlus, MapPin, BarChartBig, Lightbulb } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -155,6 +155,20 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     },
   ];
 
+    const keyLearnings = [
+    {
+      title: 'Contextual Data',
+      description: 'Successfully driving behavior requires translating data into immediate, actionable tips, not just presenting raw numbers.',
+    },
+    {
+      title: 'Trust as a Feature',
+      description: 'In the EV market, providing transparency in maintenance and verified information is the foundational feature that prevents churn.',
+    },
+    {
+      title: 'Iteration is Impact',
+      description: 'Simple changes, like refining the information hierarchy of the charging card based on feedback, can yield outsized results (the 50% efficiency gain) in critical, high-anxiety user flows.',
+    },
+  ];
 
   return (
     <div className="bg-background text-foreground">
@@ -532,6 +546,43 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </p>
               </div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Key Learnings & Reflection Section */}
+        <section className="py-24 md:py-32 bg-background text-foreground">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20">
+            <div className="max-w-4xl mx-auto">
+              <motion.div {...motionProps} className="flex items-center gap-4 mb-8">
+                <Lightbulb className="w-8 h-8 text-primary" />
+                <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">
+                  Key Learnings &amp; Reflection
+                </h2>
+              </motion.div>
+              <motion.p
+                {...motionProps}
+                transition={{ ...motionProps.transition, delay: 0.1 }}
+                className="text-lg md:text-xl text-muted-foreground mb-12"
+              >
+                This project underscored that designing for a new technology requires a focus on trust and context over features.
+              </motion.p>
+              <ul className="space-y-8">
+                {keyLearnings.map((learning, index) => (
+                  <motion.li
+                    key={index}
+                    {...motionProps}
+                    transition={{ ...motionProps.transition, delay: 0.2 + index * 0.1 }}
+                    className="flex items-start"
+                  >
+                    <span className="text-primary mr-4 mt-1">&#8226;</span>
+                    <p className="text-lg md:text-xl text-muted-foreground">
+                      <span className="font-semibold text-foreground">{learning.title}: </span>
+                      {learning.description}
+                    </p>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 
