@@ -371,6 +371,15 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
+        {/* Dummy Slide 14 */}
+        <section className="py-24 md:py-32 bg-background">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20">
+            <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
+              <p className="text-muted-foreground">Dummy Slide</p>
+            </div>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </div>
