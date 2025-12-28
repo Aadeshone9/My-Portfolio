@@ -16,6 +16,7 @@ import { motion } from 'framer-motion';
 import AnimatedShape from '@/components/AnimatedShape';
 import DesignSystemCTA from '@/components/DesignSystemCTA';
 import Showreel from '@/components/Showreel';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 export default function Home() {
   const mainImage = PlaceHolderImages.find(p => p.id === 'hero-image');
@@ -24,7 +25,7 @@ export default function Home() {
       <Header />
       <main className="flex flex-col">
         <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-6">
-            <div className="pt-6 md:pt-12 pb-6 md:pb-12">
+            <div className="pt-3 md:pt-7 pb-3 md:pb-7">
               <SplitText 
                 text="Hi, I’m Aadesh" 
                 tag="h1"
@@ -35,21 +36,32 @@ export default function Home() {
                 text="I have contributed to products at scale, Chances are you've used some!"
                 tag="p"
                 splitType="words"
-                className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground max-w-xl mt-6"
+                className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground max-w-xl mt-4"
                 textAlign="left"
               />
             </div>
         </div>
 
         {mainImage && (
-          <Showreel
-            imageUrl={mainImage.imageUrl}
-            alt={mainImage.description}
-            aiHint={mainImage.imageHint}
-          />
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div className="cursor-pointer">
+                  <Showreel
+                    imageUrl={mainImage.imageUrl}
+                    alt={mainImage.description}
+                    aiHint={mainImage.imageHint}
+                  />
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Showreel will be uploaded soon</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         )}
 
-        <section className="py-12 md:py-20">
+        <section className="py-7 md:py-12">
           <div className="container mx-auto px-4 sm:px:8 md:px-20 relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="flex-1 flex flex-col">
@@ -63,7 +75,7 @@ export default function Home() {
                   text="A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design."
                   tag="p"
                   splitType="words"
-                  className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground mt-4 max-w-[700px]"
+                  className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground mt-2 max-w-[700px]"
                   textAlign="left"
                 />
                 </div>
@@ -74,25 +86,25 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mt-10 md:mt-12">
+          <div className="relative mt-6 md:mt-7">
             <ProjectStack />
           </div>
         </section>
 
-        <section id="know-me-better" className="pt-2 pb-2 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
+        <section id="know-me-better" className="pt-1 pb-1 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
           <div className="flex flex-col items-start gap-4">
             <AnimatedShape shape="square" />
             <SplitText
               text="Know me better..."
               tag="h2"
-              className="font-headline font-semibold text-3xl md:text-5xl leading-[58px] tracking-wide text-foreground mt-4"
+              className="font-headline font-semibold text-3xl md:text-5xl leading-[58px] tracking-wide text-foreground mt-2"
               textAlign="left"
             />
           </div>
-          <div className="w-32 h-[2px] bg-border my-6"></div>
+          <div className="w-32 h-[2px] bg-border my-3"></div>
         </section>
 
-        <section className="pt-4 pb-12 container mx-auto px-4 sm:px-8 md:px-20">
+        <section className="pt-2 pb-7 container mx-auto px-4 sm:px-8 md:px-20">
            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 <div className="flex flex-col items-start w-full">
                     <SplitText
@@ -101,7 +113,7 @@ export default function Home() {
                       className="font-headline font-semibold text-2xl md:text-[32px] leading-[58px] tracking-[0.02em] text-foreground flex items-center"
                       textAlign="left"
                     />
-                    <div className="mt-4">
+                    <div className="mt-2">
                         <SplitText
                             text="I create to solve, and I solve to create."
                             tag="p"
@@ -128,7 +140,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="pb-12 pt-2">
+        <section className="pb-7 pt-1">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <TiltedCard>
                     <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
@@ -165,7 +177,7 @@ export default function Home() {
             </div>
         </section>
         
-        <div className="py-12 md:py-20">
+        <div className="py-7 md:py-12">
             <Approach />
         </div>
 
