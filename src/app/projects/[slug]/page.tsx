@@ -251,7 +251,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           stroke="currentColor"
           strokeWidth="2"
           viewBox="0 0 24 24"
-          xmlns="http://www.w3org/2000/svg"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
           <circle cx="9" cy="7" r="4" />
@@ -706,14 +706,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="pb-20 md:pb-24 container mx-auto px-4 sm:px-8 md:px-20">
           <div className="flex flex-col items-start gap-6">
             <p
-              className="font-headline font-semibold text-2xl md:text-4xl tracking-normal text-muted-foreground mb-6"
+              className="font-headline font-semibold text-xl md:text-2xl tracking-normal text-muted-foreground mb-6"
               style={{ lineHeight: '1.24' }}
             >
               you made it to the end of the scroll
             </p>
             <div className="w-[84px] h-[84px] rounded-full bg-primary"></div>
             <p
-              className="font-headline font-semibold text-2xl md:text-4xl tracking-normal text-muted-foreground"
+              className="font-headline font-semibold text-xl md:text-2xl tracking-normal text-muted-foreground"
               style={{ lineHeight: '1.24' }}
             >
               Let's connect and discuss the project in detail.
