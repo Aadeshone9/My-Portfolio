@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Target, User } from 'lucide-react';
+import { Search, Target, User } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const motionProps = {
@@ -92,7 +92,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               transition={{ ...motionProps.transition, delay: 0.1 }}
               className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-4"
             >
-              Driving Loyalty & Efficiency in
+              Driving Loyalty &amp; Efficiency in
             </motion.h1>
             <motion.h1
               {...motionProps}
@@ -114,7 +114,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               </motion.div>
               <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.1 }}>
                 <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">My Role</h2>
-                <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">Consultant: CX & UX Design</p>
+                <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">Consultant: CX &amp; UX Design</p>
               </motion.div>
               <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.2 }}>
                 <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">Project Focus</h2>
@@ -209,6 +209,29 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="w-full h-[60vh] bg-muted rounded-2xl flex items-center justify-center">
               <p className="text-muted-foreground">Dummy Slide</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Design Process & Strategic Solutions Section */}
+        <section className="py-24 md:py-32 bg-background text-foreground relative">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.div {...motionProps} className="flex items-center justify-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">
+                    <Search className="w-4 h-4 text-muted-foreground" />
+                </div>
+                <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">
+                  Design Process &amp; Strategic Solutions
+                </h2>
+              </motion.div>
+              <motion.p
+                {...motionProps}
+                transition={{ ...motionProps.transition, delay: 0.1 }}
+                className="font-headline text-4xl md:text-5xl font-semibold text-primary leading-snug md:leading-relaxed mt-8"
+              >
+                Our strategy focused on translating complex vehicle data into trust-building, actionable intelligence through two key experience enhancers:
+              </motion.p>
             </div>
           </div>
         </section>
