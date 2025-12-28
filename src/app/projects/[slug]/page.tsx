@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Search, Target, User, TrendingUp, ShieldCheck, Navigation, Phone, ShieldPlus, MapPin, BarChartBig, Lightbulb, Users, Cog, Ear, Cloud, UserCheck } from 'lucide-react';
+import { Search, Target, TrendingUp, ShieldCheck, Navigation, Phone, MapPin, BarChartBig, Lightbulb, Users, Cog, Ear, Cloud, UserCheck, CheckCircle, Package, UserPlus, FileText, Bell, Route, Shield, Fence } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import SplitText from '@/components/SplitText';
@@ -96,37 +96,37 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   const experienceEnhancers = [
     {
-      icon: <Image src="/images/subscriptions.svg" width={32} height={32} alt="Subscriptions" />,
+      icon: <Package className="w-8 h-8 text-primary" />,
       title: 'Services and Subscriptions',
       description: 'Drive subscriptions and show value with contextual nudges for pre-paid services.',
     },
     {
-      icon: <Image src="/images/reports.svg" width={32} height={32} alt="Reports" />,
+      icon: <FileText className="w-8 h-8 text-primary" />,
       title: 'Reports and Analytics',
       description: 'Provided client with performance data tracking, analytics, and insightful reports.',
     },
     {
-      icon: <Image src="/images/navigation.svg" width={32} height={32} alt="Navigation" />,
+      icon: <Navigation className="w-8 h-8 text-primary" />,
       title: 'Tailored Navigation',
       description: 'Personalized navigation to increase user engagement.',
     },
     {
-      icon: <Image src="/images/roadside.svg" width={32} height={32} alt="Roadside Assistance" />,
+      icon: <Phone className="w-8 h-8 text-primary" />,
       title: 'Roadside Assistance',
       description: 'Dependable roadside assistance for emergencies and breakdowns.',
     },
     {
-      icon: <Image src="/images/riding-mode.svg" width={32} height={32} alt="Custom Riding Mode" />,
+      icon: <Route className="w-8 h-8 text-primary" />,
       title: 'Custom Riding Mode',
       description: 'Streamline journeys with our centralized route planner and access.',
     },
     {
-      icon: <Image src="/images/safety.svg" width={32} height={32} alt="Safety and Security" />,
+      icon: <Shield className="w-8 h-8 text-primary" />,
       title: 'Priority Safety and Security',
       description: 'Enhanced user control and visibility of vehicle usage and status for safer and more secure driving.',
     },
     {
-      icon: <Image src="/images/geo-fencing.svg" width={32} height={32} alt="Geo-Fencing" />,
+      icon: <Fence className="w-8 h-8 text-primary" />,
       title: 'Geo-Fencing',
       description: 'Boost sales by offering informative content to aid decision-making on website and app.',
     },
@@ -149,31 +149,31 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   const customerExperienceImpact = [
     {
-      icon: <Image src="/images/bigger-picture.svg" width={32} height={32} alt="Bigger Picture" />,
+      icon: <Users className="w-8 h-8 text-primary" />,
       title: 'The Bigger Picture',
       description:
         'Empowering users to engage and participate in a larger community for a sense of inclusivity and involvement.',
     },
     {
-      icon: <Image src="/images/maintenance-icon.svg" width={32} height={32} alt="Easy and Quick Maintenance" />,
+      icon: <Cog className="w-8 h-8 text-primary" />,
       title: 'Easy and Quick Maintenance',
       description:
         'Using an advanced system that proactively alerts users of potential issues and simplifies maintenance with easy booking, door-to-door pickup and drop-off, and other convenient services.',
     },
     {
-      icon: <Image src="/images/assistance.svg" width={32} height={32} alt="Assistance and Support" />,
+      icon: <Ear className="w-8 h-8 text-primary" />,
       title: 'Assistance and Support',
       description:
         "Providing a comprehensive and supportive experience as a dependable companion for the user's journey.",
     },
     {
-      icon: <Image src="/images/eco-friendly.svg" width={32} height={32} alt="Eco-friendly Tools" />,
+      icon: <Cloud className="w-8 h-8 text-primary" />,
       title: 'Eco-friendly Tools',
       description:
         "Promoting eco-conscious choices by displaying users' eco-footprint as earth points, creating awareness, and offering brands an opportunity to make a positive impact in e-commerce.",
     },
     {
-      icon: <Image src="/images/hassle-free.svg" width={32} height={32} alt="Hassle Free Ownership" />,
+      icon: <CheckCircle className="w-8 h-8 text-primary" />,
       title: 'Hassle Free Ownership',
       description:
         'Leveraging intelligent technology for personalized and relevant recommendations and insights, delivering a smooth and effortless ownership experience.',
@@ -366,31 +366,18 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         <section className="py-10 md:py-12 bg-background">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {projectImage1 && (
-                        <motion.div {...motionProps} className="w-full aspect-[4/3] relative rounded-2xl overflow-hidden">
-                            <Image
-                                src={projectImage1.imageUrl}
-                                alt={projectImage1.description}
-                                fill
-                                className="object-cover"
-                                data-ai-hint={projectImage1.imageHint}
-                            />
-                        </motion.div>
-                    )}
-                    {projectImage2 && (
-                        <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.1 }} className="w-full aspect-[4/3] relative rounded-2xl overflow-hidden">
-                            <Image
-                                src={projectImage2.imageUrl}
-                                alt={projectImage2.description}
-                                fill
-                                className="object-cover"
-                                data-ai-hint={projectImage2.imageHint}
-                            />
-                        </motion.div>
-                    )}
-                </div>
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
+                {projectImage1 && (
+                    <motion.div {...motionProps} className="w-full aspect-[16/9] relative rounded-2xl overflow-hidden bg-muted">
+                        <Image
+                            src={projectImage1.imageUrl}
+                            alt={projectImage1.description}
+                            fill
+                            className="object-contain"
+                            data-ai-hint={projectImage1.imageHint}
+                        />
+                    </motion.div>
+                )}
             </div>
         </section>
 
@@ -419,15 +406,15 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
         
         <section className="py-10 md:py-12 bg-background">
-          <div className="container mx-auto px-4 sm:px-8 md:px-20">
-             {projectImage3 && (
-                <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
+             {projectImage2 && (
+                <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden bg-muted">
                     <Image
-                        src={projectImage3.imageUrl}
-                        alt={projectImage3.description}
+                        src={projectImage2.imageUrl}
+                        alt={projectImage2.description}
                         fill
-                        className="object-cover"
-                        data-ai-hint={projectImage3.imageHint}
+                        className="object-contain"
+                        data-ai-hint={projectImage2.imageHint}
                     />
                 </motion.div>
             )}
@@ -465,15 +452,15 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         <section className="py-10 md:py-12 bg-background">
-          <div className="container mx-auto px-4 sm:px-8 md:px-20">
-             {projectImage4 && (
-                <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
+             {projectImage3 && (
+                <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden bg-muted">
                     <Image
-                        src={projectImage4.imageUrl}
-                        alt={projectImage4.description}
+                        src={projectImage3.imageUrl}
+                        alt={projectImage3.description}
                         fill
-                        className="object-contain p-8 sm:p-12 md:p-20 bg-muted"
-                        data-ai-hint={projectImage4.imageHint}
+                        className="object-contain"
+                        data-ai-hint={projectImage3.imageHint}
                     />
                 </motion.div>
             )}
@@ -511,35 +498,53 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         <section className="py-10 md:py-12 bg-background">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {projectImage5 && (
-                        <motion.div {...motionProps} className="w-full aspect-[4/3] relative rounded-2xl overflow-hidden bg-muted flex items-center justify-center p-8">
-                            <Image
-                                src={projectImage5.imageUrl}
-                                alt={projectImage5.description}
-                                width={300}
-                                height={300}
-                                className="object-contain"
-                                data-ai-hint={projectImage5.imageHint}
-                            />
-                        </motion.div>
-                    )}
-                    {projectImage6 && (
-                        <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.1 }} className="w-full aspect-[4/3] relative rounded-2xl overflow-hidden bg-muted flex items-center justify-center p-8">
-                            <Image
-                                src={projectImage6.imageUrl}
-                                alt={projectImage6.description}
-                                width={300}
-                                height={300}
-                                className="object-contain"
-                                data-ai-hint={projectImage6.imageHint}
-                            />
-                        </motion.div>
-                    )}
-                </div>
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
+                {projectImage4 && (
+                    <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden bg-muted">
+                        <Image
+                            src={projectImage4.imageUrl}
+                            alt={projectImage4.description}
+                            fill
+                            className="object-contain"
+                            data-ai-hint={projectImage4.imageHint}
+                        />
+                    </motion.div>
+                )}
             </div>
         </section>
+        
+        <section className="py-10 md:py-12 bg-background">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
+                {projectImage5 && (
+                    <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden bg-muted">
+                        <Image
+                            src={projectImage5.imageUrl}
+                            alt={projectImage5.description}
+                            fill
+                            className="object-contain"
+                            data-ai-hint={projectImage5.imageHint}
+                        />
+                    </motion.div>
+                )}
+            </div>
+        </section>
+
+        <section className="py-10 md:py-12 bg-background">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
+                {projectImage6 && (
+                    <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden bg-muted">
+                        <Image
+                            src={projectImage6.imageUrl}
+                            alt={projectImage6.description}
+                            fill
+                            className="object-contain"
+                            data-ai-hint={projectImage6.imageHint}
+                        />
+                    </motion.div>
+                )}
+            </div>
+        </section>
+
 
         {/* Quantifiable Outcomes & Impact Section */}
         <section className="py-20 md:py-24 bg-background text-foreground">

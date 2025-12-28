@@ -189,37 +189,37 @@
     {
       "id": "project1-image-1",
       "description": "Project 1 Image 1",
-      "imageUrl": "/images/project1/image1.png",
+      "imageUrl": "/images/project1/1.jpg",
       "imageHint": "app screen"
     },
     {
       "id": "project1-image-2",
       "description": "Project 1 Image 2",
-      "imageUrl": "/images/project1/image2.png",
+      "imageUrl": "/images/project1/6.jpg",
       "imageHint": "app screen"
     },
     {
       "id": "project1-image-3",
       "description": "Project 1 Image 3",
-      "imageUrl": "/images/project1/image3.png",
+      "imageUrl": "/images/project1/8.jpg",
       "imageHint": "app screen"
     },
     {
       "id": "project1-image-4",
       "description": "Project 1 Image 4",
-      "imageUrl": "/images/project1/image4.png",
+      "imageUrl": "/images/project1/10.jpg",
       "imageHint": "app screen"
     },
     {
       "id": "project1-image-5",
       "description": "Project 1 Image 5",
-      "imageUrl": "/images/project1/image5.png",
+      "imageUrl": "/images/project1/11.jpg",
       "imageHint": "app screen"
     },
     {
       "id": "project1-image-6",
       "description": "Project 1 Image 6",
-      "imageUrl": "/images/project1/image6.png",
+      "imageUrl": "/images/project1/14.jpg",
       "imageHint": "app screen"
     }
   ]
