@@ -44,6 +44,8 @@ const projects = [
     description: "End-to-end connected vehicle platform experience for the launch of the Vida EV.",
     bgColor: "bg-background",
     imageBgColor: "bg-muted",
+    cta: 'View Project',
+    href: '/projects/vida'
   },
 ];
 
@@ -93,13 +95,23 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                       {project.description}
                   </CardDescription>
                   <div className="flex items-center gap-2 mt-4">
-                    <PillButton 
-                      href="https://www.linkedin.com/in/aadeshgovenkar/"
-                      className="group !text-foreground !border-foreground"
-                    >
-                        <span className="group-hover:font-semibold">Request Access</span>
-                        <Lock />
-                    </PillButton>
+                    {project.cta === 'View Project' ? (
+                      <PillButton 
+                        href={project.href || '#'}
+                        className="group !text-foreground !border-foreground"
+                      >
+                          <span className="group-hover:font-semibold">View Project</span>
+                          <ArrowRight />
+                      </PillButton>
+                    ) : (
+                      <PillButton 
+                        href="https://www.linkedin.com/in/aadeshgovenkar/"
+                        className="group !text-foreground !border-foreground"
+                      >
+                          <span className="group-hover:font-semibold">Request Access</span>
+                          <Lock />
+                      </PillButton>
+                    )}
                   </div>
                 </div>
             </div>
@@ -133,4 +145,3 @@ const ProjectStack = () => {
 }
 
 export default ProjectStack;
-
