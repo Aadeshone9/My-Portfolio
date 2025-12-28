@@ -282,26 +282,24 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           )}
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 container mx-auto px-4 sm:px-8 md:px-20 flex flex-col justify-end pb-20 md:pb-32">
-            <motion.p
-              {...motionProps}
+            <SplitText
+              tag="p"
+              text="Behavioural UX case Study"
               className="font-headline font-semibold text-lg md:text-xl text-white/80"
-            >
-              Behavioural UX case Study
-            </motion.p>
-            <motion.h1
-              {...motionProps}
-              transition={{ ...motionProps.transition, delay: 0.1 }}
+              textAlign='left'
+            />
+            <SplitText
+              tag="h1"
+              text="Driving Loyalty & Efficiency in"
               className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-4"
-            >
-              Driving Loyalty &amp; Efficiency in
-            </motion.h1>
-            <motion.h1
-              {...motionProps}
-              transition={{ ...motionProps.transition, delay: 0.2 }}
+              textAlign='left'
+            />
+            <SplitText
+              tag="h1"
+              text="EV Mobility with VIDA"
               className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-2"
-            >
-              EV Mobility with VIDA
-            </motion.h1>
+              textAlign='left'
+            />
           </div>
         </section>
 
@@ -310,7 +308,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
               <motion.div {...motionProps}>
-                <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">My Contribution</h2>
+                <SplitText 
+                  tag="h2" 
+                  text="My Contribution"
+                  className="font-headline font-semibold text-xl md:text-2xl text-foreground" 
+                  textAlign='left'
+                />
                  <div className="text-primary text-lg md:text-xl leading-relaxed mt-4">
                   <p>UX Research</p>
                   <p>User Journeys</p>
@@ -319,16 +322,49 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </div>
               </motion.div>
               <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.1 }}>
-                <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">My Role</h2>
-                <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">Consultant: CX &amp; UX Design</p>
+                <SplitText 
+                  tag="h2"
+                  text="My Role"
+                  className="font-headline font-semibold text-xl md:text-2xl text-foreground"
+                  textAlign='left'
+                />
+                <SplitText
+                  tag="p"
+                  text="Consultant: CX & UX Design"
+                  className="text-primary text-lg md:text-xl leading-relaxed mt-4"
+                  textAlign='left'
+                  splitType='words'
+                />
               </motion.div>
               <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.2 }}>
-                <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">Project Focus</h2>
-                <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">End-to-end connected vehicle platform experience for the launch of the Vida EV.</p>
+                <SplitText
+                  tag="h2"
+                  text="Project Focus"
+                  className="font-headline font-semibold text-xl md:text-2xl text-foreground"
+                  textAlign='left'
+                />
+                <SplitText
+                  tag="p"
+                  text="End-to-end connected vehicle platform experience for the launch of the Vida EV."
+                  className="text-primary text-lg md:text-xl leading-relaxed mt-4"
+                  textAlign='left'
+                  splitType='words'
+                />
               </motion.div>
                <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.3 }}>
-                <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">Primary Goal</h2>
-                <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value (LTV).</p>
+                <SplitText
+                  tag="h2"
+                  text="Primary Goal"
+                  className="font-headline font-semibold text-xl md:text-2xl text-foreground"
+                  textAlign='left'
+                />
+                <SplitText
+                  tag="p"
+                  text="Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value (LTV)."
+                  className="text-primary text-lg md:text-xl leading-relaxed mt-4"
+                  textAlign='left'
+                  splitType='words'
+                />
               </motion.div>
             </div>
           </div>
@@ -337,12 +373,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Key Outcomes Section */}
         <section className="py-20 md:py-24 bg-background text-foreground relative">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 relative">
-                <motion.h2 
-                    {...motionProps}
+                <SplitText 
+                    tag="h2"
+                    text="Key Outcomes"
                     className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-16"
-                >
-                    Key Outcomes
-                </motion.h2>
+                    textAlign='left'
+                />
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     {outcomes.map((outcome, index) => (
                          <motion.div 
@@ -365,17 +401,20 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <div className="max-w-4xl">
               <motion.div {...motionProps} className="flex items-center gap-4">
                 <Target className="w-8 h-8 text-primary" />
-                <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">
-                  Problem Definition &amp; Strategic Gap
-                </h2>
+                 <SplitText
+                  tag="h2"
+                  text="Problem Definition & Strategic Gap"
+                  className="font-headline font-semibold text-2xl md:text-3xl text-foreground"
+                  textAlign='left'
+                />
               </motion.div>
-              <motion.p
-                {...motionProps}
-                transition={{ ...motionProps.transition, delay: 0.1 }}
+              <SplitText
+                tag="p"
+                text="Our research identified significant gaps in the emerging EV market that fueled user anxiety and distrust."
+                splitType="words"
                 className="font-headline text-4xl md:text-5xl font-semibold text-primary leading-snug md:leading-relaxed mt-8"
-              >
-                Our research identified significant gaps in the emerging EV market that fueled user anxiety and distrust.
-              </motion.p>
+                textAlign='left'
+              />
             </div>
           </div>
         </section>
@@ -384,12 +423,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="py-20 md:py-24 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl mx-auto">
-              <motion.h2 
-                {...motionProps} 
+              <SplitText 
+                tag="h2" 
+                text="This led to our core design challenge:"
                 className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-12"
-              >
-                This led to our core design challenge:
-              </motion.h2>
+                textAlign='left'
+              />
               <ul className="space-y-8">
                 {designChallenges.map((challenge, index) => (
                   <motion.li 
@@ -425,17 +464,20 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <div className="max-w-4xl">
               <motion.div {...motionProps} className="flex items-center gap-4">
                 <Search className="w-8 h-8 text-primary" />
-                <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">
-                  Design Process &amp; Strategic Solutions
-                </h2>
+                <SplitText
+                  tag="h2"
+                  text="Design Process & Strategic Solutions"
+                  className="font-headline font-semibold text-2xl md:text-3xl text-foreground"
+                  textAlign='left'
+                />
               </motion.div>
-              <motion.p
-                {...motionProps}
-                transition={{ ...motionProps.transition, delay: 0.1 }}
+              <SplitText
+                tag="p"
+                text="Our strategy focused on translating complex vehicle data into trust-building, actionable intelligence through two key experience enhancers:"
+                splitType="words"
                 className="font-headline text-4xl md:text-5xl font-semibold text-primary leading-snug md:leading-relaxed mt-8"
-              >
-                Our strategy focused on translating complex vehicle data into trust-building, actionable intelligence through two key experience enhancers:
-              </motion.p>
+                textAlign='left'
+              />
             </div>
           </div>
         </section>
@@ -453,12 +495,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="max-w-4xl mx-auto">
-              <motion.h2
-                {...motionProps}
+              <SplitText
+                tag="h2"
+                text="Solving Range Anxiety (Resource Findability):"
                 className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-12"
-              >
-                Solving Range Anxiety (Resource Findability):
-              </motion.h2>
+                textAlign='left'
+              />
               <ul className="space-y-8">
                 {rangeAnxietySolutions.map((solution, index) => (
                   <motion.li
@@ -501,12 +543,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="max-w-4xl mx-auto">
-              <motion.h2
-                {...motionProps}
+              <SplitText
+                tag="h2"
+                text="Driving Safer Behaviour & Trust (Maintenance & Tips):"
                 className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-12"
-              >
-                Driving Safer Behaviour &amp; Trust (Maintenance &amp; Tips):
-              </motion.h2>
+                textAlign='left'
+              />
               <ul className="space-y-8">
                 {saferBehaviourPoints.map((point, index) => (
                   <motion.li
@@ -551,17 +593,20 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <div className="max-w-4xl mx-auto">
                     <motion.div {...motionProps} className="flex items-center gap-4 mb-4">
                         <TrendingUp className="w-8 h-8 text-primary" />
-                        <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">
-                        Quantifiable Outcomes &amp; Impact
-                        </h2>
+                        <SplitText 
+                          tag="h2" 
+                          text="Quantifiable Outcomes & Impact"
+                          className="font-headline font-semibold text-3xl md:text-4xl text-foreground"
+                          textAlign='left'
+                        />
                     </motion.div>
-                    <motion.p
-                        {...motionProps}
-                        transition={{ ...motionProps.transition, delay: 0.1 }}
+                    <SplitText
+                        tag="p"
+                        text="The strategic, data-driven design interventions resulted in the following measurable customer and business impact."
+                        splitType='words'
                         className="text-lg md:text-xl text-muted-foreground mb-16"
-                    >
-                        The strategic, data-driven design interventions resulted in the following measurable customer and business impact.
-                    </motion.p>
+                        textAlign='left'
+                    />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.2 }}>
                             <Card className="bg-card border-border p-6 h-full flex flex-col">
@@ -595,19 +640,19 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Key Experience Enhancers Section */}
         <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <motion.h2
-              {...motionProps}
+            <SplitText
+              tag="h2"
+              text="Key Experience Enhancers"
               className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-4"
-            >
-              Key Experience Enhancers
-            </motion.h2>
-            <motion.p
-              {...motionProps}
-              transition={{ ...motionProps.transition, delay: 0.1 }}
+              textAlign='left'
+            />
+            <SplitText
+              tag="p"
+              text="A user journey that fulfils user needs and expectations."
+              splitType='words'
               className="text-lg md:text-xl text-muted-foreground mb-16 max-w-2xl"
-            >
-              A user journey that fulfils user needs and expectations.
-            </motion.p>
+              textAlign='left'
+            />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
               {experienceEnhancers.map((enhancer, index) => (
                 <motion.div
@@ -637,17 +682,20 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <div className="max-w-4xl mx-auto">
               <motion.div {...motionProps} className="flex items-center gap-4 mb-8">
                 <Lightbulb className="w-8 h-8 text-primary" />
-                <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">
-                  Key Learnings &amp; Reflection
-                </h2>
+                <SplitText 
+                  tag="h2" 
+                  text="Key Learnings & Reflection"
+                  className="font-headline font-semibold text-3xl md:text-4xl text-foreground"
+                  textAlign='left'
+                />
               </motion.div>
-              <motion.p
-                {...motionProps}
-                transition={{ ...motionProps.transition, delay: 0.1 }}
+              <SplitText
+                tag="p"
+                text="This project underscored that designing for a new technology requires a focus on trust and context over features."
+                splitType='words'
                 className="text-lg md:text-xl text-muted-foreground mb-12"
-              >
-                This project underscored that designing for a new technology requires a focus on trust and context over features.
-              </motion.p>
+                textAlign='left'
+              />
               <ul className="space-y-8">
                 {keyLearnings.map((learning, index) => (
                   <motion.li
@@ -672,12 +720,19 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <motion.div {...motionProps} className="max-w-4xl mx-auto mb-16">
-              <h2 className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-4">
-                Customer Experience Impact
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                Performing data analysis to uncover insights and develop effective strategies, collaborating with cross-functional teams for seamless company-wide growth and communication.
-              </p>
+              <SplitText
+                tag="h2"
+                text="Customer Experience Impact"
+                className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-4"
+                textAlign='left'
+              />
+              <SplitText
+                tag="p"
+                text="Performing data analysis to uncover insights and develop effective strategies, collaborating with cross-functional teams for seamless company-wide growth and communication."
+                splitType='words'
+                className="text-lg md:text-xl text-muted-foreground"
+                textAlign='left'
+              />
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {customerExperienceImpact.map((item, index) => (
