@@ -702,21 +702,21 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Call to Action Section */}
         <section className="py-20 md:py-32 container mx-auto px-4 sm:px-8 md:px-20">
           <div className="flex flex-col items-start gap-6">
-            <div className="w-[84px] h-[84px] rounded-full bg-primary"></div>
             <div>
               <p
-                  className="font-headline font-semibold text-2xl md:text-4xl tracking-normal text-muted-foreground"
-                  style={{ lineHeight: '1.24' }}
-                >
-                  You've seen the case study.
-                </p>
-                <p
-                  className="font-headline font-semibold text-2xl md:text-4xl tracking-normal text-muted-foreground"
-                   style={{ lineHeight: '1.24' }}
-                >
-                  Let's connect and discuss the project in detail.
-                </p>
+                className="font-headline font-semibold text-2xl md:text-4xl tracking-normal text-muted-foreground"
+                style={{ lineHeight: '1.24' }}
+              >
+                you made it to the end of the scroll
+              </p>
+              <p
+                className="font-headline font-semibold text-2xl md:text-4xl tracking-normal text-muted-foreground"
+                style={{ lineHeight: '1.24' }}
+              >
+                Let's connect and discuss the project in detail.
+              </p>
             </div>
+            <div className="w-[84px] h-[84px] rounded-full bg-primary"></div>
           </div>
         </section>
       </main>
