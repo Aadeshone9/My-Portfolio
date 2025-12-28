@@ -64,21 +64,21 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
       <main>
         {/* Hero Section */}
         <section className="bg-background">
-          <motion.div {...motionProps} className="bg-footer text-footer-foreground py-16 md:py-32">
+          <motion.div {...motionProps} className="bg-footer text-footer-foreground py-20 md:py-40">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
+               <SplitText
+                  text="Behavioural UX case Study"
+                  tag="p"
+                  className="font-headline font-semibold text-lg md:text-xl text-footer-muted-foreground text-center md:text-left max-w-4xl mx-auto md:mx-0"
+                  textAlign="left"
+                />
                <SplitText
                 text="Driving Loyalty & Efficiency in EV Mobility with VIDA"
                 tag="h1"
-                className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-center md:text-left max-w-4xl mx-auto md:mx-0 leading-tight"
+                className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-center md:text-left max-w-4xl mx-auto md:mx-0 leading-tight mt-4"
                 textAlign="left"
               />
-              <SplitText
-                  text="Behavioural UX case Study"
-                  tag="p"
-                  className="font-headline font-semibold text-lg md:text-xl text-footer-muted-foreground mt-4 text-center md:text-left max-w-4xl mx-auto md:mx-0"
-                  textAlign="left"
-                />
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 mt-20 max-w-4xl mx-auto md:mx-0">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20 mt-24 max-w-4xl mx-auto md:mx-0">
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wider text-footer-muted-foreground">Project Type</h3>
                   <p className="text-lg mt-2">Behavioural UX case Study</p>
@@ -92,7 +92,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   <p className="text-lg mt-2">Product Strategy, UX, Visual design</p>
                 </div>
               </div>
-              <div className='mt-20'>
+              <div className='mt-24'>
                 <h2 className="font-headline font-semibold text-xl md:text-2xl text-footer-foreground">Project Focus</h2>
                 <p className="text-footer-muted-foreground text-lg md:text-xl leading-relaxed mt-2 max-w-4xl">
                     End-to-end connected vehicle platform experience for the launch of the Vida EV.
@@ -100,7 +100,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
             </div>
           </motion.div>
-          <div className="container mx-auto px-4 sm:px-8 md:px-20 py-12 md:py-20">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20 py-16 md:py-24">
             {heroImage && (
                 <motion.div {...motionProps} className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden">
                 <Image
@@ -116,7 +116,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Challenge Section */}
-        <section className="py-24 md:py-40 bg-background">
+        <section className="py-28 md:py-48 bg-background">
             <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
                 <div>
                     <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Challenge</h2>
@@ -146,7 +146,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Gallery Section */}
-        <section className="py-24 md:py-40 bg-background">
+        <section className="py-28 md:py-48 bg-background">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
                 <motion.div {...motionProps} className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     {galleryImages.map((img, index) => img && (
@@ -166,14 +166,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         
         {/* All Articles Section */}
         {articlesImage && (
-             <section className="py-24 md:py-40 bg-card">
+             <section className="py-28 md:py-48 bg-card">
                 <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 text-center">
                      <SplitText
                         text="All articles"
                         tag="h2"
                         className="font-headline font-semibold text-4xl md:text-6xl text-foreground"
                     />
-                    <div className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden mt-20">
+                    <div className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden mt-24">
                         <Image
                             src={articlesImage.imageUrl}
                             alt={articlesImage.description}
@@ -187,7 +187,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         )}
 
         {/* Result Section */}
-        <section className="py-24 md:py-40 bg-background">
+        <section className="py-28 md:py-48 bg-background">
             <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
                 <div>
                     <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Result</h2>
@@ -213,7 +213,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Final Design Section */}
-        <section className="py-24 md:py-40 bg-card">
+        <section className="py-28 md:py-48 bg-card">
             <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20">
                 <div className="text-center">
                      <SplitText
@@ -225,7 +225,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         We developed a dynamic content system that adapts to user's goals, from managing stress to improving sleep.
                     </p>
                 </div>
-                <div className="mt-20 flex flex-col md:flex-row justify-center items-center gap-12">
+                <div className="mt-24 flex flex-col md:flex-row justify-center items-center gap-12">
                     {finalDesignImage1 && (
                         <div className="relative w-full max-w-[250px] h-[500px]">
                              <Image
@@ -253,9 +253,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
         
         {/* Visuals Section */}
-        <section className="py-24 md:py-40 bg-background">
+        <section className="py-28 md:py-48 bg-background">
              <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20">
-                 <div className="text-center mb-20">
+                 <div className="text-center mb-24">
                      <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">The Visuals</h2>
                       <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mt-4">
                         The visual language of Headspace is a key part of its appeal. We worked to evolve the existing brand, introducing new layouts, typographic styles, and interactive elements to create a more engaging and cohesive experience across the platform.
@@ -289,7 +289,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
          {/* Visual Design Language Section */}
-        <section className="py-24 md:py-40 bg-card">
+        <section className="py-28 md:py-48 bg-card">
             <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                  {vdlImage1 && (
                     <div className="relative w-full h-96 bg-[#F9C900] rounded-2xl overflow-hidden p-8 flex items-center justify-center">
@@ -326,7 +326,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
 
         {/* Testimonials Section */}
-        <section className="relative py-28 md:py-56 bg-background">
+        <section className="relative py-32 md:py-64 bg-background">
              {testimonialBgImage && (
                 <Image
                     src={testimonialBgImage.imageUrl}
