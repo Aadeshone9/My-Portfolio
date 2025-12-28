@@ -57,8 +57,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
       >
         <Card className={`bg-card border-border rounded-2xl w-[80vw] md:w-[70vw] lg:w-[600px] h-full mx-auto flex flex-col p-6 md:p-8`}>
             <div className="w-full aspect-[16/9] rounded-lg flex items-center justify-center overflow-hidden relative group">
-              <div className="absolute inset-0 bg-muted"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-gradient-start/50 via-gradient-start/10 to-gradient-end/50 opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-off-white"></div>
               {project.img && (
                 <Image 
                   src={project.img} 
