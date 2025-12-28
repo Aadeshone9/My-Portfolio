@@ -338,7 +338,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Core Design Challenge Section */}
         <section className="py-20 md:py-24 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl">
               <SplitText 
                 tag="h2" 
                 text="This led to our core design challenge:"
@@ -426,7 +426,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Solving Range Anxiety Section */}
         <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl">
               <SplitText
                 tag="h2"
                 text="Solving Range Anxiety (Resource Findability):"
@@ -490,7 +490,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Driving Safer Behaviour & Trust Section */}
         <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl">
               <SplitText
                 tag="h2"
                 text="Driving Safer Behaviour & Trust (Maintenance & Tips):"
@@ -557,7 +557,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Quantifiable Outcomes & Impact Section */}
         <section className="py-20 md:py-24 bg-background text-foreground">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-4xl">
                     <motion.div {...motionProps} className="flex items-center gap-4 mb-4">
                         <TrendingUp className="w-8 h-8 text-primary" />
                         <SplitText 
@@ -646,7 +646,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Key Learnings & Reflection Section */}
         <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl">
               <motion.div {...motionProps} className="flex items-center gap-4 mb-8">
                 <Lightbulb className="w-8 h-8 text-primary" />
                 <SplitText 
@@ -686,7 +686,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Customer Experience Impact Section */}
         <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <motion.div {...motionProps} className="max-w-4xl mx-auto mb-16">
+            <motion.div {...motionProps} className="max-w-4xl mb-16">
               <SplitText
                 tag="h2"
                 text="Customer Experience Impact"
