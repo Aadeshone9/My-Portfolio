@@ -722,13 +722,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               <SplitText
                   text="You've seen the case study."
                   tag="p"
-                  className="font-headline font-semibold text-4xl md:text-6xl leading-tight tracking-tighter text-muted-foreground"
+                  className="font-headline font-semibold text-3xl md:text-5xl leading-relaxed tracking-normal text-muted-foreground"
                   textAlign="left"
                 />
                 <SplitText
                   text="Let's connect and discuss the project in detail."
                   tag="p"
-                  className="font-headline font-semibold text-4xl md:text-6xl leading-tight tracking-tighter text-muted-foreground"
+                  className="font-headline font-semibold text-3xl md:text-5xl leading-relaxed tracking-normal text-muted-foreground"
                   textAlign="left"
                 />
             </div>
