@@ -84,7 +84,9 @@ export default {
           DEFAULT: 'hsl(var(--footer))',
           foreground: 'hsl(var(--footer-foreground))',
           'muted-foreground': 'hsl(var(--footer-muted-foreground))',
-        }
+        },
+        'light-primary': 'hsl(26 87% 53%)',
+        'light-secondary': 'hsl(198 62% 66%)',
       },
       borderRadius: {
         lg: 'var(--radius)',

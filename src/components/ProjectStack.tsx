@@ -88,11 +88,11 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
           scale,
           top: `calc(-5vh + ${i * 25}px)`
         }} 
-        className={`relative h-[80vh] w-[80vw] md:h-[70vh] md:w-[70vw] lg:h-[600px] lg:w-[600px] transform-gpu`}
+        className={`relative h-auto md:h-auto lg:h-auto transform-gpu`}
       >
-        <Card className={`${project.bgColor} border-border rounded-2xl w-full h-full mx-auto flex flex-col p-6 md:p-8`}>
+        <Card className={`${project.bgColor} border-border rounded-2xl w-[80vw] md:w-[70vw] lg:w-[600px] h-full mx-auto flex flex-col p-6 md:p-8`}>
             <div className="w-full aspect-[16/9] bg-background rounded-lg flex items-center justify-center overflow-hidden relative group">
-              <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 via-transparent to-primary/20 opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-light-primary/20 via-transparent to-light-secondary/20 opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
               {project.img && (
                 <Image 
                   src={project.img} 
