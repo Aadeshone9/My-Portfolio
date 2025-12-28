@@ -106,19 +106,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
             </div>
           </motion.div>
-          <div className="container mx-auto px-4 sm:px-8 md:px-20 py-24 md:py-48">
-            {heroImage && (
-                <motion.div {...motionProps} className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden">
-                <Image
-                    src={heroImage.imageUrl}
-                    alt={heroImage.description}
-                    fill
-                    className="object-cover"
-                    data-ai-hint={heroImage.imageHint}
-                />
-                </motion.div>
-            )}
-          </div>
         </section>
 
         {/* Challenge Section */}
@@ -142,42 +129,17 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         </p>
                     </div>
                 </div>
-                 {challengeImage && (
-                    <div className="relative w-full h-[300px] md:h-[450px] rounded-2xl overflow-hidden">
-                        <Image
-                            src={challengeImage.imageUrl}
-                            alt={challengeImage.description}
-                            fill
-                            className="object-cover"
-                            data-ai-hint={challengeImage.imageHint}
-                        />
-                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                    </div>
-                )}
             </motion.div>
         </section>
 
         {/* Gallery Section */}
         <section className="py-28 md:py-48 bg-background">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                <motion.div {...motionProps} className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    {galleryImages.map((img, index) => img && (
-                    <div key={index} className="relative w-full aspect-square bg-muted rounded-2xl overflow-hidden">
-                        <Image
-                        src={img.imageUrl}
-                        alt={img.description}
-                        fill
-                        className="object-cover"
-                        data-ai-hint={img.imageHint}
-                        />
-                    </div>
-                    ))}
-                </motion.div>
             </div>
         </section>
         
         {/* All Articles Section */}
-        {articlesImage && (
+        
              <section className="py-28 md:py-48 bg-card">
                 <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 text-center">
                      <SplitText
@@ -185,18 +147,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         tag="h2"
                         className="font-headline font-semibold text-4xl md:text-6xl text-foreground"
                     />
-                    <div className="relative w-full h-[300px] md:h-[600px] rounded-2xl overflow-hidden mt-24">
-                        <Image
-                            src={articlesImage.imageUrl}
-                            alt={articlesImage.description}
-                            fill
-                            className="object-contain"
-                            data-ai-hint={articlesImage.imageHint}
-                        />
-                    </div>
                 </motion.div>
             </section>
-        )}
+        
 
         {/* Result Section */}
         <section className="py-28 md:py-48 bg-background">
@@ -210,17 +163,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         View Live Site
                     </Button>
                 </div>
-                {resultFaceImage && (
-                    <div className="relative w-full aspect-square max-w-sm mx-auto">
-                        <Image
-                            src={resultFaceImage.imageUrl}
-                            alt={resultFaceImage.description}
-                            fill
-                            className="object-contain"
-                            data-ai-hint={resultFaceImage.imageHint}
-                        />
-                    </div>
-                )}
             </motion.div>
         </section>
 
@@ -237,30 +179,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         We developed a dynamic content system that adapts to user's goals, from managing stress to improving sleep.
                     </p>
                 </div>
-                <div className="mt-24 flex flex-col md:flex-row justify-center items-center gap-12">
-                    {finalDesignImage1 && (
-                        <div className="relative w-full max-w-[250px] h-[500px]">
-                             <Image
-                                src={finalDesignImage1.imageUrl}
-                                alt={finalDesignImage1.description}
-                                fill
-                                className="object-contain"
-                                data-ai-hint={finalDesignImage1.imageHint}
-                            />
-                        </div>
-                    )}
-                     {finalDesignImage2 && (
-                        <div className="relative w-48 h-48">
-                             <Image
-                                src={finalDesignImage2.imageUrl}
-                                alt={finalDesignImage2.description}
-                                fill
-                                className="object-contain"
-                                data-ai-hint={finalDesignImage2.imageHint}
-                            />
-                        </div>
-                    )}
-                </div>
             </motion.div>
         </section>
         
@@ -273,65 +191,17 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         The visual language of Headspace is a key part of its appeal. We worked to evolve the existing brand, introducing new layouts, typographic styles, and interactive elements to create a more engaging and cohesive experience across the platform.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    {visualImage1 && (
-                         <div className="relative w-full h-[300px] md:h-[450px] bg-muted rounded-2xl overflow-hidden">
-                            <Image
-                                src={visualImage1.imageUrl}
-                                alt={visualImage1.description}
-                                fill
-                                className="object-cover"
-                                data-ai-hint={visualImage1.imageHint}
-                            />
-                        </div>
-                    )}
-                    {visualImage2 && (
-                         <div className="relative w-full h-[300px] md:h-[450px] bg-muted rounded-2xl overflow-hidden">
-                            <Image
-                                src={visualImage2.imageUrl}
-                                alt={visualImage2.description}
-                                fill
-                                className="object-cover"
-                                data-ai-hint={visualImage2.imageHint}
-                            />
-                        </div>
-                    )}
-                </div>
             </motion.div>
         </section>
 
          {/* Visual Design Language Section */}
         <section className="py-28 md:py-48 bg-card">
             <motion.div {...motionProps} className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                 {vdlImage1 && (
-                    <div className="relative w-full h-96 bg-[#F9C900] rounded-2xl overflow-hidden p-8 flex items-center justify-center">
-                        <div className="relative w-48 h-80">
-                         <Image
-                            src={vdlImage1.imageUrl}
-                            alt={vdlImage1.description}
-                            fill
-                            className="object-contain"
-                            data-ai-hint={vdlImage1.imageHint}
-                        />
-                        </div>
-                    </div>
-                )}
                  <div>
                     <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">Visual Design Language</h2>
                      <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mt-4">
                         Our goal was to create a design system that felt friendly, accessible, and unmistakably Headspace. We established a clear typography system, a versatile color palette, and a library of reusable components that allowed for consistency and scalability.
                     </p>
-                     {vdlImage2 && (
-                        <div className="relative w-full h-48 mt-12">
-                             <Image
-                                src={vdlImage2.imageUrl}
-                                alt={vdlImage2.description}
-                                fill
-                                className="object-contain"
-                                data-ai-hint={vdlImage2.imageHint}
-                            />
-                        </div>
-                    )}
                 </div>
             </motion.div>
         </section>
@@ -339,15 +209,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
         {/* Testimonials Section */}
         <section className="relative py-32 md:py-64 bg-background">
-             {testimonialBgImage && (
-                <Image
-                    src={testimonialBgImage.imageUrl}
-                    alt={testimonialBgImage.description}
-                    fill
-                    className="object-cover opacity-10 dark:opacity-5"
-                    data-ai-hint={testimonialBgImage.imageHint}
-                />
-             )}
             <motion.div {...motionProps} className="relative container mx-auto px-4 sm:px-8 md:px-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
                      {testimonials.map((item, index) => (
