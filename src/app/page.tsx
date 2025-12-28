@@ -24,8 +24,8 @@ export default function Home() {
     <div className="bg-background">
       <Header />
       <main className="flex flex-col">
-        <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-6">
-            <div className="pt-3 md:pt-7 pb-3 md:pb-7">
+        <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-2">
+            <div className="pt-1 md:pt-2 pb-1 md:pb-2">
               <SplitText 
                 text="Hi, I’m Aadesh" 
                 tag="h1"
@@ -61,7 +61,7 @@ export default function Home() {
           </TooltipProvider>
         )}
 
-        <section className="py-7 md:py-10">
+        <section className="py-4 md:py-6">
           <div className="container mx-auto px-4 sm:px:8 md:px-20 relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="flex-1 flex flex-col">
@@ -86,12 +86,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mt-6 md:mt-7">
+          <div className="relative mt-3 md:mt-4">
             <ProjectStack />
           </div>
         </section>
 
-        <section id="know-me-better" className="pt-1 pb-1 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
+        <section id="know-me-better" className="pt-0.5 pb-0.5 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
           <div className="flex flex-col items-start gap-4">
             <AnimatedShape shape="square" />
             <SplitText
@@ -101,10 +101,10 @@ export default function Home() {
               textAlign="left"
             />
           </div>
-          <div className="w-32 h-[2px] bg-border my-3"></div>
+          <div className="w-32 h-[2px] bg-border my-1"></div>
         </section>
 
-        <section className="pt-2 pb-4 container mx-auto px-4 sm:px-8 md:px-20">
+        <section className="pt-1 pb-2 container mx-auto px-4 sm:px-8 md:px-20">
            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 <div className="flex flex-col items-start w-full">
                     <SplitText
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="py-5">
+        <section className="py-2">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <TiltedCard>
                     <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
@@ -177,7 +177,7 @@ export default function Home() {
             </div>
         </section>
         
-        <div className="py-7 md:py-10">
+        <div className="py-4 md:py-6">
             <Approach />
         </div>
 
