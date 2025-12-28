@@ -417,11 +417,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         {/* Design Process & Strategic Solutions Section */}
         <section className="py-24 md:py-32 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.div {...motionProps} className="flex items-center justify-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-muted flex items-center justify-center">
-                    <Search className="w-4 h-4 text-muted-foreground" />
-                </div>
+            <div className="max-w-4xl">
+              <motion.div {...motionProps} className="flex items-center gap-3">
+                <Search className="w-8 h-8 text-primary" />
                 <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">
                   Design Process &amp; Strategic Solutions
                 </h2>
@@ -549,7 +547,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     <motion.div {...motionProps} className="flex items-center gap-4 mb-4">
                         <TrendingUp className="w-8 h-8 text-primary" />
                         <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground">
-                        Quantifiable Outcomes & Impact
+                        Quantifiable Outcomes &amp; Impact
                         </h2>
                     </motion.div>
                     <motion.p
@@ -676,7 +674,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 Performing data analysis to uncover insights and develop effective strategies, collaborating with cross-functional teams for seamless company-wide growth and communication.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {customerExperienceImpact.map((item, index) => (
                 <motion.div 
                   key={index}
