@@ -373,7 +373,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                             src={projectImage1.imageUrl}
                             alt={projectImage1.description}
                             fill
-                            className="object-contain"
+                            className="object-cover"
                             data-ai-hint={projectImage1.imageHint}
                         />
                     </motion.div>
@@ -413,7 +413,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         src={projectImage2.imageUrl}
                         alt={projectImage2.description}
                         fill
-                        className="object-contain"
+                        className="object-cover"
                         data-ai-hint={projectImage2.imageHint}
                     />
                 </motion.div>
@@ -459,7 +459,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         src={projectImage3.imageUrl}
                         alt={projectImage3.description}
                         fill
-                        className="object-contain"
+                        className="object-cover"
                         data-ai-hint={projectImage3.imageHint}
                     />
                 </motion.div>
@@ -505,7 +505,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                             src={projectImage4.imageUrl}
                             alt={projectImage4.description}
                             fill
-                            className="object-contain"
+                            className="object-cover"
                             data-ai-hint={projectImage4.imageHint}
                         />
                     </motion.div>
@@ -521,7 +521,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                             src={projectImage5.imageUrl}
                             alt={projectImage5.description}
                             fill
-                            className="object-contain"
+                            className="object-cover"
                             data-ai-hint={projectImage5.imageHint}
                         />
                     </motion.div>
@@ -537,7 +537,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                             src={projectImage6.imageUrl}
                             alt={projectImage6.description}
                             fill
-                            className="object-contain"
+                            className="object-cover"
                             data-ai-hint={projectImage6.imageHint}
                         />
                     </motion.div>
