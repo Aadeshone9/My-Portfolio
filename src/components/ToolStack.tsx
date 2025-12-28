@@ -133,13 +133,7 @@ const ToolStack = () => {
           </div>
           <div className='mt-10'>
              <SplitText
-                text="Now that you know me better"
-                tag="p"
-                className="font-headline font-semibold text-xl md:text-2xl leading-tight tracking-tighter text-muted-foreground"
-                textAlign="left"
-              />
-              <SplitText
-                text="than Earlier,"
+                text="Now that you know me better than earlier,"
                 tag="p"
                 className="font-headline font-semibold text-xl md:text-2xl leading-tight tracking-tighter text-muted-foreground"
                 textAlign="left"
