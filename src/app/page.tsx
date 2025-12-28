@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div className="bg-background">
       <Header />
-      <main className="flex flex-col">
+      <main>
         <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-24 pb-24">
             <div className="pb-1 md:pb-2">
               <SplitText 
@@ -47,15 +47,11 @@ export default function Home() {
             </div>
         </div>
 
-        {mainImage && (
-          <div className="pb-24">
-              <Showreel
-                imageUrl={mainImage.imageUrl}
-                alt={mainImage.description}
-                aiHint={mainImage.imageHint}
-              />
-          </div>
-        )}
+        <div className="py-20 md:py-32">
+            <Showreel
+              videoUrl="/banner.mp4"
+            />
+        </div>
 
         <section className="py-20 md:py-32">
           <div className="container mx-auto px-4 sm:px:8 md:px-20 relative z-10">

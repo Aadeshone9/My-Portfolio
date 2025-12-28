@@ -2,20 +2,18 @@
 
 import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Image from 'next/image';
 import { Play, Pause } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import './Showreel.css';
 
 type ShowreelProps = {
-  imageUrl: string;
-  alt: string;
-  aiHint: string;
+  videoUrl: string;
 };
 
-export default function Showreel({ imageUrl, alt, aiHint }: ShowreelProps) {
+export default function Showreel({ videoUrl }: ShowreelProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
 
   const { scrollYProgress } = useScroll({
@@ -29,7 +27,15 @@ export default function Showreel({ imageUrl, alt, aiHint }: ShowreelProps) {
 
   const handleTogglePlay = (e: React.MouseEvent) => {
     e.stopPropagation();
-    // Since there's no video, we can just leave this as a placeholder function
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+        setIsPlaying(true);
+      } else {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      }
+    }
   };
 
   return (
@@ -42,7 +48,7 @@ export default function Showreel({ imageUrl, alt, aiHint }: ShowreelProps) {
       }}
     >
       <div
-        className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center"
+        className={cn("sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center", isHovered ? (isPlaying ? 'cursor-pause' : 'cursor-play') : '')}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         onClick={handleTogglePlay}
@@ -53,12 +59,25 @@ export default function Showreel({ imageUrl, alt, aiHint }: ShowreelProps) {
           )}
           style={{ scale, borderRadius }}
         >
-          <Image src={imageUrl} alt={alt} fill className="object-cover" data-ai-hint={aiHint} />
+          <video
+            ref={videoRef}
+            src={videoUrl}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="bg-black/50 backdrop-blur-sm rounded-lg p-4 flex items-center gap-4 px-8 text-white text-xl md:text-2xl font-headline">
-              Showreel will be uploaded soon
-            </div>
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <motion.div 
+              className="bg-black/50 backdrop-blur-sm rounded-full p-4 flex items-center justify-center"
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: isHovered ? 1 : 0, opacity: isHovered ? 1 : 0}}
+              transition={{ duration: 0.3 }}
+            >
+              {isPlaying ? <Pause size={32} className="text-white" /> : <Play size={32} className="text-white" />}
+            </motion.div>
           </div>
         </motion.div>
       </div>
