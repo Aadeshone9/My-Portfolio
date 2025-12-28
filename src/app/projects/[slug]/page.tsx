@@ -4,7 +4,8 @@ import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Target } from 'lucide-react';
+import { Target, User } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const motionProps = {
   initial: { opacity: 0, y: 20 },
@@ -24,6 +25,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   const image7 = PlaceHolderImages.find(p => p.id === 'uber-image-7');
   const image8 = PlaceHolderImages.find(p => p.id === 'uber-image-8');
   const image9 = PlaceHolderImages.find(p => p.id === 'uber-image-9');
+  
+  const mentalModelImage1 = PlaceHolderImages.find(p => p.id === 'mental-model-1');
+  const mentalModelImage2 = PlaceHolderImages.find(p => p.id === 'mental-model-2');
+  const avatar1 = PlaceHolderImages.find(p => p.id === 'mental-model-avatar-1');
+  const avatar2 = PlaceHolderImages.find(p => p.id === 'mental-model-avatar-2');
+  const avatar3 = PlaceHolderImages.find(p => p.id === 'mental-model-avatar-3');
+
 
   const outcomes = [
     {
@@ -97,23 +105,23 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Contribution Section */}
-        <section className="py-24 md:py-40 bg-background text-foreground relative">
+        <section className="py-24 md:py-32 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
               <motion.div {...motionProps}>
-                <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">Contribution in Project</h2>
+                <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">Contribution in Project</h2>
                 <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">Research, Strategy, Design, Design System</p>
               </motion.div>
               <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.1 }}>
-                <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">My Role</h2>
+                <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">My Role</h2>
                 <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">Consultant: CX & UX Design</p>
               </motion.div>
               <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.2 }}>
-                <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">Project Focus</h2>
+                <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">Project Focus</h2>
                 <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">End-to-end connected vehicle platform experience for the launch of the Vida EV.</p>
               </motion.div>
                <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.3 }}>
-                <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">Primary Goal</h2>
+                <h2 className="font-headline font-semibold text-xl md:text-2xl text-foreground">Primary Goal</h2>
                 <p className="text-primary text-lg md:text-xl leading-relaxed mt-4">Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value (LTV).</p>
               </motion.div>
             </div>
@@ -121,16 +129,15 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Key Outcomes Section */}
-        <section className="py-24 md:py-40 bg-background text-foreground relative">
-            <div className="absolute inset-0 bg-grid-zinc-500/10 [mask-image:linear-gradient(to_bottom,white_10%,transparent_70%)] dark:bg-grid-white/10"></div>
+        <section className="py-24 md:py-32 bg-background text-foreground relative">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 relative">
                 <motion.h2 
                     {...motionProps}
-                    className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-20"
+                    className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-16"
                 >
                     Key Outcomes
                 </motion.h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     {outcomes.map((outcome, index) => (
                          <motion.div 
                             key={index} 
@@ -145,13 +152,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </div>
             </div>
         </section>
-
+        
         {/* Problem Definition Section */}
-        <section className="py-32 md:py-48 bg-background text-foreground relative">
-          <div className="absolute inset-0 bg-grid-zinc-500/10 [mask-image:linear-gradient(to_bottom,transparent,white_40%,white_60%,transparent)] dark:bg-grid-white/10"></div>
+        <section className="py-24 md:py-32 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
-            <div className="max-w-4xl mx-auto">
-              <motion.div {...motionProps} className="flex items-center gap-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <motion.div {...motionProps} className="flex items-center justify-center gap-4">
                 <Target className="w-8 h-8 text-primary" />
                 <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">
                   Problem Definition &amp; Strategic Gap
@@ -160,7 +166,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               <motion.p
                 {...motionProps}
                 transition={{ ...motionProps.transition, delay: 0.1 }}
-                className="font-headline text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-normal md:leading-relaxed mt-8"
+                className="font-headline text-4xl md:text-5xl font-semibold text-primary leading-snug md:leading-relaxed mt-8"
               >
                 Our research identified significant gaps in the emerging EV market that fueled user anxiety and distrust.
               </motion.p>
@@ -169,7 +175,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Core Design Challenge Section */}
-        <section className="py-24 md:py-40 bg-background text-foreground relative">
+        <section className="py-24 md:py-32 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl mx-auto">
               <motion.h2 
@@ -186,9 +192,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     transition={{ ...motionProps.transition, delay: 0.1 * (index + 1) }}
                     className="flex items-start"
                   >
-                    <span className="text-primary mr-4">&#8226;</span>
-                    <p className="text-lg md:text-xl text-foreground/80">
-                      <span className="font-semibold text-primary">{challenge.title}: </span>
+                    <span className="text-primary mr-4 mt-1">&#8226;</span>
+                    <p className="text-lg md:text-xl text-muted-foreground">
+                      <span className="font-semibold text-foreground">{challenge.title}: </span>
                       {challenge.description}
                     </p>
                   </motion.li>
@@ -197,6 +203,62 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
           </div>
         </section>
+
+        {/* User's Mental Model Section */}
+        <section className="py-24 md:py-32 bg-background text-foreground">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left Column - Images */}
+            <motion.div {...motionProps} className="relative h-[600px] flex items-center justify-center">
+              {mentalModelImage1 && (
+                <div className="absolute left-0 bottom-0 w-[60%] sm:w-[50%] md:w-[40%]">
+                  <Image src={mentalModelImage1.imageUrl} alt={mentalModelImage1.description} width={400} height={600} className="rounded-2xl object-cover shadow-lg" />
+                </div>
+              )}
+              {mentalModelImage2 && (
+                <div className="absolute right-0 top-0 w-[60%] sm:w-[50%] md:w-[55%] z-10">
+                   <Image src={mentalModelImage2.imageUrl} alt={mentalModelImage2.description} width={400} height={600} className="rounded-2xl object-cover shadow-2xl" />
+                </div>
+              )}
+               <div className="absolute bottom-4 right-4 sm:right-8 md:right-16 bg-background/50 backdrop-blur-sm p-3 rounded-2xl z-20">
+                  <div className="flex items-center space-x-2">
+                    <div className="grid grid-cols-3 gap-2">
+                      <div className="w-8 h-8 bg-muted rounded-full"></div>
+                      {avatar1 && <Avatar><AvatarImage src={avatar1.imageUrl} alt={avatar1.description} /><AvatarFallback>U1</AvatarFallback></Avatar>}
+                      <div className="w-8 h-8 bg-muted rounded-full"></div>
+                      {avatar2 && <Avatar><AvatarImage src={avatar2.imageUrl} alt={avatar2.description} /><AvatarFallback>U2</AvatarFallback></Avatar>}
+                      <div className="w-8 h-8 bg-muted rounded-full"></div>
+                      {avatar3 && <Avatar><AvatarImage src={avatar3.imageUrl} alt={avatar3.description} /><AvatarFallback>U3</AvatarFallback></Avatar>}
+                    </div>
+                  </div>
+                </div>
+            </motion.div>
+
+            {/* Right Column - Text */}
+            <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.2 }}>
+              <div className="bg-card p-8 md:p-12 rounded-3xl">
+                <h2 className="font-headline font-semibold text-3xl text-primary mb-8">User's Mental Model</h2>
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-headline font-bold text-xl text-foreground mb-2">Bold</h3>
+                    <p className="text-muted-foreground">The individual actively pursues knowledge and maintains a can-do attitude to bring about change. They show a willingness to adopt electric two-wheeler mobility early on if the product exceeds their expectations and offers innovative features beyond conventional technology.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-headline font-bold text-xl text-foreground mb-2">Balanced</h3>
+                    <p className="text-muted-foreground">This user is a methodical decision-maker who needs concrete evidence to support their choices. They require assurance of long-term viability and wide acceptance before accepting electric two-wheelers.</p>
+                  </div>
+                </div>
+
+                <h2 className="font-headline font-semibold text-3xl text-primary mt-12 mb-8">Challenges</h2>
+                <div className="space-y-4 text-muted-foreground">
+                  <p>Electric Vehicle Adoption</p>
+                  <p>Digital Distrust</p>
+                  <p>Emerging Competition</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </div>
