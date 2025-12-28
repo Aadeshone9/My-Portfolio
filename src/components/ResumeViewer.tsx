@@ -14,7 +14,7 @@ import { X } from "lucide-react";
 
 const ResumeViewer = () => {
   // IMPORTANT: Place your resume file in the `public` folder.
-  const resumePath = "/Aadesh_Govenkar_Resume.pdf";
+  const resumePath = "/pdf/resume.pdf";
 
   return (
     <Dialog>
