@@ -701,7 +701,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="py-20 md:py-32 container mx-auto px-4 sm:px-8 md:px-20">
           <div className="flex flex-col items-start gap-6">
             <p
-              className="font-headline font-semibold text-2xl md:text-4xl tracking-normal text-muted-foreground"
+              className="font-headline font-semibold text-2xl md:text-4xl tracking-normal text-muted-foreground mb-6"
               style={{ lineHeight: '1.24' }}
             >
               you made it to the end of the scroll
