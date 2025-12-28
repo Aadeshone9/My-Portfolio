@@ -61,7 +61,7 @@ export default function Home() {
           </TooltipProvider>
         )}
 
-        <section className="py-12 md:py-16">
+        <section className="py-7 md:py-10">
           <div className="container mx-auto px-4 sm:px:8 md:px-20 relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="flex-1 flex flex-col">
@@ -104,7 +104,7 @@ export default function Home() {
           <div className="w-32 h-[2px] bg-border my-3"></div>
         </section>
 
-        <section className="pt-2 pb-7 container mx-auto px-4 sm:px-8 md:px-20">
+        <section className="pt-2 pb-4 container mx-auto px-4 sm:px-8 md:px-20">
            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 <div className="flex flex-col items-start w-full">
                     <SplitText
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="py-8">
+        <section className="py-5">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <TiltedCard>
                     <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
@@ -177,7 +177,7 @@ export default function Home() {
             </div>
         </section>
         
-        <div className="py-12 md:py-16">
+        <div className="py-7 md:py-10">
             <Approach />
         </div>
 
