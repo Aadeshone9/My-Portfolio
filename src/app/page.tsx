@@ -24,12 +24,11 @@ import {
 } from "@/components/ui/tooltip"
 
 export default function Home() {
-  const mainImage = PlaceHolderImages.find(p => p.id === 'hero-image');
   return (
     <div className="bg-background">
       <Header />
       <main>
-        <div className="container mx-auto px-4 sm:px-8 md:px-20 py-24">
+        <div className="container mx-auto px-4 sm:px-8 md:px-20 py-20 md:py-24">
             <div className="pb-1 md:pb-2">
               <SplitText 
                 text="Hi, I’m Aadesh" 
@@ -47,13 +46,13 @@ export default function Home() {
             </div>
         </div>
 
-        <div className="py-24">
+        <div className="py-20 md:py-24">
             <Showreel
               videoUrl="/banner.mp4"
             />
         </div>
 
-        <section className="py-24">
+        <section className="py-20 md:py-24">
           <div className="container mx-auto px-4 sm:px:8 md:px-20 relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="flex-1 flex flex-col">
@@ -83,7 +82,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="know-me-better" className="py-24 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
+        <section id="know-me-better" className="py-20 md:py-24 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
           <div className="flex flex-col items-start gap-4">
             <AnimatedShape shape="square" />
             <SplitText
@@ -96,7 +95,7 @@ export default function Home() {
           <div className="w-32 h-[2px] bg-border my-8"></div>
         </section>
 
-        <section className="pb-24 container mx-auto px-4 sm:px-8 md:px-20">
+        <section className="pb-20 md:pb-24 container mx-auto px-4 sm:px-8 md:px-20">
            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 <div className="flex flex-col items-start w-full">
                     <SplitText
@@ -132,7 +131,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="pb-24">
+        <section className="pb-20 md:pb-24">
             <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <TiltedCard>
                     <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
@@ -169,7 +168,7 @@ export default function Home() {
             </div>
         </section>
         
-        <div className="pb-24">
+        <div className="pb-20 md:pb-24">
             <Approach />
         </div>
 
