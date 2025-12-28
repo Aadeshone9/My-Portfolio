@@ -606,7 +606,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               A user journey that fulfils user needs and expectations.
             </motion.p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
-              {experienceEnhancers.slice(0, 6).map((enhancer, index) => (
+              {experienceEnhancers.map((enhancer, index) => (
                 <motion.div
                   key={index}
                   {...motionProps}
@@ -625,21 +625,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </motion.div>
               ))}
             </div>
-            <motion.div
-              {...motionProps}
-              transition={{ ...motionProps.transition, delay: 0.8 }}
-              className="flex items-start gap-4 mt-12 md:mt-12 md:max-w-[50%] md:mx-auto"
-            >
-              <div className="flex-shrink-0">{experienceEnhancers[6].icon}</div>
-              <div>
-                <h3 className="font-headline font-semibold text-xl text-foreground">
-                  {experienceEnhancers[6].title}
-                </h3>
-                <p className="text-muted-foreground mt-1">
-                  {experienceEnhancers[6].description}
-                </p>
-              </div>
-            </motion.div>
           </div>
         </section>
 
@@ -719,18 +704,18 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           <div className="flex flex-col items-start gap-6">
             <div className="w-[84px] h-[84px] rounded-full bg-primary"></div>
             <div>
-              <SplitText
-                  text="You've seen the case study."
-                  tag="p"
-                  className="font-headline font-semibold text-3xl md:text-5xl leading-relaxed tracking-normal text-muted-foreground"
-                  textAlign="left"
-                />
-                <SplitText
-                  text="Let's connect and discuss the project in detail."
-                  tag="p"
-                  className="font-headline font-semibold text-3xl md:text-5xl leading-relaxed tracking-normal text-muted-foreground"
-                  textAlign="left"
-                />
+              <p
+                  className="font-headline font-semibold text-3xl md:text-5xl tracking-normal text-muted-foreground"
+                  style={{ lineHeight: '1.24' }}
+                >
+                  You've seen the case study.
+                </p>
+                <p
+                  className="font-headline font-semibold text-3xl md:text-5xl tracking-normal text-muted-foreground"
+                   style={{ lineHeight: '1.24' }}
+                >
+                  Let's connect and discuss the project in detail.
+                </p>
             </div>
           </div>
         </section>
