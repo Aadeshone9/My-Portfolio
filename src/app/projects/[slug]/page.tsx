@@ -418,7 +418,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <section className="py-20 md:py-24 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl">
-              <motion.div {...motionProps} className="flex items-center gap-3">
+              <motion.div {...motionProps} className="flex items-center gap-4">
                 <Search className="w-8 h-8 text-primary" />
                 <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">
                   Design Process &amp; Strategic Solutions
@@ -698,7 +698,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Call to Action Section */}
-        <section className="py-20 md:py-24 container mx-auto px-4 sm:px-8 md:px-20">
+        <section className="pb-20 md:pb-24 container mx-auto px-4 sm:px-8 md:px-20">
           <div className="flex flex-col items-start gap-6">
             <p
               className="font-headline font-semibold text-2xl md:text-4xl tracking-normal text-muted-foreground mb-6"
