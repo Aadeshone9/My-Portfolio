@@ -48,7 +48,7 @@ export default function Home() {
 
         <div className="py-20 md:py-24">
             <Showreel
-              videoUrl="/banner.mp4"
+              videoUrl="/videos/banner.mp4"
             />
         </div>
 
