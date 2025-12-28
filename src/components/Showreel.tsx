@@ -29,7 +29,7 @@ export default function Showreel({ imageUrl, alt, aiHint }: ShowreelProps) {
 
   const handleTogglePlay = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setIsPlaying((prev) => !prev);
+    // Since there's no video, we can just leave this as a placeholder function
   };
 
   return (
@@ -49,33 +49,17 @@ export default function Showreel({ imageUrl, alt, aiHint }: ShowreelProps) {
       >
         <motion.div
           className={cn(
-            'relative w-full h-full bg-muted overflow-hidden cursor-pointer',
-            isHovered && (isPlaying ? 'cursor-pause' : 'cursor-play')
+            'relative w-full h-full bg-muted overflow-hidden'
           )}
           style={{ scale, borderRadius }}
         >
           <Image src={imageUrl} alt={alt} fill className="object-cover" data-ai-hint={aiHint} />
-          <div className="absolute inset-0 bg-black/10" />
-          <motion.div
-            className="absolute inset-0 flex items-center justify-center"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: isHovered ? 1 : 0, scale: isHovered ? 1 : 0.8 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className="bg-black/50 backdrop-blur-sm rounded-full p-4 flex items-center gap-4 px-8">
-              {isPlaying ? (
-                <>
-                  <Pause className="h-12 w-12 text-white" />
-                  <span className="text-white text-2xl font-headline">Pause</span>
-                </>
-              ) : (
-                <>
-                  <Play className="h-12 w-12 text-white" />
-                   <span className="text-white text-2xl font-headline">Play</span>
-                </>
-              )}
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="bg-black/50 backdrop-blur-sm rounded-lg p-4 flex items-center gap-4 px-8 text-white text-xl md:text-2xl font-headline">
+              Showreel will be uploaded soon
             </div>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
     </motion.div>
