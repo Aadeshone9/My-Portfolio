@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import PillButton from '@/components/PillButton';
 import ProjectPageCard from '@/components/ProjectPageCard';
 import SpotlightCard from '@/components/SpotlightCard';
-import SplitText from '@/components/SplitText';
+import FadeIn from '@/components/FadeIn';
 import { ArrowRight, Lock } from 'lucide-react';
 import Footer from '@/components/Footer';
 
@@ -69,12 +69,11 @@ export default function ProjectsPage() {
       <Header />
       <main className="container mx-auto px-4 sm:px-8 md:px-20 py-20 md:py-32">
         <div className="flex flex-col items-start gap-8">
-           <SplitText 
-            text="Projects"
-            tag="h1"
-            className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground"
-            textAlign="left"
-          />
+           <FadeIn>
+            <h1 className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground text-left">
+              Projects
+            </h1>
+          </FadeIn>
           <div className="flex flex-wrap gap-4">
             <PillButton href="#" className="is-active">UX Design</PillButton>
             <PillButton href="#" >Visual Design</PillButton>
@@ -88,12 +87,11 @@ export default function ProjectsPage() {
         </div>
 
         <div className='my-32'>
-            <SplitText
-              text="stay tuned for new Projects"
-              tag="h2"
-              className="font-headline font-semibold text-3xl md:text-5xl text-left text-foreground"
-              textAlign="left"
-            />
+            <FadeIn>
+              <h2 className="font-headline font-semibold text-3xl md:text-5xl text-left text-foreground text-left">
+                stay tuned for new Projects
+              </h2>
+            </FadeIn>
             <div className="mt-16 flex overflow-x-auto gap-10 pb-10">
                 {comingSoonProjects.map((project, index) => (
                     <div key={index} className="flex-shrink-0 w-[80vw] md:w-[40vw] lg:w-[30vw]">

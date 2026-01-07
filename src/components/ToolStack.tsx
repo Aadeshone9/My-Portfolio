@@ -2,7 +2,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import SplitText from './SplitText';
+import FadeIn from './FadeIn';
 import AnimatedShape from './AnimatedShape';
 
 const designTools = [
@@ -36,30 +36,26 @@ const ToolStack = () => {
 
       <div className="container mx-auto px-4 sm:px-8 md:px-20">
         <div className="flex flex-col items-start gap-4">
-           <SplitText
-              text="/ My Tool Stack"
-              tag="h2"
-              className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground"
-              textAlign="left"
-            />
-            <SplitText
-              text="A collection of my favorite tools that help me to create and deliver the best results."
-              tag="p"
-              splitType='words'
-              className="font-subtitle text-lg md:text-2xl lg:text-[32px] text-muted-foreground mt-2 max-w-2xl leading-[30px] md:leading-[36px] lg:leading-[44px]"
-              textAlign="left"
-            />
+           <FadeIn>
+              <h2 className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground text-left">
+                / My Tool Stack
+              </h2>
+            </FadeIn>
+            <FadeIn>
+              <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] text-muted-foreground mt-2 max-w-2xl leading-[30px] md:leading-[36px] lg:leading-[44px] text-left">
+                A collection of my favorite tools that help me to create and deliver the best results.
+              </p>
+            </FadeIn>
         </div>
       </div>
 
       <div className="mt-16 container mx-auto px-4 sm:px-8 md:px-20">
         <div className="mb-10">
-            <SplitText
-                text="Design softwares"
-                tag="h3"
-                className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground"
-                textAlign="left"
-            />
+            <FadeIn>
+                <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground text-left">
+                  Design softwares
+                </h3>
+            </FadeIn>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
           {designTools.map((tool, index) => (
@@ -76,12 +72,11 @@ const ToolStack = () => {
       
       <div className="mt-16 container mx-auto px-4 sm:px-8 md:px-20">
          <div className="mb-10">
-            <SplitText
-                text="Analytical tools"
-                tag="h3"
-                className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground"
-                textAlign="left"
-            />
+            <FadeIn>
+                <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground text-left">
+                  Analytical tools
+                </h3>
+            </FadeIn>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
           {analyticalTools.map((tool, index) => (
@@ -98,12 +93,11 @@ const ToolStack = () => {
 
       <div className="mt-20 md:mt-32 container mx-auto px-4 sm:px-8 md:px-20">
         <div className="flex flex-col items-start gap-6">
-           <SplitText
-              text="/ Skills"
-              tag="h2"
-              className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground"
-              textAlign="left"
-            />
+           <FadeIn>
+              <h2 className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground text-left">
+                / Skills
+              </h2>
+            </FadeIn>
           <div className="mt-10">
             <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-2">
               Research
@@ -132,12 +126,11 @@ const ToolStack = () => {
             <div className="w-[84px] h-[84px] rounded-full bg-primary"></div>
           </div>
           <div className='mt-10'>
-             <SplitText
-                text="Now that you know me better than earlier,"
-                tag="p"
-                className="font-headline font-semibold text-xl md:text-2xl leading-tight tracking-tighter text-muted-foreground"
-                textAlign="left"
-              />
+             <FadeIn>
+                <p className="font-headline font-semibold text-xl md:text-2xl leading-tight tracking-tighter text-muted-foreground text-left">
+                  Now that you know me better than earlier,
+                </p>
+              </FadeIn>
           </div>
         </div>
       </div>

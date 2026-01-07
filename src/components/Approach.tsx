@@ -1,6 +1,6 @@
 
 import React from 'react';
-import SplitText from './SplitText';
+import FadeIn from './FadeIn';
 import { ScrollArea } from './ui/scroll-area';
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
@@ -37,21 +37,18 @@ const Approach = () => {
       <div className="container mx-auto px-4 sm:px-8 md:px-20">
         <div className="flex flex-col lg:flex-row flex-wrap items-start content-start gap-y-8 gap-x-[26px]">
           <div className="w-full">
-            <SplitText
-              text="/ My approach towards problem solving"
-              tag="h2"
-              className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground"
-              textAlign="left"
-            />
+            <FadeIn>
+              <h2 className="font-headline font-semibold text-3xl md:text-4xl leading-[58px] tracking-[0.02em] text-foreground text-left">
+                / My approach towards problem solving
+              </h2>
+            </FadeIn>
           </div>
           <div className="w-full lg:w-auto">
-            <SplitText
-              text="I believe great design is a result of clarity, collaboration, and craft."
-              tag="p"
-              splitType="words"
-              className="font-subtitle text-lg md:text-2xl lg:text-[32px] text-muted-foreground mt-2 max-w-md leading-[30px] md:leading-[36px] lg:leading-[44px]"
-              textAlign="left"
-            />
+            <FadeIn>
+              <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] text-muted-foreground mt-2 max-w-md leading-[30px] md:leading-[36px] lg:leading-[44px] text-left">
+                I believe great design is a result of clarity, collaboration, and craft.
+              </p>
+            </FadeIn>
           </div>
           <div className="w-full lg:flex-1 mt-4 lg:mt-0 relative">
             <ScrollArea className="h-[404px] w-full">

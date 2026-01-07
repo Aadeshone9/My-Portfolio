@@ -1,7 +1,7 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import SplitText from '@/components/SplitText';
+import FadeIn from '@/components/FadeIn';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Lanyard from '@/components/Lanyard';
 
@@ -38,19 +38,16 @@ export default function LearningsPage() {
       <Header />
       <main className="container mx-auto px-4 sm:px-8 md:px-20 py-24 md:py-40">
         <div className="flex flex-col items-start gap-8">
-          <SplitText 
-            text="Learnings & Reflection"
-            tag="h1"
-            className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground"
-            textAlign="left"
-          />
-          <SplitText
-            text="A collection of thoughts, challenges, and insights from my journey as a designer."
-            tag="p"
-            splitType="words"
-            className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground max-w-2xl"
-            textAlign="left"
-          />
+          <FadeIn>
+            <h1 className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground text-left">
+              Learnings & Reflection
+            </h1>
+          </FadeIn>
+          <FadeIn>
+            <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground max-w-2xl text-left">
+              A collection of thoughts, challenges, and insights from my journey as a designer.
+            </p>
+          </FadeIn>
         </div>
 
         {/* <Lanyard /> */}

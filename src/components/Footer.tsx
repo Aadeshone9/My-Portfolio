@@ -2,6 +2,7 @@
 import PillButton from "./PillButton";
 import ResumeViewer from "./ResumeViewer";
 import ScrollToTopButton from "./ScrollToTopButton";
+import FadeIn from "./FadeIn";
 
 export default function Footer() {
     return (
@@ -9,11 +10,13 @@ export default function Footer() {
         <div className="container mx-auto px-4 sm:px-8 md:px-20 flex flex-col gap-12">
           <div className='flex flex-col gap-12'>
             <div className='flex flex-col gap-8'>
-              <p 
-                className="font-headline font-semibold text-xl md:text-2xl text-footer-muted-foreground"
-              >
-                Lets get in Touch....
-              </p>
+              <FadeIn>
+                <p 
+                  className="font-headline font-semibold text-xl md:text-2xl text-footer-muted-foreground"
+                >
+                  Lets get in Touch....
+                </p>
+              </FadeIn>
               <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-base md:text-lg">
                 <ResumeViewer />
                 <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-tight underline leading-normal break-all hover:text-primary transition-colors">Aadesh.one9@gmail.com</a>

@@ -6,7 +6,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import SpotlightCard from '@/components/SpotlightCard';
-import SplitText from '@/components/SplitText';
+import FadeIn from '@/components/FadeIn';
 import TiltedCard from '@/components/TiltedCard';
 import Approach from '@/components/Approach';
 import PillButton from '@/components/PillButton';
@@ -30,19 +30,16 @@ export default function Home() {
       <main>
         <div className="container mx-auto px-4 sm:px-8 md:px-20 py-20 md:py-24">
             <div className="pb-1 md:pb-2">
-              <SplitText 
-                text="Hi, I’m Aadesh" 
-                tag="h1"
-                className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground"
-                textAlign="left"
-              />
-            <SplitText
-                text="I have contributed to products at scale, Chances are you've used some!"
-                tag="p"
-                splitType="words"
-                className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground max-w-xl mt-4"
-                textAlign="left"
-              />
+              <FadeIn>
+                <h1 className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground text-left">
+                  Hi, I’m Aadesh
+                </h1>
+              </FadeIn>
+              <FadeIn>
+                <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground max-w-xl mt-4 text-left">
+                  I have contributed to products at scale, Chances are you've used some!
+                </p>
+              </FadeIn>
             </div>
         </div>
 
@@ -56,19 +53,16 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px:8 md:px-20 relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="flex-1 flex flex-col">
-                <SplitText
-                  text="/ Recent Projects"
-                  tag="h2"
-                  className="font-headline font-semibold text-3xl md:text-[32px] leading-snug tracking-[0.02em] text-foreground"
-                  textAlign="left"
-                />
-                <SplitText
-                  text="A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design."
-                  tag="p"
-                  splitType="words"
-                  className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground mt-2 max-w-[700px]"
-                  textAlign="left"
-                />
+                <FadeIn>
+                  <h2 className="font-headline font-semibold text-3xl md:text-[32px] leading-snug tracking-[0.02em] text-foreground text-left">
+                    / Recent Projects
+                  </h2>
+                </FadeIn>
+                <FadeIn>
+                  <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground mt-2 max-w-[700px] text-left">
+                    A curated collection of latest Projects i have contributed which reflect my commitment to simplicity, timeless, and purposeful design.
+                  </p>
+                </FadeIn>
                 </div>
                 <PillButton href="/projects" className="group mt-4 md:mt-0 flex-shrink-0">
                     <span className="group-hover:font-semibold">View all Projects</span>
@@ -85,12 +79,11 @@ export default function Home() {
         <section id="know-me-better" className="py-20 md:py-24 container mx-auto px-4 sm:px-8 md:px-20 scroll-mt-20">
           <div className="flex flex-col items-start gap-4">
             <AnimatedShape shape="square" />
-            <SplitText
-              text="Know me better..."
-              tag="h2"
-              className="font-headline font-semibold text-3xl md:text-5xl leading-[58px] tracking-wide text-foreground mt-2"
-              textAlign="left"
-            />
+            <FadeIn>
+              <h2 className="font-headline font-semibold text-3xl md:text-5xl leading-[58px] tracking-wide text-foreground mt-2 text-left">
+                Know me better...
+              </h2>
+            </FadeIn>
           </div>
           <div className="w-32 h-[2px] bg-border my-8"></div>
         </section>
@@ -98,34 +91,27 @@ export default function Home() {
         <section className="pb-20 md:pb-24 container mx-auto px-4 sm:px-8 md:px-20">
            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 <div className="flex flex-col items-start w-full">
-                    <SplitText
-                      text="/ Let’s break some ice"
-                      tag="h2"
-                      className="font-headline font-semibold text-2xl md:text-[32px] leading-[58px] tracking-[0.02em] text-foreground flex items-center"
-                      textAlign="left"
-                    />
+                    <FadeIn>
+                      <h2 className="font-headline font-semibold text-2xl md:text-[32px] leading-[58px] tracking-[0.02em] text-foreground flex items-center text-left">
+                        / Let’s break some ice
+                      </h2>
+                    </FadeIn>
                     <div className="mt-8 space-y-4">
-                        <SplitText
-                            text="I create to solve, and I solve to create."
-                            tag="p"
-                            splitType="words"
-                            className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-snug md:leading-[43px] text-muted-foreground"
-                            textAlign="left"
-                        />
-                        <SplitText
-                            text="I am a designer, defined by my craft, dedicated to"
-                            tag="p"
-                            splitType="words"
-                            className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-[snug] md:leading-[43px] text-muted-foreground"
-                            textAlign="left"
-                        />
-                        <SplitText
-                            text="crafting better experiences for my fellow beings."
-                            tag="p"
-                            splitType="words"
-                            className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-snug md:leading-[43px] text-muted-foreground"
-                            textAlign="left"
-                        />
+                        <FadeIn>
+                          <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-snug md:leading-[43px] text-muted-foreground text-left">
+                            I create to solve, and I solve to create.
+                          </p>
+                        </FadeIn>
+                        <FadeIn>
+                          <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-[snug] md:leading-[43px] text-muted-foreground text-left">
+                            I am a designer, defined by my craft, dedicated to
+                          </p>
+                        </FadeIn>
+                        <FadeIn>
+                          <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-snug md:leading-[43px] text-muted-foreground text-left">
+                            crafting better experiences for my fellow beings.
+                          </p>
+                        </FadeIn>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import SplitText from '@/components/SplitText';
+import FadeIn from '@/components/FadeIn';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Lock, Menu } from 'lucide-react';
@@ -38,15 +38,16 @@ export default function DesignSystemPage() {
       <Header />
       <main className="container mx-auto px-4 sm:px-8 md:px-20 py-20 md:py-32">
         <div className="flex flex-col items-start gap-8">
-          <SplitText 
-            text="Design System"
-            tag="h1"
-            className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground"
-            textAlign="left"
-          />
-          <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground max-w-2xl">
-            The foundational elements of the visual identity, organized by atomic design principles.
-          </p>
+          <FadeIn>
+            <h1 className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground text-left">
+              Design System
+            </h1>
+          </FadeIn>
+          <FadeIn>
+            <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground max-w-2xl text-left">
+              The foundational elements of the visual identity, organized by atomic design principles.
+            </p>
+          </FadeIn>
         </div>
 
         <section className="mt-20">
@@ -169,12 +170,11 @@ export default function DesignSystemPage() {
                     <div className="space-y-10">
                         <div className="flex flex-col gap-4">
                             <p className="text-muted-foreground">Text Reveal Animation</p>
-                             <SplitText 
-                                text="Animated Text"
-                                tag="h4"
-                                className="font-headline font-semibold text-3xl text-foreground"
-                                textAlign="left"
-                            />
+                             <FadeIn>
+                                <h4 className="font-headline font-semibold text-3xl text-foreground text-left">
+                                  Animated Text
+                                </h4>
+                            </FadeIn>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
                         <div className="flex flex-col gap-4">
