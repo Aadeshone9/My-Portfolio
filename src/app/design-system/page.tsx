@@ -58,7 +58,7 @@ export default function DesignSystemPage() {
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10">
                 {colors.map(color => (
                   <div key={color.name}>
-                    <h4 className="font-headline text-xl font-semibold mb-4 text-foreground">{color.name}</h4>
+                    <h4 className="font-headline text-xl font-semibold mb-4 text-foreground text-center">{color.name}</h4>
                     <div className="flex flex-col gap-4">
                       <div className="flex flex-col items-center gap-2">
                         <div className={`w-16 h-16 rounded-full ${color.light} border-2 border-border`}></div>
