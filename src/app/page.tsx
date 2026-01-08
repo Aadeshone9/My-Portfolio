@@ -96,7 +96,7 @@ export default function Home() {
                         / Let’s break some ice
                       </h2>
                     </FadeIn>
-                    <div className="mt-8 space-y-4">
+                    <div className="mt-6 space-y-4">
                         <FadeIn>
                           <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] text-muted-foreground text-left mb-4">
                             I create to solve, and I solve to create.
