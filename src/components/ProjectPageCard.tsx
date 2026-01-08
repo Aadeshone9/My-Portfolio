@@ -18,8 +18,7 @@ export default function ProjectPageCard({ title, description, role, img, comingS
   return (
     <div className="p-6 md:p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between">
       <div>
-        <div className="w-full aspect-[16/9] rounded-lg flex items-center justify-center overflow-hidden relative group">
-          <div className="absolute inset-0 bg-off-white"></div>
+        <div className="w-full aspect-[16/9] rounded-lg flex items-center justify-center overflow-hidden relative group bg-off-white">
           {img && (
             <Image 
               src={img} 
