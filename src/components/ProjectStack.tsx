@@ -45,12 +45,14 @@ const projects = [
 
 const ProjectCard = ({ project, i, progress, range, targetScale }: { project: any, i: number, progress: any, range: number[], targetScale: number }) => {
   const scale = useTransform(progress, range, [1, targetScale]);
+  const y = useTransform(progress, range, [0, -50 * (projects.length - i)]);
 
   return (
     <div className="sticky top-0 h-screen flex items-center justify-center">
       <motion.div 
         style={{ 
           scale,
+          y,
           top: `calc(-5vh + ${i * 50}px)`
         }} 
         className={`relative h-auto md:h-auto lg:h-auto transform-gpu`}
@@ -108,7 +110,12 @@ const ProjectStack = () => {
     });
 
     return (
-        <div ref={containerRef} className="relative">
+        <div ref={containerRef} className="relative h-[calc(100vh*var(--project-count))]">
+            <style jsx>{`
+              .relative {
+                --project-count: ${projects.length};
+              }
+            `}</style>
             {projects.map((project, i) => {
                 const totalProjects = projects.length;
                 const step = 1 / totalProjects;
