@@ -45,7 +45,7 @@ const projects = [
 
 const ProjectCard = ({ project, i, progress, range, targetScale }: { project: any, i: number, progress: any, range: number[], targetScale: number }) => {
   const scale = useTransform(progress, range, [1, targetScale]);
-  const y = useTransform(progress, range, [0, -50 * (projects.length - i)]);
+  const y = useTransform(progress, range, [0, -25 * (projects.length - i)]);
 
   return (
     <div className="sticky top-0 h-screen flex items-center justify-center">
@@ -53,7 +53,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
         style={{ 
           scale,
           y,
-          top: `calc(-5vh + ${i * 50}px)`
+          top: `calc(-5vh + ${i * 25}px)`
         }} 
         className={`relative h-auto md:h-auto lg:h-auto transform-gpu`}
       >
