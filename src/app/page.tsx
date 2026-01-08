@@ -97,13 +97,13 @@ export default function Home() {
                       </h2>
                     </FadeIn>
                     <div className="mt-8 space-y-4">
-                        <FadeIn className="mb-4">
-                          <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] text-muted-foreground text-left">
+                        <FadeIn>
+                          <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] text-muted-foreground text-left mb-4">
                             I create to solve, and I solve to create.
                           </p>
                         </FadeIn>
-                        <FadeIn className="mb-4">
-                          <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] text-muted-foreground text-left">
+                        <FadeIn>
+                          <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] text-muted-foreground text-left mb-4">
                             I am a designer, defined by my craft, dedicated to
                           </p>
                         </FadeIn>
