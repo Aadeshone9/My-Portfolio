@@ -11,7 +11,7 @@ import Image from 'next/image';
 const projects = [
   {
     title: "Thermax - Edge Platform",
-    role: "UX Researcher and strategist",
+    role: "UX Researcher and Strategist",
     description: "Defined UX improvements that increased error visibility and user adoption by 25%.",
     img: '/images/edge.png',
   },
@@ -56,8 +56,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
         className={`relative h-auto md:h-auto lg:h-auto transform-gpu`}
       >
         <Card className={`bg-card border-border rounded-2xl w-[80vw] md:w-[70vw] lg:w-[600px] h-full mx-auto flex flex-col p-6 md:p-8`}>
-            <div className="w-full aspect-[16/9] rounded-lg flex items-center justify-center overflow-hidden relative group">
-              <div className="absolute inset-0 bg-off-white"></div>
+            <div className="w-full aspect-[16/9] bg-muted rounded-lg flex items-center justify-center overflow-hidden relative group">
               {project.img && (
                 <Image 
                   src={project.img} 
