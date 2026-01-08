@@ -38,7 +38,7 @@ export default function ProjectPageCard({ title, description, role, img, comingS
         {comingSoon ? (
           <div className="flex items-center gap-2 text-muted-foreground">
             <Timer />
-            <span>Coming soon</span>
+            <span>Coming soon | NDA Project</span>
           </div>
         ) : isVidaProject ? (
            <PillButton href="/projects/vida" className="group !text-foreground !border-foreground">
