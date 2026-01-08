@@ -89,7 +89,7 @@ export default function ProjectsPage() {
         <div className='my-32'>
             <FadeIn>
               <h2 className="font-headline font-semibold text-3xl md:text-5xl text-left text-foreground text-left">
-                stay tuned for new Projects
+                Stay tuned for new projects
               </h2>
             </FadeIn>
             <div className="mt-16 flex overflow-x-auto gap-10 pb-10">
