@@ -55,3 +55,4 @@ export default function ProjectPageCard({ title, description, role, img, comingS
     </div>
   );
 }
+
