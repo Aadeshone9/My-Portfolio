@@ -39,7 +39,7 @@ const DesignSystemCTA = () => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ ease: 'easeOut', duration: 0.5 }}
-          className="fixed bottom-4 right-4 z-[100] w-auto max-w-[calc(100%-2rem)]"
+          className="fixed bottom-4 right-4 z-50 w-auto max-w-[calc(100%-2rem)]"
         >
           <Button asChild size="lg" className="rounded-full shadow-lg">
             <Link href="/design-system">
