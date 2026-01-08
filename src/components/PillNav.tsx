@@ -1,8 +1,10 @@
+
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import './PillNav.css';
+import { Home } from 'lucide-react';
 
 const PillNav = ({
   items,
@@ -141,8 +143,12 @@ const PillNav = ({
                   }}
                 />
                 <span className="label-stack">
-                  <span className="pill-label group-hover:font-semibold">{item.label}</span>
-                  <span className="pill-label-hover" aria-hidden="true">
+                  <span className="pill-label group-hover:font-semibold flex items-center gap-2">
+                    {item.href === '/' && <Home className="h-4 w-4" />}
+                    {item.label}
+                  </span>
+                  <span className="pill-label-hover flex items-center gap-2" aria-hidden="true">
+                    {item.href === '/' && <Home className="h-4 w-4" />}
                     {item.label}
                   </span>
                 </span>

@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -6,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { ThemeToggle } from './ThemeToggle';
-import { Menu } from 'lucide-react';
+import { Menu, Home } from 'lucide-react';
 import { Button } from './ui/button';
 import {
   Sheet,
@@ -37,6 +38,7 @@ export default function Header() {
   }, []);
 
   const navItems = [
+    { href: '/', label: 'Home' },
     { href: '/projects', label: 'Projects' },
     { href: '/#know-me-better', label: 'Know me better' },
     { href: '/learnings', label: 'Learnings & Reflection' },
@@ -77,8 +79,12 @@ export default function Header() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className={cn("text-lg font-medium", pathname === item.href ? "text-primary" : "text-foreground")}
+                        className={cn(
+                            "flex items-center gap-2 text-lg font-medium", 
+                            pathname === item.href ? "text-primary" : "text-foreground"
+                        )}
                       >
+                        {item.href === '/' && <Home className="h-5 w-5" />}
                         {item.label}
                       </Link>
                     ))}
@@ -92,3 +98,4 @@ export default function Header() {
     </div>
   );
 }
+
