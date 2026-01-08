@@ -10,14 +10,6 @@ import Image from 'next/image';
 
 const projects = [
   {
-    title: "Hero Motocorp Vida App",
-    role: "UX Design consultant and Researcher",
-    description: "End-to-end connected vehicle platform experience for the launch of the Vida EV.",
-    cta: 'View Project',
-    href: '/projects/vida',
-    img: '/images/hero.svg'
-  },
-  {
     title: "Thermax - Edge Platform",
     role: "UX Researcher and Strategist",
     description: "Defined UX improvements that increased error visibility and user adoption by 25%.",
@@ -40,6 +32,14 @@ const projects = [
     role: "Partner Product & UX Design consultant | Co-Designer",
     description: "Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.",
     img: '/images/google-cloud-logo.svg',
+  },
+  {
+    title: "Hero Motocorp Vida App",
+    role: "UX Design consultant and Researcher",
+    description: "End-to-end connected vehicle platform experience for the launch of the Vida EV.",
+    cta: 'View Project',
+    href: '/projects/vida',
+    img: '/images/hero.svg'
   },
 ];
 
