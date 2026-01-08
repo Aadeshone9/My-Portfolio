@@ -38,7 +38,6 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { href: '/', label: 'Home' },
     { href: '/projects', label: 'Projects' },
     { href: '/#know-me-better', label: 'Know me better' },
     { href: '/learnings', label: 'Learnings & Reflection' },
@@ -53,8 +52,8 @@ export default function Header() {
         )}
       >
         <div className="container mx-auto flex h-[51px] items-center justify-between py-[13px] px-4 md:px-8">
-          <Link href="/" className="font-headline font-semibold text-lg text-foreground">
-            Aadeshone9.com
+          <Link href="/" aria-label="Home">
+            <Home className="h-6 w-6 text-foreground hover:text-primary transition-colors" />
           </Link>
           <div className="hidden md:flex items-center gap-2">
             <PillNav items={navItems} activeHref={pathname} />
@@ -84,7 +83,6 @@ export default function Header() {
                             pathname === item.href ? "text-primary" : "text-foreground"
                         )}
                       >
-                        {item.href === '/' && <Home className="h-5 w-5" />}
                         {item.label}
                       </Link>
                     ))}
@@ -98,4 +96,3 @@ export default function Header() {
     </div>
   );
 }
-

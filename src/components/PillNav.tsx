@@ -144,11 +144,9 @@ const PillNav = ({
                 />
                 <span className="label-stack">
                   <span className="pill-label group-hover:font-semibold flex items-center gap-2">
-                    {item.href === '/' && <Home className="h-4 w-4" />}
                     {item.label}
                   </span>
                   <span className="pill-label-hover flex items-center gap-2" aria-hidden="true">
-                    {item.href === '/' && <Home className="h-4 w-4" />}
                     {item.label}
                   </span>
                 </span>
