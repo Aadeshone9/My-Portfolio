@@ -31,7 +31,7 @@ const projects = [
   {
     title: 'Google Cloud Security',
     role: 'Partner Product & UX Design consultant | Co-Designer',
-    img: '/images/google-cloud-logo.svg',
+    img: '/images/Google.png',
   },
   {
     title: 'JIO Reliance',

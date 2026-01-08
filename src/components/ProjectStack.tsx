@@ -31,7 +31,7 @@ const projects = [
     title: "Google Cloud Security",
     role: "Partner Product & UX Design consultant | Co-Designer",
     description: "Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.",
-    img: '/images/google-cloud-logo.svg',
+    img: '/images/Google.png',
   },
   {
     title: "Hero Motocorp Vida App",

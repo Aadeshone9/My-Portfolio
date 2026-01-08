@@ -66,6 +66,12 @@ export default function Showreel({ videoUrl }: ShowreelProps) {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="bg-black/50 text-white p-4 rounded-lg">
+                <p className="text-center">Dummy video.</p>
+                <p className="text-center">Showreel will be updated very soon.</p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </motion.div>
