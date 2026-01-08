@@ -45,7 +45,11 @@ const projects = [
 
 const ProjectCard = ({ project, i, progress, range, targetScale }: { project: any, i: number, progress: any, range: number[], targetScale: number }) => {
   const scale = useTransform(progress, range, [1, targetScale]);
-  const y = useTransform(progress, range, [0, -25 * (projects.length - i)]);
+  
+  // This ensures that each card moves up by a consistent amount (50px) as it stacks.
+  // The 'y' value is calculated based on how many cards are "behind" the current one in the stack.
+  const stackOffset = (projects.length - 1 - i) * 50; 
+  const y = useTransform(progress, range, [0, -stackOffset]);
 
   return (
     <div className="sticky top-0 h-screen flex items-center justify-center">
@@ -53,7 +57,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
         style={{ 
           scale,
           y,
-          top: `calc(-5vh + ${i * 25}px)`
+          top: `calc(5vh + ${i * 25}px)` // Initial vertical offset for each card
         }} 
         className={`relative h-auto md:h-auto lg:h-auto transform-gpu`}
       >
