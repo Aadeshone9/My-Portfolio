@@ -41,6 +41,7 @@ const projects = [
   {
     title: 'General Motors - Enterprise Security Restriction For Mobile Devices',
     role: 'UX Design Consultant | Individual Contributor',
+    img: '/images/gm.png',
   },
 ];
 
