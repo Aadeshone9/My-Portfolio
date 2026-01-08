@@ -11,12 +11,12 @@ import TiltedCard from '@/components/TiltedCard';
 import ProjectPageCard from '@/components/ProjectPageCard';
 
 const colors = [
-    { name: 'Primary', light: 'bg-primary', dark: 'dark:bg-primary', lightCode: 'hsl(26 87% 53%)', darkCode: 'hsl(26 90% 60%)' },
-    { name: 'Secondary', light: 'bg-secondary', dark: 'dark:bg-secondary', lightCode: 'hsl(198 62% 66%)', darkCode: 'hsl(198 70% 70%)' },
-    { name: 'Background', light: 'bg-background', dark: 'dark:bg-background', lightCode: 'hsl(34 83% 96%)', darkCode: 'hsl(220 40% 5%)' },
-    { name: 'Foreground', light: 'bg-foreground', dark: 'dark:bg-foreground', lightCode: 'hsl(220 11% 22%)', darkCode: 'hsl(210 40% 98%)' },
-    { name: 'Card', light: 'bg-card', dark: 'dark:bg-card', lightCode: 'hsl(34 83% 96%)', darkCode: 'hsl(220 40% 10%)' },
-    { name: 'Border', light: 'bg-border', dark: 'dark:bg-border', lightCode: 'hsl(198 22% 75%)', darkCode: 'hsl(220 40% 20%)' },
+    { name: 'Primary', light: 'bg-primary', dark: 'dark:bg-primary', lightCode: '#F48225', darkCode: '#FB9440' },
+    { name: 'Secondary', light: 'bg-secondary', dark: 'dark:bg-secondary', lightCode: '#7EC4E6', darkCode: '#85CCEC' },
+    { name: 'Background', light: 'bg-background', dark: 'dark:bg-background', lightCode: '#FEF9F3', darkCode: '#080F19' },
+    { name: 'Foreground', light: 'bg-foreground', dark: 'dark:bg-foreground', lightCode: '#2D343F', darkCode: '#F8FAFC' },
+    { name: 'Card', light: 'bg-card', dark: 'dark:bg-card', lightCode: '#FEF9F3', darkCode: '#0D1321' },
+    { name: 'Border', light: 'bg-border', dark: 'dark:bg-border', lightCode: '#B4C9D5', darkCode: '#21334D' },
 ];
 
 const typography = [
