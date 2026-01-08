@@ -97,18 +97,18 @@ export default function Home() {
                       </h2>
                     </FadeIn>
                     <div className="mt-8 space-y-4">
-                        <FadeIn>
-                          <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground text-left">
+                        <FadeIn className="mb-4">
+                          <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] text-muted-foreground text-left">
                             I create to solve, and I solve to create.
                           </p>
                         </FadeIn>
-                        <FadeIn>
-                          <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground text-left">
+                        <FadeIn className="mb-4">
+                          <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] text-muted-foreground text-left">
                             I am a designer, defined by my craft, dedicated to
                           </p>
                         </FadeIn>
                         <FadeIn>
-                          <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground text-left">
+                          <p className="font-subtitle font-medium text-xl md:text-3xl lg:text-[32px] text-muted-foreground text-left">
                             crafting better experiences for my fellow beings.
                           </p>
                         </FadeIn>
