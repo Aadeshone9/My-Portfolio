@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 const projects = [
   {
     title: 'Hero Motocorp Vida App',
-    role: 'UX Design Consultant | Co-Designer',
+    role: 'UX Design consultant and researcher',
     img: '/images/hero.svg',
   },
   {
