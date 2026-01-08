@@ -4,7 +4,7 @@ import PillButton from '@/components/PillButton';
 import ProjectPageCard from '@/components/ProjectPageCard';
 import SpotlightCard from '@/components/SpotlightCard';
 import FadeIn from '@/components/FadeIn';
-import { ArrowRight, Lock } from 'lucide-react';
+import { ArrowRight, Lock, Hotel, Car, Home } from 'lucide-react';
 import Footer from '@/components/Footer';
 
 const projects = [
@@ -48,18 +48,22 @@ const comingSoonProjects = [
     {
         title: 'ITC Hotels LTD Website Revamp',
         role: 'Lead | Individual Contributor',
+        icon: <Hotel className="w-16 h-16 text-muted-foreground" />
     },
     {
         title: 'SKoda Automobiles India Website Revamp',
         role: 'Lead | Individual Contributor',
+        icon: <Car className="w-16 h-16 text-muted-foreground" />
     },
     {
         title: 'Club ITC - ITC In-Hotel Guest Experience',
         role: 'Lead | Individual Contributor',
+        icon: <Hotel className="w-16 h-16 text-muted-foreground" />
     },
     {
         title: 'MyIFB App',
         role: 'Lead | Individual Contributor',
+        icon: <Home className="w-16 h-16 text-muted-foreground" />
     },
 ]
 
