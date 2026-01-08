@@ -30,7 +30,10 @@ const projects = [
   {
     title: "Google Cloud Security",
     role: "Partner Product & UX Design consultant | Co-Designer",
-    description: "Optimised a ticketing system, resulting in a quantifiable efficiency by reducing average ticket resolution time by 30%.",
+    description: [
+      "Optimised a ticketing system, resulting in a quantifiable efficiency",
+      "by reducing average ticket resolution time by 30%."
+    ],
     img: '/images/Google.png',
   },
   {
@@ -46,10 +49,8 @@ const projects = [
 const ProjectCard = ({ project, i, progress, range, targetScale }: { project: any, i: number, progress: any, range: number[], targetScale: number }) => {
   const scale = useTransform(progress, range, [1, targetScale]);
   
-  // This ensures that each card moves up by a consistent amount (50px) as it stacks.
-  // The 'y' value is calculated based on how many cards are "behind" the current one in the stack.
-  const stackOffset = (projects.length - 1 - i) * 50; 
-  const y = useTransform(progress, range, [0, -stackOffset]);
+  // This ensures that each card moves up by a consistent amount (e.g., 50px) as it stacks.
+  const y = useTransform(progress, range, [0, -50 * (projects.length - 1 - i)]);
 
   return (
     <div className="sticky top-0 h-screen flex items-center justify-center">
