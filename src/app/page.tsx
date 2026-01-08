@@ -36,7 +36,7 @@ export default function Home() {
                 </h1>
               </FadeIn>
               <FadeIn>
-                <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-[28px] md:leading-[34px] lg:leading-[42px] text-muted-foreground max-w-xl mt-4 text-left">
+                <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-snug md:leading-[43px] text-muted-foreground max-w-xl mt-4 text-left">
                   I have contributed to products at scale, Chances are you've used some!
                 </p>
               </FadeIn>
