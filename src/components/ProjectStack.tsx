@@ -30,7 +30,10 @@ const projects = [
   {
     title: "Google Cloud Security",
     role: "Partner Product & UX Design consultant | Co-Designer",
-    description: "Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45% and reducing average resolution time by 30%.",
+    description: [
+      "Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45%",
+      "and reducing average resolution time by 30%."
+    ],
     img: '/images/Google.png',
   },
   {
@@ -73,7 +76,13 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                     <CardTitle className="text-xl md:text-2xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
                     <p className="text-sm md:text-base text-muted-foreground mt-1">{project.role}</p>
                     <CardDescription className="text-base md:text-lg text-foreground/80 mt-2">
-                        {project.description}
+                        {Array.isArray(project.description) ? (
+                          project.description.map((line, index) => (
+                            <span key={index} className="block">{line}</span>
+                          ))
+                        ) : (
+                          project.description
+                        )}
                     </CardDescription>
                 </div>
                 <div className="flex items-center gap-2 mt-4">
