@@ -145,4 +145,39 @@
       transparent 100%
     );
   }
+
+  .shiny-text {
+    position: relative;
+    color: hsl(var(--foreground));
+    background: linear-gradient(
+      110deg,
+      hsl(var(--foreground)) 35%,
+      rgba(255, 255, 255, 0.6) 50%,
+      hsl(var(--foreground)) 65%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shiny-text-anim 5s linear infinite;
+  }
+
+  .dark .shiny-text {
+    background: linear-gradient(
+      110deg,
+      hsl(var(--foreground)) 35%,
+      rgba(255, 255, 255, 0.4) 50%,
+      hsl(var(--foreground)) 65%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes shiny-text-anim {
+    to {
+      background-position-x: -200%;
+    }
+  }
 }
