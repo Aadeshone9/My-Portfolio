@@ -30,10 +30,7 @@ const projects = [
   {
     title: "Google Cloud Security",
     role: "Partner Product & UX Design consultant | Co-Designer",
-    description: [
-      "Optimised a user-centric ticketing system, resulting in a quantifiable efficiency boost of 45%",
-      "and reducing average resolution time by 30%."
-    ],
+    description: "Optimised a ticketing system, resulting in a quantifiable efficiency by reducing average ticket resolution time by 30%.",
     img: '/images/Google.png',
   },
   {
