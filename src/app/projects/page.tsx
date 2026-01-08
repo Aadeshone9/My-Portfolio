@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: 'Thermax - Edge Platform',
-    role: 'UX Researcher and UX Designer',
+    role: 'UX Researcher and strategist',
     img: '/images/edge.png',
   },
   {

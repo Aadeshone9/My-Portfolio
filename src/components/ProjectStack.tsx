@@ -11,7 +11,7 @@ import Image from 'next/image';
 const projects = [
   {
     title: "Thermax - Edge Platform",
-    role: "UX Researcher and UX Designer",
+    role: "UX Researcher and strategist",
     description: "Defined UX improvements that increased error visibility and user adoption by 25%.",
     img: '/images/edge.png',
   },
