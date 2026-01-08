@@ -11,12 +11,12 @@ import TiltedCard from '@/components/TiltedCard';
 import ProjectPageCard from '@/components/ProjectPageCard';
 
 const colors = [
-    { name: 'Primary', light: 'bg-primary', dark: 'dark:bg-primary' },
-    { name: 'Secondary', light: 'bg-secondary', dark: 'dark:bg-secondary' },
-    { name: 'Background', light: 'bg-background', dark: 'dark:bg-background' },
-    { name: 'Foreground', light: 'bg-foreground', dark: 'dark:bg-foreground' },
-    { name: 'Card', light: 'bg-card', dark: 'dark:bg-card' },
-    { name: 'Border', light: 'bg-border', dark: 'dark:bg-border' },
+    { name: 'Primary', light: 'bg-primary', dark: 'dark:bg-primary', lightCode: '26 87% 53%', darkCode: '26 90% 60%' },
+    { name: 'Secondary', light: 'bg-secondary', dark: 'dark:bg-secondary', lightCode: '198 62% 66%', darkCode: '198 70% 70%' },
+    { name: 'Background', light: 'bg-background', dark: 'dark:bg-background', lightCode: '34 83% 96%', darkCode: '220 40% 5%' },
+    { name: 'Foreground', light: 'bg-foreground', dark: 'dark:bg-foreground', lightCode: '220 11% 22%', darkCode: '210 40% 98%' },
+    { name: 'Card', light: 'bg-card', dark: 'dark:bg-card', lightCode: '34 83% 96%', darkCode: '220 40% 10%' },
+    { name: 'Border', light: 'bg-border', dark: 'dark:bg-border', lightCode: '198 22% 75%', darkCode: '220 40% 20%' },
 ];
 
 const typography = [
@@ -62,11 +62,13 @@ export default function DesignSystemPage() {
                     <div className="flex flex-col gap-4">
                       <div className="flex flex-col items-center gap-2">
                         <div className={`w-16 h-16 rounded-full ${color.light} border-2 border-border`}></div>
-                        <p className="text-sm text-muted-foreground">Light</p>
+                        <p className="text-sm font-medium text-muted-foreground mt-2">Light</p>
+                        <p className="text-xs text-muted-foreground font-mono">hsl({color.lightCode})</p>
                       </div>
-                       <div className="flex flex-col items-center gap-2">
+                       <div className="flex flex-col items-center gap-2 mt-4">
                         <div className={`w-16 h-16 rounded-full ${color.dark} border-2 border-border`}></div>
-                        <p className="text-sm text-muted-foreground">Dark</p>
+                        <p className="text-sm font-medium text-muted-foreground mt-2">Dark</p>
+                        <p className="text-xs text-muted-foreground font-mono">hsl({color.darkCode})</p>
                       </div>
                     </div>
                   </div>
