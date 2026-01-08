@@ -85,7 +85,7 @@ export default function Home() {
               </h2>
             </FadeIn>
           </div>
-          <div className="w-32 h-[2px] bg-border my-8"></div>
+          <div className="w-32 h-[2px] bg-border my-4"></div>
         </section>
 
         <section className="pb-20 md:pb-24 container mx-auto px-4 sm:px-8 md:px-20">
