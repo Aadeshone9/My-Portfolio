@@ -47,24 +47,6 @@ const uxProjects = [
   },
 ];
 
-const uiProjects = [
-  {
-    title: 'ITC Hotels LTD Website Revamp',
-    role: 'Lead | Individual Contributor',
-    img: '/images/itc.svg',
-  },
-  {
-    title: 'SKoda Automobiles India Website Revamp',
-    role: 'Lead | Individual Contributor',
-    img: '/images/skoda.svg',
-  },
-    {
-    title: 'MyIFB App',
-    role: 'Lead | Individual Contributor',
-    img: '/images/ifb.png',
-  },
-];
-
 const comingSoonProjects = [
     {
         title: 'ITC Hotels LTD Website Revamp',
@@ -91,8 +73,6 @@ const comingSoonProjects = [
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState('UX');
 
-  const projectsToShow = activeCategory === 'UX' ? uxProjects : uiProjects;
-
   return (
     <div className="bg-background">
       <Header />
@@ -113,10 +93,20 @@ export default function ProjectsPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 mt-20">
-          {projectsToShow.map((project, index) => (
-            <ProjectPageCard key={index} {...project} />
-          ))}
+        <div className="mt-20">
+          {activeCategory === 'UX' ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
+              {uxProjects.map((project, index) => (
+                <ProjectPageCard key={index} {...project} />
+              ))}
+            </div>
+          ) : (
+            <div className="flex justify-center items-center h-64">
+              <p className="text-muted-foreground text-xl text-center">
+                This page will be updated soon with new projects.
+              </p>
+            </div>
+          )}
         </div>
 
         <div className='my-32'>
