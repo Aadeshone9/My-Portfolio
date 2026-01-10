@@ -107,9 +107,11 @@ export default function ProjectsPage() {
                     Stay tuned for new projects
                   </h2>
                 </FadeIn>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="flex overflow-x-auto space-x-10 pb-4">
                   {upcomingProjects.map((project, index) => (
-                    <ProjectPageCard key={index} {...project} />
+                    <div key={index} className="flex-shrink-0 w-[300px] md:w-[350px]">
+                      <ProjectPageCard {...project} />
+                    </div>
                   ))}
                 </div>
               </div>
