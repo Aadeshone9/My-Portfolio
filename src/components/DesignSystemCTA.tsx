@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -43,7 +44,7 @@ const DesignSystemCTA = () => {
         >
           <Button asChild size="lg" className="rounded-full shadow-lg">
             <Link href="/design-system">
-              Explore the Design System
+              See How It's Built
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

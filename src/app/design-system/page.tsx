@@ -201,6 +201,42 @@ export default function DesignSystemPage() {
             </div>
         </section>
 
+        <section className="mt-20">
+          <h2 className="font-headline text-4xl font-semibold mb-10">From Design to Code</h2>
+          <div className="space-y-16">
+            <div>
+              <h3 className="font-headline text-2xl font-semibold mb-6">Systematic Naming</h3>
+              <p className="text-muted-foreground max-w-2xl">
+                Components are named logically and consistently to create a shared language between design and development. This ensures that a component in Figma is named the same as its code counterpart (e.g., `PillButton`), reducing ambiguity and speeding up implementation.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-headline text-2xl font-semibold mb-6">Props and Variants</h3>
+              <p className="text-muted-foreground mb-4 max-w-2xl">
+                Components are designed to be modular and flexible. Instead of creating dozens of one-off designs, components are built with "props" (properties) that allow them to adapt. For example, the `Button` component can have different variants (`default`, `destructive`, `outline`) and sizes.
+              </p>
+              <div className="flex flex-wrap gap-4 items-center">
+                <Button variant="default">Default</Button>
+                <Button variant="destructive">Destructive</Button>
+                <Button variant="outline">Outline</Button>
+                <Button variant="secondary">Secondary</Button>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-headline text-2xl font-semibold mb-6">Usage Example</h3>
+              <p className="text-muted-foreground mb-4 max-w-2xl">
+                This shows how a developer would use the component in the codebase. It's a simple, declarative way to use complex UI elements, which is made possible by the design system.
+              </p>
+              <pre className="bg-card border border-border rounded-lg p-4 text-sm overflow-x-auto">
+                <code className="font-mono text-foreground">
+                  {`<Button variant="destructive" size="lg">
+  Delete Project
+</Button>`}
+                </code>
+              </pre>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
