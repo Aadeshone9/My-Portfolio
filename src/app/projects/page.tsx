@@ -64,7 +64,7 @@ const upcomingProjects = [
     comingSoon: true,
   },
   {
-    title: 'SaaS Dashboard',
+    title: 'Club ITC - ITC In-Hotel Guest Experience Mobile Version',
     role: 'Lead UX Designer',
     comingSoon: true,
   },
