@@ -59,7 +59,7 @@ const upcomingProjects = [
     comingSoon: true,
   },
   {
-    title: 'HDFC - Corporate Bank Loan Journey site Mobile version',
+    title: 'HDFC - Corporate Bank Loan Journey Responsive Site',
     role: 'UX Strategist',
     comingSoon: true,
   },
