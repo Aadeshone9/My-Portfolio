@@ -55,7 +55,7 @@ const upcomingProjects = [
   },
   {
     title: 'Poast sales Skoda India Website Online Booking Journey site',
-    role: 'Product Designer',
+    role: 'Senior UX and UI Design consultant',
     comingSoon: true,
   },
   {
