@@ -47,6 +47,29 @@ const uxProjects = [
   },
 ];
 
+const upcomingProjects = [
+  {
+    title: 'Fintech App',
+    role: 'UX/UI Designer',
+    comingSoon: true,
+  },
+  {
+    title: 'Healthcare Platform',
+    role: 'Product Designer',
+    comingSoon: true,
+  },
+  {
+    title: 'E-commerce Redesign',
+    role: 'UX Strategist',
+    comingSoon: true,
+  },
+  {
+    title: 'SaaS Dashboard',
+    role: 'Lead UX Designer',
+    comingSoon: true,
+  },
+];
+
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState('UX');
 
@@ -72,10 +95,24 @@ export default function ProjectsPage() {
 
         <div className="mt-20">
           {activeCategory === 'UX' ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
-              {uxProjects.map((project, index) => (
-                <ProjectPageCard key={index} {...project} />
-              ))}
+            <div className="space-y-20">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
+                {uxProjects.map((project, index) => (
+                  <ProjectPageCard key={index} {...project} />
+                ))}
+              </div>
+              <div>
+                <FadeIn>
+                  <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground text-left mb-10">
+                    Stay tuned for new projects
+                  </h2>
+                </FadeIn>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
+                  {upcomingProjects.map((project, index) => (
+                    <ProjectPageCard key={index} {...project} />
+                  ))}
+                </div>
+              </div>
             </div>
           ) : (
             <div className="flex justify-center items-center h-64">
