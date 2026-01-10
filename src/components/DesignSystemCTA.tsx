@@ -44,7 +44,7 @@ const DesignSystemCTA = () => {
         >
           <Button asChild size="lg" className="rounded-full shadow-lg">
             <Link href="/design-system">
-              See How It's Built
+              See how its built
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
