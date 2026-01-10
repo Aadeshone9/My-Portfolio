@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="text-right text-sm md:text-base font-normal tracking-[0.02em] flex flex-col gap-2 text-footer-muted-foreground">
-            <p>Designed & developed with Figma, Firebase Studio, and GitHub by Aadesh Govenkar.</p>
+            <p>Designed & developed with Figma, Firebase Studio & GitHub by Aadesh Govenkar.</p>
             <p>&copy; 2026 Copyright All Rights Reserved</p>
           </div>
         </div>
