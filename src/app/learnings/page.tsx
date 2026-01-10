@@ -30,6 +30,24 @@ const learnings = [
     takeaway: 'Great products are built by teams, not individuals.',
     category: 'Collaboration',
   },
+  {
+    title: "Beyond the 'Perfect' Solution",
+    reflection: "Early in my career, I focused on designing the 'perfect' user experience. But I've learned that the best products are born from a blend of user needs, business goals, and technical reality. It’s less about compromise and more about finding a creative path where a great experience and a viable product can both thrive.",
+    takeaway: "The most elegant design is one that succeeds within its real-world constraints.",
+    category: 'Design Strategy',
+  },
+  {
+    title: 'Data Tells a Story',
+    reflection: "Raw data and research findings can feel abstract. I’ve found that the key to making an impact is to translate that data into a story. When you can walk stakeholders through the user's journey and show exactly where the design makes a difference, it's far more powerful than just showing numbers on a slide.",
+    takeaway: "Data provides the evidence, but a good story creates understanding and drives action.",
+    category: 'Communication',
+  },
+  {
+    title: 'Trusting, but Verifying',
+    reflection: "User interviews give you the 'why' behind a problem, but seeing how thousands of users actually behave is something else entirely. On the Google Cloud project, combining qualitative feedback with analytics gave us the full picture. It allowed us to validate our gut feelings with hard evidence, leading to much more confident decisions.",
+    takeaway: "Listen to what users say, but also watch what they do.",
+    category: 'Data-Informed Design',
+  },
 ];
 
 export default function LearningsPage() {
