@@ -56,7 +56,7 @@ const upcomingProjects = [
   },
   {
     title: 'Skoda - vehicle Booking Journey Responsive site',
-    role: 'Senior UX and UI Design consultant',
+    role: 'Lead Product Designer',
     comingSoon: true,
     icon: <Car size={48} className="text-primary" />,
   },
