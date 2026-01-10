@@ -123,6 +123,14 @@ const ToolStack = () => {
             </p>
           </div>
           <div className="mt-10">
+            <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-2">
+              Strategy & Innovation
+            </h3>
+            <p className="font-subtitle text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Design Consulting | Business Design Strategy | Product Innovation | Customer Experience (CX) | Problem Solving
+            </p>
+          </div>
+          <div className="mt-10">
             <div className="w-[84px] h-[84px] rounded-full bg-primary"></div>
           </div>
           <div className='mt-10'>
