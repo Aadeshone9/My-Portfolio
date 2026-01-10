@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -54,7 +53,7 @@ const upcomingProjects = [
     comingSoon: true,
   },
   {
-    title: 'Skoda - India Website vehicle Booking Journey site',
+    title: 'Skoda - vehicle Booking Journey Responsive site',
     role: 'Senior UX and UI Design consultant',
     comingSoon: true,
   },
