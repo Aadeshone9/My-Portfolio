@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -48,7 +49,7 @@ const uxProjects = [
 
 const upcomingProjects = [
   {
-    title: 'ITC Hotels Ltd | Club ITC Website UX & UI',
+    title: 'ITC Hotels Ltd | Club ITC Website UX & UI - Responsive',
     role: 'Senior UX Design consultant | Co Designer',
     comingSoon: true,
   },
