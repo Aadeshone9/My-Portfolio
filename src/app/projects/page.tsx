@@ -52,21 +52,25 @@ const upcomingProjects = [
     title: 'ITC Hotels Ltd | Club ITC Website UX & UI - Responsive',
     role: 'Senior UX Design consultant | Co Designer',
     comingSoon: true,
+    icon: <Hotel size={48} className="text-primary" />,
   },
   {
     title: 'Skoda - vehicle Booking Journey Responsive site',
     role: 'Senior UX and UI Design consultant',
     comingSoon: true,
+    icon: <Car size={48} className="text-primary" />,
   },
   {
     title: 'HDFC - Corporate Bank Loan Journey Responsive Site',
     role: 'UX Design & Strategist',
     comingSoon: true,
+    icon: <Home size={48} className="text-primary" />,
   },
   {
     title: 'Club ITC - ITC In-Hotel Guest Experience Mobile Version',
     role: 'Lead UX Designer',
     comingSoon: true,
+    icon: <Hotel size={48} className="text-primary" />,
   },
 ];
 
