@@ -107,7 +107,7 @@ export default function ProjectsPage() {
                     Stay tuned for new projects
                   </h2>
                 </FadeIn>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
                   {upcomingProjects.map((project, index) => (
                     <ProjectPageCard key={index} {...project} />
                   ))}
