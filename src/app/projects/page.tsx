@@ -1,13 +1,15 @@
 
+'use client';
+
+import { useState } from 'react';
 import Header from '@/components/Header';
 import PillButton from '@/components/PillButton';
 import ProjectPageCard from '@/components/ProjectPageCard';
-import SpotlightCard from '@/components/SpotlightCard';
 import FadeIn from '@/components/FadeIn';
-import { ArrowRight, Lock, Hotel, Car, Home } from 'lucide-react';
+import { Hotel, Car, Home } from 'lucide-react';
 import Footer from '@/components/Footer';
 
-const projects = [
+const uxProjects = [
   {
     title: 'Hero Motocorp Vida App',
     role: 'UX Design consultant and Researcher',
@@ -45,6 +47,24 @@ const projects = [
   },
 ];
 
+const uiProjects = [
+  {
+    title: 'ITC Hotels LTD Website Revamp',
+    role: 'Lead | Individual Contributor',
+    img: '/images/itc.svg',
+  },
+  {
+    title: 'SKoda Automobiles India Website Revamp',
+    role: 'Lead | Individual Contributor',
+    img: '/images/skoda.svg',
+  },
+    {
+    title: 'MyIFB App',
+    role: 'Lead | Individual Contributor',
+    img: '/images/ifb.png',
+  },
+];
+
 const comingSoonProjects = [
     {
         title: 'ITC Hotels LTD Website Revamp',
@@ -69,6 +89,10 @@ const comingSoonProjects = [
 ]
 
 export default function ProjectsPage() {
+  const [activeCategory, setActiveCategory] = useState('UX');
+
+  const projectsToShow = activeCategory === 'UX' ? uxProjects : uiProjects;
+
   return (
     <div className="bg-background">
       <Header />
@@ -80,13 +104,17 @@ export default function ProjectsPage() {
             </h1>
           </FadeIn>
           <div className="flex flex-wrap gap-4">
-            <PillButton href="#" className="is-active">UX Design</PillButton>
-            <PillButton href="#" >UI Design</PillButton>
+            <button onClick={() => setActiveCategory('UX')}>
+                <PillButton href="#" className={activeCategory === 'UX' ? 'is-active' : ''}>UX Design</PillButton>
+            </button>
+            <button onClick={() => setActiveCategory('UI')}>
+                <PillButton href="#" className={activeCategory === 'UI' ? 'is-active' : ''}>UI Design</PillButton>
+            </button>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-20 mt-20">
-          {projects.map((project, index) => (
+          {projectsToShow.map((project, index) => (
             <ProjectPageCard key={index} {...project} />
           ))}
         </div>
