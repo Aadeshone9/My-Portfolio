@@ -28,7 +28,7 @@ export default function Home() {
     <div className="bg-background">
       <Header />
       <main>
-        <div className="container mx-auto px-4 sm:px-8 md:px-20 py-20 md:py-24">
+        <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-20 md:pt-24 pb-10 md:pb-12">
             <div className="pb-1 md:pb-2">
               <FadeIn>
                 <h1 className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground text-left">
