@@ -8,7 +8,7 @@ import Lanyard from '@/components/Lanyard';
 const learnings = [
   {
     title: 'The Power of Iterative Design',
-    reflection: "Working on the VIDO project, I learned that the first solution is rarely the best. Continuous user feedback and iterative prototyping led to a much more intuitive and effective final product. It reinforced the importance of being adaptable and not getting too attached to initial ideas.",
+    reflection: "Working on the Hero VIDA project, I learned that the first solution is rarely the best. Continuous user feedback and iterative prototyping led to a much more intuitive and effective final product. It reinforced the importance of being adaptable and not getting too attached to initial ideas.",
     takeaway: 'Embrace feedback loops and be willing to pivot.',
     category: 'UX Process',
   },
