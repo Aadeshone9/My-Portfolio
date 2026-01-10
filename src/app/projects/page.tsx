@@ -49,7 +49,7 @@ const uxProjects = [
 
 const upcomingProjects = [
   {
-    title: 'ITC Hotels Limited - Website Revamp',
+    title: 'ITC Hotels Limited - Website Revamp Web & Mobile',
     role: 'Senior UX Design consultant | Co Designer',
     comingSoon: true,
   },
