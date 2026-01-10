@@ -108,7 +108,7 @@ export default function ProjectsPage() {
               <div>
                 <FadeIn>
                   <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground text-left mb-10">
-                    Stay tuned for new projects
+                    / Stay tuned for new projects
                   </h2>
                 </FadeIn>
                 <div className="flex overflow-x-auto space-x-10 pb-4">
