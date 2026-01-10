@@ -47,29 +47,6 @@ const uxProjects = [
   },
 ];
 
-const comingSoonProjects = [
-    {
-        title: 'ITC Hotels LTD Website Revamp',
-        role: 'Lead | Individual Contributor',
-        icon: <Hotel className="w-16 h-16 text-muted-foreground" />
-    },
-    {
-        title: 'SKoda Automobiles India Website Revamp',
-        role: 'Lead | Individual Contributor',
-        icon: <Car className="w-16 h-16 text-muted-foreground" />
-    },
-    {
-        title: 'Club ITC - ITC In-Hotel Guest Experience',
-        role: 'Lead | Individual Contributor',
-        icon: <Hotel className="w-16 h-16 text-muted-foreground" />
-    },
-    {
-        title: 'MyIFB App',
-        role: 'Lead | Individual Contributor',
-        icon: <Home className="w-16 h-16 text-muted-foreground" />
-    },
-]
-
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState('UX');
 
@@ -108,22 +85,6 @@ export default function ProjectsPage() {
             </div>
           )}
         </div>
-
-        <div className='my-32'>
-            <FadeIn>
-              <h2 className="font-headline font-semibold text-3xl md:text-5xl text-left text-foreground text-left">
-                Stay tuned for new projects
-              </h2>
-            </FadeIn>
-            <div className="mt-16 flex overflow-x-auto gap-10 pb-10">
-                {comingSoonProjects.map((project, index) => (
-                    <div key={index} className="flex-shrink-0 w-[80vw] md:w-[40vw] lg:w-[30vw]">
-                        <ProjectPageCard {...project} comingSoon={true} />
-                    </div>
-                ))}
-            </div>
-        </div>
-
       </main>
       <Footer />
     </div>
