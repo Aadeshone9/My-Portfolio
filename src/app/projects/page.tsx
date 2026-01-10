@@ -54,7 +54,7 @@ const upcomingProjects = [
     comingSoon: true,
   },
   {
-    title: 'Healthcare Platform',
+    title: 'Poast sales Skoda India Website Online Booking Journey site',
     role: 'Product Designer',
     comingSoon: true,
   },
