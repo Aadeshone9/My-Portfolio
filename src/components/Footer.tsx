@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="p-2.5 flex justify-between items-end">
               <div className="font-headline font-semibold text-5xl sm:text-7xl md:text-9xl lg:text-[160px] leading-[0.8] tracking-tighter flex flex-col gap-8">
                 <span>Aadesh</span>
-                <span>one9.com<sup className="text-2xl font-normal">®</sup></span>
+                <span>one9.com</span>
               </div>
               <ScrollToTopButton />
             </div>
