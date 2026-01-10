@@ -33,7 +33,7 @@ export default function ProjectPageCard({ title, description, role, img, icon, c
         <div className="mt-6">
           <h3 className="font-headline font-semibold text-xl text-foreground">{title}</h3>
           {description && <p className="text-muted-foreground mt-2 text-base">{description}</p>}
-          <p className="text-sm text-muted-foreground mt-4">{role}</p>
+          <p className="text-sm text-muted-foreground mt-4 whitespace-nowrap">{role}</p>
         </div>
       </div>
       <div className="mt-6">
