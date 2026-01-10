@@ -6,7 +6,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Lock, Menu } from 'lucide-react';
 import PillButton from '@/components/PillButton';
-import SpotlightCard from '@/components/SpotlightCard';
 import TiltedCard from '@/components/TiltedCard';
 import ProjectPageCard from '@/components/ProjectPageCard';
 
@@ -178,14 +177,7 @@ export default function DesignSystemPage() {
                                 </h4>
                             </FadeIn>
                         </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-                        <div className="flex flex-col gap-4">
-                            <p className="text-muted-foreground">Spotlight Card</p>
-                            <SpotlightCard className="p-8 rounded-2xl border border-border bg-card">
-                            <h4 className="font-headline font-semibold text-lg text-foreground">Spotlight Effect</h4>
-                            <p className="text-sm text-muted-foreground mt-2">Move your mouse over this card to see the spotlight effect.</p>
-                            </SpotlightCard>
-                        </div>
+                        <div className="grid grid-cols-1 gap-10 items-start">
                         <div className="flex flex-col gap-4">
                             <p className="text-muted-foreground">Tilted Card</p>
                             <TiltedCard>
