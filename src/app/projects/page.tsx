@@ -81,7 +81,7 @@ export default function ProjectsPage() {
           </FadeIn>
           <div className="flex flex-wrap gap-4">
             <PillButton href="#" className="is-active">UX Design</PillButton>
-            <PillButton href="#" >Visual Design</PillButton>
+            <PillButton href="#" >UI Design</PillButton>
           </div>
         </div>
 
