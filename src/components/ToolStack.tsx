@@ -127,7 +127,7 @@ const ToolStack = () => {
               Strategy & Innovation
             </h3>
             <p className="font-subtitle text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Design Consulting | Business Design Strategy | Product Innovation | Customer Experience (CX) | Problem Solving
+              Design Consulting | Business Design Strategy | Product Innovation | Customer Experience (CX) | <span className="whitespace-nowrap">Problem Solving</span>
             </p>
           </div>
           <div className="mt-10">
