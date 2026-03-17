@@ -50,7 +50,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
   
   const y = useTransform(progress, range, [0, -50 * (projects.length - 1 - i)]);
 
-  const message = encodeURIComponent(`Hi Aadesh, I'm interested in your work on "${project.title}". Could you please grant me access to this case study? I'd also like to discuss potential hiring or collaboration opportunities.`);
+  const message = encodeURIComponent(`Hi Aadesh, I'm interested in discussing a hiring opportunity and would like to review your work on "${project.title}". Could you please grant me access to this case study? My official email is [Enter your email here]. Looking forward to connecting!`);
   const linkedinUrl = `https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar&body=${message}`;
 
   return (

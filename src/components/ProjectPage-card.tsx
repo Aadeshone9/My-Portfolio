@@ -15,7 +15,7 @@ export default function ProjectPageCard({ title, description, role, image, comin
   const isVidaProject = title === 'Hero Motocorp Vida App';
   const isMaplegeniProject = title === 'Maplegeni';
 
-  const message = encodeURIComponent(`Hi Aadesh, I'm interested in your work on "${title}". Could you please grant me access to this case study? I'd also like to discuss potential hiring or collaboration opportunities.`);
+  const message = encodeURIComponent(`Hi Aadesh, I'm interested in discussing a hiring opportunity and would like to review your work on "${title}". Could you please grant me access to this case study? My official email is [Enter your email here]. Looking forward to connecting!`);
   const linkedinUrl = `https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar&body=${message}`;
 
   return (
