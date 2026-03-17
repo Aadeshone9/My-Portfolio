@@ -1,4 +1,3 @@
-
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -124,10 +123,10 @@ const ToolStack = () => {
           </div>
           <div className="mt-10">
             <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-2">
-              Strategy & Innovation
+              Strategic Consulting & Management
             </h3>
             <p className="font-subtitle text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Design Consulting | Business Design Strategy | Product Innovation | Customer Experience (CX) | <span className="whitespace-nowrap">Problem Solving</span>
+              Design Strategy & ROI | Stakeholder Management | Project Roadmap & Scoping | Design Sprint Facilitation | Cross-functional Leadership | Agile & Project Oversight | UX Audits & Transformation
             </p>
           </div>
           <div className="mt-10">
