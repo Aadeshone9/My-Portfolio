@@ -14,6 +14,9 @@ type ProjectPageCardProps = {
 
 export default function ProjectPageCard({ title, description, role, img, icon, comingSoon = false }: ProjectPageCardProps) {
   const isVidaProject = title === 'Hero Motocorp Vida App';
+  
+  const message = encodeURIComponent(`Hi Aadesh, I'm interested in your work on "${title}". Could you please grant me access to this case study? I'd also like to discuss potential hiring or collaboration opportunities.`);
+  const linkedinUrl = `https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar&body=${message}`;
 
   return (
     <div className="p-6 md:p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between">
@@ -48,7 +51,7 @@ export default function ProjectPageCard({ title, description, role, img, icon, c
             <ArrowRight />
           </PillButton>
         ) : (
-          <PillButton href="https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar" className="group !text-foreground !border-foreground">
+          <PillButton href={linkedinUrl} className="group !text-foreground !border-foreground">
             <span className="group-hover:font-semibold">Request Access</span>
             <Lock />
           </PillButton>

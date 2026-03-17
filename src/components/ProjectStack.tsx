@@ -1,5 +1,4 @@
 
-
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -49,8 +48,10 @@ const projects = [
 const ProjectCard = ({ project, i, progress, range, targetScale }: { project: any, i: number, progress: any, range: number[], targetScale: number }) => {
   const scale = useTransform(progress, range, [1, targetScale]);
   
-  // This ensures that each card moves up by a consistent amount (e.g., 50px) as it stacks.
   const y = useTransform(progress, range, [0, -50 * (projects.length - 1 - i)]);
+
+  const message = encodeURIComponent(`Hi Aadesh, I'm interested in your work on "${project.title}". Could you please grant me access to this case study? I'd also like to discuss potential hiring or collaboration opportunities.`);
+  const linkedinUrl = `https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar&body=${message}`;
 
   return (
     <div className="sticky top-0 h-screen flex items-center justify-center">
@@ -58,7 +59,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
         style={{ 
           scale,
           y,
-          top: `calc(5vh + ${i * 25}px)` // Initial vertical offset for each card
+          top: `calc(5vh + ${i * 25}px)`
         }} 
         className={`relative h-auto md:h-auto lg:h-auto transform-gpu`}
       >
@@ -98,7 +99,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                       </PillButton>
                     ) : (
                       <PillButton 
-                        href="https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar"
+                        href={linkedinUrl}
                         className="group !text-foreground !border-foreground"
                       >
                           <span className="group-hover:font-semibold">Request Access</span>
