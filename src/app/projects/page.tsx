@@ -6,7 +6,7 @@ import Header from '@/components/Header';
 import PillButton from '@/components/PillButton';
 import ProjectPageCard from '@/components/ProjectPageCard';
 import FadeIn from '@/components/FadeIn';
-import { Hotel, Car, Home } from 'lucide-react';
+import { Hotel, Car, Home, ShieldCheck } from 'lucide-react';
 import Footer from '@/components/Footer';
 
 const uxProjects = [
@@ -71,6 +71,12 @@ const upcomingProjects = [
     role: 'Lead UX Designer',
     comingSoon: true,
     icon: <Hotel size={48} className="text-primary" />,
+  },
+  {
+    title: 'HDFC Bank Lead Insta Insurance Platform',
+    role: 'Lead Product Designer',
+    comingSoon: true,
+    icon: <ShieldCheck size={48} className="text-primary" />,
   },
 ];
 
