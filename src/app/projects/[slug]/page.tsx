@@ -1,5 +1,5 @@
 'use client';
-import { useMemo } from 'react';
+import { useMemo, use } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
@@ -74,14 +74,14 @@ const projectData: Record<string, any> = {
     focus: 'Standardising research methodology and operationalising data for 300+ designers across a massive digital ecosystem.',
     primaryGoal: "To eliminate 'Knowledge Debt' and standardize research artifacts across a massive digital ecosystem.",
     outcomes: [
-      { value: '40%', description: "Reduction in 'Time-to-Insight'" },
-      { value: '1,700+', description: 'Annual Design Hours Saved' },
-      { value: '80%', description: 'Organization-wide Adoption Rate' },
+      { value: '$250k+', description: "Saved in annual research budget by eliminating redundant studies." },
+      { value: '65%', description: "Faster 'Research-to-Action' cycles (14 days to 4 days)." },
+      { value: '90%', description: "Reduction in onboarding time for new design hires." },
     ],
     challenges: [
-      { title: 'User Gap', description: "Designers faced 'Analysis Paralysis' and manual friction when choosing research methods." },
-      { title: 'Business Gap', description: "High 'Knowledge Debt' and redundant costs ($250k+) due to siloed data." },
-      { title: 'Internal Gap', description: "Lack of a unified, searchable repository across the 'X' digital ecosystem." },
+      { title: 'User', description: "Designers faced 'Analysis Paralysis' and manual friction when choosing research methods." },
+      { title: 'Business', description: "High 'Knowledge Debt' and redundant costs ($250k+) due to siloed data." },
+      { title: 'Internal', description: "Lack of a unified, searchable repository across the 'X' digital ecosystem." },
     ],
     rationales: [
       {
@@ -111,7 +111,8 @@ const projectData: Record<string, any> = {
   }
 };
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
+export default function ProjectPage({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
+  const params = use(paramsPromise);
   const project = useMemo(() => projectData[params.slug] || projectData['vida'], [params.slug]);
 
   const heroImage = PlaceHolderImages.find(p => p.id === 'project1-image-1');
@@ -290,7 +291,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     className="flex items-start"
                   >
                     <span className="text-primary mr-4 mt-1">&#8226;</span>
-                    <p className="text-lg md:text-xl text-muted-foreground">
+                    <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                       <span className="font-semibold text-foreground">{challenge.title}: </span>
                       {challenge.description}
                     </p>
@@ -374,7 +375,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         className="flex items-start"
                       >
                         <span className="text-primary mr-4 mt-1">&#8226;</span>
-                        <p className="text-lg md:text-xl text-muted-foreground">
+                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                           <span className="font-semibold text-primary">{point.title}: </span>
                           {point.description}
                         </p>
@@ -478,7 +479,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     className="flex items-start"
                   >
                     <span className="text-primary mr-4 mt-1">&#8226;</span>
-                    <p className="text-lg md:text-xl text-muted-foreground">
+                    <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                       <span className="font-semibold text-foreground">{learning.title}: </span>
                       {learning.description}
                     </p>
