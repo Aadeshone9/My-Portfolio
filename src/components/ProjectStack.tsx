@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -30,7 +31,7 @@ const projects = [
   {
     title: "Google Cloud Security",
     role: "Partner Product & UX Design consultant | Co-Designer",
-    description: "Prioritized accessibility and clarity to improve the experience for all users in complex enterprise security environments.",
+    description: "Prioritized accessibility and clarity for all users in complex enterprise security environments.",
     img: '/images/Google.png',
   },
   {
