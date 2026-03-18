@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -36,6 +35,14 @@ const projects = [
     img: '/images/Google.png',
   },
   {
+    title: "Design Research Ops",
+    role: "Consultant: UX Strategy & Ops",
+    description: "Engineering a self-service ecosystem for 300+ designers.",
+    cta: 'View Project',
+    href: '/projects/design-research-ops',
+    img: '/images/jio.png'
+  },
+  {
     title: "Hero Motocorp Vida App",
     role: "UX Design consultant and Researcher",
     description: "End-to-end connected vehicle platform experience for the launch of the Vida EV.",
@@ -43,6 +50,14 @@ const projects = [
     href: '/projects/vida',
     img: '/images/hero.svg'
   },
+  {
+    title: "JIO Research",
+    role: "UX Strategy",
+    description: "Proprietary Strategy: Access Restricted. Password required.",
+    cta: 'Request Access',
+    isLocked: true,
+    img: '/images/jio.png'
+  }
 ];
 
 const ProjectCard = ({ project, i, progress, range, targetScale }: { project: any, i: number, progress: any, range: number[], targetScale: number }) => {
@@ -63,7 +78,15 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
         }} 
         className={`relative h-auto md:h-auto lg:h-auto transform-gpu`}
       >
-        <Card className={`bg-card border-border rounded-2xl w-[80vw] md:w-[70vw] lg:w-[600px] h-full mx-auto flex flex-col p-6 md:p-8`}>
+        <Card className={`bg-card border-border rounded-2xl w-[80vw] md:w-[70vw] lg:w-[600px] h-full mx-auto flex flex-col p-6 md:p-8 relative overflow-hidden`}>
+            {project.isLocked && (
+              <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px] z-20 flex items-center justify-center">
+                <div className="bg-card/90 p-4 rounded-xl border border-border shadow-xl text-center">
+                  <Lock className="w-8 h-8 mx-auto text-primary mb-2" />
+                  <p className="text-xs font-semibold text-primary uppercase tracking-widest">Restricted</p>
+                </div>
+              </div>
+            )}
             <div className="w-full aspect-[16/9] bg-off-white-f4 rounded-lg flex items-center justify-center overflow-hidden relative group">
               {project.img && (
                 <Image 

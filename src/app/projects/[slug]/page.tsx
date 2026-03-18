@@ -1,11 +1,11 @@
 'use client';
+import { useMemo } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Search, Target, TrendingUp, ShieldCheck, Navigation, Phone, MapPin, BarChartBig, Lightbulb, Users, Cog, Ear, Cloud, UserCheck, CheckCircle, Package, UserPlus, FileText, Bell, Route, Shield, Fence } from 'lucide-react';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Search, Target, TrendingUp, Lightbulb, Package, FileText, Navigation, Phone, Route, Shield, Fence, Users, Cog, Ear, Cloud, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import FadeIn from '@/components/FadeIn';
 
@@ -16,168 +16,128 @@ const motionProps = {
   transition: { duration: 0.8, ease: "easeOut" },
 };
 
+const projectData: Record<string, any> = {
+  'vida': {
+    title: 'EV Mobility with VIDA',
+    subtitle: 'Driving Loyalty & Efficiency in',
+    heroTag: 'Behavioural UX case Study',
+    contribution: ['UX Research', 'User Journeys', 'Strategy & Design Conceptualisation', 'Design System'],
+    role: 'Consultant: CX & UX Design',
+    focus: 'End-to-end connected vehicle platform experience for the launch of the Vida EV.',
+    primaryGoal: 'Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value (LTV).',
+    outcomes: [
+      { value: '50%', description: 'Reduction in time to find a charging station' },
+      { value: '10%', description: 'Reduction in costly riding habits' },
+      { value: '20%', description: 'Increase in re-subscription rates.' },
+    ],
+    challenges: [
+      { title: 'User Pain Point', description: 'Frustration with Range Anxiety and the lack of verified information for charging, Vehicle adaptation.' },
+      { title: 'Business Challenge', description: 'Lack of convenience and transparency in after-sales services, leading to high potential subscriber churn.' },
+      { title: 'Competitive Gap', description: 'Competitors lacked a clear, personalized system for proactive maintenance alerts and data-driven riding feedback, Safety of Vehicle.' },
+    ],
+    rationales: [
+      {
+        title: 'Solving Range Anxiety (Resource Findability)',
+        points: [
+          { title: 'Inefficient Journey', description: 'Finding a charging station typically required five inefficient steps in existing systems.' },
+          { title: 'Design Solution', description: 'We drastically simplified the charging station flow from five steps to just two by intelligently sharing contextual charging stations based on planned or daily commuted routes.' },
+          { title: 'Design Rationale (Map vs. List)', description: 'We used a combined Map View (for quick spatial context/familiarity) and List View (optimized for detailed comparison of price/connector type) to maximize user trust and efficiency.' },
+          { title: 'Testing & Iteration', description: 'Initial usability tests showed users struggled to verify station compatibility. We iterated by simplifying and highlighting the connector type and status on the information card.' },
+        ]
+      },
+      {
+        title: 'Driving Safer Behaviour & Trust (Maintenance & Tips)',
+        points: [
+          { title: 'Strategic Gap Addressed', description: 'The need for personalized riding tips and transparent maintenance.' },
+          { title: 'Design Rationale (Behavioral Nudges)', description: 'We used Behavioral Design (Nudges) by providing actionable tips instead of just a raw score. This personalized, supportive approach successfully drove better habits.' },
+          { title: 'Data Hierarchy', description: "On the 'My Rides' screen, we prioritized functional metrics like Distance and Avg Speed over the subjective star rating." },
+          { title: 'Maintenance Transparency', description: 'We addressed the trust gap by designing an Easy, Quick, and Transparent Maintenance Process with proactive alerts and upfront pricing.' },
+        ]
+      }
+    ],
+    metrics: [
+      { title: 'Charging Efficiency', value: '50%', description: 'Reduction in the average time to locate a charging station.', detail: 'Directly reduced Range Anxiety and improved trip planning.' },
+      { title: 'Customer Retention', value: '20%', description: 'Increase in re-subscription rates.', detail: 'Validated the strategy of building trust through transparent ownership.' }
+    ],
+    learnings: [
+      { title: 'Contextual Data', description: 'Successfully driving behavior requires translating data into immediate, actionable tips, not just presenting raw numbers.' },
+      { title: 'Trust as a Feature', description: 'In the EV market, providing transparency in maintenance and verified information is the foundational feature that prevents churn.' },
+      { title: 'Iteration is Impact', description: 'Simple changes, like refining the information hierarchy of the charging card based on feedback, can yield outsized results in critical user flows.' },
+    ]
+  },
+  'design-research-ops': {
+    title: 'Scalable Research Governance & Velocity',
+    subtitle: 'Engineering a self-service ecosystem for 300+ designers.',
+    heroTag: 'Research Operations Case Study',
+    contribution: ['Research Ops Strategy', 'Interactive Workflows', 'Governance', 'Pilot Testing'],
+    role: 'Consultant: UX Strategy & Ops',
+    focus: 'Standardising research methodology and operationalising data for 300+ designers across a massive digital ecosystem.',
+    primaryGoal: "To eliminate 'Knowledge Debt' and standardize research artifacts across a massive digital ecosystem.",
+    outcomes: [
+      { value: '40%', description: "Reduction in 'Time-to-Insight'" },
+      { value: '1,700+', description: 'Annual Design Hours Saved' },
+      { value: '80%', description: 'Organization-wide Adoption Rate' },
+    ],
+    challenges: [
+      { title: 'User Gap', description: "Designers faced 'Analysis Paralysis' and manual friction when choosing research methods." },
+      { title: 'Business Gap', description: "High 'Knowledge Debt' and redundant costs ($250k+) due to siloed data." },
+      { title: 'Internal Gap', description: "Lack of a unified, searchable repository across the 'X' digital ecosystem." },
+    ],
+    rationales: [
+      {
+        title: 'The Guided Logic Flow',
+        points: [
+          { title: 'Cognitive Load', description: "We designed a 'logic-gate' interface that reduced cognitive load, guiding designers from 20+ methods to the top 3 relevant choices in under 2 minutes." },
+          { title: 'Decision Velocity', description: 'This intervention resulted in a 65% reduction in decision time for research planning.' }
+        ]
+      },
+      {
+        title: 'Systemic Quality & Scaling',
+        points: [
+          { title: 'Master Templates', description: "Developed interactive 'Stakeholder-Ready' templates to ensure 100% brand and data consistency across all 300+ designers." },
+          { title: 'Automated Mentor', description: "Detailed how we reduced onboarding from 3 days to 2 hours using the 'Automated Mentor' guide for new hires." }
+        ]
+      }
+    ],
+    metrics: [
+      { title: 'Time-to-Insight', value: '40%', description: "Reduction in the average time required to translate raw research into actionable design insights.", detail: 'Achieved through standardized logic-gates and templates.' },
+      { title: 'Operational Savings', value: '1,700+', description: 'Annual design hours saved by eliminating manual workflow friction.', detail: 'Direct impact on organizational velocity and resource allocation.' }
+    ],
+    learnings: [
+      { title: 'Governance as Enabler', description: 'Standardization is not about restriction; it is about providing the guardrails that allow designers to move faster with higher confidence.' },
+      { title: 'Infrastructure for Impact', description: 'The most powerful research tools are those that integrate seamlessly into existing design workflows rather than existing as separate silos.' },
+      { title: 'Data Democracy', description: 'Making research searchable and accessible transforms it from a one-time project artifact into a living, reusable business asset.' },
+    ]
+  }
+};
+
 export default function ProjectPage({ params }: { params: { slug: string } }) {
+  const project = useMemo(() => projectData[params.slug] || projectData['vida'], [params.slug]);
+
   const heroImage = PlaceHolderImages.find(p => p.id === 'project1-image-1');
   const projectImage1 = PlaceHolderImages.find(p => p.id === 'project1-image-2');
   const projectImage2 = PlaceHolderImages.find(p => p.id === 'project1-image-3');
   const projectImage3 = PlaceHolderImages.find(p => p.id === 'project1-image-4');
   const projectImage4 = PlaceHolderImages.find(p => p.id === 'project1-image-5');
-  const projectImage6 = PlaceHolderImages.find(p => p.id === 'project1-image-6');
   const projectImage5 = PlaceHolderImages.find(p => p.id === 'project1-image-7');
-  
-
-  const outcomes = [
-    {
-      value: '50%',
-      description: 'Reduction in time to find a charging station',
-    },
-    {
-      value: '10%',
-      description: 'Reduction in costly riding habits',
-    },
-    {
-      value: '20%',
-      description: 'Increase in re-subscription rates.',
-    },
-  ];
-
-    const designChallenges = [
-    {
-      title: 'User Pain Point',
-      description: 'Frustration with Range Anxiety and the lack of verified information for charging, Vehicle adaptation.',
-    },
-    {
-      title: 'Business Challenge',
-      description: 'Lack of convenience and transparency in after-sales services, leading to high potential subscriber churn.',
-    },
-    {
-      title: 'Competitive Gap',
-      description: 'Competitors lacked a clear, personalized system for proactive maintenance alerts and data-driven riding feedback, Safety of Vehicle.',
-    },
-  ];
-
-  const rangeAnxietySolutions = [
-    {
-      title: 'Inefficient Journey',
-      description: 'Finding a charging station typically required five inefficient steps in existing systems.',
-    },
-    {
-      title: 'Design Solution',
-      description: 'We drastically simplified the charging station flow from five steps to just two by intelligently sharing contextual charging stations based on planned or daily commuted routes.',
-    },
-    {
-      title: 'Design Rationale (Map vs. List)',
-      description: 'We used a combined Map View (for quick spatial context/familiarity) and List View (optimized for detailed comparison of price/connector type) to maximize user trust and efficiency.',
-    },
-    {
-      title: 'Testing & Iteration',
-      description: 'Initial usability tests showed users struggled to verify station compatibility. We iterated by simplifying and highlighting the connector type and status on the information card, which was crucial to achieving the final efficiency gains.',
-    },
-  ];
-
-  const saferBehaviourPoints = [
-    {
-      title: 'Strategic Gap Addressed',
-      description: 'The need for personalized riding tips and transparent maintenance.',
-    },
-    {
-      title: 'Design Rationale (Behavioral Nudges)',
-      description: 'We used Behavioral Design (Nudges) by providing actionable tips (e.g., "Tips on Harsh-braking") instead of just a raw score. This personalized, supportive approach successfully drove better habits.',
-    },
-    {
-      title: 'Data Hierarchy',
-      description: "On the 'My Rides' screen, we prioritized functional metrics like Distance and Avg Speed over the subjective star rating, reflecting our focus on utility and safety improvement.",
-    },
-    {
-      title: 'Maintenance Transparency',
-      description: 'We addressed the trust gap by designing an Easy, Quick, and Transparent Maintenance Process with proactive alerts and upfront pricing, directly combating the after-sales inconvenience seen in competitors.',
-    },
-  ];
+  const projectImage6 = PlaceHolderImages.find(p => p.id === 'project1-image-6');
 
   const experienceEnhancers = [
-    {
-      icon: <Package className="w-8 h-8 text-primary" />,
-      title: 'Services and Subscriptions',
-      description: 'Drive subscriptions and show value with contextual nudges for pre-paid services.',
-    },
-    {
-      icon: <FileText className="w-8 h-8 text-primary" />,
-      title: 'Reports and Analytics',
-      description: 'Provided client with performance data tracking, analytics, and insightful reports.',
-    },
-    {
-      icon: <Navigation className="w-8 h-8 text-primary" />,
-      title: 'Tailored Navigation',
-      description: 'Personalized navigation to increase user engagement.',
-    },
-    {
-      icon: <Phone className="w-8 h-8 text-primary" />,
-      title: 'Roadside Assistance',
-      description: 'Dependable roadside assistance for emergencies and breakdowns.',
-    },
-    {
-      icon: <Route className="w-8 h-8 text-primary" />,
-      title: 'Custom Riding Mode',
-      description: 'Streamline journeys with our centralized route planner and access.',
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-primary" />,
-      title: 'Priority Safety and Security',
-      description: 'Enhanced user control and visibility of vehicle usage and status for safer and more secure driving.',
-    },
-    {
-      icon: <Fence className="w-8 h-8 text-primary" />,
-      title: 'Geo-Fencing',
-      description: 'Boost sales by offering informative content to aid decision-making on website and app.',
-    },
-  ];
-
-    const keyLearnings = [
-    {
-      title: 'Contextual Data',
-      description: 'Successfully driving behavior requires translating data into immediate, actionable tips, not just presenting raw numbers.',
-    },
-    {
-      title: 'Trust as a Feature',
-      description: 'In the EV market, providing transparency in maintenance and verified information is the foundational feature that prevents churn.',
-    },
-    {
-      title: 'Iteration is Impact',
-      description: 'Simple changes, like refining the information hierarchy of the charging card based on feedback, can yield outsized results (the 50% efficiency gain) in critical, high-anxiety user flows.',
-    },
+    { icon: <Package className="w-8 h-8 text-primary" />, title: 'Services and Subscriptions', description: 'Drive subscriptions and show value with contextual nudges for pre-paid services.' },
+    { icon: <FileText className="w-8 h-8 text-primary" />, title: 'Reports and Analytics', description: 'Provided client with performance data tracking, analytics, and insightful reports.' },
+    { icon: <Navigation className="w-8 h-8 text-primary" />, title: 'Tailored Navigation', description: 'Personalized navigation to increase user engagement.' },
+    { icon: <Phone className="w-8 h-8 text-primary" />, title: 'Roadside Assistance', description: 'Dependable roadside assistance for emergencies and breakdowns.' },
+    { icon: <Route className="w-8 h-8 text-primary" />, title: 'Custom Riding Mode', description: 'Streamline journeys with our centralized route planner and access.' },
+    { icon: <Shield className="w-8 h-8 text-primary" />, title: 'Priority Safety and Security', description: 'Enhanced user control and visibility of vehicle usage and status for safer and more secure driving.' },
+    { icon: <Fence className="w-8 h-8 text-primary" />, title: 'Geo-Fencing', description: 'Boost sales by offering informative content to aid decision-making on website and app.' },
   ];
 
   const customerExperienceImpact = [
-    {
-      icon: <Users className="w-8 h-8 text-primary" />,
-      title: 'The Bigger Picture',
-      description:
-        'Empowering users to engage and participate in a larger community for a sense of inclusivity and involvement.',
-    },
-    {
-      icon: <Cog className="w-8 h-8 text-primary" />,
-      title: 'Easy and Quick Maintenance',
-      description:
-        'Using an advanced system that proactively alerts users of potential issues and simplifies maintenance with easy booking, door-to-door pickup and drop-off, and other convenient services.',
-    },
-    {
-      icon: <Ear className="w-8 h-8 text-primary" />,
-      title: 'Assistance and Support',
-      description:
-        "Providing a comprehensive and supportive experience as a dependable companion for the user's journey.",
-    },
-    {
-      icon: <Cloud className="w-8 h-8 text-primary" />,
-      title: 'Eco-friendly Tools',
-      description:
-        "Promoting eco-conscious choices by displaying users' eco-footprint as earth points, creating awareness, and offering brands an opportunity to make a positive impact in e-commerce.",
-    },
-    {
-      icon: <CheckCircle className="w-8 h-8 text-primary" />,
-      title: 'Hassle Free Ownership',
-      description:
-        'Leveraging intelligent technology for personalized and relevant recommendations and insights, delivering a smooth and effortless ownership experience.',
-    },
+    { icon: <Users className="w-8 h-8 text-primary" />, title: 'The Bigger Picture', description: 'Empowering users to engage and participate in a larger community for a sense of inclusivity and involvement.' },
+    { icon: <Cog className="w-8 h-8 text-primary" />, title: 'Easy and Quick Maintenance', description: 'Using an advanced system that proactively alerts users of potential issues and simplifies maintenance.' },
+    { icon: <Ear className="w-8 h-8 text-primary" />, title: 'Assistance and Support', description: "Providing a comprehensive and supportive experience as a dependable companion for the user's journey." },
+    { icon: <Cloud className="w-8 h-8 text-primary" />, title: 'Eco-friendly Tools', description: "Promoting eco-conscious choices by displaying users' eco-footprint as earth points." },
+    { icon: <CheckCircle className="w-8 h-8 text-primary" />, title: 'Hassle Free Ownership', description: 'Leveraging intelligent technology for personalized and relevant recommendations and insights.' },
   ];
 
   return (
@@ -200,17 +160,17 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           <div className="absolute inset-0 container mx-auto px-4 sm:px-8 md:px-20 flex flex-col justify-end pb-20 md:pb-32">
             <FadeIn>
               <p className="font-headline font-semibold text-lg md:text-xl text-white/80 text-left">
-                Behavioural UX case Study
+                {project.heroTag}
               </p>
             </FadeIn>
             <FadeIn>
               <h1 className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-4 text-left">
-                Driving Loyalty & Efficiency in
+                {project.subtitle}
               </h1>
             </FadeIn>
             <FadeIn>
               <h1 className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-2 text-left">
-                EV Mobility with VIDA
+                {project.title}
               </h1>
             </FadeIn>
           </div>
@@ -227,10 +187,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   </h2>
                 </FadeIn>
                  <div className="text-primary text-lg md:text-xl leading-relaxed mt-4">
-                  <p>UX Research</p>
-                  <p>User Journeys</p>
-                  <p>Strategy & Design Conceptualisation</p>
-                  <p>Design System</p>
+                  {project.contribution.map((item: string, i: number) => (
+                    <p key={i}>{item}</p>
+                  ))}
                 </div>
               </motion.div>
               <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.1 }}>
@@ -241,7 +200,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </FadeIn>
                 <FadeIn>
                   <p className="text-primary text-lg md:text-xl leading-relaxed mt-4 text-left">
-                    Consultant: CX & UX Design
+                    {project.role}
                   </p>
                 </FadeIn>
               </motion.div>
@@ -253,7 +212,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </FadeIn>
                 <FadeIn>
                   <p className="text-primary text-lg md:text-xl leading-relaxed mt-4 text-left">
-                    End-to-end connected vehicle platform experience for the launch of the Vida EV.
+                    {project.focus}
                   </p>
                 </FadeIn>
               </motion.div>
@@ -265,7 +224,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </FadeIn>
                 <FadeIn>
                   <p className="text-primary text-lg md:text-xl leading-relaxed mt-4 text-left">
-                    Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value (LTV).
+                    {project.primaryGoal}
                   </p>
                 </FadeIn>
               </motion.div>
@@ -282,7 +241,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                     </h2>
                 </FadeIn>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    {outcomes.map((outcome, index) => (
+                    {project.outcomes.map((outcome: any, index: number) => (
                          <motion.div 
                             key={index} 
                             {...motionProps} 
@@ -297,7 +256,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
         </section>
         
-        {/* Problem Definition Section */}
+        {/* Strategic Gap Section */}
         <section className="py-20 md:py-24 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl">
@@ -305,30 +264,25 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <Target className="w-8 h-8 text-primary" />
                  <FadeIn>
                   <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground text-left">
-                    Problem Definition & Strategic Gap
+                    Strategic Gap Analysis
                   </h2>
                 </FadeIn>
               </motion.div>
               <FadeIn>
                 <p className="font-headline text-4xl md:text-5xl font-semibold text-primary leading-snug md:leading-relaxed mt-8 text-left">
-                  Our research identified significant gaps in the emerging EV market that fueled user anxiety and distrust.
+                  Our evaluation identified critical friction points that hindered operational velocity.
                 </p>
               </FadeIn>
             </div>
           </div>
         </section>
 
-        {/* Core Design Challenge Section */}
+        {/* Core Challenge Section */}
         <section className="py-20 md:py-24 bg-background text-foreground relative">
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl">
-              <FadeIn>
-                <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-12 text-left">
-                  This led to our core design challenge:
-                </h2>
-              </FadeIn>
               <ul className="space-y-8">
-                {designChallenges.map((challenge, index) => (
+                {project.challenges.map((challenge: any, index: number) => (
                   <motion.li 
                     key={index}
                     {...motionProps}
@@ -364,174 +318,76 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
         </section>
 
-        {/* Design Process & Strategic Solutions Section */}
-        <section className="py-20 md:py-24 bg-background text-foreground relative">
-          <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
-            <div className="max-w-4xl">
-              <motion.div {...motionProps} className="flex items-center gap-4">
-                <Search className="w-8 h-8 text-primary" />
-                <FadeIn>
-                  <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground text-left">
-                    Design Process & Strategic Solutions
-                  </h2>
-                </FadeIn>
-              </motion.div>
-              <FadeIn>
-                <p className="font-headline text-4xl md:text-5xl font-semibold text-primary leading-snug md:leading-relaxed mt-8 text-left">
-                  Our strategy focused on translating complex vehicle data into trust-building, actionable intelligence through two key experience enhancers:
-                </p>
-              </FadeIn>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-10 md:py-12 bg-background">
-          <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
-             {projectImage2 && (
-                <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                    <Image
-                        src={projectImage2.imageUrl}
-                        alt={projectImage2.description}
-                        width={1280}
-                        height={720}
-                        className="w-full h-auto object-contain"
-                        data-ai-hint={projectImage2.imageHint}
-                    />
-                </motion.div>
-            )}
-          </div>
-        </section>
-
-        {/* Solving Range Anxiety Section */}
-        <section className="py-20 md:py-24 bg-background text-foreground">
-          <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <div className="max-w-4xl">
-              <FadeIn>
-                <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-12 text-left">
-                  Solving Range Anxiety (Resource Findability):
-                </h2>
-              </FadeIn>
-              <ul className="space-y-8">
-                {rangeAnxietySolutions.map((solution, index) => (
-                  <motion.li
-                    key={index}
-                    {...motionProps}
-                    transition={{ ...motionProps.transition, delay: 0.1 * (index + 1) }}
-                    className="flex items-start"
-                  >
-                    <span className="text-primary mr-4 mt-1">&#8226;</span>
-                    <p className="text-lg md:text-xl text-muted-foreground">
-                      <span className="font-semibold text-primary">{solution.title}: </span>
-                      {solution.description}
-                    </p>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-10 md:py-12 bg-background">
-          <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
-             {projectImage3 && (
-                <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                    <Image
-                        src={projectImage3.imageUrl}
-                        alt={projectImage3.description}
-                        width={1280}
-                        height={720}
-                        className="w-full h-auto object-contain"
-                        data-ai-hint={projectImage3.imageHint}
-                    />
-                </motion.div>
-            )}
-          </div>
-        </section>
-
-        <section className="py-10 md:py-12 bg-background">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
-                {projectImage4 && (
-                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                        <Image
-                            src={projectImage4.imageUrl}
-                            alt={projectImage4.description}
-                            width={1280}
-                            height={720}
-                            className="w-full h-auto object-contain"
-                            data-ai-hint={projectImage4.imageHint}
-                        />
-                    </motion.div>
+        {/* Rationale Blocks */}
+        {project.rationales.map((block: any, blockIdx: number) => (
+          <div key={blockIdx}>
+            <section className="py-20 md:py-24 bg-background text-foreground relative">
+              <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
+                <div className="max-w-4xl">
+                  <motion.div {...motionProps} className="flex items-center gap-4">
+                    <Search className="w-8 h-8 text-primary" />
+                    <FadeIn>
+                      <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground text-left">
+                        {block.title}
+                      </h2>
+                    </FadeIn>
+                  </motion.div>
+                </div>
+              </div>
+            </section>
+            
+            <section className="py-10 md:py-12 bg-background">
+              <div className="container mx-auto px-4 sm:px-8 md:px-20">
+                {blockIdx % 2 === 0 ? projectImage2 && (
+                  <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                      <Image
+                          src={projectImage2.imageUrl}
+                          alt={projectImage2.description}
+                          width={1280}
+                          height={720}
+                          className="w-full h-auto object-contain"
+                      />
+                  </motion.div>
+                ) : projectImage3 && (
+                  <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                      <Image
+                          src={projectImage3.imageUrl}
+                          alt={projectImage3.description}
+                          width={1280}
+                          height={720}
+                          className="w-full h-auto object-contain"
+                      />
+                  </motion.div>
                 )}
-            </div>
-        </section>
+              </div>
+            </section>
 
-        {/* Driving Safer Behaviour & Trust Section */}
-        <section className="py-20 md:py-24 bg-background text-foreground">
-          <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <div className="max-w-4xl">
-              <FadeIn>
-                <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-12 text-left">
-                  Driving Safer Behaviour & Trust (Maintenance & Tips):
-                </h2>
-              </FadeIn>
-              <ul className="space-y-8">
-                {saferBehaviourPoints.map((point, index) => (
-                  <motion.li
-                    key={index}
-                    {...motionProps}
-                    transition={{ ...motionProps.transition, delay: 0.1 * (index + 1) }}
-                    className="flex items-start"
-                  >
-                    <span className="text-primary mr-4 mt-1">&#8226;</span>
-                    <p className="text-lg md:text-xl text-muted-foreground">
-                      <span className="font-semibold text-primary">{point.title}: </span>
-                      {point.description}
-                    </p>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
+            <section className="py-20 md:py-24 bg-background text-foreground">
+              <div className="container mx-auto px-4 sm:px-8 md:px-20">
+                <div className="max-w-4xl">
+                  <ul className="space-y-8">
+                    {block.points.map((point: any, pIdx: number) => (
+                      <motion.li
+                        key={pIdx}
+                        {...motionProps}
+                        transition={{ ...motionProps.transition, delay: 0.1 * (pIdx + 1) }}
+                        className="flex items-start"
+                      >
+                        <span className="text-primary mr-4 mt-1">&#8226;</span>
+                        <p className="text-lg md:text-xl text-muted-foreground">
+                          <span className="font-semibold text-primary">{point.title}: </span>
+                          {point.description}
+                        </p>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </section>
           </div>
-        </section>
+        ))}
 
-   
-        
-        <section className="py-10 md:py-12 bg-background">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
-                {projectImage5 && (
-                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                        <Image
-                            src={projectImage5.imageUrl}
-                            alt={projectImage5.description}
-                            width={1280}
-                            height={720}
-                            className="w-full h-auto object-contain"
-                            data-ai-hint={projectImage5.imageHint}
-                        />
-                    </motion.div>
-                )}
-            </div>
-        </section>
-
-        <section className="py-10 md:py-12 bg-background">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
-                {projectImage6 && (
-                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                        <Image
-                            src={projectImage6.imageUrl}
-                            alt={projectImage6.description}
-                            width={1280}
-                            height={720}
-                            className="w-full h-auto object-contain"
-                            data-ai-hint={projectImage6.imageHint}
-                        />
-                    </motion.div>
-                )}
-            </div>
-        </section>
-
-
-        {/* Quantifiable Outcomes & Impact Section */}
+        {/* Quantifiable Outcomes Section */}
         <section className="py-20 md:py-24 bg-background text-foreground">
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
                 <div className="max-w-4xl">
@@ -539,82 +395,69 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                         <TrendingUp className="w-8 h-8 text-primary" />
                         <FadeIn>
                           <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground text-left">
-                            Quantifiable Outcomes & Impact
+                            Quantifiable Impact
                           </h2>
                         </FadeIn>
                     </motion.div>
-                    <FadeIn>
-                        <p className="text-lg md:text-xl text-muted-foreground mb-16 text-left">
-                          The strategic, data-driven design interventions resulted in the following measurable customer and business impact.
-                        </p>
-                    </FadeIn>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.2 }}>
-                            <Card className="bg-card border-border p-6 h-full flex flex-col">
-                                <CardHeader className="p-0">
-                                <CardTitle className="font-headline text-lg text-muted-foreground">Charging Efficiency</CardTitle>
-                                </CardHeader>
-                                <CardContent className="p-0 mt-4 flex-grow flex flex-col justify-center">
-                                    <p className="font-headline font-bold text-5xl md:text-6xl text-primary">50%</p>
-                                    <p className="text-lg text-foreground mt-2">Reduction in the average time to locate a charging station.</p>
-                                    <p className="text-base text-muted-foreground mt-4">Directly reduced Range Anxiety and improved trip planning.</p>
-                                </CardContent>
-                            </Card>
-                        </motion.div>
-                        <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.3 }}>
-                            <Card className="bg-card border-border p-6 h-full flex flex-col">
-                                <CardHeader className="p-0">
-                                <CardTitle className="font-headline text-lg text-muted-foreground">Customer Retention</CardTitle>
-                                </CardHeader>
-                                <CardContent className="p-0 mt-4 flex-grow flex flex-col justify-center">
-                                    <p className="font-headline font-bold text-5xl md:text-6xl text-primary">20%</p>
-                                    <p className="text-lg text-foreground mt-2">Increase in re-subscription rates.</p>
-                                    <p className="text-base text-muted-foreground mt-4">Validated the strategy of building trust through transparent ownership.</p>
-                                </CardContent>
-                            </Card>
-                        </motion.div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+                        {project.metrics.map((metric: any, mIdx: number) => (
+                          <motion.div key={mIdx} {...motionProps} transition={{ ...motionProps.transition, delay: 0.2 + mIdx * 0.1 }}>
+                              <Card className="bg-card border-border p-6 h-full flex flex-col">
+                                  <CardHeader className="p-0">
+                                  <CardTitle className="font-headline text-lg text-muted-foreground">{metric.title}</CardTitle>
+                                  </CardHeader>
+                                  <CardContent className="p-0 mt-4 flex-grow flex flex-col justify-center">
+                                      <p className="font-headline font-bold text-5xl md:text-6xl text-primary">{metric.value}</p>
+                                      <p className="text-lg text-foreground mt-2">{metric.description}</p>
+                                      <p className="text-base text-muted-foreground mt-4">{metric.detail}</p>
+                                  </CardContent>
+                              </Card>
+                          </motion.div>
+                        ))}
                     </div>
                 </div>
             </div>
         </section>
 
-        {/* Key Experience Enhancers Section */}
-        <section className="py-20 md:py-24 bg-background text-foreground">
-          <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <FadeIn>
-              <h2 className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-4 text-left">
-                Key Experience Enhancers
-              </h2>
-            </FadeIn>
-            <FadeIn>
-              <p className="text-lg md:text-xl text-muted-foreground mb-16 max-w-2xl text-left">
-                A user journey that fulfils user needs and expectations.
-              </p>
-            </FadeIn>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
-              {experienceEnhancers.map((enhancer, index) => (
-                <motion.div
-                  key={index}
-                  {...motionProps}
-                  transition={{ ...motionProps.transition, delay: 0.2 + index * 0.1 }}
-                  className="flex items-start gap-4"
-                >
-                  <div className="flex-shrink-0">{enhancer.icon}</div>
-                  <div>
-                    <h3 className="font-headline font-semibold text-xl text-foreground">
-                      {enhancer.title}
-                    </h3>
-                    <p className="text-muted-foreground mt-1">
-                      {enhancer.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+        {/* Experience Enhancers (Only for VIDA) */}
+        {params.slug === 'vida' && (
+          <section className="py-20 md:py-24 bg-background text-foreground">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20">
+              <FadeIn>
+                <h2 className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-4 text-left">
+                  Key Experience Enhancers
+                </h2>
+              </FadeIn>
+              <FadeIn>
+                <p className="text-lg md:text-xl text-muted-foreground mb-16 max-w-2xl text-left">
+                  A user journey that fulfils user needs and expectations.
+                </p>
+              </FadeIn>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+                {experienceEnhancers.map((enhancer, index) => (
+                  <motion.div
+                    key={index}
+                    {...motionProps}
+                    transition={{ ...motionProps.transition, delay: 0.2 + index * 0.1 }}
+                    className="flex items-start gap-4"
+                  >
+                    <div className="flex-shrink-0">{enhancer.icon}</div>
+                    <div>
+                      <h3 className="font-headline font-semibold text-xl text-foreground">
+                        {enhancer.title}
+                      </h3>
+                      <p className="text-muted-foreground mt-1">
+                        {enhancer.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
-        {/* Key Learnings & Reflection Section */}
+        {/* Key Learnings Section */}
         <section className="py-20 md:py-24 bg-background text-foreground">
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="max-w-4xl">
@@ -626,13 +469,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                   </h2>
                 </FadeIn>
               </motion.div>
-              <FadeIn>
-                <p className="text-lg md:text-xl text-muted-foreground mb-12 text-left">
-                  This project underscored that designing for a new technology requires a focus on trust and context over features.
-                </p>
-              </FadeIn>
               <ul className="space-y-8">
-                {keyLearnings.map((learning, index) => (
+                {project.learnings.map((learning: any, index: number) => (
                   <motion.li
                     key={index}
                     {...motionProps}
@@ -651,43 +489,40 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
 
-        {/* Customer Experience Impact Section */}
-        <section className="py-20 md:py-24 bg-background text-foreground">
-          <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <motion.div {...motionProps} className="max-w-4xl mb-16">
-              <FadeIn>
-                <h2 className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-4 text-left">
-                  Customer Experience Impact
-                </h2>
-              </FadeIn>
-              <FadeIn>
-                <p className="text-lg md:text-xl text-muted-foreground text-left">
-                  Performing data analysis to uncover insights and develop effective strategies, collaborating with cross-functional teams for seamless company-wide growth and communication.
-                </p>
-              </FadeIn>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {customerExperienceImpact.map((item, index) => (
-                <motion.div 
-                  key={index}
-                  {...motionProps} 
-                  transition={{...motionProps.transition, delay: 0.2 + (index * 0.1)}}
-                  className="bg-card border border-border rounded-2xl p-8 space-y-4"
-                >
-                  <div className="flex-shrink-0">{item.icon}</div>
-                  <div>
-                    <h3 className="font-headline font-semibold text-xl text-foreground">
-                      {item.title}
-                    </h3>
-                    <p className="text-muted-foreground mt-1">
-                      {item.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+        {/* Customer Experience Impact (VIDA only) */}
+        {params.slug === 'vida' && (
+          <section className="py-20 md:py-24 bg-background text-foreground">
+            <div className="container mx-auto px-4 sm:px-8 md:px-20">
+              <motion.div {...motionProps} className="max-w-4xl mb-16">
+                <FadeIn>
+                  <h2 className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-4 text-left">
+                    Customer Experience Impact
+                  </h2>
+                </FadeIn>
+              </motion.div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {customerExperienceImpact.map((item, index) => (
+                  <motion.div 
+                    key={index}
+                    {...motionProps} 
+                    transition={{...motionProps.transition, delay: 0.2 + (index * 0.1)}}
+                    className="bg-card border border-border rounded-2xl p-8 space-y-4"
+                  >
+                    <div className="flex-shrink-0">{item.icon}</div>
+                    <div>
+                      <h3 className="font-headline font-semibold text-xl text-foreground">
+                        {item.title}
+                      </h3>
+                      <p className="text-muted-foreground mt-1">
+                        {item.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* Call to Action Section */}
         <section className="pb-20 container mx-auto px-4 sm:px-8 md:px-20">

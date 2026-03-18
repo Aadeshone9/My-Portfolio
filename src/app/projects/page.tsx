@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -14,6 +13,13 @@ const uxProjects = [
     title: 'Hero Motocorp Vida App',
     role: 'UX Design consultant and Researcher',
     img: '/images/hero.svg',
+    slug: 'vida'
+  },
+  {
+    title: 'Design Research Ops',
+    role: 'Consultant: UX Strategy & Ops',
+    img: '/images/jio.png',
+    slug: 'design-research-ops'
   },
   {
     title: 'Thermax - Edge Platform',
@@ -36,9 +42,10 @@ const uxProjects = [
     img: '/images/Google.png',
   },
   {
-    title: 'JIO Reliance',
-    role: 'UX Design Consultant | Co-Designer',
+    title: 'JIO Research',
+    role: 'UX Strategy',
     img: '/images/jio.png',
+    isLocked: true
   },
   {
     title: 'General Motors - Enterprise Security Restriction For Mobile Devices',
