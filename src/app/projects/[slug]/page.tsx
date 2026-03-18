@@ -66,8 +66,8 @@ const projectData: Record<string, any> = {
     ]
   },
   'design-research-ops': {
-    title: 'Scalable Research Governance & Velocity',
-    subtitle: 'Engineering a self-service ecosystem for 300+ designers.',
+    title: 'Research Ops & Governance',
+    subtitle: 'Streamlining research for 300+ enterprise designers.',
     heroTag: 'Research Operations Case Study',
     contribution: ['Research Ops Strategy', 'Interactive Workflows', 'Governance', 'Pilot Testing'],
     role: 'Consultant: UX Strategy & Ops',

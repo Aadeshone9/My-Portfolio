@@ -35,9 +35,9 @@ const projects = [
     img: '/images/Google.png',
   },
   {
-    title: "Design Research Ops",
+    title: "Research Ops & Governance",
     role: "Consultant: UX Strategy & Ops",
-    description: "Engineering a self-service ecosystem for 300+ designers.",
+    description: "Streamlining research for 300+ enterprise designers.",
     cta: 'View Project',
     href: '/projects/design-research-ops',
     img: '/images/jio.png'

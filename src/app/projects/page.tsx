@@ -16,7 +16,7 @@ const uxProjects = [
     slug: 'vida'
   },
   {
-    title: 'Design Research Ops',
+    title: 'Research Ops & Governance',
     role: 'Consultant: UX Strategy & Ops',
     img: '/images/jio.png',
     slug: 'design-research-ops'
