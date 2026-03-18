@@ -19,11 +19,11 @@ export default function ProjectPageCard({ title, description, role, img, icon, c
   const message = encodeURIComponent(`Hi Aadesh, I'm interested in discussing a hiring opportunity and would like to review your work on "${title}". Could you please grant me access to this case study? My official email is [Enter your email here]. Looking forward to connecting!`);
   const linkedinUrl = `https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar&body=${message}`;
 
-  const isJioLocked = title === 'JIO Research' && isLocked;
+  const isJioLocked = title === 'JIO Research' || isLocked;
 
   return (
     <div className="p-6 md:p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between relative overflow-hidden">
-      {isJioLocked && (
+      {isJioLocked && !isUnlockedProject && (
         <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px] z-20 flex items-center justify-center">
           <div className="bg-card/90 p-4 rounded-xl border border-border shadow-xl text-center">
             <Lock className="w-8 h-8 mx-auto text-primary mb-2" />
@@ -47,7 +47,7 @@ export default function ProjectPageCard({ title, description, role, img, icon, c
         <div className="mt-6">
           <h3 className="font-headline font-semibold text-xl text-foreground">{title}</h3>
           {description && <p className="text-muted-foreground mt-2 text-base">{description}</p>}
-          {isJioLocked && <p className="text-xs text-primary font-semibold mt-2">Proprietary Strategy: Access Restricted. Password required.</p>}
+          {(isJioLocked && !isUnlockedProject) && <p className="text-xs text-primary font-semibold mt-2">Proprietary Strategy: Access Restricted. Password required.</p>}
           <p className="text-sm text-muted-foreground mt-4 whitespace-nowrap">{role}</p>
         </div>
       </div>

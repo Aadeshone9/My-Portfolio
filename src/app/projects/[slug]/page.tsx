@@ -130,7 +130,7 @@ const projectData: Record<string, any> = {
       { value: '35%', description: 'Rise in Mobile-First User Engagement' },
     ],
     challenges: [
-      { title: 'User', description: "Cognitive overload caused by fragmented apps and a lack of personalised financial guidance." },
+      { title: 'User', description: "Cognitive overload caused by fragmented apps and a lack of personalized financial guidance." },
       { title: 'Business', description: "Missed revenue due to siloed data and inefficient cross-selling of insurance and loan products." },
       { title: 'Internal', description: "Inconsistent design language across the ecosystem leading to user distrust and high churn." },
     ],
@@ -138,7 +138,7 @@ const projectData: Record<string, any> = {
       {
         title: 'The Life Stages Framework (Mental Models)',
         points: [
-          { title: 'Design Solution', description: "We designed a 'Life Stages' map tailored for two distinct personas: the Salaried Professional (Wealth Growth) and the Transport Operator (Asset Management)." },
+          { title: 'Design Solution', description: "We designed a 'Life Stages' map tailored for two distinct personas: the Salaried Professional (Wealth Growth) and the Transport Operator (Asset & Business Management)." },
           { title: 'Impact', description: "By aligning product offerings with major life milestones, we moved from generic services to proactive financial partnership." }
         ]
       },
@@ -152,7 +152,7 @@ const projectData: Record<string, any> = {
       {
         title: 'Visual Trust & Data Clarity',
         points: [
-          { title: 'Design Rationale', description: "Shifted to a modern Dark-themed UI that prioritizes data legibility and demystifies complex assets and liabilities." },
+          { title: 'Design Rationale', description: "Shifted from wireframes to the final Dark-themed UI that prioritizes data legibility and demystifies complex assets and liabilities." },
           { title: 'Confidence', description: "Clean, professional data visualization significantly increased user confidence in performing high-value transactions." }
         ]
       }
@@ -162,7 +162,7 @@ const projectData: Record<string, any> = {
       { title: 'Engagement Surge', value: '35%', description: 'Rise in Mobile-First User Engagement', detail: 'Direct result of the intuitive, simplified life-companion interface.' }
     ],
     learnings: [
-      { title: 'Empowerment vs Transactions', description: 'Shifting the narrative from "scarcity" to "empowerment" transforms a transactional app into a long-term companion.' },
+      { title: 'Empowerment vs Transactions', description: 'By shifting the narrative from "scarcity" to "empowerment," we transformed a transactional app into a long-term life companion that grows with the user.' },
       { title: 'Context is Everything', description: 'Financial products are most successful when offered at the precise moment they solve a real-life need.' },
       { title: 'Trust through Consistency', description: 'A unified design language is not just aesthetic; it is the foundation of trust in a financial ecosystem.' },
     ]

@@ -28,13 +28,19 @@ const projects = [
     img: '/images/mahindra-finance.svg',
   },
   {
-    title: "Google Cloud Security",
-    role: "Partner Product & UX Design consultant | Co-Designer",
-    description: [
-      "Optimized ticketing workflows",
-      "and Reduced average resolution time by 30%."
-    ],
-    img: '/images/Google.png',
+    title: "Research Ops & Governance",
+    role: "Consultant: UX Strategy & Ops",
+    description: "Engineering a self-service ecosystem for 300+ designers across a massive digital ecosystem.",
+    cta: 'View Project',
+    href: '/projects/design-research-ops',
+    img: '/images/jio.png',
+  },
+  {
+    title: "JIO Research",
+    role: "Senior Consultant: UX Design",
+    description: "Proprietary Strategy: Access Restricted. Password required.",
+    isLocked: true,
+    img: '/images/jio.png',
   },
   {
     title: "Hero Motocorp Vida App",
