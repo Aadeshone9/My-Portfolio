@@ -36,13 +36,6 @@ const projects = [
     img: '/images/jio.png',
   },
   {
-    title: "JIO Research",
-    role: "Senior Consultant: UX Design",
-    description: "Proprietary Strategy: Access Restricted. Password required.",
-    isLocked: true,
-    img: '/images/jio.png',
-  },
-  {
     title: "Hero Motocorp Vida App",
     role: "UX Design consultant and Researcher",
     description: "End-to-end connected vehicle platform experience for the launch of the Vida EV.",
