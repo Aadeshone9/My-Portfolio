@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -49,14 +50,6 @@ const projects = [
     cta: 'View Project',
     href: '/projects/vida',
     img: '/images/hero.svg'
-  },
-  {
-    title: "JIO Research",
-    role: "UX Strategy",
-    description: "Proprietary Strategy: Access Restricted. Password required.",
-    cta: 'Request Access',
-    isLocked: true,
-    img: '/images/jio.png'
   }
 ];
 
