@@ -36,14 +36,6 @@ const projects = [
     img: '/images/Google.png',
   },
   {
-    title: "Research Ops & Governance",
-    role: "Consultant: UX Strategy & Ops",
-    description: "Streamlining research for 300+ enterprise designers.",
-    cta: 'View Project',
-    href: '/projects/design-research-ops',
-    img: '/images/jio.png'
-  },
-  {
     title: "Hero Motocorp Vida App",
     role: "UX Design consultant and Researcher",
     description: "End-to-end connected vehicle platform experience for the launch of the Vida EV.",

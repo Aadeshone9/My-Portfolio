@@ -1,3 +1,4 @@
+
 'use client';
 import { useMemo, use } from 'react';
 import Header from '@/components/Header';
@@ -71,12 +72,12 @@ const projectData: Record<string, any> = {
     heroTag: 'Research Operations Case Study',
     contribution: ['Research Ops Strategy', 'Interactive Workflows', 'Governance', 'Pilot Testing'],
     role: 'Consultant: UX Strategy & Ops',
-    focus: 'Standardising research methodology and operationalising data for 300+ designers across a massive digital ecosystem.',
+    focus: 'Engineering a self-service ecosystem for 300+ designers across a massive digital ecosystem.',
     primaryGoal: "To eliminate 'Knowledge Debt' and standardize research artifacts across a massive digital ecosystem.",
     outcomes: [
-      { value: '$250k+', description: "Saved in annual research budget by eliminating redundant studies." },
-      { value: '65%', description: "Faster 'Research-to-Action' cycles (14 days to 4 days)." },
-      { value: '90%', description: "Reduction in onboarding time for new design hires." },
+      { value: '40%', description: "Reduction in 'Time-to-Insight'" },
+      { value: '1,700+', description: "Annual Design Hours Saved" },
+      { value: '80%', description: "Organization-wide Adoption Rate" },
     ],
     challenges: [
       { title: 'User', description: "Designers faced 'Analysis Paralysis' and manual friction when choosing research methods." },
@@ -85,28 +86,35 @@ const projectData: Record<string, any> = {
     ],
     rationales: [
       {
-        title: 'The Guided Logic Flow',
+        title: 'The Logic-Gate Flow (Cognitive Load)',
         points: [
-          { title: 'Cognitive Load', description: "We designed a 'logic-gate' interface that reduced cognitive load, guiding designers from 20+ methods to the top 3 relevant choices in under 2 minutes." },
-          { title: 'Decision Velocity', description: 'This intervention resulted in a 65% reduction in decision time for research planning.' }
+          { title: 'Design Solution', description: "We designed a 'logic-gate' interface that reduced cognitive load, guiding designers from 20+ methods to the top 3 relevant choices in under 2 minutes." },
+          { title: 'Decision Velocity', description: "This intervention resulted in a 65% reduction in decision time for research planning." }
         ]
       },
       {
-        title: 'Systemic Quality & Scaling',
+        title: 'Systemic Quality (Master Templates)',
         points: [
-          { title: 'Master Templates', description: "Developed interactive 'Stakeholder-Ready' templates to ensure 100% brand and data consistency across all 300+ designers." },
-          { title: 'Automated Mentor', description: "Detailed how we reduced onboarding from 3 days to 2 hours using the 'Automated Mentor' guide for new hires." }
+          { title: 'Standardization', description: "Developed interactive 'Stakeholder-Ready' templates to ensure 100% brand and data consistency across all 300+ designers." },
+          { title: 'Consistency', description: "Automated templates eliminated manual errors, ensuring that every insight followed organizational standards." }
+        ]
+      },
+      {
+        title: 'Scaling (Automated Mentor)',
+        points: [
+          { title: 'Onboarding Efficiency', description: "Reduced onboarding from 3 days to 2 hours using the 'Automated Mentor' guide for new hires." },
+          { title: 'Knowledge Scaling', description: "The self-service guide allowed the research team to scale support without proportional headcount growth." }
         ]
       }
     ],
     metrics: [
-      { title: 'Time-to-Insight', value: '40%', description: "Reduction in the average time required to translate raw research into actionable design insights.", detail: 'Achieved through standardized logic-gates and templates.' },
-      { title: 'Operational Savings', value: '1,700+', description: 'Annual design hours saved by eliminating manual workflow friction.', detail: 'Direct impact on organizational velocity and resource allocation.' }
+      { title: 'Time-to-Insight', value: '40%', description: "Reduction in 'Time-to-Insight'", detail: 'Achieved through standardized logic-gates and templates.' },
+      { title: 'Operational Savings', value: '1,700+', description: 'Annual Design Hours Saved', detail: 'Direct impact on organizational velocity and resource allocation.' }
     ],
     learnings: [
       { title: 'Governance as Enabler', description: 'Standardization is not about restriction; it is about providing the guardrails that allow designers to move faster with higher confidence.' },
-      { title: 'Infrastructure for Impact', description: 'The most powerful research tools are those that integrate seamlessly into existing design workflows rather than existing as separate silos.' },
-      { title: 'Data Democracy', description: 'Making research searchable and accessible transforms it from a one-time project artifact into a living, reusable business asset.' },
+      { title: 'Infrastructure for Impact', description: 'The most powerful research tools are those that integrate seamlessly into existing design workflows.' },
+      { title: 'Data Democracy', description: 'Making research searchable transforms it from a one-time project artifact into a living business asset.' },
     ]
   }
 };
