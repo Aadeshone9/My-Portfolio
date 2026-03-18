@@ -147,8 +147,8 @@ const projectData: Record<string, any> = {
     ]
   },
   'mahindra-finance': {
-    title: 'Trust & Growth',
-    subtitle: "Seamless Financial Companion",
+    title: 'Unified Financial Ecosystem',
+    subtitle: 'Designing for Trust & Growth',
     heroTag: 'Financial Ecosystem Strategy',
     contribution: ['UX Strategy', 'Financial Journey Mapping', 'Cross-selling Logic', 'High-Fidelity Design'],
     role: 'Senior UX Consultant | Lead Designer',

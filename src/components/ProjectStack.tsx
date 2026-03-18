@@ -28,12 +28,10 @@ const projects = [
     img: '/images/mahindra-finance.svg',
   },
   {
-    title: "Research Ops & Governance",
-    role: "Consultant: UX Strategy & Ops",
-    description: "Engineering a self-service ecosystem for 300+ designers across a massive digital ecosystem.",
-    cta: 'View Project',
-    href: '/projects/design-research-ops',
-    img: '/images/jio.png',
+    title: "Google Cloud Security",
+    role: "Partner Product & UX Design consultant | Co-Designer",
+    description: "Prioritized accessibility and clarity to improve the experience for all users in complex enterprise security environments.",
+    img: '/images/Google.png',
   },
   {
     title: "Hero Motocorp Vida App",
