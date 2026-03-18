@@ -50,31 +50,31 @@ const uxProjects = [
 const upcomingProjects = [
   {
     title: 'ITC Hotels Ltd | Club ITC Website UX & UI - Responsive',
-    role: 'Lead UX | Co Designer',
+    role: 'Senior Consultant: UX Design',
     comingSoon: true,
     icon: <Hotel size={48} className="text-primary" />,
   },
   {
     title: 'Skoda - vehicle Booking Journey Responsive site',
-    role: 'Lead Product Designer',
+    role: 'Senior Consultant: UX Design',
     comingSoon: true,
     icon: <Car size={48} className="text-primary" />,
   },
   {
     title: 'HDFC - Corporate Bank Loan Journey Responsive Site',
-    role: 'Lead Product Designer',
+    role: 'Senior Consultant: UX Design',
     comingSoon: true,
     icon: <Home size={48} className="text-primary" />,
   },
   {
     title: 'Club ITC - ITC In-Hotel Guest Experience Mobile Version',
-    role: 'Lead UX Designer',
+    role: 'Senior Consultant: UX Design',
     comingSoon: true,
     icon: <Hotel size={48} className="text-primary" />,
   },
   {
     title: 'HDFC Bank Lead Insta Insurance Platform',
-    role: 'Lead Product Designer',
+    role: 'Senior Consultant: UX Design',
     comingSoon: true,
     icon: <ShieldCheck size={48} className="text-primary" />,
   },
