@@ -14,7 +14,7 @@ type ProjectPageCardProps = {
 };
 
 export default function ProjectPageCard({ title, description, role, img, icon, comingSoon = false, slug, isLocked = false }: ProjectPageCardProps) {
-  const isUnlockedProject = slug === 'vida' || slug === 'design-research-ops';
+  const isUnlockedProject = slug === 'vida' || slug === 'design-research-ops' || slug === 'mahindra-finance';
   
   const message = encodeURIComponent(`Hi Aadesh, I'm interested in discussing a hiring opportunity and would like to review your work on "${title}". Could you please grant me access to this case study? My official email is [Enter your email here]. Looking forward to connecting!`);
   const linkedinUrl = `https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar&body=${message}`;

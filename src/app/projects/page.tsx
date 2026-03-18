@@ -22,6 +22,12 @@ const uxProjects = [
     slug: 'design-research-ops'
   },
   {
+    title: 'Unified Financial Ecosystem',
+    role: 'Senior UX Consultant | Lead Designer',
+    img: '/images/mahindra-finance.svg',
+    slug: 'mahindra-finance'
+  },
+  {
     title: 'Thermax - Edge Platform',
     role: 'UX Researcher and Strategist',
     img: '/images/edge.png',
@@ -32,20 +38,9 @@ const uxProjects = [
     img: '/images/maplegenix.webp',
   },
   {
-    title: 'Mahindra Finance',
-    role: 'UX Design Consultant | Co-Designer',
-    img: '/images/mahindra-finance.svg',
-  },
-  {
     title: 'Google Cloud Security',
     role: 'Partner Product & UX Design consultant | Co-Designer',
     img: '/images/Google.png',
-  },
-  {
-    title: 'JIO Research',
-    role: 'UX Strategy',
-    img: '/images/jio.png',
-    isLocked: true
   },
   {
     title: 'General Motors - Enterprise Security Restriction For Mobile Devices',

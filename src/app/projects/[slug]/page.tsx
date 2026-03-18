@@ -1,4 +1,3 @@
-
 'use client';
 import { useMemo, use } from 'react';
 import Header from '@/components/Header';
@@ -115,6 +114,57 @@ const projectData: Record<string, any> = {
       { title: 'Governance as Enabler', description: 'Standardization is not about restriction; it is about providing the guardrails that allow designers to move faster with higher confidence.' },
       { title: 'Infrastructure for Impact', description: 'The most powerful research tools are those that integrate seamlessly into existing design workflows.' },
       { title: 'Data Democracy', description: 'Making research searchable transforms it from a one-time project artifact into a living business asset.' },
+    ]
+  },
+  'mahindra-finance': {
+    title: 'Designing for Trust & Growth',
+    subtitle: "Streamlining complex financial products into a seamless 'Life Companion' experience.",
+    heroTag: 'Financial Ecosystem Strategy',
+    contribution: ['UX Strategy', 'Financial Journey Mapping', 'Cross-selling Logic', 'High-Fidelity Design'],
+    role: 'Senior UX Consultant | Lead Designer',
+    focus: "Transforming a transactional financial app into a long-term life companion that grows with the user's life stages.",
+    primaryGoal: "To eliminate friction in complex financial journeys and drive business growth through contextual, trust-based empowerment.",
+    outcomes: [
+      { value: '30%', description: 'Increase in Customer Retention' },
+      { value: '25%', description: 'Boost in Cross-selling Efficiency' },
+      { value: '35%', description: 'Rise in Mobile-First User Engagement' },
+    ],
+    challenges: [
+      { title: 'User', description: "Cognitive overload caused by fragmented apps and a lack of personalised financial guidance." },
+      { title: 'Business', description: "Missed revenue due to siloed data and inefficient cross-selling of insurance and loan products." },
+      { title: 'Internal', description: "Inconsistent design language across the ecosystem leading to user distrust and high churn." },
+    ],
+    rationales: [
+      {
+        title: 'The Life Stages Framework (Mental Models)',
+        points: [
+          { title: 'Design Solution', description: "We designed a 'Life Stages' map tailored for two distinct personas: the Salaried Professional (Wealth Growth) and the Transport Operator (Asset Management)." },
+          { title: 'Impact', description: "By aligning product offerings with major life milestones, we moved from generic services to proactive financial partnership." }
+        ]
+      },
+      {
+        title: 'Contextual Revenue Growth (Nudges)',
+        points: [
+          { title: 'Strategic Integration', description: "Integrated 'Contextual Nudges' that suggest relevant products like insurance or top-up loans at the exact moment of user need." },
+          { title: 'Result', description: "This non-intrusive approach directly drove a 25% increase in cross-selling conversions." }
+        ]
+      },
+      {
+        title: 'Visual Trust & Data Clarity',
+        points: [
+          { title: 'Design Rationale', description: "Shifted to a modern Dark-themed UI that prioritizes data legibility and demystifies complex assets and liabilities." },
+          { title: 'Confidence', description: "Clean, professional data visualization significantly increased user confidence in performing high-value transactions." }
+        ]
+      }
+    ],
+    metrics: [
+      { title: 'Retention Growth', value: '30%', description: 'Increase in Customer Retention', detail: 'Achieved through personalized guidance and seamless UX.' },
+      { title: 'Engagement Surge', value: '35%', description: 'Rise in Mobile-First User Engagement', detail: 'Direct result of the intuitive, simplified life-companion interface.' }
+    ],
+    learnings: [
+      { title: 'Empowerment vs Transactions', description: 'Shifting the narrative from "scarcity" to "empowerment" transforms a transactional app into a long-term companion.' },
+      { title: 'Context is Everything', description: 'Financial products are most successful when offered at the precise moment they solve a real-life need.' },
+      { title: 'Trust through Consistency', description: 'A unified design language is not just aesthetic; it is the foundation of trust in a financial ecosystem.' },
     ]
   }
 };

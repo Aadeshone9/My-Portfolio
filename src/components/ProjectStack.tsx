@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -21,9 +20,11 @@ const projects = [
     img: '/images/maplegenix.webp',
   },
   {
-    title: "Mahindra Finance",
-    role: "UX Design Consultant | Co-Designer",
+    title: "Unified Financial Ecosystem",
+    role: "Senior UX Consultant | Lead Designer",
     description: "Increased customer retention by 30% and cross-selling by 25% by integrating \"Design for Trust and Growth\" principles.",
+    cta: 'View Project',
+    href: '/projects/mahindra-finance',
     img: '/images/mahindra-finance.svg',
   },
   {
