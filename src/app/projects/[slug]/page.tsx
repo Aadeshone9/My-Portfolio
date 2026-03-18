@@ -5,7 +5,32 @@ import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Search, Target, TrendingUp, Lightbulb, Package, FileText, Navigation, Phone, Route, Shield, Fence, Users, Cog, Ear, Cloud, CheckCircle } from 'lucide-react';
+import { 
+  Search, 
+  Target, 
+  TrendingUp, 
+  Lightbulb, 
+  Package, 
+  FileText, 
+  Navigation, 
+  Phone, 
+  Route, 
+  Shield, 
+  Fence, 
+  Users, 
+  Cog, 
+  Ear, 
+  Cloud, 
+  CheckCircle,
+  MapPin,
+  ShieldCheck,
+  Zap,
+  Layers,
+  Rocket,
+  BellRing,
+  Eye,
+  Brain
+} from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import FadeIn from '@/components/FadeIn';
 
@@ -38,6 +63,7 @@ const projectData: Record<string, any> = {
     rationales: [
       {
         title: 'Solving Range Anxiety (Resource Findability)',
+        icon: 'MapPin',
         points: [
           { title: 'Inefficient Journey', description: 'Finding a charging station typically required five inefficient steps in existing systems.' },
           { title: 'Design Solution', description: 'We drastically simplified the charging station flow from five steps to just two by intelligently sharing contextual charging stations based on planned or daily commuted routes.' },
@@ -47,6 +73,7 @@ const projectData: Record<string, any> = {
       },
       {
         title: 'Driving Safer Behaviour & Trust (Maintenance & Tips)',
+        icon: 'ShieldCheck',
         points: [
           { title: 'Strategic Gap Addressed', description: 'The need for personalized riding tips and transparent maintenance.' },
           { title: 'Design Rationale (Behavioral Nudges)', description: 'We used Behavioral Design (Nudges) by providing actionable tips instead of just a raw score. This personalized, supportive approach successfully drove better habits.' },
@@ -86,6 +113,7 @@ const projectData: Record<string, any> = {
     rationales: [
       {
         title: 'The Logic-Gate Flow (Cognitive Load)',
+        icon: 'Zap',
         points: [
           { title: 'Design Solution', description: "We designed a 'logic-gate' interface that reduced cognitive load, guiding designers from 20+ methods to the top 3 relevant choices in under 2 minutes." },
           { title: 'Decision Velocity', description: "This intervention resulted in a 65% reduction in decision time for research planning." }
@@ -93,6 +121,7 @@ const projectData: Record<string, any> = {
       },
       {
         title: 'Systemic Quality (Master Templates)',
+        icon: 'Layers',
         points: [
           { title: 'Standardization', description: "Developed interactive 'Stakeholder-Ready' templates to ensure 100% brand and data consistency across all 300+ designers." },
           { title: 'Consistency', description: "Automated templates eliminated manual errors, ensuring that every insight followed organizational standards." }
@@ -100,6 +129,7 @@ const projectData: Record<string, any> = {
       },
       {
         title: 'Scaling (Automated Mentor)',
+        icon: 'Rocket',
         points: [
           { title: 'Onboarding Efficiency', description: "Reduced onboarding from 3 days to 2 hours using the 'Automated Mentor' guide for new hires." },
           { title: 'Knowledge Scaling', description: "The self-service guide allowed the research team to scale support without proportional headcount growth." }
@@ -137,6 +167,7 @@ const projectData: Record<string, any> = {
     rationales: [
       {
         title: 'The Life Stages Framework (Mental Models)',
+        icon: 'Users',
         points: [
           { title: 'Design Solution', description: "We designed a 'Life Stages' map tailored for two distinct personas: the Salaried Professional (Wealth Growth) and the Transport Operator (Asset & Business Management)." },
           { title: 'Impact', description: "By aligning product offerings with major life milestones, we moved from generic services to proactive financial partnership." }
@@ -144,6 +175,7 @@ const projectData: Record<string, any> = {
       },
       {
         title: 'Contextual Revenue Growth (Nudges)',
+        icon: 'BellRing',
         points: [
           { title: 'Strategic Integration', description: "Integrated 'Contextual Nudges' that suggest relevant products like insurance or top-up loans at the exact moment of user need." },
           { title: 'Result', description: "This non-intrusive approach directly drove a 25% increase in cross-selling conversions." }
@@ -151,6 +183,7 @@ const projectData: Record<string, any> = {
       },
       {
         title: 'Visual Trust & Data Clarity',
+        icon: 'Eye',
         points: [
           { title: 'Design Rationale', description: "Shifted from wireframes to the final Dark-themed UI that prioritizes data legibility and demystifies complex assets and liabilities." },
           { title: 'Confidence', description: "Clean, professional data visualization significantly increased user confidence in performing high-value transactions." }
@@ -167,6 +200,18 @@ const projectData: Record<string, any> = {
       { title: 'Trust through Consistency', description: 'A unified design language is not just aesthetic; it is the foundation of trust in a financial ecosystem.' },
     ]
   }
+};
+
+const IconMap: Record<string, any> = {
+  MapPin,
+  ShieldCheck,
+  Zap,
+  Layers,
+  Rocket,
+  BellRing,
+  Eye,
+  Users,
+  Search
 };
 
 export default function ProjectPage({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
@@ -378,73 +423,76 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         </section>
 
         {/* Rationale Blocks */}
-        {project.rationales.map((block: any, blockIdx: number) => (
-          <div key={blockIdx}>
-            <section className="py-20 md:py-24 bg-background text-foreground relative">
-              <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
-                <div className="max-w-4xl">
-                  <motion.div {...motionProps} className="flex items-center gap-4">
-                    <Search className="w-8 h-8 text-primary" />
-                    <FadeIn>
-                      <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground text-left">
-                        {block.title}
-                      </h2>
-                    </FadeIn>
-                  </motion.div>
+        {project.rationales.map((block: any, blockIdx: number) => {
+          const RationaleIcon = IconMap[block.icon] || Search;
+          return (
+            <div key={blockIdx}>
+              <section className="py-20 md:py-24 bg-background text-foreground relative">
+                <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
+                  <div className="max-w-4xl">
+                    <motion.div {...motionProps} className="flex items-center gap-4">
+                      <RationaleIcon className="w-8 h-8 text-primary" />
+                      <FadeIn>
+                        <h2 className="font-headline font-semibold text-2xl md:text-3xl text-foreground text-left">
+                          {block.title}
+                        </h2>
+                      </FadeIn>
+                    </motion.div>
+                  </div>
                 </div>
-              </div>
-            </section>
-            
-            <section className="py-10 md:py-12 bg-background">
-              <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                {blockIdx % 2 === 0 ? projectImage2 && (
-                  <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                      <Image
-                          src={projectImage2.imageUrl}
-                          alt={projectImage2.description}
-                          width={1280}
-                          height={720}
-                          className="w-full h-auto object-contain"
-                      />
-                  </motion.div>
-                ) : projectImage3 && (
-                  <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                      <Image
-                          src={projectImage3.imageUrl}
-                          alt={projectImage3.description}
-                          width={1280}
-                          height={720}
-                          className="w-full h-auto object-contain"
-                      />
-                  </motion.div>
-                )}
-              </div>
-            </section>
+              </section>
+              
+              <section className="py-10 md:py-12 bg-background">
+                <div className="container mx-auto px-4 sm:px-8 md:px-20">
+                  {blockIdx % 2 === 0 ? projectImage2 && (
+                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                        <Image
+                            src={projectImage2.imageUrl}
+                            alt={projectImage2.description}
+                            width={1280}
+                            height={720}
+                            className="w-full h-auto object-contain"
+                        />
+                    </motion.div>
+                  ) : projectImage3 && (
+                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                        <Image
+                            src={projectImage3.imageUrl}
+                            alt={projectImage3.description}
+                            width={1280}
+                            height={720}
+                            className="w-full h-auto object-contain"
+                        />
+                    </motion.div>
+                  )}
+                </div>
+              </section>
 
-            <section className="py-20 md:py-24 bg-background text-foreground">
-              <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                <div className="max-w-4xl">
-                  <ul className="space-y-8">
-                    {block.points.map((point: any, pIdx: number) => (
-                      <motion.li
-                        key={pIdx}
-                        {...motionProps}
-                        transition={{ ...motionProps.transition, delay: 0.1 * (pIdx + 1) }}
-                        className="flex items-start"
-                      >
-                        <span className="text-primary mr-4 mt-1">&#8226;</span>
-                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                          <span className="font-semibold text-primary">{point.title}: </span>
-                          {point.description}
-                        </p>
-                      </motion.li>
-                    ))}
-                  </ul>
+              <section className="py-20 md:py-24 bg-background text-foreground">
+                <div className="container mx-auto px-4 sm:px-8 md:px-20">
+                  <div className="max-w-4xl">
+                    <ul className="space-y-8">
+                      {block.points.map((point: any, pIdx: number) => (
+                        <motion.li
+                          key={pIdx}
+                          {...motionProps}
+                          transition={{ ...motionProps.transition, delay: 0.1 * (pIdx + 1) }}
+                          className="flex items-start"
+                        >
+                          <span className="text-primary mr-4 mt-1">&#8226;</span>
+                          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                            <span className="font-semibold text-primary">{point.title}: </span>
+                            {point.description}
+                          </p>
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </section>
-          </div>
-        ))}
+              </section>
+            </div>
+          );
+        })}
 
         {/* Quantifiable Outcomes Section */}
         <section className="py-20 md:py-24 bg-background text-foreground">
