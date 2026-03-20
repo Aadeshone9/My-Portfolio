@@ -1,8 +1,9 @@
+
 'use client';
-import { useMemo, use } from 'react';
+import { useMemo, use, useEffect, useState, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform, useInView, animate } from 'framer-motion';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { 
@@ -41,7 +42,38 @@ const motionProps = {
   initial: { opacity: 0, y: 20 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.8, ease: "easeOut" },
+  transition: { duration: 0.6, ease: "easeOut" },
+};
+
+// Count-up component for metrics
+const Counter = ({ value }: { value: string }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const [displayValue, setDisplayValue] = useState("0");
+  
+  useEffect(() => {
+    if (isInView) {
+      const match = value.match(/(\d+)/);
+      if (match) {
+        const target = parseInt(match[0]);
+        const suffix = value.replace(match[0], '');
+        const prefix = value.split(match[0])[0];
+        
+        const controls = animate(0, target, {
+          duration: 2,
+          ease: "easeOut",
+          onUpdate: (latest) => {
+            setDisplayValue(`${prefix}${Math.floor(latest)}${suffix}`);
+          }
+        });
+        return () => controls.stop();
+      } else {
+        setDisplayValue(value);
+      }
+    }
+  }, [isInView, value]);
+
+  return <span ref={ref}>{displayValue}</span>;
 };
 
 const projectData: Record<string, any> = {
@@ -151,7 +183,7 @@ const projectData: Record<string, any> = {
   },
   'mahindra-finance': {
     title: 'Designing for Trust & Growth',
-    subtitle: "Streamlining financial products into a 'Life Companion' experience.",
+    subtitle: "Streamlining financial products into a seamless 'Life Companion' experience.",
     heroTag: 'Financial Ecosystem Strategy',
     contribution: ['UX Strategy', 'Financial Journey Mapping', 'Cross-selling Logic', 'High-Fidelity Design'],
     role: 'Senior UX Consultant | Lead Designer',
@@ -205,7 +237,7 @@ const projectData: Record<string, any> = {
   },
   'thermax-edge': {
     title: 'Industrial UX Audit & Strategy',
-    subtitle: "Benchmarking for a scalable industrial roadmap.",
+    subtitle: "Benchmarking the 'Customer Connect' ecosystem.",
     heroTag: 'UX Audit & Research Benchmarking',
     contribution: ['UX Audit & Heuristics', 'Research Benchmarking', 'Information Architecture', 'Design Strategy'],
     role: 'UX Strategy Consultant',
@@ -286,6 +318,17 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
   const projectImage5 = PlaceHolderImages.find(p => p.id === 'project1-image-7');
   const projectImage6 = PlaceHolderImages.find(p => p.id === 'project1-image-6');
 
+  // Parallax Hero effect
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
+
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
+  const heroBlur = useTransform(scrollYProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
+
   const experienceEnhancers = [
     { icon: <Package className="w-8 h-8 text-primary" />, title: 'Services and Subscriptions', description: 'Drive subscriptions and show value with contextual nudges for pre-paid services.' },
     { icon: <FileText className="w-8 h-8 text-primary" />, title: 'Reports and Analytics', description: 'Provided client with performance data tracking, analytics, and insightful reports.' },
@@ -305,22 +348,27 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
   ];
 
   return (
-    <div className="bg-background text-foreground">
+    <div className="bg-background text-foreground" ref={containerRef}>
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="h-screen w-full relative">
-          {heroImage && (
-            <Image
-              src={heroImage.imageUrl}
-              alt={heroImage.description}
-              fill
-              className="object-cover"
-              data-ai-hint={heroImage.imageHint}
-              priority
-            />
-          )}
-          <div className="absolute inset-0 bg-black/50" />
+        <section className="h-screen w-full relative overflow-hidden">
+          <motion.div 
+            style={{ scale: heroScale, opacity: heroOpacity, filter: heroBlur }}
+            className="absolute inset-0"
+          >
+            {heroImage && (
+              <Image
+                src={heroImage.imageUrl}
+                alt={heroImage.description}
+                fill
+                className="object-cover"
+                data-ai-hint={heroImage.imageHint}
+                priority
+              />
+            )}
+            <div className="absolute inset-0 bg-black/50" />
+          </motion.div>
           <div className="absolute inset-0 container mx-auto px-4 sm:px-8 md:px-20 flex flex-col justify-end pb-20 md:pb-32">
             <FadeIn>
               <p className="font-headline font-semibold text-lg md:text-xl text-white/80 text-left">
@@ -412,7 +460,9 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                             transition={{ ...motionProps.transition, delay: 0.1 * (index + 1) }}
                             className="flex items-start gap-6"
                         >
-                            <span className="font-headline font-bold text-5xl md:text-6xl text-primary">{outcome.value}</span>
+                            <span className="font-headline font-bold text-5xl md:text-6xl text-primary">
+                              <Counter value={outcome.value} />
+                            </span>
                             <p className="text-lg md:text-xl text-muted-foreground mt-2">{outcome.description}</p>
                         </motion.div>
                     ))}
@@ -574,7 +624,9 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                                   <CardTitle className="font-headline text-lg text-muted-foreground">{metric.title}</CardTitle>
                                   </CardHeader>
                                   <CardContent className="p-0 mt-4 flex-grow flex flex-col justify-center">
-                                      <p className="font-headline font-bold text-5xl md:text-6xl text-primary">{metric.value}</p>
+                                      <p className="font-headline font-bold text-5xl md:text-6xl text-primary">
+                                        <Counter value={metric.value} />
+                                      </p>
                                       <p className="text-lg text-foreground mt-2">{metric.description}</p>
                                       <p className="text-base text-muted-foreground mt-4">{metric.detail}</p>
                                   </CardContent>

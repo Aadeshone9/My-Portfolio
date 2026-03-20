@@ -1,7 +1,10 @@
 
+'use client';
+
 import { ArrowRight, Lock, Timer } from 'lucide-react';
 import Image from 'next/image';
 import PillButton from './PillButton';
+import { motion } from 'framer-motion';
 
 type ProjectPageCardProps = {
   title: string;
@@ -22,8 +25,20 @@ export default function ProjectPageCard({ title, description, role, img, icon, c
 
   const isJioLocked = title === 'Jio Research' || isLocked;
 
+  // NDA Shake animation for locked cards
+  const shakeAnimation = {
+    hover: isJioLocked && !isUnlockedProject ? {
+      x: [-2, 2, -2, 2, 0],
+      transition: { duration: 0.4, ease: "easeInOut" }
+    } : {}
+  };
+
   return (
-    <div className="p-6 md:p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between relative overflow-hidden">
+    <motion.div 
+      whileHover="hover"
+      variants={shakeAnimation}
+      className="p-6 md:p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between relative overflow-hidden"
+    >
       {(isJioLocked && !isUnlockedProject) && (
         <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px] z-20 flex items-center justify-center">
           <div className="bg-card/90 p-4 rounded-xl border border-border shadow-xl text-center">
@@ -70,6 +85,6 @@ export default function ProjectPageCard({ title, description, role, img, icon, c
           </PillButton>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }

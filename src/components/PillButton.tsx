@@ -1,10 +1,11 @@
 
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { gsap } from 'gsap';
 import './PillButton.css';
 import { cn } from '@/lib/utils';
+import { motion, useSpring, useMotionValue, useTransform } from 'framer-motion';
 
 const PillButton = ({
   children,
@@ -16,6 +17,32 @@ const PillButton = ({
   const tlRef = useRef(null);
   const activeTweenRef = useRef(null);
   const buttonRef = useRef(null);
+
+  // Magnetic effect logic
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springConfig = { damping: 15, stiffness: 150, mass: 0.1 };
+  const springX = useSpring(mouseX, springConfig);
+  const springY = useSpring(mouseY, springConfig);
+
+  const magneticX = useTransform(springX, (val) => val * 0.35);
+  const magneticY = useTransform(springY, (val) => val * 0.35);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!buttonRef.current) return;
+    const { clientX, clientY } = e;
+    const { left, top, width, height } = buttonRef.current.getBoundingClientRect();
+    const x = clientX - (left + width / 2);
+    const y = clientY - (top + height / 2);
+    mouseX.set(x);
+    mouseY.set(y);
+  };
+
+  const handleMouseLeaveMagnetic = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+  };
 
   const cssVars = {
     ['--base']: 'transparent',
@@ -118,29 +145,36 @@ const PillButton = ({
       ease,
       overwrite: 'auto',
     });
+    handleMouseLeaveMagnetic();
   };
   
   return (
-    <Link
-        href={href}
-        ref={buttonRef}
-        className={cn('pill-button', className)}
-        style={cssVars}
-        onMouseEnter={handleEnter}
-        onMouseLeave={handleLeave}
+    <motion.div
+      style={{ x: magneticX, y: magneticY }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleLeave}
+      className="inline-flex"
     >
-        <span
-          className="hover-circle"
-          aria-hidden="true"
-          ref={circleRef}
-        />
-        <span className="label-stack">
-            <span className="pill-label">{children}</span>
-            <span className="pill-label-hover font-semibold" aria-hidden="true">
-                {children}
-            </span>
-        </span>
-    </Link>
+      <Link
+          href={href}
+          ref={buttonRef}
+          className={cn('pill-button', className)}
+          style={cssVars}
+          onMouseEnter={handleEnter}
+      >
+          <span
+            className="hover-circle"
+            aria-hidden="true"
+            ref={circleRef}
+          />
+          <span className="label-stack">
+              <span className="pill-label">{children}</span>
+              <span className="pill-label-hover font-semibold" aria-hidden="true">
+                  {children}
+              </span>
+          </span>
+      </Link>
+    </motion.div>
   );
 };
 

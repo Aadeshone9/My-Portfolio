@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -57,11 +58,19 @@ const projects = [
 
 const ProjectCard = ({ project, i, progress, range, targetScale }: { project: any, i: number, progress: any, range: number[], targetScale: number }) => {
   const scale = useTransform(progress, range, [1, targetScale]);
-  
   const y = useTransform(progress, range, [0, -50 * (projects.length - 1 - i)]);
 
   const message = encodeURIComponent(`Hi Aadesh, I'm interested in discussing a hiring opportunity and would like to review your work on "${project.title}". Could you please grant me access to this case study? My official email is [Enter your email here]. Looking forward to connecting!`);
   const linkedinUrl = `https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar&body=${message}`;
+
+  // Shake animation for locked cards
+  const isLocked = !project.cta;
+  const shakeAnimation = isLocked ? {
+    hover: {
+      x: [-2, 2, -2, 2, 0],
+      transition: { duration: 0.4, ease: "easeInOut" }
+    }
+  } : {};
 
   return (
     <div className="sticky top-0 h-screen flex items-center justify-center">
@@ -71,6 +80,8 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
           y,
           top: `calc(5vh + ${i * 25}px)`
         }} 
+        whileHover="hover"
+        variants={shakeAnimation}
         className={`relative h-auto md:h-auto lg:h-auto transform-gpu`}
       >
         <Card className={`bg-card border-border rounded-2xl w-[80vw] md:w-[70vw] lg:w-[600px] h-full mx-auto flex flex-col p-6 md:p-8 relative overflow-hidden`}>
