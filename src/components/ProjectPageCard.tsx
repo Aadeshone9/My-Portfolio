@@ -1,3 +1,4 @@
+
 import { ArrowRight, Lock, Timer } from 'lucide-react';
 import Image from 'next/image';
 import PillButton from './PillButton';
@@ -20,7 +21,6 @@ export default function ProjectPageCard({ title, description, role, img, icon, c
   const linkedinUrl = `https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar&body=${message}`;
 
   const isJioLocked = title === 'Jio Research' || isLocked;
-  const isThermax = slug === 'thermax-edge';
 
   return (
     <div className="p-6 md:p-8 rounded-2xl bg-card border border-border h-full flex flex-col justify-between relative overflow-hidden">
@@ -60,7 +60,7 @@ export default function ProjectPageCard({ title, description, role, img, icon, c
           </div>
         ) : isUnlockedProject ? (
            <PillButton href={`/projects/${slug}`} className="group !text-foreground !border-foreground">
-            <span className="group-hover:font-semibold">{isThermax ? 'View Case Study' : 'View Project'}</span>
+            <span className="group-hover:font-semibold">View Project</span>
             <ArrowRight />
           </PillButton>
         ) : (

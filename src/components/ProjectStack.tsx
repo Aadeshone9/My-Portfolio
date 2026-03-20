@@ -37,7 +37,7 @@ const projects = [
     role: "UX Researcher and Strategist",
     description: "Defined UX improvements that increased error visibility and user adoption by 25%.",
     img: '/images/edge.png',
-    cta: 'View Case Study',
+    cta: 'View Project',
     href: '/projects/thermax-edge',
   },
   {
