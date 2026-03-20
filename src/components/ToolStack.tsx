@@ -1,3 +1,4 @@
+
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -60,7 +61,7 @@ const ToolStack = () => {
           {designTools.map((tool, index) => (
             <div key={index}>
               <div className="bg-card border border-border rounded-xl flex items-center justify-center p-4 h-24">
-                <p className="font-headline text-center font-semibold text-base md:text-lg text-foreground whitespace-nowrap">
+                <p className="font-headline text-center font-semibold text-sm md:text-lg text-foreground leading-tight">
                   {tool.name}
                 </p>
               </div>
@@ -81,7 +82,7 @@ const ToolStack = () => {
           {analyticalTools.map((tool, index) => (
             <div key={index}>
               <div className="bg-card border border-border rounded-xl flex items-center justify-center p-4 h-24">
-                <p className="font-headline text-center font-semibold text-base md:text-lg text-foreground whitespace-nowrap">
+                <p className="font-headline text-center font-semibold text-sm md:text-lg text-foreground leading-tight">
                   {tool.name}
                 </p>
               </div>
