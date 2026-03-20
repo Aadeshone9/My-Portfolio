@@ -1,10 +1,8 @@
+
 'use client';
 
 import Header from '@/components/Header';
 import ProjectStack from '@/components/ProjectStack';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
 import SpotlightCard from '@/components/SpotlightCard';
 import FadeIn from '@/components/FadeIn';
 import TiltedCard from '@/components/TiltedCard';
@@ -12,22 +10,22 @@ import Approach from '@/components/Approach';
 import PillButton from '@/components/PillButton';
 import Footer from '@/components/Footer';
 import ToolStack from '@/components/ToolStack';
-import { motion } from 'framer-motion';
 import AnimatedShape from '@/components/AnimatedShape';
 import DesignSystemCTA from '@/components/DesignSystemCTA';
 import Showreel from '@/components/Showreel';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip"
+import DotGrid from '@/components/DotGrid';
+import { ArrowRight, Plus } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="bg-background">
+    <div className="bg-background relative">
+      <DotGrid />
       <Header />
       <main>
+        {/* Decorative Corner Markers */}
+        <div className="fixed top-24 left-8 pointer-events-none opacity-20 hidden lg:block"><Plus size={16} /></div>
+        <div className="fixed top-24 right-8 pointer-events-none opacity-20 hidden lg:block"><Plus size={16} /></div>
+
         <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-20 md:pt-24 pb-10 md:pb-12">
             <div className="pb-1 md:pb-2">
               <FadeIn>
@@ -154,7 +152,8 @@ export default function Home() {
             </div>
         </section>
         
-        <div className="pb-20 md:pb-24">
+        <div className="pb-20 md:pb-24 relative">
+             <div className="absolute right-8 top-0 pointer-events-none opacity-20 hidden lg:block"><Plus size={16} /></div>
             <Approach />
         </div>
 

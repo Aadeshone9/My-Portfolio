@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useRef } from 'react';
@@ -13,11 +14,9 @@ export default function AnimatedShape({ shape, className }: AnimatedShapeProps) 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'start 0.8'], // Start when bottom of viewport hits top of element, end when 80% of element is scrolled past
+    offset: ['start end', 'start 0.8'],
   });
 
-  // Get theme colors for interpolation. Note: This requires CSS variables to be available.
-  // We're assuming `hsl(var(--border))` and `hsl(var(--primary))` are set in globals.css
   const fromColor = 'hsl(var(--border))';
   const toColor = 'hsl(var(--primary))';
 
@@ -37,6 +36,16 @@ export default function AnimatedShape({ shape, className }: AnimatedShapeProps) 
       ref={ref}
       className={cn(shapeClasses[shape], className)}
       style={{ borderColor }}
+      animate={{
+        y: [0, -15, 0],
+        rotate: [0, 5, 0],
+        scale: [1, 1.05, 1],
+      }}
+      transition={{
+        duration: 6,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
     />
   );
 }
