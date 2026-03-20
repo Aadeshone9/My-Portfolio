@@ -26,7 +26,6 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased relative">
-        <div className="noise-overlay" aria-hidden="true" />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -36,16 +36,6 @@ export default function AnimatedShape({ shape, className }: AnimatedShapeProps) 
       ref={ref}
       className={cn(shapeClasses[shape], className)}
       style={{ borderColor }}
-      animate={{
-        y: [0, -15, 0],
-        rotate: [0, 5, 0],
-        scale: [1, 1.05, 1],
-      }}
-      transition={{
-        duration: 6,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
     />
   );
 }

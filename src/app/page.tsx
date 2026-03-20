@@ -13,19 +13,13 @@ import ToolStack from '@/components/ToolStack';
 import AnimatedShape from '@/components/AnimatedShape';
 import DesignSystemCTA from '@/components/DesignSystemCTA';
 import Showreel from '@/components/Showreel';
-import DotGrid from '@/components/DotGrid';
-import { ArrowRight, Plus } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Home() {
   return (
     <div className="bg-background relative">
-      <DotGrid />
       <Header />
       <main>
-        {/* Decorative Corner Markers */}
-        <div className="fixed top-24 left-8 pointer-events-none opacity-20 hidden lg:block"><Plus size={16} /></div>
-        <div className="fixed top-24 right-8 pointer-events-none opacity-20 hidden lg:block"><Plus size={16} /></div>
-
         <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-20 md:pt-24 pb-10 md:pb-12">
             <div className="pb-1 md:pb-2">
               <FadeIn>
@@ -34,7 +28,7 @@ export default function Home() {
                 </h1>
               </FadeIn>
               <FadeIn>
-                <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-snug md:leading-[43px] text-muted-foreground max-w-xl mt-4 text-left">
+                <p className="font-subtitle text-lg md:text-2xl lg:text-[32px] leading-snug md:leading-[43px] text-muted-foreground mt-4 text-left">
                   I have contributed to products at scale, Chances are you've used some!
                 </p>
               </FadeIn>
@@ -153,7 +147,6 @@ export default function Home() {
         </section>
         
         <div className="pb-20 md:pb-24 relative">
-             <div className="absolute right-8 top-0 pointer-events-none opacity-20 hidden lg:block"><Plus size={16} /></div>
             <Approach />
         </div>
 
