@@ -29,7 +29,10 @@ import {
   Rocket,
   BellRing,
   Eye,
-  Brain
+  Brain,
+  ClipboardCheck,
+  BarChart3,
+  Map
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import FadeIn from '@/components/FadeIn';
@@ -160,9 +163,9 @@ const projectData: Record<string, any> = {
       { value: '35%', description: 'Rise in Mobile-First User Engagement' },
     ],
     challenges: [
-      { title: 'User', description: "Cognitive overload caused by fragmented apps and a lack of personalized financial guidance." },
-      { title: 'Business', description: "Missed revenue due to siloed data and inefficient cross-selling of insurance and loan products." },
-      { title: 'Internal', description: "Inconsistent design language across the ecosystem leading to user distrust and high churn." },
+      { title: 'The Audit', description: "Cognitive overload caused by fragmented apps and a lack of personalized financial guidance." },
+      { title: 'The Benchmarking', description: "Missed revenue due to siloed data and inefficient cross-selling of insurance and loan products." },
+      { title: 'The Strategy', description: "Inconsistent design language across the ecosystem leading to user distrust and high churn." },
     ],
     rationales: [
       {
@@ -201,57 +204,57 @@ const projectData: Record<string, any> = {
     ]
   },
   'thermax-edge': {
-    title: 'Reimagining Industrial Connections',
-    subtitle: "Optimizing the 'Customer Connect' platform for the energy and renewables sector.",
-    heroTag: 'Industrial UX Case Study',
-    contribution: ['UX Research (70+ Participants)', 'Information Architecture', 'Task Flow Optimization', 'Industrial Strategy'],
-    role: 'UX Researcher & Strategist',
-    focus: "Optimizing the 'Customer Connect' platform for the energy and renewables sector.",
-    primaryGoal: 'To empower users to take control of their energy usage and plant health through a unified Service Hub.',
+    title: 'Industrial UX Audit & Strategy',
+    subtitle: "Benchmarking the 'Customer Connect' ecosystem to define a scalable roadmap for the energy sector.",
+    heroTag: 'UX Audit & Research Benchmarking',
+    contribution: ['UX Audit & Heuristics', 'Research Benchmarking', 'Information Architecture', 'Design Strategy'],
+    role: 'UX Strategy Consultant',
+    focus: "Identifying friction and benchmarking task success rates for the 'Customer Connect' ecosystem.",
+    primaryGoal: 'Defining a scalable roadmap and benchmarking performance to justify the ROI of a strategic overhaul.',
     outcomes: [
-      { value: '25%', description: 'Increase in User Adoption Rate' },
-      { value: '30%', description: 'Reduction in Task Completion Time for spare parts booking' },
-      { value: '100%', description: 'Transparency in Install Base tracking' },
+      { value: '70+', description: 'Critical Friction Points identified and mapped for resolution.' },
+      { value: '30%', description: 'Roadmap for a reduction in task completion time.' },
+      { value: '100%', description: 'Alignment on a new Information Architecture across all business units.' },
     ],
     challenges: [
-      { title: 'User', description: 'Information overload and cumbersome task flows causing frustration and disconnected engagement for plant managers.' },
-      { title: 'Business', description: 'Inefficient operations and missed revenue due to lack of transparency in the install base and spare parts ordering.' },
-      { title: 'Internal', description: 'Inconsistent Design Language (VX) and fragmented IA hindering global scalability and technology-driven growth.' },
+      { title: 'The Audit', description: "Identified significant 'Friction Debt' in the legacy IA, leading to 70+ identified pain points across the platform." },
+      { title: 'Benchmarking', description: "Benchmarked 'Task Success Rates' against industry standards, revealing a 30% lag in critical maintenance workflows." },
+      { title: 'The Strategy', description: "Absence of a North Star design language, requiring a unified strategy to prevent fragmented development across global teams." },
     ],
     rationales: [
       {
-        title: 'Field Research & Contextual Mapping',
-        icon: 'Search',
+        title: 'Audit Methodology (Heuristics)',
+        icon: 'ClipboardCheck',
         points: [
-          { title: 'In-depth Interviews', description: 'Conducted interviews with 70+ customers across diverse energy plants to map unique operational challenges.' },
-          { title: 'Persona Task Flows', description: 'Visiting energy plants allowed us to map unique task flows for Plant Heads, Maintenance Managers, and Utility Managers.' }
+          { title: 'Analysis', description: "Detail the heuristic evaluation and plant visits. Audited task flows for Plant Heads and Managers to identify high-risk friction areas." },
+          { title: 'Insight', description: "Identified systemic usability issues that directly impacted plant operational safety and data entry accuracy." }
         ]
       },
       {
-        title: 'Information Architecture (IA) Evolution',
-        icon: 'Layers',
+        title: 'Research Benchmarking (70+ Participants)',
+        icon: 'BarChart3',
         points: [
-          { title: 'IA Strategy', description: 'Shifted from fragmented "Existing IA" to a proposed IA using progressive disclosure to reduce cognitive load.' },
-          { title: 'Findability', description: 'Drastically reduced cognitive load by restructuring data hierarchy and improving findability of critical controls.' }
+          { title: 'Process', description: "Describe the benchmarking process with 70+ participants. We didn't just design; we measured current performance to justify ROI." },
+          { title: 'Data-Driven Validation', description: "Quantifiable metrics allowed stakeholders to see the direct correlation between UX friction and operational downtime." }
         ]
       },
       {
-        title: 'Service Excellence & High-Pressure Tasks',
-        icon: 'Zap',
+        title: 'Strategic Roadmap (The Blueprint)',
+        icon: 'Map',
         points: [
-          { title: 'Use Case Optimization', description: 'Explained the "Plant Shutdown" and "Maintenance Check" use cases to streamline high-pressure tasks.' },
-          { title: 'Operational Impact', description: 'Streamlining these tasks directly impacts operational efficiency, asset lifespan, and plant safety.' }
+          { title: 'Implementation', description: "Explain the Proposed IA and Task Flow Recommendations. This served as the master blueprint for the design team." },
+          { title: 'Scalability', description: "A unified Information Architecture ensures that future features can be integrated without increasing user cognitive load." }
         ]
       }
     ],
     metrics: [
-      { title: 'User Adoption', value: '25%', description: 'Increase in User Adoption Rate', detail: 'Driven by simplified task flows and better data visibility.' },
-      { title: 'Booking Efficiency', value: '30%', description: 'Reduction in Task Completion Time', detail: 'Measured specifically for the critical spare parts booking process.' }
+      { title: 'Audit Value', value: '70+', description: 'Critical Friction Points identified', detail: 'Mapped for immediate resolution in the next development cycle.' },
+      { title: 'Efficiency Goal', value: '30%', description: 'Target Reduction in Task Time', detail: 'Achieved through streamlined maintenance and booking workflows.' }
     ],
     learnings: [
-      { title: 'Safety as Priority', description: 'Industrial UX is fundamentally about safety and efficiency; every design choice must support these core needs.' },
-      { title: 'Service Hub Mental Model', description: 'Treating the platform as a comprehensive Service Hub empowered users to proactively manage plant health.' },
-      { title: 'Impact of Research', description: 'Direct field observations were critical in uncovering the friction points that Plant Managers faced daily.' },
+      { title: 'Data over Opinion', description: 'A UX Audit isn\'t just about finding what\'s broken; it\'s about defining the ROI of fixing it.' },
+      { title: 'Contextual Reality', description: 'Visiting energy plants revealed that "desk-side" design doesn\'t account for high-pressure industrial environments.' },
+      { title: 'Master Blueprints', description: 'By benchmarking the current state, we gave the design team the data-driven confidence to build a world-class industrial hub.' },
     ]
   }
 };
@@ -265,7 +268,10 @@ const IconMap: Record<string, any> = {
   BellRing,
   Eye,
   Users,
-  Search
+  Search,
+  ClipboardCheck,
+  BarChart3,
+  Map
 };
 
 export default function ProjectPage({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
