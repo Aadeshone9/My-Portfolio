@@ -64,14 +64,14 @@ export default function ProjectPageCard({ title, description, role, img, icon, c
           <h3 className="font-headline font-semibold text-xl text-foreground">{title}</h3>
           {description && <p className="text-muted-foreground mt-2 text-base">{description}</p>}
           {(isJioLocked && !isUnlockedProject) && <p className="text-xs text-primary font-semibold mt-2">Proprietary Strategy: Access Restricted. Password required.</p>}
-          <p className="text-sm text-muted-foreground mt-4 whitespace-nowrap">{role}</p>
+          <p className="text-sm text-muted-foreground mt-4 leading-relaxed">{role}</p>
         </div>
       </div>
       <div className="mt-6">
         {comingSoon ? (
           <div className="flex items-center gap-2 text-muted-foreground">
             <Timer />
-            <span className="whitespace-nowrap">Coming soon | NDA Project</span>
+            <span className="text-sm">Coming soon | NDA Project</span>
           </div>
         ) : isUnlockedProject ? (
            <PillButton href={`/projects/${slug}`} className="group !text-foreground !border-foreground">
