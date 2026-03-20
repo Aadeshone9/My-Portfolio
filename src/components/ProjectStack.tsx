@@ -31,7 +31,7 @@ const projects = [
     cta: 'View Project',
     href: '/projects/design-research-ops',
     img: '/images/jio.png',
-    isLocked: false, // Removed lock for Jio as requested
+    isLocked: false,
   },
   {
     title: "Thermax - Edge Platform",
@@ -42,10 +42,10 @@ const projects = [
     href: '/projects/thermax-edge',
   },
   {
-    title: "Maplegeni",
-    role: "Product Designer | Co-Designer",
-    description: "A AI driven search tool for students to find the best college and course based on their profile.",
-    cta: 'View Project',
+    title: "B2C Software Platform",
+    role: "Lead Product & UX Designer",
+    description: "Designing a responsive, multi-domain service platform with a 'Mobile-First' strategy.",
+    cta: 'View Case Study',
     href: '/projects/maplegeni',
     img: '/images/maplegenix.webp',
   },

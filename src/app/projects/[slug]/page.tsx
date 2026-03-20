@@ -135,6 +135,60 @@ const projectData: Record<string, any> = {
       { title: 'Iteration is Impact', description: 'Simple changes, like refining the information hierarchy of the charging card based on feedback, can yield outsized results in critical user flows.' },
     ]
   },
+  'maplegeni': {
+    title: 'Scalable B2C Experience Design',
+    subtitle: 'Crafting a unified digital presence for global software development and testing services.',
+    heroTag: 'B2C Software Platform Case Study',
+    contribution: ['UX Strategy', 'Visual Experience (VX)', 'Information Architecture', 'Mobile-First Design'],
+    role: 'Lead Product & UX Designer',
+    focus: "Designing a responsive, multi-domain service platform with a 'Mobile-First' strategy.",
+    primaryGoal: 'To transform a technical services site into an intuitive, world-class digital product.',
+    outcomes: [
+      { value: '35%', description: 'Rise in Mobile-First user engagement.' },
+      { value: '100%', description: 'Brand consistency across UK & US market assets.' },
+      { value: 'Streamlined', description: "Onshore-Offshore handoff through a unified Design System." },
+    ],
+    challenges: [
+      { title: 'The Challenge', description: 'Information overload within the legacy IA made it difficult for diverse clients (Startups to Enterprises) to locate relevant services.' },
+      { title: 'Business', description: 'Lack of a unified brand identity led to low credibility and missed opportunities in competitive markets like the UK & US.' },
+      { title: 'Internal', description: 'Siloed onshore/offshore team workflows resulted in inconsistent handoffs and fragmented user journeys.' },
+    ],
+    rationales: [
+      {
+        title: 'Design Ethics (Core Pillars)',
+        icon: 'ShieldCheck',
+        points: [
+          { title: 'Useful', description: 'Providing clear and concise service activities to help users understand the value proposition quickly.' },
+          { title: 'Usable', description: 'Creating an intuitive interaction model that minimizes friction in service discovery.' },
+          { title: 'Desirable', description: 'Implementing delightful craft and visual polish to build emotional resonance.' }
+        ]
+      },
+      {
+        title: 'VX Strategy (Visual Trust)',
+        icon: 'Eye',
+        points: [
+          { title: 'Visual Palette', description: 'Detail the use of soft pastel tones and Poppins typography to evoke a welcoming and professional atmosphere.' },
+          { title: 'Approachable Tech', description: 'This choice demystifies complex tech services, making them feel accessible to both startups and enterprises.' }
+        ]
+      },
+      {
+        title: 'Mobile-First Architecture',
+        icon: 'Zap',
+        points: [
+          { title: 'Proposed IA', description: 'Describe the complete Information Architecture overhaul optimized for vertical viewing.' },
+          { title: 'Responsive Continuity', description: 'A seamless, "one-size-fits-all" approach that caters to individual user preferences on any device.' }
+        ]
+      }
+    ],
+    metrics: [
+      { title: 'User Engagement', value: '35%', description: 'Rise in Mobile-First user engagement.', detail: 'Direct result of the responsive design strategy.' },
+      { title: 'Market Credibility', value: '100%', description: 'Brand consistency across UK & US.', detail: 'Unified brand identity across all international market assets.' }
+    ],
+    learnings: [
+      { title: 'Design as Communication', description: 'Visual Design is an asset for communication. It bridges the gap between technical complexity and user understanding.' },
+      { title: 'Ethics & Strategy', description: 'By balancing Design Ethics with a clean VX strategy, we transformed a technical services site into an intuitive digital product.' }
+    ]
+  },
   'design-research-ops': {
     title: 'Research Ops & Governance',
     subtitle: 'Streamlining research for 300+ enterprise designers.',
