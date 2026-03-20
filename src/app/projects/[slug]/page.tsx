@@ -151,7 +151,7 @@ const projectData: Record<string, any> = {
   },
   'mahindra-finance': {
     title: 'Designing for Trust & Growth',
-    subtitle: "Streamlining complex financial products into a seamless 'Life Companion' experience.",
+    subtitle: "Streamlining financial products into a 'Life Companion' experience.",
     heroTag: 'Financial Ecosystem Strategy',
     contribution: ['UX Strategy', 'Financial Journey Mapping', 'Cross-selling Logic', 'High-Fidelity Design'],
     role: 'Senior UX Consultant | Lead Designer',
@@ -205,7 +205,7 @@ const projectData: Record<string, any> = {
   },
   'thermax-edge': {
     title: 'Industrial UX Audit & Strategy',
-    subtitle: "Benchmarking the 'Customer Connect' ecosystem to define a scalable roadmap for the energy sector.",
+    subtitle: "Benchmarking for a scalable industrial roadmap.",
     heroTag: 'UX Audit & Research Benchmarking',
     contribution: ['UX Audit & Heuristics', 'Research Benchmarking', 'Information Architecture', 'Design Strategy'],
     role: 'UX Strategy Consultant',
