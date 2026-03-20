@@ -31,6 +31,7 @@ const projects = [
     cta: 'View Project',
     href: '/projects/design-research-ops',
     img: '/images/jio.png',
+    isLocked: true, // Unique lock logic for Jio
   },
   {
     title: "Thermax - Edge Platform",
@@ -64,7 +65,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
   const linkedinUrl = `https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar&body=${message}`;
 
   // Shake animation for locked cards
-  const isLocked = !project.cta;
+  const isLocked = project.isLocked || !project.cta;
   const shakeAnimation = isLocked ? {
     hover: {
       x: [-2, 2, -2, 2, 0],

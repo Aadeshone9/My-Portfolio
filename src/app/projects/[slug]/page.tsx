@@ -48,7 +48,7 @@ const motionProps = {
 // Count-up component for metrics
 const Counter = ({ value }: { value: string }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
   const [displayValue, setDisplayValue] = useState("0");
   
   useEffect(() => {
@@ -60,7 +60,7 @@ const Counter = ({ value }: { value: string }) => {
         const prefix = value.split(match[0])[0];
         
         const controls = animate(0, target, {
-          duration: 2,
+          duration: 1.5,
           ease: "easeOut",
           onUpdate: (latest) => {
             setDisplayValue(`${prefix}${Math.floor(latest)}${suffix}`);
@@ -73,7 +73,15 @@ const Counter = ({ value }: { value: string }) => {
     }
   }, [isInView, value]);
 
-  return <span ref={ref}>{displayValue}</span>;
+  return (
+    <span 
+      ref={ref} 
+      className="inline-block" 
+      style={{ minWidth: `${value.length}ch` }}
+    >
+      {displayValue}
+    </span>
+  );
 };
 
 const projectData: Record<string, any> = {

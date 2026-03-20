@@ -1,8 +1,11 @@
 
+'use client';
 import PillButton from "./PillButton";
 import ResumeViewer from "./ResumeViewer";
 import ScrollToTopButton from "./ScrollToTopButton";
 import FadeIn from "./FadeIn";
+import { Bike } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Footer() {
     return (
@@ -19,7 +22,16 @@ export default function Footer() {
               </FadeIn>
               <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-base md:text-lg">
                 <ResumeViewer />
-                <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-tight underline leading-normal break-all hover:text-primary transition-colors">Aadesh.one9@gmail.com</a>
+                <div className="flex items-center gap-2">
+                  <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-tight underline leading-normal break-all hover:text-primary transition-colors">Aadesh.one9@gmail.com</a>
+                  <motion.div 
+                    whileHover={{ scale: 1.2, rotate: -10 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    className="text-primary inline-flex"
+                  >
+                    <Bike size={20} aria-hidden="true" />
+                  </motion.div>
+                </div>
                 <p className="font-headline font-semibold tracking-tight leading-normal">+ (91) 8975143018</p>
                 <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold tracking-tight underline leading-normal break-all hover:text-primary transition-colors">
                   LinkedIn

@@ -14,13 +14,41 @@ import AnimatedShape from '@/components/AnimatedShape';
 import DesignSystemCTA from '@/components/DesignSystemCTA';
 import Showreel from '@/components/Showreel';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
     <div className="bg-background relative">
       <Header />
       <main>
-        <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-20 md:pt-24 pb-10 md:pb-12">
+        {/* Hero Section */}
+        <div className="container mx-auto px-4 sm:px-8 md:px-20 pt-20 md:pt-24 pb-10 md:pb-12 relative overflow-hidden">
+            {/* Background Vector Watermark */}
+            <motion.div 
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[-1] opacity-[0.05] pointer-events-none"
+              animate={{
+                y: [0, -20, 0],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            >
+              <svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="400" cy="300" r="1" fill="currentColor" />
+                <path d="M100 100L250 150L400 100L550 200L700 150" stroke="currentColor" strokeWidth="0.5" />
+                <path d="M150 450L300 400L450 500L650 400" stroke="currentColor" strokeWidth="0.5" />
+                <circle cx="100" cy="100" r="4" stroke="currentColor" strokeWidth="0.5" />
+                <circle cx="250" cy="150" r="4" stroke="currentColor" strokeWidth="0.5" />
+                <circle cx="400" cy="100" r="4" stroke="currentColor" strokeWidth="0.5" />
+                <circle cx="550" cy="200" r="4" stroke="currentColor" strokeWidth="0.5" />
+                <circle cx="700" cy="150" r="4" stroke="currentColor" strokeWidth="0.5" />
+                <line x1="250" y1="150" x2="300" y2="400" stroke="currentColor" strokeWidth="0.3" strokeDasharray="4 4" />
+                <line x1="550" y1="200" x2="450" y2="500" stroke="currentColor" strokeWidth="0.3" strokeDasharray="4 4" />
+              </svg>
+            </motion.div>
+
             <div className="pb-1 md:pb-2">
               <FadeIn>
                 <h1 className="font-headline font-semibold text-5xl md:text-8xl lg:text-[100px] leading-tight tracking-wide text-foreground text-left">
