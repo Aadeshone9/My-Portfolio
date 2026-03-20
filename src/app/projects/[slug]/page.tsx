@@ -44,8 +44,8 @@ const motionProps = {
 const projectData: Record<string, any> = {
   'vida': {
     title: 'EV Mobility with VIDA',
-    subtitle: 'Driving Loyalty & Efficiency in',
-    heroTag: 'Behavioural UX case Study',
+    subtitle: 'Driving Loyalty & Efficiency in EV Mobility',
+    heroTag: 'Behavioural UX Case Study',
     contribution: ['UX Research', 'User Journeys', 'Strategy & Design Conceptualisation', 'Design System'],
     role: 'Consultant: CX & UX Design',
     focus: 'End-to-end connected vehicle platform experience for the launch of the Vida EV.',
@@ -147,8 +147,8 @@ const projectData: Record<string, any> = {
     ]
   },
   'mahindra-finance': {
-    title: 'Unified Financial Ecosystem',
-    subtitle: 'Designing for Trust & Growth',
+    title: 'Designing for Trust & Growth',
+    subtitle: "Streamlining complex financial products into a seamless 'Life Companion' experience.",
     heroTag: 'Financial Ecosystem Strategy',
     contribution: ['UX Strategy', 'Financial Journey Mapping', 'Cross-selling Logic', 'High-Fidelity Design'],
     role: 'Senior UX Consultant | Lead Designer',
@@ -198,6 +198,60 @@ const projectData: Record<string, any> = {
       { title: 'Empowerment vs Transactions', description: 'By shifting the narrative from "scarcity" to "empowerment," we transformed a transactional app into a long-term life companion that grows with the user.' },
       { title: 'Context is Everything', description: 'Financial products are most successful when offered at the precise moment they solve a real-life need.' },
       { title: 'Trust through Consistency', description: 'A unified design language is not just aesthetic; it is the foundation of trust in a financial ecosystem.' },
+    ]
+  },
+  'thermax-edge': {
+    title: 'Reimagining Industrial Connections',
+    subtitle: "Optimizing the 'Customer Connect' platform for the energy and renewables sector.",
+    heroTag: 'Industrial UX Case Study',
+    contribution: ['UX Research (70+ Participants)', 'Information Architecture', 'Task Flow Optimization', 'Industrial Strategy'],
+    role: 'UX Researcher & Strategist',
+    focus: "Optimizing the 'Customer Connect' platform for the energy and renewables sector.",
+    primaryGoal: 'To empower users to take control of their energy usage and plant health through a unified Service Hub.',
+    outcomes: [
+      { value: '25%', description: 'Increase in User Adoption Rate' },
+      { value: '30%', description: 'Reduction in Task Completion Time for spare parts booking' },
+      { value: '100%', description: 'Transparency in Install Base tracking' },
+    ],
+    challenges: [
+      { title: 'User', description: 'Information overload and cumbersome task flows causing frustration and disconnected engagement for plant managers.' },
+      { title: 'Business', description: 'Inefficient operations and missed revenue due to lack of transparency in the install base and spare parts ordering.' },
+      { title: 'Internal', description: 'Inconsistent Design Language (VX) and fragmented IA hindering global scalability and technology-driven growth.' },
+    ],
+    rationales: [
+      {
+        title: 'Field Research & Contextual Mapping',
+        icon: 'Search',
+        points: [
+          { title: 'In-depth Interviews', description: 'Conducted interviews with 70+ customers across diverse energy plants to map unique operational challenges.' },
+          { title: 'Persona Task Flows', description: 'Visiting energy plants allowed us to map unique task flows for Plant Heads, Maintenance Managers, and Utility Managers.' }
+        ]
+      },
+      {
+        title: 'Information Architecture (IA) Evolution',
+        icon: 'Layers',
+        points: [
+          { title: 'IA Strategy', description: 'Shifted from fragmented "Existing IA" to a proposed IA using progressive disclosure.' },
+          { title: 'Findability', description: 'Drastically reduced cognitive load by restructuring data hierarchy and improving findability of critical controls.' }
+        ]
+      },
+      {
+        title: 'Service Excellence & High-Pressure Tasks',
+        icon: 'Zap',
+        points: [
+          { title: 'Use Case Optimization', description: 'Explained the "Plant Shutdown" and "Maintenance Check" use cases to streamline high-pressure tasks.' },
+          { title: 'Operational Impact', description: 'Streamlining these tasks directly impacts operational efficiency, asset lifespan, and plant safety.' }
+        ]
+      }
+    ],
+    metrics: [
+      { title: 'User Adoption', value: '25%', description: 'Increase in User Adoption Rate', detail: 'Driven by simplified task flows and better data visibility.' },
+      { title: 'Booking Efficiency', value: '30%', description: 'Reduction in Task Completion Time', detail: 'Measured specifically for the critical spare parts booking process.' }
+    ],
+    learnings: [
+      { title: 'Safety as Priority', description: 'Industrial UX is fundamentally about safety and efficiency; every design choice must support these core needs.' },
+      { title: 'Service Hub Mental Model', description: 'Treating the platform as a comprehensive Service Hub empowered users to proactively manage plant health.' },
+      { title: 'Impact of Research', description: 'Direct field observations were critical in uncovering the friction points that Plant Managers faced daily.' },
     ]
   }
 };

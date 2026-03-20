@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -9,16 +8,27 @@ import Image from 'next/image';
 
 const projects = [
   {
+    title: "Google Cloud Security",
+    role: "Partner Product & UX Design consultant | Co-Designer",
+    description: "Optimized ticketing workflows and reduced average resolution time by 30% for cloud security infrastructure.",
+    img: '/images/Google.png',
+    isLocked: true,
+  },
+  {
     title: "Thermax - Edge Platform",
     role: "UX Researcher and Strategist",
     description: "Defined UX improvements that increased error visibility and user adoption by 25%.",
     img: '/images/edge.png',
+    cta: 'View Case Study',
+    href: '/projects/thermax-edge',
   },
   {
-    title: "Maplegeni",
-    role: "Product Designer | Co-Designer",
-    description: "Led B2C website product design, boosting mobile-first engagement by 35%.",
-    img: '/images/maplegenix.webp',
+    title: "Research Ops & Governance",
+    role: "Consultant: UX Strategy & Ops",
+    description: "Streamlining research workflows for 300+ enterprise designers, reducing time-to-insight by 40%.",
+    cta: 'View Project',
+    href: '/projects/design-research-ops',
+    img: '/images/jio.png',
   },
   {
     title: "Unified Financial Ecosystem",
@@ -27,12 +37,6 @@ const projects = [
     cta: 'View Project',
     href: '/projects/mahindra-finance',
     img: '/images/mahindra-finance.svg',
-  },
-  {
-    title: "Google Cloud Security",
-    role: "Partner Product & UX Design consultant | Co-Designer",
-    description: "Prioritized accessibility and clarity for all users in complex enterprise security environments.",
-    img: '/images/Google.png',
   },
   {
     title: "Hero Motocorp Vida App",
@@ -67,7 +71,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
               <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px] z-20 flex items-center justify-center">
                 <div className="bg-card/90 p-4 rounded-xl border border-border shadow-xl text-center">
                   <Lock className="w-8 h-8 mx-auto text-primary mb-2" />
-                  <p className="text-xs font-semibold text-primary uppercase tracking-widest">Restricted</p>
+                  <p className="text-xs font-semibold text-primary uppercase tracking-widest">NDA Protected</p>
                 </div>
               </div>
             )}
@@ -96,12 +100,12 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                     </CardDescription>
                 </div>
                 <div className="flex items-center gap-2 mt-4">
-                    {project.cta === 'View Project' ? (
+                    {project.cta ? (
                       <PillButton 
                         href={project.href || '#'}
                         className="group !text-foreground !border-foreground"
                       >
-                          <span className="group-hover:font-semibold">View Project</span>
+                          <span className="group-hover:font-semibold">{project.cta}</span>
                           <ArrowRight />
                       </PillButton>
                     ) : (

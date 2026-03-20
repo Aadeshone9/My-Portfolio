@@ -31,6 +31,7 @@ const uxProjects = [
     title: 'Thermax - Edge Platform',
     role: 'UX Researcher and Strategist',
     img: '/images/edge.png',
+    slug: 'thermax-edge'
   },
   {
     title: 'Maplegeni',
@@ -41,6 +42,7 @@ const uxProjects = [
     title: 'Google Cloud Security',
     role: 'Partner Product & UX Design consultant | Co-Designer',
     img: '/images/Google.png',
+    isLocked: true,
   },
   {
     title: 'General Motors - Enterprise Security Restriction For Mobile Devices',
