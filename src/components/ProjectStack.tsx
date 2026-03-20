@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -52,7 +53,6 @@ const projects = [
     role: "Partner Product & UX Design consultant | Co-Designer",
     description: "Optimized ticketing workflows and reduced average resolution time by 30% for cloud security infrastructure.",
     img: '/images/Google.png',
-    isLocked: true,
   }
 ];
 
