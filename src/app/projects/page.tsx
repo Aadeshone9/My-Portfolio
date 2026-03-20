@@ -41,12 +41,6 @@ const uxProjects = [
     slug: 'maplegeni'
   },
   {
-    title: 'Jio Research',
-    role: 'Proprietary Strategy: Access Restricted',
-    img: '/images/jio.png',
-    isLocked: true,
-  },
-  {
     title: 'Google Cloud Security',
     description: 'Optimized ticketing workflows and reduced average resolution time by 30% for cloud security infrastructure.',
     role: 'Partner Product & UX Design consultant | Co-Designer',
