@@ -231,7 +231,7 @@ const projectData: Record<string, any> = {
         title: 'Information Architecture (IA) Evolution',
         icon: 'Layers',
         points: [
-          { title: 'IA Strategy', description: 'Shifted from fragmented "Existing IA" to a proposed IA using progressive disclosure.' },
+          { title: 'IA Strategy', description: 'Shifted from fragmented "Existing IA" to a proposed IA using progressive disclosure to reduce cognitive load.' },
           { title: 'Findability', description: 'Drastically reduced cognitive load by restructuring data hierarchy and improving findability of critical controls.' }
         ]
       },

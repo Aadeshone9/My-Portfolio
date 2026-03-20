@@ -8,27 +8,12 @@ import Image from 'next/image';
 
 const projects = [
   {
-    title: "Google Cloud Security",
-    role: "Partner Product & UX Design consultant | Co-Designer",
-    description: "Optimized ticketing workflows and reduced average resolution time by 30% for cloud security infrastructure.",
-    img: '/images/Google.png',
-    isLocked: true,
-  },
-  {
-    title: "Thermax - Edge Platform",
-    role: "UX Researcher and Strategist",
-    description: "Defined UX improvements that increased error visibility and user adoption by 25%.",
-    img: '/images/edge.png',
-    cta: 'View Case Study',
-    href: '/projects/thermax-edge',
-  },
-  {
-    title: "Research Ops & Governance",
-    role: "Consultant: UX Strategy & Ops",
-    description: "Streamlining research workflows for 300+ enterprise designers, reducing time-to-insight by 40%.",
+    title: "Hero Motocorp Vida App",
+    role: "UX Design consultant and Researcher",
+    description: "End-to-end connected vehicle platform experience for the launch of the Vida EV.",
     cta: 'View Project',
-    href: '/projects/design-research-ops',
-    img: '/images/jio.png',
+    href: '/projects/vida',
+    img: '/images/hero.svg'
   },
   {
     title: "Unified Financial Ecosystem",
@@ -39,12 +24,35 @@ const projects = [
     img: '/images/mahindra-finance.svg',
   },
   {
-    title: "Hero Motocorp Vida App",
-    role: "UX Design consultant and Researcher",
-    description: "End-to-end connected vehicle platform experience for the launch of the Vida EV.",
+    title: "Research Ops & Governance",
+    role: "Consultant: UX Strategy & Ops",
+    description: "Streamlining research workflows for 300+ enterprise designers, reducing time-to-insight by 40%.",
     cta: 'View Project',
-    href: '/projects/vida',
-    img: '/images/hero.svg'
+    href: '/projects/design-research-ops',
+    img: '/images/jio.png',
+  },
+  {
+    title: "Thermax - Edge Platform",
+    role: "UX Researcher and Strategist",
+    description: "Defined UX improvements that increased error visibility and user adoption by 25%.",
+    img: '/images/edge.png',
+    cta: 'View Case Study',
+    href: '/projects/thermax-edge',
+  },
+  {
+    title: "Maplegeni",
+    role: "Product Designer | Co-Designer",
+    description: "A AI driven search tool for students to find the best college and course based on their profile.",
+    cta: 'View Project',
+    href: '/projects/maplegeni',
+    img: '/images/maplegenix.webp',
+  },
+  {
+    title: "Google Cloud Security",
+    role: "Partner Product & UX Design consultant | Co-Designer",
+    description: "Optimized ticketing workflows and reduced average resolution time by 30% for cloud security infrastructure.",
+    img: '/images/Google.png',
+    isLocked: true,
   }
 ];
 
@@ -91,7 +99,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                     <p className="text-sm md:text-base text-muted-foreground mt-1">{project.role}</p>
                     <CardDescription className="text-base md:text-lg text-foreground/80 mt-2">
                         {Array.isArray(project.description) ? (
-                          project.description.map((line, index) => (
+                          project.description.map((line: string, index: number) => (
                             <span key={index} className="block">{line}</span>
                           ))
                         ) : (

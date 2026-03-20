@@ -16,16 +16,16 @@ const uxProjects = [
     slug: 'vida'
   },
   {
-    title: 'Research Ops & Governance',
-    role: 'Consultant: UX Strategy & Ops',
-    img: '/images/jio.png',
-    slug: 'design-research-ops'
-  },
-  {
     title: 'Unified Financial Ecosystem',
     role: 'Senior UX Consultant | Lead Designer',
     img: '/images/mahindra-finance.svg',
     slug: 'mahindra-finance'
+  },
+  {
+    title: 'Research Ops & Governance',
+    role: 'Consultant: UX Strategy & Ops',
+    img: '/images/jio.png',
+    slug: 'design-research-ops'
   },
   {
     title: 'Thermax - Edge Platform',
@@ -37,6 +37,13 @@ const uxProjects = [
     title: 'Maplegeni',
     role: 'Product Designer | Co-Designer',
     img: '/images/maplegenix.webp',
+    slug: 'maplegeni'
+  },
+  {
+    title: 'Jio Research',
+    role: 'Proprietary Strategy: Access Restricted',
+    img: '/images/jio.png',
+    isLocked: true,
   },
   {
     title: 'Google Cloud Security',
