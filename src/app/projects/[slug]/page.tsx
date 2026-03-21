@@ -2,6 +2,7 @@
 import { useMemo, use, useEffect, useState, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import NextProjectFooter from '@/components/NextProjectFooter';
 import { motion, useScroll, useTransform, useInView, animate } from 'framer-motion';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -923,6 +924,9 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
             </div>
           </section>
         )}
+
+        {/* Continuity Loop Footer */}
+        <NextProjectFooter currentSlug={params.slug} />
 
         {/* Call to Action Section */}
         <section className="pb-20 container mx-auto px-4 sm:px-8 md:px-20">
