@@ -24,9 +24,9 @@ const projects = [
     img: '/images/mahindra-finance.svg',
   },
   {
-    title: "Research Ops & Governance",
+    title: "Research Ops",
     role: "Consultant: UX Strategy & Ops",
-    description: "Streamlining research workflows for 300+ enterprise designers, reducing time-to-insight by 40%.",
+    description: "Scaling research for 300+ Designers, reducing time-to-insight by 40%.",
     cta: 'View Project',
     href: '/projects/design-research-ops',
     img: '/images/jio.png',

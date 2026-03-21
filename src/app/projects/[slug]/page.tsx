@@ -202,8 +202,8 @@ const projectData: Record<string, any> = {
     ]
   },
   'design-research-ops': {
-    title: 'Research Ops & Governance',
-    subtitle: 'Streamlining research for 300+ enterprise designers.',
+    title: 'Research Ops',
+    subtitle: 'Scaling research for 300+ Designers',
     heroTag: 'Research Operations Case Study',
     contribution: ['Research Ops Strategy', 'Interactive Workflows', 'Governance', 'Pilot Testing'],
     role: 'Consultant: UX Strategy & Ops',
@@ -830,7 +830,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
               </FadeIn>
               <FadeIn>
                 <p className="text-lg md:text-xl text-muted-foreground mb-16 max-w-2xl text-left">
-                  A user journey that fulfils user needs and expectations.
+                  a user journey that fulfils user needs and expectations.
                 </p>
               </FadeIn>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">

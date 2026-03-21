@@ -22,7 +22,7 @@ const uxProjects = [
     slug: 'mahindra-finance'
   },
   {
-    title: 'Research Ops & Governance',
+    title: 'Research Ops',
     role: 'Consultant: UX Strategy & Ops',
     img: '/images/jio.png',
     slug: 'design-research-ops'
