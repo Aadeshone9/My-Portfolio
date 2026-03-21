@@ -37,6 +37,7 @@ import {
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import FadeIn from '@/components/FadeIn';
+import { cn } from '@/lib/utils';
 
 const motionProps = {
   initial: { opacity: 0, y: 20 },
@@ -136,7 +137,7 @@ const projectData: Record<string, any> = {
     ]
   },
   'maplegeni': {
-    title: 'Scalable B2C Design',
+    title: 'B2C Software Platform',
     subtitle: 'Unified digital presence for global software services.',
     heroTag: 'B2C Software Platform Case Study',
     contribution: ['UX Strategy', 'Visual Experience (VX)', 'Information Architecture', 'Mobile-First Design'],
@@ -373,6 +374,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
   const project = useMemo(() => projectData[params.slug] || projectData['vida'], [params.slug]);
 
   const showImages = params.slug !== 'thermax-edge';
+  const sectionPadding = showImages ? "py-20 md:py-24" : "py-12 md:py-16";
 
   const heroImage = PlaceHolderImages.find(p => p.id === 'project1-image-1');
   const projectImage1 = PlaceHolderImages.find(p => p.id === 'project1-image-2');
@@ -416,7 +418,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="h-screen w-full relative overflow-hidden">
+        <section className={cn("w-full relative overflow-hidden", showImages ? "h-screen" : "h-[70vh]")}>
           <motion.div 
             style={{ scale: heroScale, opacity: heroOpacity, filter: heroBlur }}
             className="absolute inset-0"
@@ -453,7 +455,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         </section>
 
         {/* Contribution Section */}
-        <section className="py-20 md:py-24 bg-background text-foreground relative">
+        <section className={cn("bg-background text-foreground relative", sectionPadding)}>
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
               <motion.div {...motionProps}>
@@ -509,7 +511,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         </section>
 
         {/* Key Outcomes Section */}
-        <section className="py-20 md:py-24 bg-background text-foreground relative">
+        <section className={cn("bg-background text-foreground relative", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20 relative">
                 <FadeIn>
                     <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-16 text-left">
@@ -535,7 +537,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         </section>
         
         {/* Strategic Gap Section */}
-        <section className="py-20 md:py-24 bg-background text-foreground relative">
+        <section className={cn("bg-background text-foreground relative", sectionPadding)}>
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl">
               <motion.div {...motionProps} className="flex items-center gap-4">
@@ -556,7 +558,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         </section>
 
         {/* Core Challenge Section */}
-        <section className="py-20 md:py-24 bg-background text-foreground relative">
+        <section className={cn("bg-background text-foreground relative", sectionPadding)}>
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl">
               <ul className="space-y-8">
@@ -603,7 +605,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           const RationaleIcon = IconMap[block.icon] || Search;
           return (
             <div key={blockIdx}>
-              <section className="py-20 md:py-24 bg-background text-foreground relative">
+              <section className={cn("bg-background text-foreground relative", sectionPadding)}>
                 <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
                   <div className="max-w-4xl">
                     <motion.div {...motionProps} className="flex items-center gap-4">
@@ -646,7 +648,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                 </section>
               )}
 
-              <section className="py-20 md:py-24 bg-background text-foreground">
+              <section className={cn("bg-background text-foreground", sectionPadding)}>
                 <div className="container mx-auto px-4 sm:px-8 md:px-20">
                   <div className="max-w-4xl">
                     <ul className="space-y-8">
@@ -673,7 +675,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         })}
 
         {/* Quantifiable Outcomes Section */}
-        <section className="py-20 md:py-24 bg-background text-foreground">
+        <section className={cn("bg-background text-foreground", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
                 <div className="max-w-4xl">
                     <motion.div {...motionProps} className="flex items-center gap-4 mb-4">
@@ -708,7 +710,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
 
         {/* Experience Enhancers (Only for VIDA) */}
         {params.slug === 'vida' && (
-          <section className="py-20 md:py-24 bg-background text-foreground">
+          <section className={cn("bg-background text-foreground", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
               <FadeIn>
                 <h2 className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-4 text-left">
@@ -745,7 +747,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         )}
 
         {/* Key Learnings Section */}
-        <section className="py-20 md:py-24 bg-background text-foreground">
+        <section className={cn("bg-background text-foreground", sectionPadding)}>
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="max-w-4xl">
               <motion.div {...motionProps} className="flex items-center gap-4 mb-8">
@@ -778,7 +780,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
 
         {/* Customer Experience Impact (VIDA only) */}
         {params.slug === 'vida' && (
-          <section className="py-20 md:py-24 bg-background text-foreground">
+          <section className={cn("bg-background text-foreground", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
               <motion.div {...motionProps} className="max-w-4xl mb-16">
                 <FadeIn>
