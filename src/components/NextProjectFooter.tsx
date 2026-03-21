@@ -41,7 +41,7 @@ export default function NextProjectFooter({ currentSlug }: { currentSlug: string
                 </div>
               </div>
               <h3 className="font-headline font-semibold text-2xl md:text-3xl lg:text-4xl text-foreground text-left">
-                Explore: {nextProject.title}
+                {nextProject.title}
               </h3>
             </div>
             

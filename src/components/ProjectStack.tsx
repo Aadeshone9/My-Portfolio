@@ -8,9 +8,9 @@ import Image from 'next/image';
 
 const projects = [
   {
-    title: "Hero Motocorp Vida App",
+    title: "EV Mobility with VIDA",
     role: "UX Design consultant and Researcher",
-    description: "End-to-end connected vehicle platform experience for the launch of the Vida EV.",
+    description: "Driving Loyalty & Efficiency in EV Mobility. End-to-end connected vehicle platform experience.",
     cta: 'View Project',
     href: '/projects/vida',
     img: '/images/hero.svg'
@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Unified Financial Ecosystem",
     role: "Senior UX Consultant | Lead Designer",
-    description: "Designing for Trust & Growth. Streamlining financial products into a seamless 'Life Companion' experience.",
+    description: "Designing for Trust & Growth. Streamlining products into a seamless 'Life Companion' experience.",
     cta: 'View Project',
     href: '/projects/mahindra-finance',
     img: '/images/mahindra-finance.svg',
@@ -43,7 +43,7 @@ const projects = [
   {
     title: "Scalable B2C Design",
     role: "Lead Product & UX Designer",
-    description: "Global Software Services Platform. Unified digital presence for global software services.",
+    description: "Global Software Services Platform. Unified digital presence for global services.",
     cta: 'View Project',
     href: '/projects/maplegeni',
     img: '/images/maplegenix.webp',
@@ -63,7 +63,6 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
   const message = encodeURIComponent(`Hi Aadesh, I'm interested in discussing a hiring opportunity and would like to review your work on "${project.title}". Could you please grant me access to this case study? My official email is [Enter your email here]. Looking forward to connecting!`);
   const linkedinUrl = `https://www.linkedin.com/messaging/compose/?recipient=aadeshgovenkar&body=${message}`;
 
-  // Shake animation for locked cards
   const isLocked = project.isLocked;
   const shakeAnimation = isLocked ? {
     hover: {

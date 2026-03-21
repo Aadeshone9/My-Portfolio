@@ -10,7 +10,7 @@ import Footer from '@/components/Footer';
 
 const uxProjects = [
   {
-    title: 'Hero Motocorp Vida App',
+    title: 'EV Mobility with VIDA',
     role: 'UX Design consultant and Researcher',
     img: '/images/hero.svg',
     slug: 'vida'
