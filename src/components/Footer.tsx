@@ -19,7 +19,7 @@ export default function Footer() {
               <div className="flex flex-wrap items-center gap-x-10 gap-y-6 text-base md:text-lg">
                 <ResumeViewer />
                 <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-4 hover:text-primary transition-colors">Aadesh.one9@gmail.com</a>
-                <p className="font-headline font-semibold tracking-tight">+ (91) 8975143018</p>
+                <p className="font-headline font-semibold tracking-tight text-footer-foreground">+ (91) 8975143018</p>
                 <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-4 hover:text-primary transition-colors">
                   LinkedIn
                 </a>
