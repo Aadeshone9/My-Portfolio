@@ -17,18 +17,27 @@ export default function Footer() {
                 </p>
               </FadeIn>
               
-              {/* Contact Links Container - Refined for mobile alignment */}
-              <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-x-10 text-base md:text-lg">
-                <div className="flex-shrink-0">
-                  <ResumeViewer />
-                </div>
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-x-10">
-                  <a href="mailto:Aadesh.one9@gmail.com" className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-4 hover:text-primary transition-colors">
+              <div className="flex flex-col items-start gap-8">
+                {/* View Resume Button - Signature Orange Pulse */}
+                <ResumeViewer />
+
+                {/* Contact Links Stacking */}
+                <div className="flex flex-col items-start gap-4 text-base md:text-lg lg:text-xl">
+                  <a 
+                    href="mailto:Aadesh.one9@gmail.com" 
+                    className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors"
+                  >
                     Aadesh.one9@gmail.com
                   </a>
-                  <div className="flex items-center gap-10">
-                    <p className="font-headline font-semibold tracking-tight text-footer-foreground">+ (91) 8975143018</p>
-                    <a href="https://www.linkedin.com/in/aadeshgovenkar/" target="_blank" rel="noopener noreferrer" className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-4 hover:text-primary transition-colors">
+                  
+                  <div className="flex flex-wrap items-center gap-x-10 gap-y-4">
+                    <p className="font-headline font-semibold tracking-tight">+ (91) 8975143018</p>
+                    <a 
+                      href="https://www.linkedin.com/in/aadeshgovenkar/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors"
+                    >
                       LinkedIn
                     </a>
                   </div>
@@ -36,8 +45,8 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Large Text and Go Up Button - Aligned horizontally on mobile */}
-            <div className="flex flex-row items-end justify-between md:items-end gap-4 mt-4">
+            {/* Large Text and Go Up Button */}
+            <div className="flex flex-row items-end justify-between gap-4 mt-8 md:mt-12">
               <div className="font-headline font-semibold text-6xl sm:text-8xl md:text-9xl lg:text-[160px] 2xl:text-[180px] leading-[0.8] tracking-tighter flex flex-col text-left">
                 <span>Aadesh</span>
                 <span>one9.com</span>
@@ -48,8 +57,8 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Footer Bottom Info - Centered for balance */}
-          <div className="text-center text-sm font-normal tracking-[0.02em] flex flex-col gap-1 text-footer-muted-foreground">
+          {/* Footer Bottom Info - Now Left Aligned */}
+          <div className="text-left text-sm md:text-base font-normal tracking-[0.02em] flex flex-col gap-2 text-footer-muted-foreground max-w-2xl">
             <p>Designed & developed with Figma, Firebase Studio & GitHub by Aadesh Govenkar.</p>
             <p>&copy; 2026 Copyright All Rights Reserved</p>
           </div>
