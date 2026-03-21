@@ -8,9 +8,9 @@ import Image from 'next/image';
 
 const projects = [
   {
-    title: "EV Mobility with VIDA",
+    title: "VIDA EV Mobility",
     role: "UX Design consultant and Researcher",
-    description: "Driving Loyalty & Efficiency in EV Mobility. End-to-end connected vehicle platform experience.",
+    description: "Driving Loyalty & Efficiency. End-to-end connected vehicle platform experience.",
     cta: 'View Project',
     href: '/projects/vida',
     img: '/images/hero.svg'

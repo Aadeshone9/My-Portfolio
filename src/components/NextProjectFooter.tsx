@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
 const projects = [
-  { slug: 'vida', title: 'EV Mobility with VIDA', img: '/images/hero.svg' },
+  { slug: 'vida', title: 'VIDA EV Mobility', img: '/images/hero.svg' },
   { slug: 'mahindra-finance', title: 'Unified Financial Ecosystem', img: '/images/mahindra-finance.svg' },
   { slug: 'design-research-ops', title: 'Research Ops', img: '/images/jio.png' },
   { slug: 'thermax-edge', title: 'Industrial UX Audit', img: '/images/edge.png' },

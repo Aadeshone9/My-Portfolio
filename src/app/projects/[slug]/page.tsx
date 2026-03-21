@@ -91,8 +91,8 @@ const Counter = ({ value }: { value: string }) => {
 
 const projectData: Record<string, any> = {
   'vida': {
-    title: 'EV Mobility with VIDA',
-    subtitle: 'Driving Loyalty & Efficiency in EV Mobility',
+    title: 'VIDA EV Mobility',
+    subtitle: 'Driving Loyalty & Efficiency',
     heroTag: 'Behavioural UX Case Study',
     contribution: ['UX Research', 'User Journeys', 'Strategy & Design Conceptualisation', 'Design System'],
     role: 'Consultant: CX & UX Design',
