@@ -33,7 +33,11 @@ import {
   Brain,
   ClipboardCheck,
   BarChart3,
-  Map
+  Map,
+  Microscope,
+  FileSearch,
+  Activity,
+  Network
 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import FadeIn from '@/components/FadeIn';
@@ -137,7 +141,7 @@ const projectData: Record<string, any> = {
     ]
   },
   'maplegeni': {
-    title: 'B2C Software Platform',
+    title: 'Scalable B2C Experience Design',
     subtitle: 'Unified digital presence for global software services.',
     heroTag: 'B2C Software Platform Case Study',
     contribution: ['UX Strategy', 'Visual Experience (VX)', 'Information Architecture', 'Mobile-First Design'],
@@ -311,6 +315,18 @@ const projectData: Record<string, any> = {
       { value: '30%', description: 'Roadmap for a reduction in task completion time.' },
       { value: '100%', description: 'Alignment on a new Information Architecture across all business units.' },
     ],
+    methodology: [
+      { icon: <ClipboardCheck className="w-8 h-8 text-primary" />, title: 'Heuristic Evaluation', description: 'Applied 10 Usability Heuristics to identify severe interface violations affecting operational safety.' },
+      { icon: <Users className="w-8 h-8 text-primary" />, title: 'User Task Analysis', description: 'Deep-dive interviews and observations with 70+ Plant Managers to map 20+ critical operational paths.' },
+      { icon: <BarChart3 className="w-8 h-8 text-primary" />, title: 'Research Benchmarking', description: 'Quantitative performance measurement against industry standards to justify the ROI of design debt resolution.' },
+      { icon: <Map className="w-8 h-8 text-primary" />, title: 'Strategic Roadmap', description: 'A prioritized 12-month evolution blueprint balanced against technical feasibility and business urgency.' },
+    ],
+    artefacts: [
+      { title: 'Heuristic Violation Map', count: '45 Points', description: 'Identified UI elements leading to data entry errors.' },
+      { title: 'Task Success Benchmarks', count: '12 Metrics', description: 'Quantifiable time-on-task measurements for core flows.' },
+      { title: 'Systemic Pain Points', count: '70+ Points', description: 'Comprehensive registry of cross-platform friction areas.' },
+      { title: 'Unified IA Blueprint', count: 'V1.0 Draft', description: 'Standardized structure for all future industrial modules.' },
+    ],
     challenges: [
       { title: 'The Audit', description: "Identified significant 'Friction Debt' in the legacy IA, leading to 70+ identified pain points across the platform." },
       { title: 'Benchmarking', description: "Benchmarked 'Task Success Rates' against industry standards, revealing a 30% lag in critical maintenance workflows." },
@@ -366,7 +382,11 @@ const IconMap: Record<string, any> = {
   Search,
   ClipboardCheck,
   BarChart3,
-  Map
+  Map,
+  Microscope,
+  FileSearch,
+  Activity,
+  Network
 };
 
 export default function ProjectPage({ params: paramsPromise }: { params: Promise<{ slug: string }> }) {
@@ -374,6 +394,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
   const project = useMemo(() => projectData[params.slug] || projectData['vida'], [params.slug]);
 
   const showImages = params.slug !== 'thermax-edge';
+  const isThermax = params.slug === 'thermax-edge';
   const sectionPadding = showImages ? "py-20 md:py-24" : "py-12 md:py-16";
 
   const heroImage = PlaceHolderImages.find(p => p.id === 'project1-image-1');
@@ -418,12 +439,12 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
       <Header />
       <main>
         {/* Hero Section */}
-        <section className={cn("w-full relative overflow-hidden", showImages ? "h-screen" : "h-[70vh]")}>
+        <section className={cn("w-full relative overflow-hidden flex items-center", showImages ? "h-screen" : "min-h-[60vh] md:min-h-[70vh]")}>
           <motion.div 
             style={{ scale: heroScale, opacity: heroOpacity, filter: heroBlur }}
             className="absolute inset-0"
           >
-            {showImages && heroImage && (
+            {showImages && heroImage ? (
               <Image
                 src={heroImage.imageUrl}
                 alt={heroImage.description}
@@ -432,22 +453,24 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                 data-ai-hint={heroImage.imageHint}
                 priority
               />
+            ) : (
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-background" />
             )}
             <div className="absolute inset-0 bg-black/50" />
           </motion.div>
-          <div className="absolute inset-0 container mx-auto px-4 sm:px-8 md:px-20 flex flex-col justify-end pb-20 md:pb-32">
+          <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10 flex flex-col justify-end h-full pb-20 md:pb-32">
             <FadeIn>
               <p className="font-headline font-semibold text-lg md:text-xl text-white/80 text-left">
                 {project.heroTag}
               </p>
             </FadeIn>
             <FadeIn>
-              <h1 className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-4 text-left">
+              <h1 className="font-headline font-semibold text-4xl md:text-5xl lg:text-7xl text-white leading-tight mt-4 text-left">
                 {project.subtitle}
               </h1>
             </FadeIn>
             <FadeIn>
-              <h1 className="font-headline font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mt-2 text-left">
+              <h1 className="font-headline font-semibold text-4xl md:text-5xl lg:text-7xl text-white leading-tight mt-2 text-left">
                 {project.title}
               </h1>
             </FadeIn>
@@ -510,6 +533,33 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           </div>
         </section>
 
+        {/* Audit Methodology (Only for Thermax) */}
+        {isThermax && project.methodology && (
+          <section className={cn("bg-card text-card-foreground relative", sectionPadding)}>
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
+              <FadeIn>
+                <h2 className="font-headline font-semibold text-3xl md:text-4xl text-primary mb-12 text-left">
+                  Research Methodology
+                </h2>
+              </FadeIn>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {project.methodology.map((item: any, index: number) => (
+                  <motion.div 
+                    key={index} 
+                    {...motionProps} 
+                    transition={{ ...motionProps.transition, delay: 0.1 * index }}
+                    className="p-8 border border-border rounded-2xl bg-background shadow-sm hover:border-primary/30 transition-colors"
+                  >
+                    <div className="mb-4">{item.icon}</div>
+                    <h3 className="font-headline font-semibold text-xl text-foreground mb-3">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Key Outcomes Section */}
         <section className={cn("bg-background text-foreground relative", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20 relative">
@@ -535,6 +585,41 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                 </div>
             </div>
         </section>
+
+        {/* Audit Artefacts (Only for Thermax) */}
+        {isThermax && project.artefacts && (
+          <section className={cn("bg-background text-foreground relative", sectionPadding)}>
+            <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
+              <div className="max-w-4xl">
+                <FadeIn>
+                  <h2 className="font-headline font-semibold text-3xl md:text-4xl text-foreground mb-12 text-left">
+                    Audit Deliverables & Artefacts
+                  </h2>
+                </FadeIn>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {project.artefacts.map((artefact: any, index: number) => (
+                    <motion.div 
+                      key={index}
+                      {...motionProps}
+                      className="flex items-start p-6 bg-card border border-border rounded-xl"
+                    >
+                      <div className="mr-4 mt-1">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                          <span className="text-primary font-bold text-xs">{index + 1}</span>
+                        </div>
+                      </div>
+                      <div>
+                        <h4 className="font-headline font-semibold text-lg text-foreground">{artefact.title}</h4>
+                        <p className="text-primary font-bold text-sm mb-1">{artefact.count}</p>
+                        <p className="text-sm text-muted-foreground">{artefact.description}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
         
         {/* Strategic Gap Section */}
         <section className={cn("bg-background text-foreground relative", sectionPadding)}>
