@@ -1,4 +1,5 @@
-import data from './placeholder-images.json';
+
+import data from './placeholders.json';
 
 export type ImagePlaceholder = {
   id: string;

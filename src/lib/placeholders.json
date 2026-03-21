@@ -1,0 +1,233 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "Abstract hero image for portfolio",
+      "imageUrl": "/images/hero-image.jpg",
+      "imageHint": "abstract lines"
+    },
+    {
+      "id": "vida-hero",
+      "description": "VIDA EV mobile application screenshots",
+      "imageUrl": "/images/vida-hero.png",
+      "imageHint": "mobile app ev"
+    },
+    {
+      "id": "headspace-challenge",
+      "description": "Woman lying on a rooftop with a laptop",
+      "imageUrl": "/images/laptop-lifestyle.jpg",
+      "imageHint": "laptop lifestyle"
+    },
+    {
+      "id": "headspace-gallery-1",
+      "description": "App screen with a cartoon illustration",
+      "imageUrl": "/images/app-interface-1.jpg",
+      "imageHint": "app interface"
+    },
+    {
+      "id": "headspace-gallery-2",
+      "description": "A person's legs and running shoes",
+      "imageUrl": "/images/running-shoes.jpg",
+      "imageHint": "running shoes"
+    },
+    {
+      "id": "headspace-gallery-3",
+      "description": "App notification overlay",
+      "imageUrl": "/images/app-notification.jpg",
+      "imageHint": "app notification"
+    },
+    {
+      "id": "headspace-articles",
+      "description": "A collage of various app screens",
+      "imageUrl": "/images/app-screens-collage.jpg",
+      "imageHint": "app screens"
+    },
+    {
+      "id": "headspace-result-face",
+      "description": "A simple yellow smiley face",
+      "imageUrl": "/images/smiley-face.jpg",
+      "imageHint": "smiley face"
+    },
+    {
+      "id": "headspace-final-design-1",
+      "description": "A smartphone screen showing a menu",
+      "imageUrl": "/images/app-menu.jpg",
+      "imageHint": "app menu"
+    },
+    {
+      "id": "headspace-final-design-2",
+      "description": "An illustration of a yellow character",
+      "imageUrl": "/images/character-illustration.jpg",
+      "imageHint": "character illustration"
+    },
+    {
+      "id": "headspace-visual-1",
+      "description": "A laptop screen showing a user profile page",
+      "imageUrl": "/images/laptop-profile.jpg",
+      "imageHint": "laptop profile"
+    },
+    {
+      "id": "headspace-visual-2",
+      "description": "A hand holding a smartphone",
+      "imageUrl": "/images/phone-screen.jpg",
+      "imageHint": "phone screen"
+    },
+    {
+      "id": "headspace-vdl-1",
+      "description": "App UI for a timer",
+      "imageUrl": "/images/app-timer.jpg",
+      "imageHint": "app timer"
+    },
+    {
+      "id": "headspace-vdl-2",
+      "description": "UI component showing a color picker",
+      "imageUrl": "/images/color-picker.jpg",
+      "imageHint": "color picker"
+    },
+    {
+      "id": "headspace-testimonial-bg",
+      "description": "A black and white portrait of a woman's face",
+      "imageUrl": "/images/woman-portrait.jpg",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "vida-app-screen",
+      "description": "Screenshot of the VIDA mobile application",
+      "imageUrl": "/images/vida-ev-hero.png",
+      "imageHint": "mobile app ev"
+    },
+    {
+      "id": "uber-hero",
+      "description": "Uber app hero image",
+      "imageUrl": "/images/vida-hero.png",
+      "imageHint": "urban mobility night"
+    },
+    {
+      "id": "uber-image-1",
+      "description": "Uber app screen 1",
+      "imageUrl": "/images/charge-station.png",
+      "imageHint": "app screen"
+    },
+    {
+      "id": "uber-image-2",
+      "description": "Uber app screen 2",
+      "imageUrl": "/images/maintenance.png",
+      "imageHint": "app map"
+    },
+    {
+      "id": "uber-image-3",
+      "description": "Uber app screen 3",
+      "imageUrl": "/images/my-rides.png",
+      "imageHint": "urban street"
+    },
+    {
+      "id": "uber-image-4",
+      "description": "Uber app screen 4",
+      "imageUrl": "/images/my-vehicle.png",
+      "imageHint": "city traffic"
+    },
+    {
+      "id": "uber-image-5",
+      "description": "Uber app screen 5",
+      "imageUrl": "/images/subscription.png",
+      "imageHint": "car interior"
+    },
+    {
+      "id": "uber-image-6",
+      "description": "Uber app screen 6",
+      "imageUrl": "/images/vida-app-screen.png",
+      "imageHint": "phone screen"
+    },
+    {
+      "id": "uber-image-7",
+      "description": "Uber app screen 7",
+      "imageUrl": "/images/my-rides-2.png",
+      "imageHint": "person walking"
+    },
+    {
+      "id": "uber-image-8",
+      "description": "Uber app screen 8",
+      "imageUrl": "/images/my-rides-3.png",
+      "imageHint": "city skyline"
+    },
+    {
+      "id": "uber-image-9",
+      "description": "Uber app screen 9",
+      "imageUrl": "/images/trip-history.png",
+      "imageHint": "night drive"
+    },
+    {
+      "id": "mental-model-1",
+      "description": "Portrait of a man",
+      "imageUrl": "/images/mental-model-1.png",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "mental-model-2",
+      "description": "Portrait of a woman",
+      "imageUrl": "/images/mental-model-2.png",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "mental-model-avatar-1",
+      "description": "Avatar of a user",
+      "imageUrl": "/images/avatar-1.png",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "mental-model-avatar-2",
+      "description": "Avatar of a user",
+      "imageUrl": "/images/avatar-2.png",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "mental-model-avatar-3",
+      "description": "Avatar of a user",
+      "imageUrl": "/images/avatar-3.png",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "project1-image-1",
+      "description": "Project 1 Image 1",
+      "imageUrl": "/images/project1/1.jpg",
+      "imageHint": "app screen"
+    },
+    {
+      "id": "project1-image-2",
+      "description": "Project 1 Image 2",
+      "imageUrl": "/images/project1/6.jpg",
+      "imageHint": "app screen"
+    },
+    {
+      "id": "project1-image-3",
+      "description": "Project 1 Image 3",
+      "imageUrl": "/images/project1/8.jpg",
+      "imageHint": "app screen"
+    },
+    {
+      "id": "project1-image-4",
+      "description": "Project 1 Image 4",
+      "imageUrl": "/images/project1/10.jpg",
+      "imageHint": "app screen"
+    },
+    {
+      "id": "project1-image-5",
+      "description": "Project 1 Image 5",
+      "imageUrl": "/images/project1/11.jpg",
+      "imageHint": "app screen"
+    },
+    {
+      "id": "project1-image-6",
+      "description": "Project 1 Image 6",
+      "imageUrl": "/images/project1/14.jpg",
+      "imageHint": "app screen"
+    },
+    {
+      "id": "project1-image-7",
+      "description": "Project 1 Image 7",
+      "imageUrl": "/images/project1/13.jpg",
+      "imageHint": "app screen"
+    }
+  ]
+}
