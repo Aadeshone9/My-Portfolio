@@ -252,6 +252,48 @@
       "description": "Jio Project Image 4",
       "imageUrl": "/images/project2/4.jpg",
       "imageHint": "data analysis"
+    },
+    {
+      "id": "project3-image-1",
+      "description": "Mahindra Finance Image 1",
+      "imageUrl": "/images/project3/1.jpg",
+      "imageHint": "finance app"
+    },
+    {
+      "id": "project3-image-2",
+      "description": "Mahindra Finance Image 2",
+      "imageUrl": "/images/project3/2.jpg",
+      "imageHint": "user journey"
+    },
+    {
+      "id": "project3-image-3",
+      "description": "Mahindra Finance Image 3",
+      "imageUrl": "/images/project3/3.jpg",
+      "imageHint": "app dashboard"
+    },
+    {
+      "id": "project3-image-4",
+      "description": "Mahindra Finance Image 4",
+      "imageUrl": "/images/project3/4.jpg",
+      "imageHint": "transaction flow"
+    },
+    {
+      "id": "project3-image-5",
+      "description": "Mahindra Finance Image 5",
+      "imageUrl": "/images/project3/5.jpg",
+      "imageHint": "ux mapping"
+    },
+    {
+      "id": "project3-image-6",
+      "description": "Mahindra Finance Image 6",
+      "imageUrl": "/images/project3/6.jpg",
+      "imageHint": "visual identity"
+    },
+    {
+      "id": "project3-image-7",
+      "description": "Mahindra Finance Image 7",
+      "imageUrl": "/images/project3/7.jpg",
+      "imageHint": "customer retention"
     }
   ]
 }

@@ -397,7 +397,10 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
   const isThermax = params.slug === 'thermax-edge';
   const sectionPadding = showImages ? "py-20 md:py-24" : "py-12 md:py-16";
 
-  const imagePrefix = params.slug === 'design-research-ops' ? 'project2' : 'project1';
+  const imagePrefix = 
+    params.slug === 'design-research-ops' ? 'project2' : 
+    params.slug === 'mahindra-finance' ? 'project3' : 
+    'project1';
 
   const heroImage = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-1`);
   const projectImage1 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-2`);
@@ -926,4 +929,3 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
     </div>
   );
 }
-
