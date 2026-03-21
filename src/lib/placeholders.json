@@ -294,6 +294,48 @@
       "description": "Mahindra Finance Image 7",
       "imageUrl": "/images/project3/7.jpg",
       "imageHint": "customer retention"
+    },
+    {
+      "id": "project4-image-1",
+      "description": "Maplegenix Image 1",
+      "imageUrl": "/images/project4/1.jpg",
+      "imageHint": "software platform"
+    },
+    {
+      "id": "project4-image-2",
+      "description": "Maplegenix Image 2",
+      "imageUrl": "/images/project4/2.jpg",
+      "imageHint": "mobile ui"
+    },
+    {
+      "id": "project4-image-3",
+      "description": "Maplegenix Image 3",
+      "imageUrl": "/images/project4/3.jpg",
+      "imageHint": "web design"
+    },
+    {
+      "id": "project4-image-4",
+      "description": "Maplegenix Image 4",
+      "imageUrl": "/images/project4/4.jpg",
+      "imageHint": "brand strategy"
+    },
+    {
+      "id": "project4-image-5",
+      "description": "Maplegenix Image 5",
+      "imageUrl": "/images/project4/5.jpg",
+      "imageHint": "user interface"
+    },
+    {
+      "id": "project4-image-6",
+      "description": "Maplegenix Image 6",
+      "imageUrl": "/images/project4/6.jpg",
+      "imageHint": "responsive layout"
+    },
+    {
+      "id": "project4-image-7",
+      "description": "Maplegenix Image 7",
+      "imageUrl": "/images/project4/7.jpg",
+      "imageHint": "product showcase"
     }
   ]
 }

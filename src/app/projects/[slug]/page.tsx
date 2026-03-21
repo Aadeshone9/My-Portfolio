@@ -400,6 +400,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
   const imagePrefix = 
     params.slug === 'design-research-ops' ? 'project2' : 
     params.slug === 'mahindra-finance' ? 'project3' : 
+    params.slug === 'maplegeni' ? 'project4' :
     'project1';
 
   const heroImage = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-1`);
