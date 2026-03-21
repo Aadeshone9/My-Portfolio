@@ -710,26 +710,36 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
               {showImages && (
                 <section className="py-10 md:py-12 bg-background">
                   <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                    {blockIdx % 2 === 0 ? projectImage2 && (
-                      <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                          <Image
-                              src={projectImage2.imageUrl}
-                              alt={projectImage2.description}
-                              width={1280}
-                              height={720}
-                              className="w-full h-auto object-contain"
-                          />
-                      </motion.div>
-                    ) : projectImage3 && (
-                      <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                          <Image
-                              src={projectImage3.imageUrl}
-                              alt={projectImage3.description}
-                              width={1280}
-                              height={720}
-                              className="w-full h-auto object-contain"
-                          />
-                      </motion.div>
+                    {params.slug === 'design-research-ops' && blockIdx === 2 ? (
+                        <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden bg-muted border border-border">
+                            <iframe 
+                                className="w-full h-full"
+                                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fsbg0dKpE8BV4MnGFdoTDsu%2Fportfolio%3Fpage-id%3D1403%253A173%26node-id%3D1403-7250%26viewport%3D-2931%252C-1913%252C0.21%26t%3Df3q7lEBvUcL4G0Ub-8%26scaling%3Dscale-down-width%26content-scaling%3Dfixed%26starting-point-node-id%3D1403%253A7250%26hide-ui%3D1" 
+                                allowFullScreen
+                            />
+                        </motion.div>
+                    ) : (
+                      blockIdx % 2 === 0 ? projectImage2 && (
+                        <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                            <Image
+                                src={projectImage2.imageUrl}
+                                alt={projectImage2.description}
+                                width={1280}
+                                height={720}
+                                className="w-full h-auto object-contain"
+                            />
+                        </motion.div>
+                      ) : projectImage3 && (
+                        <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                            <Image
+                                src={projectImage3.imageUrl}
+                                alt={projectImage3.description}
+                                width={1280}
+                                height={720}
+                                className="w-full h-auto object-contain"
+                            />
+                        </motion.div>
+                      )
                     )}
                   </div>
                 </section>
@@ -916,3 +926,4 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
     </div>
   );
 }
+
