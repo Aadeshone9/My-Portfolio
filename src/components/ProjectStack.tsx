@@ -9,7 +9,7 @@ import Image from 'next/image';
 const projects = [
   {
     title: "VIDA EV Mobility",
-    role: "UX Design consultant and Researcher",
+    role: "UX Design Consultant and Researcher",
     description: "Driving Loyalty & Efficiency. End-to-end connected vehicle platform experience.",
     cta: 'View Project',
     href: '/projects/vida',
@@ -50,7 +50,7 @@ const projects = [
   },
   {
     title: "Google Cloud Security",
-    role: "Partner Product & UX Design consultant | Co-Designer",
+    role: "Partner Product & UX Design Consultant | Co-Designer",
     description: "Optimized ticketing workflows, reducing resolution time by 30%.",
     img: '/images/Google.png',
   }

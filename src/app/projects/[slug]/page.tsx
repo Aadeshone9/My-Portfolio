@@ -95,7 +95,7 @@ const projectData: Record<string, any> = {
     subtitle: 'Driving Loyalty & Efficiency',
     heroTag: 'Behavioural UX Case Study',
     contribution: ['UX Research', 'User Journeys', 'Strategy & Design Conceptualisation', 'Design System'],
-    role: 'Consultant: CX & UX Design',
+    role: 'UX Design Consultant and Researcher',
     focus: 'End-to-end connected vehicle platform experience for the launch of the Vida EV.',
     primaryGoal: 'Build a world-class platform to empower EV adoption and drive large-scale sustainable practices, focusing on customer Lifetime Value (LTV).',
     outcomes: [
@@ -361,7 +361,7 @@ const projectData: Record<string, any> = {
         title: 'Strategic Roadmap (The Blueprint)',
         icon: 'Map',
         points: [
-          { title: 'Implementation', description: "Explain the Proposed IA and Task Flow Recommendations. This served as the master blueprint for the design team." },
+          { title: 'Insight', description: "Explain the Proposed IA and Task Flow Recommendations. This served as the master blueprint for the design team." },
           { title: 'Scalability', description: "A unified Information Architecture ensures that future features can be integrated without increasing user cognitive load." }
         ]
       }

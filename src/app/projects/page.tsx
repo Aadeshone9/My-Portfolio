@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 const uxProjects = [
   {
     title: 'VIDA EV Mobility',
-    role: 'UX Design consultant and Researcher',
+    role: 'UX Design Consultant and Researcher',
     img: '/images/hero.svg',
     slug: 'vida'
   },
@@ -29,7 +29,7 @@ const uxProjects = [
   },
   {
     title: 'Industrial UX Audit',
-    role: 'UX Researcher and Strategist',
+    role: 'UX Strategy Consultant',
     img: '/images/edge.png',
     slug: 'thermax-edge'
   },
@@ -41,7 +41,7 @@ const uxProjects = [
   },
   {
     title: 'Google Cloud Security',
-    role: 'Partner Product & UX Design consultant | Co-Designer',
+    role: 'Partner Product & UX Design Consultant | Co-Designer',
     img: '/images/Google.png',
   },
   {
