@@ -76,7 +76,7 @@ const Counter = ({ value }: { value: string }) => {
   return (
     <span 
       ref={ref} 
-      className="inline-block" 
+      className="inline-flex" 
       style={{ minWidth: `${value.length}ch` }}
     >
       {displayValue}
@@ -514,18 +514,18 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                       Key Outcomes
                     </h2>
                 </FadeIn>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16 lg:gap-20">
                     {project.outcomes.map((outcome: any, index: number) => (
                          <motion.div 
                             key={index} 
                             {...motionProps} 
                             transition={{ ...motionProps.transition, delay: 0.1 * (index + 1) }}
-                            className="flex items-start gap-6"
+                            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
                         >
-                            <span className="font-headline font-bold text-5xl md:text-6xl text-primary">
+                            <span className="font-headline font-bold text-5xl md:text-6xl text-primary leading-none shrink-0">
                               <Counter value={outcome.value} />
                             </span>
-                            <p className="text-lg md:text-xl text-muted-foreground mt-2">{outcome.description}</p>
+                            <p className="text-lg md:text-xl text-muted-foreground leading-tight">{outcome.description}</p>
                         </motion.div>
                     ))}
                 </div>
