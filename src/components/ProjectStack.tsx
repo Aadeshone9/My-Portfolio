@@ -52,7 +52,7 @@ const projects = [
   {
     title: "Google Cloud Security",
     role: "Partner Product & UX Design consultant | Co-Designer",
-    description: "Optimized ticketing workflows and reduced average resolution time by 30% for cloud security infrastructure.",
+    description: "Optimized ticketing workflows, reducing resolution time by 30%.",
     img: '/images/Google.png',
   }
 ];
