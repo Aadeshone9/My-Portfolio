@@ -373,7 +373,7 @@ const projectData: Record<string, any> = {
     learnings: [
       { title: 'Data over Opinion', description: 'A UX Audit isn\'t just about finding what\'s broken; it\'s about defining the ROI of fixing it.' },
       { title: 'Contextual Reality', description: 'Visiting energy plants revealed that "desk-side" design doesn\'t account for high-pressure industrial environments.' },
-      { title: 'Master Blueprints', description: 'By benchmarking the current state, we gave the design team the data-driven confidence to build a world-class industrial hub.' },
+      { title: 'Master Blueprints', description: 'By benchmarking the current state, we gave the data-driven confidence to build a world-class industrial hub.' },
     ]
   }
 };
@@ -479,12 +479,12 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
               </p>
             </FadeIn>
             <FadeIn>
-              <h1 className="font-headline font-semibold text-4xl md:text-5xl lg:text-7xl text-white leading-tight mt-4 text-left">
+              <h1 className="font-headline font-semibold text-4xl md:text-5xl lg:text-7xl 2xl:text-8xl text-white leading-tight mt-4 text-left">
                 {project.subtitle}
               </h1>
             </FadeIn>
             <FadeIn>
-              <h1 className="font-headline font-semibold text-4xl md:text-5xl lg:text-7xl text-white leading-tight mt-2 text-left">
+              <h1 className="font-headline font-semibold text-4xl md:text-5xl lg:text-7xl 2xl:text-8xl text-white leading-tight mt-2 text-left">
                 {project.title}
               </h1>
             </FadeIn>
@@ -497,11 +497,11 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
               <motion.div {...motionProps}>
                 <FadeIn>
-                  <h2 className="font-headline font-semibold text-xl md:text-2xl lg:text-3xl text-foreground text-left">
+                  <h2 className="font-headline font-semibold text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-foreground text-left">
                     My Contribution
                   </h2>
                 </FadeIn>
-                 <div className="text-primary text-lg md:text-xl lg:text-2xl leading-relaxed mt-4">
+                 <div className="text-primary text-lg md:text-xl lg:text-2xl 2xl:text-[28px] leading-relaxed mt-4">
                   {project.contribution.map((item: string, i: number) => (
                     <p key={i}>{item}</p>
                   ))}
@@ -509,36 +509,36 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
               </motion.div>
               <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.1 }}>
                 <FadeIn>
-                  <h2 className="font-headline font-semibold text-xl md:text-2xl lg:text-3xl text-foreground text-left">
+                  <h2 className="font-headline font-semibold text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-foreground text-left">
                     My Role
                   </h2>
                 </FadeIn>
                 <FadeIn>
-                  <p className="text-primary text-lg md:text-xl lg:text-2xl leading-relaxed mt-4 text-left">
+                  <p className="text-primary text-lg md:text-xl lg:text-2xl 2xl:text-[28px] leading-relaxed mt-4 text-left">
                     {project.role}
                   </p>
                 </FadeIn>
               </motion.div>
               <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.2 }}>
                 <FadeIn>
-                  <h2 className="font-headline font-semibold text-xl md:text-2xl lg:text-3xl text-foreground text-left">
+                  <h2 className="font-headline font-semibold text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-foreground text-left">
                     Project Focus
                   </h2>
                 </FadeIn>
                 <FadeIn>
-                  <p className="text-primary text-lg md:text-xl lg:text-2xl leading-relaxed mt-4 text-left">
+                  <p className="text-primary text-lg md:text-xl lg:text-2xl 2xl:text-[28px] leading-relaxed mt-4 text-left">
                     {project.focus}
                   </p>
                 </FadeIn>
               </motion.div>
                <motion.div {...motionProps} transition={{ ...motionProps.transition, delay: 0.3 }}>
                 <FadeIn>
-                  <h2 className="font-headline font-semibold text-xl md:text-2xl lg:text-3xl text-foreground text-left">
+                  <h2 className="font-headline font-semibold text-xl md:text-2xl lg:text-3xl 2xl:text-4xl text-foreground text-left">
                     Primary Goal
                   </h2>
                 </FadeIn>
                 <FadeIn>
-                  <p className="text-primary text-lg md:text-xl lg:text-2xl leading-relaxed mt-4 text-left">
+                  <p className="text-primary text-lg md:text-xl lg:text-2xl 2xl:text-[28px] leading-relaxed mt-4 text-left">
                     {project.primaryGoal}
                   </p>
                 </FadeIn>
@@ -552,7 +552,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           <section className={cn("bg-card text-card-foreground relative", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
               <FadeIn>
-                <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl text-primary mb-12 text-left">
+                <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl text-primary mb-12 text-left">
                   Research Methodology
                 </h2>
               </FadeIn>
@@ -565,8 +565,8 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                     className="p-8 border border-border rounded-2xl bg-background shadow-sm hover:border-primary/30 transition-colors"
                   >
                     <div className="mb-4">{item.icon}</div>
-                    <h3 className="font-headline font-semibold text-xl lg:text-2xl text-foreground mb-3">{item.title}</h3>
-                    <p className="text-muted-foreground text-base md:text-lg lg:text-xl leading-relaxed">{item.description}</p>
+                    <h3 className="font-headline font-semibold text-xl lg:text-2xl 2xl:text-3xl text-foreground mb-3">{item.title}</h3>
+                    <p className="text-muted-foreground text-base md:text-lg lg:text-xl 2xl:text-[24px] leading-relaxed">{item.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -578,7 +578,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         <section className={cn("bg-background text-foreground relative", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20 relative">
                 <FadeIn>
-                    <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl text-foreground mb-16 text-left">
+                    <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl text-foreground mb-16 text-left">
                       Key Outcomes
                     </h2>
                 </FadeIn>
@@ -590,10 +590,10 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                             transition={{ ...motionProps.transition, delay: 0.1 * (index + 1) }}
                             className="flex flex-col items-start gap-4"
                         >
-                            <span className="font-headline font-bold text-5xl md:text-6xl lg:text-7xl text-primary leading-none shrink-0">
+                            <span className="font-headline font-bold text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-primary leading-none shrink-0">
                               <Counter value={outcome.value} />
                             </span>
-                            <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-tight">{outcome.description}</p>
+                            <p className="text-lg md:text-xl lg:text-2xl 2xl:text-[28px] text-muted-foreground leading-tight">{outcome.description}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -604,9 +604,9 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         {isThermax && project.artefacts && (
           <section className={cn("bg-background text-foreground relative", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
-              <div className="max-w-4xl lg:max-w-5xl">
+              <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
                 <FadeIn>
-                  <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl text-foreground mb-12 text-left">
+                  <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl text-foreground mb-12 text-left">
                     Audit Deliverables & Artefacts
                   </h2>
                 </FadeIn>
@@ -623,9 +623,9 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                         </div>
                       </div>
                       <div>
-                        <h4 className="font-headline font-semibold text-lg lg:text-xl text-foreground">{artefact.title}</h4>
-                        <p className="text-primary font-bold text-sm lg:text-base mb-1">{artefact.count}</p>
-                        <p className="text-sm lg:text-lg text-muted-foreground">{artefact.description}</p>
+                        <h4 className="font-headline font-semibold text-lg lg:text-xl 2xl:text-2xl text-foreground">{artefact.title}</h4>
+                        <p className="text-primary font-bold text-sm lg:text-base 2xl:text-lg mb-1">{artefact.count}</p>
+                        <p className="text-sm lg:text-lg 2xl:text-xl text-muted-foreground">{artefact.description}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -638,17 +638,17 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         {/* Strategic Gap Section */}
         <section className={cn("bg-background text-foreground relative", sectionPadding)}>
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
-            <div className="max-w-4xl lg:max-w-5xl">
+            <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
               <motion.div {...motionProps} className="flex items-center gap-4">
                 <Target className="w-8 h-8 text-primary" />
                  <FadeIn>
-                  <h2 className="font-headline font-semibold text-2xl md:text-3xl lg:text-4xl text-foreground text-left">
+                  <h2 className="font-headline font-semibold text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-foreground text-left">
                     Strategic Gap Analysis
                   </h2>
                 </FadeIn>
               </motion.div>
               <FadeIn>
-                <p className="font-headline text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-snug md:leading-relaxed mt-8 text-left">
+                <p className="font-headline text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-semibold text-primary leading-snug md:leading-relaxed mt-8 text-left">
                   Our evaluation identified critical friction points that hindered operational velocity.
                 </p>
               </FadeIn>
@@ -659,7 +659,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         {/* Core Challenge Section */}
         <section className={cn("bg-background text-foreground relative", sectionPadding)}>
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
-            <div className="max-w-4xl lg:max-w-5xl">
+            <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
               <ul className="space-y-8">
                 {project.challenges.map((challenge: any, index: number) => (
                   <motion.li 
@@ -669,7 +669,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                     className="flex items-start"
                   >
                     <span className="text-primary mr-4 mt-1">&#8226;</span>
-                    <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
+                    <p className="text-lg md:text-xl lg:text-2xl 2xl:text-[28px] text-muted-foreground leading-relaxed">
                       <span className="font-semibold text-foreground">{challenge.title}: </span>
                       {challenge.description}
                     </p>
@@ -706,11 +706,11 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
             <div key={blockIdx}>
               <section className={cn("bg-background text-foreground relative", sectionPadding)}>
                 <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
-                  <div className="max-w-4xl lg:max-w-5xl">
+                  <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
                     <motion.div {...motionProps} className="flex items-center gap-4">
                       <RationaleIcon className="w-8 h-8 text-primary" />
                       <FadeIn>
-                        <h2 className="font-headline font-semibold text-2xl md:text-3xl lg:text-4xl text-foreground text-left">
+                        <h2 className="font-headline font-semibold text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-foreground text-left">
                           {block.title}
                         </h2>
                       </FadeIn>
@@ -762,7 +762,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
 
               <section className={cn("bg-background text-foreground", sectionPadding)}>
                 <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                  <div className="max-w-4xl lg:max-w-5xl">
+                  <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
                     <ul className="space-y-8">
                       {block.points.map((point: any, pIdx: number) => (
                         <motion.li
@@ -772,7 +772,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                           className="flex items-start"
                         >
                           <span className="text-primary mr-4 mt-1">&#8226;</span>
-                          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
+                          <p className="text-lg md:text-xl lg:text-2xl 2xl:text-[28px] text-muted-foreground leading-relaxed">
                             <span className="font-semibold text-primary">{point.title}: </span>
                             {point.description}
                           </p>
@@ -789,11 +789,11 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         {/* Quantifiable Outcomes Section */}
         <section className={cn("bg-background text-foreground", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                <div className="max-w-4xl lg:max-w-5xl">
+                <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
                     <motion.div {...motionProps} className="flex items-center gap-4 mb-4">
                         <TrendingUp className="w-8 h-8 text-primary" />
                         <FadeIn>
-                          <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl text-foreground text-left">
+                          <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl text-foreground text-left">
                             Quantifiable Impact
                           </h2>
                         </FadeIn>
@@ -803,14 +803,14 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                           <motion.div key={mIdx} {...motionProps} transition={{ ...motionProps.transition, delay: 0.2 + mIdx * 0.1 }}>
                               <Card className="bg-card border-border p-6 h-full flex flex-col">
                                   <CardHeader className="p-0">
-                                  <CardTitle className="font-headline text-lg lg:text-xl text-muted-foreground">{metric.title}</CardTitle>
+                                  <CardTitle className="font-headline text-lg lg:text-xl 2xl:text-2xl text-muted-foreground">{metric.title}</CardTitle>
                                   </CardHeader>
                                   <CardContent className="p-0 mt-4 flex-grow flex flex-col justify-center">
-                                      <p className="font-headline font-bold text-5xl md:text-6xl lg:text-7xl text-primary">
+                                      <p className="font-headline font-bold text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl text-primary">
                                         <Counter value={metric.value} />
                                       </p>
-                                      <p className="text-lg lg:text-xl text-foreground mt-2">{metric.description}</p>
-                                      <p className="text-base lg:text-lg text-muted-foreground mt-4">{metric.detail}</p>
+                                      <p className="text-lg lg:text-xl 2xl:text-2xl text-foreground mt-2">{metric.description}</p>
+                                      <p className="text-base lg:text-lg 2xl:text-xl text-muted-foreground mt-4">{metric.detail}</p>
                                   </CardContent>
                               </Card>
                           </motion.div>
@@ -825,12 +825,12 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           <section className={cn("bg-background text-foreground", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
               <FadeIn>
-                <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl text-primary mb-4 text-left">
+                <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl text-primary mb-4 text-left">
                   Key Experience Enhancers
                 </h2>
               </FadeIn>
               <FadeIn>
-                <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-16 max-w-2xl text-left">
+                <p className="text-lg md:text-xl lg:text-2xl 2xl:text-3xl text-muted-foreground mb-16 max-w-2xl text-left">
                   a user journey that fulfils user needs and expectations.
                 </p>
               </FadeIn>
@@ -844,10 +844,10 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                   >
                     <div className="flex-shrink-0">{enhancer.icon}</div>
                     <div>
-                      <h3 className="font-headline font-semibold text-xl lg:text-2xl text-foreground">
+                      <h3 className="font-headline font-semibold text-xl lg:text-2xl 2xl:text-3xl text-foreground">
                         {enhancer.title}
                       </h3>
-                      <p className="text-muted-foreground text-base md:text-lg lg:text-xl mt-1">
+                      <p className="text-muted-foreground text-base md:text-lg lg:text-xl 2xl:text-2xl mt-1">
                         {enhancer.description}
                       </p>
                     </div>
@@ -861,11 +861,11 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         {/* Key Learnings Section */}
         <section className={cn("bg-background text-foreground", sectionPadding)}>
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
-            <div className="max-w-4xl lg:max-w-5xl">
+            <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
               <motion.div {...motionProps} className="flex items-center gap-4 mb-8">
                 <Lightbulb className="w-8 h-8 text-primary" />
                 <FadeIn>
-                  <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl text-foreground text-left">
+                  <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl text-foreground text-left">
                     Key Learnings & Reflection
                   </h2>
                 </FadeIn>
@@ -879,7 +879,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                     className="flex items-start"
                   >
                     <span className="text-primary mr-4 mt-1">&#8226;</span>
-                    <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed">
+                    <p className="text-lg md:text-xl lg:text-2xl 2xl:text-[28px] text-muted-foreground leading-relaxed">
                       <span className="font-semibold text-foreground">{learning.title}: </span>
                       {learning.description}
                     </p>
@@ -896,7 +896,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
               <motion.div {...motionProps} className="max-w-4xl mb-16">
                 <FadeIn>
-                  <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl text-primary mb-4 text-left">
+                  <h2 className="font-headline font-semibold text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl text-primary mb-4 text-left">
                     Customer Experience Impact
                   </h2>
                 </FadeIn>
@@ -911,10 +911,10 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                   >
                     <div className="flex-shrink-0">{item.icon}</div>
                     <div>
-                      <h3 className="font-headline font-semibold text-xl lg:text-2xl text-foreground">
+                      <h3 className="font-headline font-semibold text-xl lg:text-2xl 2xl:text-3xl text-foreground">
                         {item.title}
                       </h3>
-                      <p className="text-muted-foreground text-base md:text-lg lg:text-xl mt-1">
+                      <p className="text-muted-foreground text-base md:text-lg lg:text-xl 2xl:text-2xl mt-1">
                         {item.description}
                       </p>
                     </div>
@@ -933,7 +933,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           <div className="flex flex-col items-start gap-6">
             <div className="w-[84px] h-[84px] rounded-full bg-primary mb-6"></div>
             <FadeIn>
-              <p className="font-headline font-semibold text-xl md:text-2xl lg:text-3xl tracking-normal text-muted-foreground text-left">
+              <p className="font-headline font-semibold text-xl md:text-2xl lg:text-3xl 2xl:text-4xl tracking-normal text-muted-foreground text-left">
                 you made it to the end of the scroll! Let's discuss the project in detail.
               </p>
             </FadeIn>
