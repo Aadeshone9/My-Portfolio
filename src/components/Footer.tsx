@@ -18,10 +18,8 @@ export default function Footer() {
               </FadeIn>
               
               <div className="flex flex-col items-start gap-8">
-                {/* View Resume Button - Signature Orange Pulse */}
                 <ResumeViewer />
 
-                {/* Contact Links Stacking */}
                 <div className="flex flex-col items-start gap-4 text-base md:text-lg lg:text-xl">
                   <a 
                     href="mailto:Aadesh.one9@gmail.com" 
@@ -45,19 +43,17 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Large Text and Go Up Button */}
-            <div className="flex flex-row items-end justify-between gap-4 mt-8 md:mt-12">
+            <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 md:gap-4 mt-8 md:mt-12">
               <div className="font-headline font-semibold text-6xl sm:text-8xl md:text-9xl lg:text-[160px] 2xl:text-[180px] leading-[0.8] tracking-tighter flex flex-col text-left">
                 <span>Aadesh</span>
                 <span>one9.com</span>
               </div>
-              <div className="pb-2 md:pb-4 flex-shrink-0">
+              <div className="pb-0 md:pb-4 flex-shrink-0">
                 <ScrollToTopButton />
               </div>
             </div>
           </div>
 
-          {/* Footer Bottom Info - One Line & Left Aligned */}
           <div className="text-left text-sm md:text-base font-normal tracking-[0.02em] flex flex-col gap-2 text-footer-muted-foreground">
             <p className="md:whitespace-nowrap">Designed & developed with Figma, Firebase Studio & GitHub by Aadesh Govenkar.</p>
             <p>&copy; 2026 Copyright All Rights Reserved</p>
