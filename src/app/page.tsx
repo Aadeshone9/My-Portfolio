@@ -1,4 +1,3 @@
-
 'use client';
 
 import Header from '@/components/Header';
@@ -74,7 +73,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="flex-1 flex flex-col">
                 <FadeIn>
-                  <h2 className="font-headline font-semibold text-3xl md:text-[32px] leading-snug tracking-[0.02em] text-foreground text-left">
+                  <h2 className="font-headline font-semibold text-3xl md:text-[32px] lg:text-[40px] leading-snug tracking-[0.02em] text-foreground text-left">
                     / Recent Projects
                   </h2>
                 </FadeIn>
@@ -100,7 +99,7 @@ export default function Home() {
           <div className="flex flex-col items-start gap-4">
             <AnimatedShape shape="square" />
             <FadeIn>
-              <h2 className="font-headline font-semibold text-3xl md:text-5xl leading-[58px] tracking-wide text-foreground mt-2 text-left">
+              <h2 className="font-headline font-semibold text-3xl md:text-5xl lg:text-6xl leading-[58px] tracking-wide text-foreground mt-2 text-left">
                 Know me better...
               </h2>
             </FadeIn>
@@ -112,7 +111,7 @@ export default function Home() {
            <div className="flex flex-col md:flex-row items-center justify-between gap-10">
                 <div className="flex flex-col items-start w-full">
                     <FadeIn>
-                      <h2 className="font-headline font-semibold text-2xl md:text-[32px] leading-[58px] tracking-[0.02em] text-foreground flex items-center text-left">
+                      <h2 className="font-headline font-semibold text-2xl md:text-[32px] lg:text-[40px] leading-[58px] tracking-[0.02em] text-foreground flex items-center text-left">
                         / Let’s break some ice
                       </h2>
                     </FadeIn>
@@ -137,41 +136,39 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="pb-20 md:pb-24">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <section className="pb-20 md:pb-24 container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 md:grid-cols-2 gap-10">
                 <TiltedCard>
                     <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
-                        <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">Visual Roots</h3>
-                        <p className="font-subtitle text-lg md:text-xl text-foreground mt-4">
+                        <h3 className="font-headline font-semibold text-2xl md:text-3xl lg:text-4xl text-foreground">Visual Roots</h3>
+                        <p className="font-subtitle text-lg md:text-xl lg:text-2xl text-foreground mt-4 leading-relaxed">
                             With a background in Applied Art and Visual Communication, I bring a rigorous understanding of form, composition, and detail to every pixel.
                         </p>
                     </div>
                 </TiltedCard>
                 <TiltedCard>
                     <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
-                        <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">Cognitive Focus</h3>
-                        <p className="font-subtitle text-lg md:text-xl text-foreground mt-4">
+                        <h3 className="font-headline font-semibold text-2xl md:text-3xl lg:text-4xl text-foreground">Cognitive Focus</h3>
+                        <p className="font-subtitle text-lg md:text-xl lg:text-2xl text-foreground mt-4 leading-relaxed">
                             My transition from Visual Design driven by a fascination with Cognitive Psychology. I focus on the subtle details and emotional connections that determine how users perceive and interact with a product.
                         </p>
                     </div>
                 </TiltedCard>
                 <TiltedCard>
                     <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
-                        <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">Building Since 2022</h3>
-                        <p className="font-subtitle text-lg md:text-xl text-foreground mt-4">
+                        <h3 className="font-headline font-semibold text-2xl md:text-3xl lg:text-4xl text-foreground">Building Since 2022</h3>
+                        <p className="font-subtitle text-lg md:text-xl lg:text-2xl text-foreground mt-4 leading-relaxed">
                             For the past few years, I’ve used this blend of psychology & aesthetics to build breakthrough products that are not just usable & memorable.
                         </p>
                     </div>
                 </TiltedCard>
                 <TiltedCard>
                     <div className="bg-background border border-border rounded-3xl p-8 h-full w-full">
-                        <h3 className="font-headline font-semibold text-2xl md:text-3xl text-foreground">Inspired Living</h3>
-                        <p className="font-subtitle text-lg md:text-xl text-foreground mt-4">
+                        <h3 className="font-headline font-semibold text-2xl md:text-3xl lg:text-4xl text-foreground">Inspired Living</h3>
+                        <p className="font-subtitle text-lg md:text-xl lg:text-2xl text-foreground mt-4 leading-relaxed">
                             My designs are grounded in real life. As a passionate biker, illustrator, and hobby cook I draw inspiration from the world around me to keep my work fresh, organic, and deeply human.
                         </p>
                     </div>
                 </TiltedCard>
-            </div>
         </section>
         
         <div className="pb-20 md:pb-24 relative">

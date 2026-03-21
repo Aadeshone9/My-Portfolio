@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Unified Financial Ecosystem",
     role: "Senior UX Consultant | Lead Designer",
-    description: "Increased customer retention by 30% and cross-selling by 25% by integrating \"Design for Trust and Growth\" principles.",
+    description: "Designing for Trust & Growth. Streamlining financial products into a seamless 'Life Companion' experience.",
     cta: 'View Project',
     href: '/projects/mahindra-finance',
     img: '/images/mahindra-finance.svg',
@@ -43,7 +43,7 @@ const projects = [
   {
     title: "Scalable B2C Design",
     role: "Lead Product & UX Designer",
-    description: "Global Software Services Platform",
+    description: "Global Software Services Platform. Unified digital presence for global software services.",
     cta: 'View Project',
     href: '/projects/maplegeni',
     img: '/images/maplegenix.webp',
@@ -84,7 +84,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
         variants={shakeAnimation}
         className={`relative h-auto md:h-auto lg:h-auto transform-gpu`}
       >
-        <Card className={`bg-card border-border rounded-2xl w-[80vw] md:w-[70vw] lg:w-[600px] h-full mx-auto flex flex-col p-6 md:p-8 relative overflow-hidden`}>
+        <Card className={`bg-card border-border rounded-2xl w-[80vw] md:w-[70vw] lg:w-[600px] xl:w-[700px] h-full mx-auto flex flex-col p-6 md:p-8 relative overflow-hidden`}>
             {project.isLocked && (
               <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px] z-20 flex items-center justify-center">
                 <div className="bg-card/90 p-4 rounded-xl border border-border shadow-xl text-center">
@@ -105,9 +105,9 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
             </div>
             <div className="flex flex-col flex-grow justify-between mt-6">
                 <div>
-                    <CardTitle className="text-xl md:text-2xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
-                    <p className="text-sm md:text-base text-muted-foreground mt-1">{project.role}</p>
-                    <CardDescription className="text-base md:text-lg text-foreground/80 mt-2">
+                    <CardTitle className="text-xl md:text-2xl lg:text-3xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
+                    <p className="text-sm md:text-base lg:text-lg text-muted-foreground mt-1">{project.role}</p>
+                    <CardDescription className="text-base md:text-lg lg:text-xl text-foreground/80 mt-2 leading-relaxed">
                         {Array.isArray(project.description) ? (
                           project.description.map((line: string, index: number) => (
                             <span key={index} className="block">{line}</span>
