@@ -17,7 +17,7 @@ const uxProjects = [
   },
   {
     title: 'Unified Financial Ecosystem',
-    role: 'Senior UX Consultant | Lead Designer',
+    role: 'UX Design Consultant',
     img: '/images/mahindra-finance.svg',
     slug: 'mahindra-finance'
   },

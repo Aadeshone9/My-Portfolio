@@ -261,7 +261,7 @@ const projectData: Record<string, any> = {
     subtitle: "Designing for Trust & Growth",
     heroTag: 'Financial Ecosystem Strategy',
     contribution: ['UX Strategy', 'Financial Journey Mapping', 'Cross-selling Logic', 'High-Fidelity Design'],
-    role: 'Senior UX Consultant | Lead Designer',
+    role: 'UX Design Consultant',
     focus: "Transforming a transactional financial app into a long-term life companion that grows with the user's life stages.",
     primaryGoal: "To eliminate friction in complex financial journeys and drive business growth through contextual, trust-based empowerment.",
     outcomes: [
