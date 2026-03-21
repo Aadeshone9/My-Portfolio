@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Unified Financial Ecosystem",
     role: "UX Design Consultant",
-    description: "Designing for Trust & Growth. Streamlining products into a seamless 'Life Companion' experience.",
+    description: "Designing for Trust & Growth. Streamlining products into a seamless 'Life Companion'.",
     cta: 'View Project',
     href: '/projects/mahindra-finance',
     img: '/images/mahindra-finance.svg',
