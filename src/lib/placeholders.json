@@ -228,6 +228,30 @@
       "description": "Project 1 Image 7",
       "imageUrl": "/images/project1/13.jpg",
       "imageHint": "app screen"
+    },
+    {
+      "id": "project2-image-1",
+      "description": "Jio Project Image 1",
+      "imageUrl": "/images/project2/1.jpg",
+      "imageHint": "research dashboard"
+    },
+    {
+      "id": "project2-image-2",
+      "description": "Jio Project Image 2",
+      "imageUrl": "/images/project2/2.jpg",
+      "imageHint": "user workflow"
+    },
+    {
+      "id": "project2-image-3",
+      "description": "Jio Project Image 3",
+      "imageUrl": "/images/project2/3.jpg",
+      "imageHint": "design artifacts"
+    },
+    {
+      "id": "project2-image-4",
+      "description": "Jio Project Image 4",
+      "imageUrl": "/images/project2/4.jpg",
+      "imageHint": "data analysis"
     }
   ]
 }

@@ -397,13 +397,15 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
   const isThermax = params.slug === 'thermax-edge';
   const sectionPadding = showImages ? "py-20 md:py-24" : "py-12 md:py-16";
 
-  const heroImage = PlaceHolderImages.find(p => p.id === 'project1-image-1');
-  const projectImage1 = PlaceHolderImages.find(p => p.id === 'project1-image-2');
-  const projectImage2 = PlaceHolderImages.find(p => p.id === 'project1-image-3');
-  const projectImage3 = PlaceHolderImages.find(p => p.id === 'project1-image-4');
-  const projectImage4 = PlaceHolderImages.find(p => p.id === 'project1-image-5');
-  const projectImage5 = PlaceHolderImages.find(p => p.id === 'project1-image-7');
-  const projectImage6 = PlaceHolderImages.find(p => p.id === 'project1-image-6');
+  const imagePrefix = params.slug === 'design-research-ops' ? 'project2' : 'project1';
+
+  const heroImage = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-1`);
+  const projectImage1 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-2`);
+  const projectImage2 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-3`);
+  const projectImage3 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-4`);
+  const projectImage4 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-5`);
+  const projectImage5 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-7`);
+  const projectImage6 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-6`);
 
   // Parallax Hero effect
   const containerRef = useRef(null);
