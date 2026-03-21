@@ -35,7 +35,7 @@ const uxProjects = [
     slug: 'thermax-edge'
   },
   {
-    title: 'B2C Software Platform',
+    title: 'Scalable B2C Design',
     role: 'Lead Product & UX Designer',
     img: '/images/maplegenix.webp',
     slug: 'maplegeni'

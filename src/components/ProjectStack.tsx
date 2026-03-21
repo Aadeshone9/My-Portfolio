@@ -42,9 +42,9 @@ const projects = [
     href: '/projects/thermax-edge',
   },
   {
-    title: "B2C Software Platform",
+    title: "Scalable B2C Design",
     role: "Lead Product & UX Designer",
-    description: "Designing a responsive, multi-domain service platform with a 'Mobile-First' strategy.",
+    description: "Unified digital presence for global software services.",
     cta: 'View Case Study',
     href: '/projects/maplegeni',
     img: '/images/maplegenix.webp',

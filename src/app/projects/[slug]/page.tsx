@@ -136,8 +136,8 @@ const projectData: Record<string, any> = {
     ]
   },
   'maplegeni': {
-    title: 'Scalable B2C Experience Design',
-    subtitle: 'Crafting a unified digital presence for global software development and testing services.',
+    title: 'Scalable B2C Design',
+    subtitle: 'Unified digital presence for global software services.',
     heroTag: 'B2C Software Platform Case Study',
     contribution: ['UX Strategy', 'Visual Experience (VX)', 'Information Architecture', 'Mobile-First Design'],
     role: 'Lead Product & UX Designer',
