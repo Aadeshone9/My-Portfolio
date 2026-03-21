@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -44,7 +43,7 @@ const projects = [
   {
     title: "Scalable B2C Design",
     role: "Lead Product & UX Designer",
-    description: "Unified digital presence for global software services.",
+    description: "Global Software Services Platform",
     cta: 'View Project',
     href: '/projects/maplegeni',
     img: '/images/maplegenix.webp',

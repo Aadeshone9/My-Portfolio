@@ -1,4 +1,3 @@
-
 'use client';
 import { useMemo, use, useEffect, useState, useRef } from 'react';
 import Header from '@/components/Header';
@@ -141,8 +140,8 @@ const projectData: Record<string, any> = {
     ]
   },
   'maplegeni': {
-    title: 'Scalable B2C Experience Design',
-    subtitle: 'Unified digital presence for global software services.',
+    title: 'Scalable B2C Design',
+    subtitle: 'Global Software Services Platform',
     heroTag: 'B2C Software Platform Case Study',
     contribution: ['UX Strategy', 'Visual Experience (VX)', 'Information Architecture', 'Mobile-First Design'],
     role: 'Lead Product & UX Designer',
@@ -435,7 +434,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
     { icon: <FileText className="w-8 h-8 text-primary" />, title: 'Reports and Analytics', description: 'Provided client with performance data tracking, analytics, and insightful reports.' },
     { icon: <Navigation className="w-8 h-8 text-primary" />, title: 'Tailored Navigation', description: 'Personalized navigation to increase user engagement.' },
     { icon: <Phone className="w-8 h-8 text-primary" />, title: 'Roadside Assistance', description: 'Dependable roadside assistance for emergencies and breakdowns.' },
-    { icon: <Route className="w-8 h-8 text-primary" />, title: 'Custom Riding Mode', description: 'Streamline journeys with our centralized route planner and access.' },
+    { icon: <Navigation className="w-8 h-8 text-primary" />, title: 'Custom Riding Mode', description: 'Streamline journeys with our centralized route planner and access.' },
     { icon: <Shield className="w-8 h-8 text-primary" />, title: 'Priority Safety and Security', description: 'Enhanced user control and visibility of vehicle usage and status for safer and more secure driving.' },
     { icon: <Fence className="w-8 h-8 text-primary" />, title: 'Geo-Fencing', description: 'Boost sales by offering informative content to aid decision-making on website and app.' },
   ];
