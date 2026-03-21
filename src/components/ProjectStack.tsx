@@ -34,9 +34,9 @@ const projects = [
     isLocked: false,
   },
   {
-    title: "Thermax - Edge Platform",
+    title: "Industrial UX Audit",
     role: "UX Strategy Consultant",
-    description: "UX Audit & Research Benchmarking: Defining a 25% improvement in operational efficiency.",
+    description: "Benchmarking the 'Customer Connect' ecosystem to define scalable roadmaps.",
     img: '/images/edge.png',
     cta: 'View Case Study',
     href: '/projects/thermax-edge',

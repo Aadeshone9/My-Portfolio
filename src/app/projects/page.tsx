@@ -29,7 +29,7 @@ const uxProjects = [
     slug: 'design-research-ops'
   },
   {
-    title: 'Thermax - Edge Platform',
+    title: 'Industrial UX Audit',
     role: 'UX Researcher and Strategist',
     img: '/images/edge.png',
     slug: 'thermax-edge'

@@ -298,8 +298,8 @@ const projectData: Record<string, any> = {
     ]
   },
   'thermax-edge': {
-    title: 'Industrial UX Audit & Strategy',
-    subtitle: "Benchmarking the 'Customer Connect' ecosystem.",
+    title: 'Industrial UX Audit',
+    subtitle: "Benchmarking 'Customer Connect'",
     heroTag: 'UX Audit & Research Benchmarking',
     contribution: ['UX Audit & Heuristics', 'Research Benchmarking', 'Information Architecture', 'Design Strategy'],
     role: 'UX Strategy Consultant',
@@ -372,6 +372,8 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
   const params = use(paramsPromise);
   const project = useMemo(() => projectData[params.slug] || projectData['vida'], [params.slug]);
 
+  const showImages = params.slug !== 'thermax-edge';
+
   const heroImage = PlaceHolderImages.find(p => p.id === 'project1-image-1');
   const projectImage1 = PlaceHolderImages.find(p => p.id === 'project1-image-2');
   const projectImage2 = PlaceHolderImages.find(p => p.id === 'project1-image-3');
@@ -419,7 +421,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
             style={{ scale: heroScale, opacity: heroOpacity, filter: heroBlur }}
             className="absolute inset-0"
           >
-            {heroImage && (
+            {showImages && heroImage && (
               <Image
                 src={heroImage.imageUrl}
                 alt={heroImage.description}
@@ -577,22 +579,24 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           </div>
         </section>
 
-        <section className="py-10 md:py-12 bg-background">
-            <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
-                {projectImage1 && (
-                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                        <Image
-                            src={projectImage1.imageUrl}
-                            alt={projectImage1.description}
-                            width={1280}
-                            height={720}
-                            className="w-full h-auto object-contain"
-                            data-ai-hint={projectImage1.imageHint}
-                        />
-                    </motion.div>
-                )}
-            </div>
-        </section>
+        {showImages && (
+          <section className="py-10 md:py-12 bg-background">
+              <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
+                  {projectImage1 && (
+                      <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                          <Image
+                              src={projectImage1.imageUrl}
+                              alt={projectImage1.description}
+                              width={1280}
+                              height={720}
+                              className="w-full h-auto object-contain"
+                              data-ai-hint={projectImage1.imageHint}
+                          />
+                      </motion.div>
+                  )}
+              </div>
+          </section>
+        )}
 
         {/* Rationale Blocks */}
         {project.rationales.map((block: any, blockIdx: number) => {
@@ -614,31 +618,33 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                 </div>
               </section>
               
-              <section className="py-10 md:py-12 bg-background">
-                <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                  {blockIdx % 2 === 0 ? projectImage2 && (
-                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                        <Image
-                            src={projectImage2.imageUrl}
-                            alt={projectImage2.description}
-                            width={1280}
-                            height={720}
-                            className="w-full h-auto object-contain"
-                        />
-                    </motion.div>
-                  ) : projectImage3 && (
-                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                        <Image
-                            src={projectImage3.imageUrl}
-                            alt={projectImage3.description}
-                            width={1280}
-                            height={720}
-                            className="w-full h-auto object-contain"
-                        />
-                    </motion.div>
-                  )}
-                </div>
-              </section>
+              {showImages && (
+                <section className="py-10 md:py-12 bg-background">
+                  <div className="container mx-auto px-4 sm:px-8 md:px-20">
+                    {blockIdx % 2 === 0 ? projectImage2 && (
+                      <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                          <Image
+                              src={projectImage2.imageUrl}
+                              alt={projectImage2.description}
+                              width={1280}
+                              height={720}
+                              className="w-full h-auto object-contain"
+                          />
+                      </motion.div>
+                    ) : projectImage3 && (
+                      <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                          <Image
+                              src={projectImage3.imageUrl}
+                              alt={projectImage3.description}
+                              width={1280}
+                              height={720}
+                              className="w-full h-auto object-contain"
+                          />
+                      </motion.div>
+                    )}
+                  </div>
+                </section>
+              )}
 
               <section className="py-20 md:py-24 bg-background text-foreground">
                 <div className="container mx-auto px-4 sm:px-8 md:px-20">
