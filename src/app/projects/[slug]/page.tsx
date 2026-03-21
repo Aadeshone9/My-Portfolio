@@ -77,7 +77,7 @@ const Counter = ({ value }: { value: string }) => {
     <span 
       ref={ref} 
       className="inline-flex" 
-      style={{ minWidth: `${value.length}ch` }}
+      style={{ minWidth: value.match(/\d/) ? `${value.length}ch` : 'auto' }}
     >
       {displayValue}
     </span>
@@ -520,7 +520,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                             key={index} 
                             {...motionProps} 
                             transition={{ ...motionProps.transition, delay: 0.1 * (index + 1) }}
-                            className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6"
+                            className="flex flex-col items-start gap-4"
                         >
                             <span className="font-headline font-bold text-5xl md:text-6xl text-primary leading-none shrink-0">
                               <Counter value={outcome.value} />
