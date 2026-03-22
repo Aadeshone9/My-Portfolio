@@ -10,7 +10,7 @@ const projects = [
   {
     title: "VIDA EV Mobility",
     role: "UX Design Consultant and Researcher",
-    description: "Driving Loyalty & Efficiency. End-to-end connected vehicle platform experience.",
+    description: "Driving Loyalty & Efficiency for an end-to-end connected vehicle platform experience.",
     cta: 'View Project',
     href: '/projects/vida',
     img: '/images/hero.svg'
