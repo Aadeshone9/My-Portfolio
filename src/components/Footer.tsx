@@ -1,4 +1,3 @@
-
 'use client';
 import ResumeViewer from "./ResumeViewer";
 import ScrollToTopButton from "./ScrollToTopButton";
