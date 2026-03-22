@@ -107,7 +107,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                 <div className="space-y-4 text-left">
                     <CardTitle className="text-2xl md:text-3xl lg:text-[32px] font-headline font-semibold text-foreground tracking-tight">{project.title}</CardTitle>
                     <p className="text-sm md:text-base font-body text-muted-foreground font-medium tracking-wide">{project.role}</p>
-                    <p className="text-base md:text-lg text-foreground/80 leading-relaxed font-normal">
+                    <p className="text-lg md:text-xl text-foreground/80 leading-relaxed font-normal">
                         {project.description}
                     </p>
                 </div>
