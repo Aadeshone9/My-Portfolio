@@ -17,28 +17,24 @@ export default function Footer() {
                 </p>
               </FadeIn>
               
-              <div className="flex flex-col items-start gap-8">
+              <div className="flex flex-col md:flex-row md:items-center flex-wrap gap-x-10 gap-y-6 text-base md:text-lg lg:text-xl">
                 <ResumeViewer />
-
-                <div className="flex flex-col items-start gap-4 text-base md:text-lg lg:text-xl">
+                <a 
+                  href="mailto:Aadesh.one9@gmail.com" 
+                  className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors"
+                >
+                  Aadesh.one9@gmail.com
+                </a>
+                <div className="flex items-center gap-x-10">
+                  <p className="font-headline font-semibold tracking-tight">+ (91) 8975143018</p>
                   <a 
-                    href="mailto:Aadesh.one9@gmail.com" 
+                    href="https://www.linkedin.com/in/aadeshgovenkar/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
                     className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors"
                   >
-                    Aadesh.one9@gmail.com
+                    LinkedIn
                   </a>
-                  
-                  <div className="flex flex-wrap items-center gap-x-10 gap-y-4">
-                    <p className="font-headline font-semibold tracking-tight">+ (91) 8975143018</p>
-                    <a 
-                      href="https://www.linkedin.com/in/aadeshgovenkar/" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors"
-                    >
-                      LinkedIn
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
