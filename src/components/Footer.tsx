@@ -15,28 +15,24 @@ export default function Footer() {
                             </p>
                         </FadeIn>
                         
-                        {/* Contact Section: Vertical on mobile, Horizontal on desktop */}
-                        <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-x-10 text-base md:text-lg items-start">
-                            <div className="flex-shrink-0">
-                                <ResumeViewer />
-                            </div>
-                            <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-x-10 items-start">
-                                <a 
-                                    href="mailto:Aadesh.one9@gmail.com" 
-                                    className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors whitespace-nowrap"
-                                >
-                                    Aadesh.one9@gmail.com
-                                </a>
-                                <p className="font-headline font-semibold tracking-tight whitespace-nowrap">+ (91) 8975143018</p>
-                                <a 
-                                    href="https://www.linkedin.com/in/aadeshgovenkar/" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors whitespace-nowrap"
-                                >
-                                    LinkedIn
-                                </a>
-                            </div>
+                        {/* Contact Section: Vertical stack on mobile, horizontal row on desktop */}
+                        <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-10 text-base md:text-lg items-start">
+                            <ResumeViewer />
+                            <a 
+                                href="mailto:Aadesh.one9@gmail.com" 
+                                className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors whitespace-nowrap"
+                            >
+                                Aadesh.one9@gmail.com
+                            </a>
+                            <p className="font-headline font-semibold tracking-tight whitespace-nowrap">+ (91) 8975143018</p>
+                            <a 
+                                href="https://www.linkedin.com/in/aadeshgovenkar/" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors whitespace-nowrap"
+                            >
+                                LinkedIn
+                            </a>
                         </div>
                     </div>
 
@@ -52,8 +48,9 @@ export default function Footer() {
                 </div>
 
                 <div className="text-left text-sm md:text-base font-normal tracking-[0.02em] flex flex-col gap-2 text-footer-muted-foreground border-t border-footer-foreground/10 pt-8">
-                    <p className="md:whitespace-nowrap">Designed & developed with Figma, Firebase Studio & GitHub by Aadesh Govenkar.</p>
-                    <p>&copy; 2026 Copyright All Rights Reserved</p>
+                    <p className="md:whitespace-nowrap">
+                        Designed & developed with Figma, Firebase Studio & GitHub by Aadesh Govenkar. &copy; 2026 Copyright All Rights Reserved
+                    </p>
                 </div>
             </div>
         </footer>
