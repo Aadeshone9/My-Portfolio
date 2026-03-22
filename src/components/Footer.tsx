@@ -27,15 +27,17 @@ export default function Footer() {
                                 >
                                     Aadesh.one9@gmail.com
                                 </a>
-                                <p className="font-headline font-semibold tracking-tight whitespace-nowrap">+ (91) 8975143018</p>
-                                <a 
-                                    href="https://www.linkedin.com/in/aadeshgovenkar/" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors"
-                                >
-                                    LinkedIn
-                                </a>
+                                <div className="flex flex-wrap items-center gap-6 md:gap-x-10">
+                                    <p className="font-headline font-semibold tracking-tight whitespace-nowrap">+ (91) 8975143018</p>
+                                    <a 
+                                        href="https://www.linkedin.com/in/aadeshgovenkar/" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer" 
+                                        className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors"
+                                    >
+                                        LinkedIn
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -83,7 +83,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
         variants={shakeAnimation}
         className={`relative h-auto transform-gpu`}
       >
-        <Card className={`bg-card border-border rounded-3xl w-[85vw] md:w-[75vw] lg:w-[700px] xl:w-[800px] h-full mx-auto flex flex-col p-8 md:p-10 relative overflow-hidden shadow-2xl`}>
+        <Card className={`bg-card border-border rounded-3xl w-[92vw] md:w-[85vw] lg:w-[600px] xl:w-[700px] h-full mx-auto flex flex-col p-8 md:p-10 relative overflow-hidden shadow-2xl`}>
             {project.isLocked && (
               <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px] z-20 flex items-center justify-center">
                 <div className="bg-card/90 p-4 rounded-xl border border-border shadow-xl text-center">
@@ -103,10 +103,10 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
               )}
             </div>
             <div className="flex flex-col flex-grow justify-between mt-8">
-                <div className="space-y-4">
-                    <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-headline font-semibold text-foreground tracking-tight">{project.title}</CardTitle>
-                    <p className="text-base md:text-lg font-body text-muted-foreground font-medium tracking-wide">{project.role}</p>
-                    <CardDescription className="text-lg md:text-xl text-foreground/80 leading-relaxed font-normal">
+                <div className="space-y-4 text-left">
+                    <CardTitle className="text-2xl md:text-3xl lg:text-[32px] font-headline font-semibold text-foreground tracking-tight">{project.title}</CardTitle>
+                    <p className="text-sm md:text-base font-body text-muted-foreground font-medium tracking-wide">{project.role}</p>
+                    <CardDescription className="text-base md:text-lg text-foreground/80 leading-relaxed font-normal">
                         {project.description}
                     </CardDescription>
                 </div>
