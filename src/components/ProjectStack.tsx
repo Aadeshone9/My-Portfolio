@@ -105,7 +105,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
             </div>
             <div className="flex flex-col flex-grow justify-between mt-8">
                 <div className="space-y-4">
-                    <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-headline font-bold text-foreground tracking-tight">{project.title}</CardTitle>
+                    <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-headline font-semibold text-foreground tracking-tight">{project.title}</CardTitle>
                     <p className="text-base md:text-lg font-body text-muted-foreground font-medium tracking-wide">{project.role}</p>
                     <CardDescription className="text-lg md:text-xl text-foreground/80 leading-relaxed font-normal">
                         {project.description}
