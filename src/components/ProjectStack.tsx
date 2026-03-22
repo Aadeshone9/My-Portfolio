@@ -81,7 +81,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
         }} 
         whileHover="hover"
         variants={shakeAnimation}
-        className={`relative h-auto md:h-auto lg:h-auto transform-gpu`}
+        className={`relative h-auto transform-gpu`}
       >
         <Card className={`bg-card border-border rounded-2xl w-[80vw] md:w-[70vw] lg:w-[600px] xl:w-[700px] h-full mx-auto flex flex-col p-6 md:p-8 relative overflow-hidden`}>
             {project.isLocked && (
@@ -104,9 +104,9 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
             </div>
             <div className="flex flex-col flex-grow justify-between mt-6">
                 <div>
-                    <CardTitle className="text-xl md:text-2xl lg:text-3xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
-                    <p className="text-sm md:text-base lg:text-lg text-muted-foreground mt-1">{project.role}</p>
-                    <CardDescription className="text-base md:text-lg lg:text-xl text-foreground/80 mt-2 leading-relaxed">
+                    <CardTitle className="text-xl md:text-2xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
+                    <p className="text-sm font-body text-muted-foreground mt-1">{project.role}</p>
+                    <CardDescription className="text-sm md:text-base text-foreground/80 mt-2 leading-relaxed">
                         {Array.isArray(project.description) ? (
                           project.description.map((line: string, index: number) => (
                             <span key={index} className="block">{line}</span>
