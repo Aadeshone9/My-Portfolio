@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
@@ -83,7 +84,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
         variants={shakeAnimation}
         className={`relative h-auto transform-gpu`}
       >
-        <Card className={`bg-card border-border rounded-2xl w-[80vw] md:w-[70vw] lg:w-[600px] xl:w-[700px] h-full mx-auto flex flex-col p-6 md:p-8 relative overflow-hidden`}>
+        <Card className={`bg-card border-border rounded-3xl w-[85vw] md:w-[75vw] lg:w-[700px] xl:w-[800px] h-full mx-auto flex flex-col p-8 md:p-10 relative overflow-hidden shadow-2xl`}>
             {project.isLocked && (
               <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px] z-20 flex items-center justify-center">
                 <div className="bg-card/90 p-4 rounded-xl border border-border shadow-xl text-center">
@@ -92,31 +93,25 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                 </div>
               </div>
             )}
-            <div className="w-full aspect-[16/9] bg-off-white-f4 rounded-lg flex items-center justify-center overflow-hidden relative group">
+            <div className="w-full aspect-[16/9] bg-off-white-f4 rounded-2xl flex items-center justify-center overflow-hidden relative group">
               {project.img && (
                 <Image 
                   src={project.img} 
                   alt={project.title} 
                   fill 
-                  className="object-contain p-8 z-10" 
+                  className="object-contain p-10 z-10 transition-transform duration-500 group-hover:scale-105" 
                 />
               )}
             </div>
-            <div className="flex flex-col flex-grow justify-between mt-6">
-                <div>
-                    <CardTitle className="text-xl md:text-2xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
-                    <p className="text-sm font-body text-muted-foreground mt-1">{project.role}</p>
-                    <CardDescription className="text-sm md:text-base text-foreground/80 mt-2 leading-relaxed">
-                        {Array.isArray(project.description) ? (
-                          project.description.map((line: string, index: number) => (
-                            <span key={index} className="block">{line}</span>
-                          ))
-                        ) : (
-                          project.description
-                        )}
+            <div className="flex flex-col flex-grow justify-between mt-8">
+                <div className="space-y-4">
+                    <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-headline font-bold text-foreground tracking-tight">{project.title}</CardTitle>
+                    <p className="text-base md:text-lg font-body text-muted-foreground font-medium tracking-wide">{project.role}</p>
+                    <CardDescription className="text-lg md:text-xl text-foreground/80 leading-relaxed font-normal">
+                        {project.description}
                     </CardDescription>
                 </div>
-                <div className="flex items-center gap-2 mt-4">
+                <div className="flex items-center gap-2 mt-8">
                     {project.cta ? (
                       <PillButton 
                         href={project.href || '#'}
@@ -162,7 +157,7 @@ const ProjectStack = () => {
                 const rangeStart = i * step;
                 const rangeEnd = rangeStart + step;
                 const range = [rangeStart, rangeEnd];
-                const targetScale = 1 - ((totalProjects - i - 1) * 0.05);
+                const targetScale = 1 - ((totalProjects - i - 1) * 0.04);
                 return <ProjectCard key={i} i={i} {...{project, progress: scrollYProgress, range, targetScale}}/>
             })}
         </div>

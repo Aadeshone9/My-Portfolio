@@ -1,3 +1,4 @@
+
 'use client';
 import ResumeViewer from "./ResumeViewer";
 import ScrollToTopButton from "./ScrollToTopButton";
@@ -15,18 +16,18 @@ export default function Footer() {
                             </p>
                         </FadeIn>
                         
-                        {/* Responsive Contact Info Row */}
-                        <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-x-10 text-base md:text-lg">
+                        {/* Desktop: One line, Mobile: Stacked with proper alignment */}
+                        <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-x-10 text-base md:text-lg items-start">
                             <div className="w-full md:w-auto">
                                 <ResumeViewer />
                             </div>
                             <a 
                                 href="mailto:Aadesh.one9@gmail.com" 
-                                className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors"
+                                className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors block md:inline"
                             >
                                 Aadesh.one9@gmail.com
                             </a>
-                            <div className="flex items-center gap-x-10">
+                            <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-x-10 w-full md:w-auto">
                                 <p className="font-headline font-semibold tracking-tight">+ (91) 8975143018</p>
                                 <a 
                                     href="https://www.linkedin.com/in/aadeshgovenkar/" 
@@ -45,13 +46,13 @@ export default function Footer() {
                             <span>Aadesh</span>
                             <span>one9.com</span>
                         </div>
-                        <div className="pb-0 md:pb-4 flex-shrink-0">
+                        <div className="pb-0 md:pb-4 flex-shrink-0 w-full md:w-auto flex justify-start md:justify-end">
                             <ScrollToTopButton />
                         </div>
                     </div>
                 </div>
 
-                <div className="text-left text-sm md:text-base font-normal tracking-[0.02em] flex flex-col gap-2 text-footer-muted-foreground">
+                <div className="text-left text-sm md:text-base font-normal tracking-[0.02em] flex flex-col gap-2 text-footer-muted-foreground border-t border-footer-foreground/10 pt-8">
                     <p className="md:whitespace-nowrap">Designed & developed with Figma, Firebase Studio & GitHub by Aadesh Govenkar.</p>
                     <p>&copy; 2026 Copyright All Rights Reserved</p>
                 </div>
