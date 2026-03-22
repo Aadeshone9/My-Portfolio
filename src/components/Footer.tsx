@@ -36,8 +36,9 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8 md:gap-4 mt-8 md:mt-12">
-                        <div className="font-headline font-semibold text-6xl sm:text-8xl md:text-9xl lg:text-[160px] 2xl:text-[180px] leading-[0.8] tracking-tighter flex flex-col text-left">
+                    <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-10 md:gap-4 mt-8 md:mt-12">
+                        {/* Branding Stack: Refined vertical spacing for mobile */}
+                        <div className="font-headline font-semibold text-6xl sm:text-8xl md:text-9xl lg:text-[160px] 2xl:text-[180px] leading-[0.9] md:leading-[0.8] tracking-tighter flex flex-col gap-2 md:gap-0 text-left">
                             <span>Aadesh</span>
                             <span>one9.com</span>
                         </div>
