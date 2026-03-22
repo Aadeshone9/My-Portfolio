@@ -106,7 +106,7 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                 <div>
                     <CardTitle className="text-xl md:text-2xl lg:text-3xl font-headline font-semibold text-foreground">{project.title}</CardTitle>
                     <p className="text-sm md:text-base lg:text-lg text-muted-foreground mt-1">{project.role}</p>
-                    <CardDescription className="text-base md:text-lg lg:text-xl 2xl:text-[28px] text-foreground/80 mt-2 leading-relaxed">
+                    <CardDescription className="text-base md:text-lg lg:text-xl text-foreground/80 mt-2 leading-relaxed">
                         {Array.isArray(project.description) ? (
                           project.description.map((line: string, index: number) => (
                             <span key={index} className="block">{line}</span>
