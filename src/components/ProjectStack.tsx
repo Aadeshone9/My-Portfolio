@@ -1,7 +1,8 @@
+
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { Card, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Lock } from "lucide-react";
 import PillButton from "./PillButton";
 import Image from 'next/image';
@@ -106,9 +107,9 @@ const ProjectCard = ({ project, i, progress, range, targetScale }: { project: an
                 <div className="space-y-4 text-left">
                     <CardTitle className="text-2xl md:text-3xl lg:text-[32px] font-headline font-semibold text-foreground tracking-tight">{project.title}</CardTitle>
                     <p className="text-sm md:text-base font-body text-muted-foreground font-medium tracking-wide">{project.role}</p>
-                    <CardDescription className="text-base md:text-lg text-foreground/80 leading-relaxed font-normal">
+                    <p className="text-base md:text-lg text-foreground/80 leading-relaxed font-normal">
                         {project.description}
-                    </CardDescription>
+                    </p>
                 </div>
                 <div className="flex items-center gap-2 mt-8">
                     {project.cta ? (
