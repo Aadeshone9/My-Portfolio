@@ -1,4 +1,3 @@
-
 'use client';
 import ResumeViewer from "./ResumeViewer";
 import ScrollToTopButton from "./ScrollToTopButton";
@@ -11,24 +10,24 @@ export default function Footer() {
                 <div className='flex flex-col gap-12'>
                     <div className='flex flex-col gap-8'>
                         <FadeIn>
-                            <p className="font-headline font-medium text-lg md:text-xl text-footer-muted-foreground">
+                            <p className="font-headline font-medium text-lg md:text-xl text-footer-muted-foreground text-left">
                                 Lets get in Touch....
                             </p>
                         </FadeIn>
                         
-                        {/* Desktop: One line, Mobile: Stacked with proper alignment */}
+                        {/* Desktop: One line, Mobile: Stacked with strict left alignment */}
                         <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-x-10 text-base md:text-lg items-start">
-                            <div className="w-full md:w-auto">
+                            <div className="w-full md:w-auto flex justify-start">
                                 <ResumeViewer />
                             </div>
-                            <a 
-                                href="mailto:Aadesh.one9@gmail.com" 
-                                className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors block md:inline"
-                            >
-                                Aadesh.one9@gmail.com
-                            </a>
-                            <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-x-10 w-full md:w-auto">
-                                <p className="font-headline font-semibold tracking-tight">+ (91) 8975143018</p>
+                            <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-x-10 items-start w-full md:w-auto">
+                                <a 
+                                    href="mailto:Aadesh.one9@gmail.com" 
+                                    className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors block"
+                                >
+                                    Aadesh.one9@gmail.com
+                                </a>
+                                <p className="font-headline font-semibold tracking-tight whitespace-nowrap">+ (91) 8975143018</p>
                                 <a 
                                     href="https://www.linkedin.com/in/aadeshgovenkar/" 
                                     target="_blank" 
