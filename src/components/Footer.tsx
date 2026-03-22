@@ -15,29 +15,27 @@ export default function Footer() {
                             </p>
                         </FadeIn>
                         
-                        {/* Desktop: One line, Mobile: Stacked with strict left alignment */}
+                        {/* Contact Section: Vertical on mobile, Horizontal on desktop */}
                         <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-x-10 text-base md:text-lg items-start">
-                            <div className="w-full md:w-auto flex justify-start">
+                            <div className="flex-shrink-0">
                                 <ResumeViewer />
                             </div>
-                            <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-x-10 items-start w-full md:w-auto">
+                            <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-x-10 items-start">
                                 <a 
                                     href="mailto:Aadesh.one9@gmail.com" 
-                                    className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors block"
+                                    className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors whitespace-nowrap"
                                 >
                                     Aadesh.one9@gmail.com
                                 </a>
-                                <div className="flex flex-wrap items-center gap-6 md:gap-x-10">
-                                    <p className="font-headline font-semibold tracking-tight whitespace-nowrap">+ (91) 8975143018</p>
-                                    <a 
-                                        href="https://www.linkedin.com/in/aadeshgovenkar/" 
-                                        target="_blank" 
-                                        rel="noopener noreferrer" 
-                                        className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors"
-                                    >
-                                        LinkedIn
-                                    </a>
-                                </div>
+                                <p className="font-headline font-semibold tracking-tight whitespace-nowrap">+ (91) 8975143018</p>
+                                <a 
+                                    href="https://www.linkedin.com/in/aadeshgovenkar/" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="font-headline font-semibold tracking-tight underline decoration-1 underline-offset-8 hover:text-primary transition-colors whitespace-nowrap"
+                                >
+                                    LinkedIn
+                                </a>
                             </div>
                         </div>
                     </div>
