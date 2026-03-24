@@ -714,9 +714,10 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           const RationaleIcon = IconMap[block.icon] || Search;
           const isMaplegeniImageSkipped = params.slug === 'maplegeni' && blockIdx === 0;
           
-          // Tighten vertical spacing for Maplegeni and Mahindra Finance
+          // Tighten vertical spacing for specific projects and blocks
           const isSpacingFix = (params.slug === 'maplegeni' && (blockIdx === 1 || blockIdx === 2 || blockIdx === 3)) || 
-                               (params.slug === 'mahindra-finance');
+                               (params.slug === 'mahindra-finance') ||
+                               (params.slug === 'design-research-ops');
           
           return (
             <div key={blockIdx}>
