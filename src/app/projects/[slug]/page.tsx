@@ -646,7 +646,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         )}
         
         {/* Strategic Gap Section */}
-        <section className={cn("bg-background text-foreground relative", sectionPadding)}>
+        <section className={cn("bg-background text-foreground relative pt-20 md:pt-24 pb-0")}>
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
               <motion.div {...motionProps} className="flex items-center gap-4">
@@ -667,7 +667,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         </section>
 
         {/* Core Challenge Section */}
-        <section className={cn("bg-background text-foreground relative", sectionPadding)}>
+        <section className={cn("bg-background text-foreground relative pb-20 md:pb-24 pt-12 md:pt-16")}>
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
               <ul className="space-y-8">
@@ -712,9 +712,14 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         {/* Rationale Blocks */}
         {project.rationales.map((block: any, blockIdx: number) => {
           const RationaleIcon = IconMap[block.icon] || Search;
+          const isMaplegeniImageSkipped = params.slug === 'maplegeni' && blockIdx === 0;
+          
           return (
             <div key={blockIdx}>
-              <section className={cn("bg-background text-foreground relative", sectionPadding)}>
+              <section className={cn(
+                "bg-background text-foreground relative", 
+                isMaplegeniImageSkipped ? "pt-20 md:pt-24 pb-0" : sectionPadding
+              )}>
                 <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
                   <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
                     <motion.div {...motionProps} className="flex items-center gap-4">
@@ -729,7 +734,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                 </div>
               </section>
               
-              {showImages && !(params.slug === 'maplegeni' && blockIdx === 0) && (
+              {showImages && !isMaplegeniImageSkipped && (
                 <section className="py-10 md:py-12 bg-background">
                   <div className="container mx-auto px-4 sm:px-8 md:px-20">
                     {((params.slug === 'design-research-ops' && blockIdx === 2) || (params.slug === 'maplegeni' && blockIdx === 3)) ? (
@@ -770,7 +775,10 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                 </section>
               )}
 
-              <section className={cn("bg-background text-foreground", sectionPadding)}>
+              <section className={cn(
+                "bg-background text-foreground", 
+                isMaplegeniImageSkipped ? "pb-20 md:pb-24 pt-8 md:pt-12" : sectionPadding
+              )}>
                 <div className="container mx-auto px-4 sm:px-8 md:px-20">
                   <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
                     <ul className="space-y-8">
