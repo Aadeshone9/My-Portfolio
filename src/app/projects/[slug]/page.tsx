@@ -749,26 +749,38 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                             />
                         </motion.div>
                     ) : (
-                      blockIdx % 2 === 0 ? projectImage2 && (
+                      params.slug === 'maplegeni' && blockIdx === 2 ? projectImage4 && (
                         <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
                             <Image
-                                src={projectImage2.imageUrl}
-                                alt={projectImage2.description}
+                                src={projectImage4.imageUrl}
+                                alt={projectImage4.description}
                                 width={1280}
                                 height={720}
                                 className="w-full h-auto object-contain"
                             />
                         </motion.div>
-                      ) : projectImage3 && (
-                        <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                            <Image
-                                src={projectImage3.imageUrl}
-                                alt={projectImage3.description}
-                                width={1280}
-                                height={720}
-                                className="w-full h-auto object-contain"
-                            />
-                        </motion.div>
+                      ) : (
+                        blockIdx % 2 === 0 ? projectImage2 && (
+                          <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                              <Image
+                                  src={projectImage2.imageUrl}
+                                  alt={projectImage2.description}
+                                  width={1280}
+                                  height={720}
+                                  className="w-full h-auto object-contain"
+                              />
+                          </motion.div>
+                        ) : projectImage3 && (
+                          <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                              <Image
+                                  src={projectImage3.imageUrl}
+                                  alt={projectImage3.description}
+                                  width={1280}
+                                  height={720}
+                                  className="w-full h-auto object-contain"
+                              />
+                          </motion.div>
+                        )
                       )
                     )}
                   </div>
