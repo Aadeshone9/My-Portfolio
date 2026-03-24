@@ -729,7 +729,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                 </div>
               </section>
               
-              {showImages && (
+              {showImages && !(params.slug === 'maplegeni' && blockIdx === 0) && (
                 <section className="py-10 md:py-12 bg-background">
                   <div className="container mx-auto px-4 sm:px-8 md:px-20">
                     {((params.slug === 'design-research-ops' && blockIdx === 2) || (params.slug === 'maplegeni' && blockIdx === 3)) ? (
