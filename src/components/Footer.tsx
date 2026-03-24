@@ -57,7 +57,7 @@ export default function Footer() {
                         Designed in Figma & developed in Firebase Studio by Aadesh Govenkar.
                     </p>
                     <p className="whitespace-normal leading-relaxed">
-                        &copy; 2026 aadeshone.com All Rights Reserved.
+                        &copy; 2026 aadeshone9.com All Rights Reserved.
                     </p>
                 </div>
             </div>
