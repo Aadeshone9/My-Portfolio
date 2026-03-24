@@ -713,13 +713,16 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
         {project.rationales.map((block: any, blockIdx: number) => {
           const RationaleIcon = IconMap[block.icon] || Search;
           const isMaplegeniImageSkipped = params.slug === 'maplegeni' && blockIdx === 0;
-          const isMaplegeniSpacingFix = params.slug === 'maplegeni' && (blockIdx === 1 || blockIdx === 2 || blockIdx === 3);
+          
+          // Tighten vertical spacing for Maplegeni and Mahindra Finance
+          const isSpacingFix = (params.slug === 'maplegeni' && (blockIdx === 1 || blockIdx === 2 || blockIdx === 3)) || 
+                               (params.slug === 'mahindra-finance');
           
           return (
             <div key={blockIdx}>
               <section className={cn(
                 "bg-background text-foreground relative", 
-                isMaplegeniImageSkipped ? "pt-20 md:pt-24 pb-0" : (isMaplegeniSpacingFix ? "pt-20 md:pt-24 pb-6 md:pb-8" : sectionPadding)
+                isMaplegeniImageSkipped ? "pt-20 md:pt-24 pb-0" : (isSpacingFix ? "pt-20 md:pt-24 pb-6 md:pb-8" : sectionPadding)
               )}>
                 <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
                   <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
@@ -738,7 +741,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
               {showImages && !isMaplegeniImageSkipped && (
                 <section className={cn(
                   "bg-background",
-                  isMaplegeniSpacingFix ? "pt-0 pb-10 md:pb-12" : "py-10 md:py-12"
+                  isSpacingFix ? "pt-0 pb-10 md:pb-12" : "py-10 md:py-12"
                 )}>
                   <div className="container mx-auto px-4 sm:px-8 md:px-20">
                     {((params.slug === 'design-research-ops' && blockIdx === 2) || (params.slug === 'maplegeni' && blockIdx === 3)) ? (
@@ -793,7 +796,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
 
               <section className={cn(
                 "bg-background text-foreground", 
-                isMaplegeniImageSkipped ? "pb-20 md:pb-24 pt-8 md:pt-12" : (isMaplegeniSpacingFix ? "pb-20 md:pb-24 pt-4 md:pt-6" : sectionPadding)
+                isMaplegeniImageSkipped ? "pb-20 md:pb-24 pt-8 md:pt-12" : (isSpacingFix ? "pb-20 md:pb-24 pt-4 md:pt-6" : sectionPadding)
               )}>
                 <div className="container mx-auto px-4 sm:px-8 md:px-20">
                   <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
