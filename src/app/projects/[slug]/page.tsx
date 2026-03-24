@@ -220,7 +220,7 @@ const projectData: Record<string, any> = {
     challenges: [
       { title: 'User', description: "Designers faced 'Analysis Paralysis' and manual friction when choosing research methods." },
       { title: 'Business', description: "High 'Knowledge Debt' and redundant costs ($250k+) due to siloed data." },
-      { title: 'Internal', description: "Lack of a unified, searchable repository across the 'X' digital ecosystem." },
+      { title: 'Internal', description: "Lack of a unified, searchable repository across the Jio digital project ecosystem." },
     ],
     rationales: [
       {
