@@ -281,7 +281,7 @@ const projectData: Record<string, any> = {
         title: 'The Life Stages Framework (Mental Models)',
         icon: 'Users',
         points: [
-          { title: 'Design Solution', description: "We designed a 'Life Stages' map tailored for two distinct personas: the Salaried Professional (Wealth Growth) and the Transport Operator (Asset & Business Management)." },
+          { title: 'Design Solution', description: "We designed a 'Life Stages' map tailored for two distinct personas: the Salaried Professional (Wealth Growth)." },
           { title: 'Impact', description: "By aligning product offerings with major life milestones, we moved from generic services to proactive financial partnership." }
         ]
       },
@@ -373,7 +373,7 @@ const projectData: Record<string, any> = {
       { title: 'Efficiency Goal', value: '30%', description: 'Target Reduction in Task Time', detail: 'Achieved through streamlined maintenance and booking workflows.' }
     ],
     learnings: [
-      { title: 'Data over Opinion', description: 'A UX Audit isn\'t just about finding what\'s broken; it\'s about defining the ROI of fixing it.' },
+      { title: 'Data over Opinion', description: "A UX Audit isn't just about finding what's broken; it's about defining the ROI of fixing it." },
       { title: 'Contextual Reality', description: 'Visiting energy plants revealed that "desk-side" design doesn\'t account for high-pressure industrial environments.' },
       { title: 'Master Blueprints', description: 'By benchmarking the current state, we gave the data-driven confidence to build a world-class industrial hub.' },
     ]
@@ -812,7 +812,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                         className="flex items-start"
                       >
                         <span className="text-primary mr-4 mt-1">&#8226;</span>
-                        <p className="text-lg md:text-xl lg:text-2xl 2xl:text-[28px] text-muted-foreground leading-relaxed">
+                        <p className="text-lg md:text-xl lg:text-2xl 2xl:text-[28px] text-muted-foreground_leading-relaxed">
                           <span className="font-semibold text-primary">{point.title}: </span>
                           {point.description}
                         </p>
