@@ -373,7 +373,7 @@ const projectData: Record<string, any> = {
       { title: 'Efficiency Goal', value: '30%', description: 'Target Reduction in Task Time', detail: 'Achieved through streamlined maintenance and booking workflows.' }
     ],
     learnings: [
-      { title: 'Data over Opinion', description: 'A UX Audit isn\'t just about finding what\'s broken; it's about defining the ROI of fixing it.' },
+      { title: 'Data over Opinion', description: 'A UX Audit isn\'t just about finding what\'s broken; it\'s about defining the ROI of fixing it.' },
       { title: 'Contextual Reality', description: 'Visiting energy plants revealed that "desk-side" design doesn\'t account for high-pressure industrial environments.' },
       { title: 'Master Blueprints', description: 'By benchmarking the current state, we gave the data-driven confidence to build a world-class industrial hub.' },
     ]
