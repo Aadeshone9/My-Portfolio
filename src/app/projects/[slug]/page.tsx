@@ -373,7 +373,7 @@ const projectData: Record<string, any> = {
       { title: 'Efficiency Goal', value: '30%', description: 'Target Reduction in Task Time', detail: 'Achieved through streamlined maintenance and booking workflows.' }
     ],
     learnings: [
-      { title: 'Data over Opinion', description: 'A UX Audit isn\'t just about finding what\'s broken; it\'s about defining the ROI of fixing it.' },
+      { title: 'Data over Opinion', description: 'A UX Audit isn\'t just about finding what\'s broken; it's about defining the ROI of fixing it.' },
       { title: 'Contextual Reality', description: 'Visiting energy plants revealed that "desk-side" design doesn\'t account for high-pressure industrial environments.' },
       { title: 'Master Blueprints', description: 'By benchmarking the current state, we gave the data-driven confidence to build a world-class industrial hub.' },
     ]
@@ -405,6 +405,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
 
   const showImages = params.slug !== 'thermax-edge';
   const isThermax = params.slug === 'thermax-edge';
+  const isTextFirstProject = params.slug === 'mahindra-finance' || params.slug === 'design-research-ops';
   const sectionPadding = showImages ? "py-20 md:py-24" : "py-12 md:py-16";
 
   const imagePrefix = 
@@ -414,11 +415,11 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
     'project1';
 
   const heroImage = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-1`);
-  const projectImage1 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-2`);
-  const projectImage2 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-3`);
-  const projectImage3 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-4`);
-  const projectImage4 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-5`);
-  const projectImage5 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-7`);
+  const projectImage1 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-1`); // Used for life stages diagram in mahindra
+  const projectImage2 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-2`);
+  const projectImage3 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-3`);
+  const projectImage4 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-4`);
+  const projectImage5 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-5`);
   const projectImage6 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-6`);
 
   // Parallax Hero effect
@@ -690,18 +691,18 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           </div>
         </section>
 
-        {showImages && (
+        {showImages && params.slug !== 'mahindra-finance' && params.slug !== 'design-research-ops' && (
           <section className="py-10 md:py-12 bg-background">
               <div className="container mx-auto px-4 sm:px-8 md:px-20 grid grid-cols-1 gap-8">
-                  {projectImage1 && (
+                  {projectImage2 && (
                       <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
                           <Image
-                              src={projectImage1.imageUrl}
-                              alt={projectImage1.description}
+                              src={projectImage2.imageUrl}
+                              alt={projectImage2.description}
                               width={1280}
                               height={720}
                               className="w-full h-auto object-contain"
-                              data-ai-hint={projectImage1.imageHint}
+                              data-ai-hint={projectImage2.imageHint}
                           />
                       </motion.div>
                   )}
@@ -718,108 +719,117 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           const isSpacingFix = (params.slug === 'maplegeni' && (blockIdx === 1 || blockIdx === 2 || blockIdx === 3)) || 
                                (params.slug === 'mahindra-finance') ||
                                (params.slug === 'design-research-ops');
+
+          const renderTitle = (
+            <section className={cn(
+              "bg-background text-foreground relative", 
+              isMaplegeniImageSkipped ? "pt-20 md:pt-24 pb-0" : (isSpacingFix ? "pt-20 md:pt-24 pb-6 md:pb-8" : sectionPadding)
+            )}>
+              <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
+                <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
+                  <motion.div {...motionProps} className="flex items-center gap-4">
+                    <RationaleIcon className="w-8 h-8 text-primary" />
+                    <FadeIn>
+                      <h2 className="font-headline font-semibold text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-foreground text-left">
+                        {block.title}
+                      </h2>
+                    </FadeIn>
+                  </motion.div>
+                </div>
+              </div>
+            </section>
+          );
+
+          const renderImage = showImages && !isMaplegeniImageSkipped && (
+            <section className={cn(
+              "bg-background",
+              isSpacingFix ? "pt-0 pb-10 md:pb-12" : "py-10 md:py-12"
+            )}>
+              <div className="container mx-auto px-4 sm:px-8 md:px-20">
+                {((params.slug === 'design-research-ops' && blockIdx === 2) || (params.slug === 'maplegeni' && blockIdx === 3)) ? (
+                    <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden bg-muted border border-border">
+                        <iframe 
+                            className="w-full h-full"
+                            src={params.slug === 'design-research-ops' 
+                              ? "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fsbg0dKpE8BV4MnGFdoTDsu%2Fportfolio%3Fpage-id%3D1403%253A173%26node-id%3D1403-7250%26viewport%3D-2931%252C-1913%252C0.21%26t%3Df3q7lEBvUcL4G0Ub-8%26scaling%3Dscale-down-width%26content-scaling%3Dfixed%26starting-point-node-id%3D1403%253A7250%26hide-ui%3D1"
+                              : "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fsbg0dKpE8BV4MnGFdoTDsu%2Fportfolio%3Fpage-id%3D1403%253A173%26node-id%3D1403-18699%26viewport%3D-2931%252C-1913%252C0.21%26t%3Df3q7lEBvUcL4G0Ub-8%26scaling%3Dscale-down-width%26content-scaling%3Dfixed%26starting-point-node-id%3D1403%3A18699%26hide-ui%3D1"
+                            } 
+                            allowFullScreen
+                        />
+                    </motion.div>
+                ) : (
+                  params.slug === 'maplegeni' && blockIdx === 2 ? projectImage5 && (
+                    <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                        <Image
+                            src={projectImage5.imageUrl}
+                            alt={projectImage5.description}
+                            width={1280}
+                            height={720}
+                            className="w-full h-auto object-contain"
+                        />
+                    </motion.div>
+                  ) : (
+                    blockIdx % 2 === 0 ? projectImage2 && (
+                      <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                          <Image
+                              src={projectImage2.imageUrl}
+                              alt={projectImage2.description}
+                              width={1280}
+                              height={720}
+                              className="w-full h-auto object-contain"
+                          />
+                      </motion.div>
+                    ) : projectImage3 && (
+                      <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
+                          <Image
+                              src={projectImage3.imageUrl}
+                              alt={projectImage3.description}
+                              width={1280}
+                              height={720}
+                              className="w-full h-auto object-contain"
+                          />
+                      </motion.div>
+                    )
+                  )
+                )}
+              </div>
+            </section>
+          );
+
+          const renderPoints = (
+            <section className={cn(
+              "bg-background text-foreground", 
+              isMaplegeniImageSkipped ? "pb-20 md:pb-24 pt-8 md:pt-12" : (isSpacingFix ? "pb-20 md:pb-24 pt-4 md:pt-6" : sectionPadding)
+            )}>
+              <div className="container mx-auto px-4 sm:px-8 md:px-20">
+                <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
+                  <ul className="space-y-8">
+                    {block.points.map((point: any, pIdx: number) => (
+                      <motion.li
+                        key={pIdx}
+                        {...motionProps}
+                        transition={{ ...motionProps.transition, delay: 0.1 * (pIdx + 1) }}
+                        className="flex items-start"
+                      >
+                        <span className="text-primary mr-4 mt-1">&#8226;</span>
+                        <p className="text-lg md:text-xl lg:text-2xl 2xl:text-[28px] text-muted-foreground leading-relaxed">
+                          <span className="font-semibold text-primary">{point.title}: </span>
+                          {point.description}
+                        </p>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </section>
+          );
           
           return (
             <div key={blockIdx}>
-              <section className={cn(
-                "bg-background text-foreground relative", 
-                isMaplegeniImageSkipped ? "pt-20 md:pt-24 pb-0" : (isSpacingFix ? "pt-20 md:pt-24 pb-6 md:pb-8" : sectionPadding)
-              )}>
-                <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
-                  <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
-                    <motion.div {...motionProps} className="flex items-center gap-4">
-                      <RationaleIcon className="w-8 h-8 text-primary" />
-                      <FadeIn>
-                        <h2 className="font-headline font-semibold text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl text-foreground text-left">
-                          {block.title}
-                        </h2>
-                      </FadeIn>
-                    </motion.div>
-                  </div>
-                </div>
-              </section>
-              
-              {showImages && !isMaplegeniImageSkipped && (
-                <section className={cn(
-                  "bg-background",
-                  isSpacingFix ? "pt-0 pb-10 md:pb-12" : "py-10 md:py-12"
-                )}>
-                  <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                    {((params.slug === 'design-research-ops' && blockIdx === 2) || (params.slug === 'maplegeni' && blockIdx === 3)) ? (
-                        <motion.div {...motionProps} className="w-full aspect-video relative rounded-2xl overflow-hidden bg-muted border border-border">
-                            <iframe 
-                                className="w-full h-full"
-                                src={params.slug === 'design-research-ops' 
-                                  ? "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fsbg0dKpE8BV4MnGFdoTDsu%2Fportfolio%3Fpage-id%3D1403%253A173%26node-id%3D1403-7250%26viewport%3D-2931%252C-1913%252C0.21%26t%3Df3q7lEBvUcL4G0Ub-8%26scaling%3Dscale-down-width%26content-scaling%3Dfixed%26starting-point-node-id%3D1403%253A7250%26hide-ui%3D1"
-                                  : "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fsbg0dKpE8BV4MnGFdoTDsu%2Fportfolio%3Fpage-id%3D1403%253A173%26node-id%3D1403-18699%26viewport%3D-2931%252C-1913%252C0.21%26t%3Df3q7lEBvUcL4G0Ub-8%26scaling%3Dscale-down-width%26content-scaling%3Dfixed%26starting-point-node-id%3D1403%3A18699%26hide-ui%3D1"
-                                } 
-                                allowFullScreen
-                            />
-                        </motion.div>
-                    ) : (
-                      params.slug === 'maplegeni' && blockIdx === 2 ? projectImage4 && (
-                        <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                            <Image
-                                src={projectImage4.imageUrl}
-                                alt={projectImage4.description}
-                                width={1280}
-                                height={720}
-                                className="w-full h-auto object-contain"
-                            />
-                        </motion.div>
-                      ) : (
-                        blockIdx % 2 === 0 ? projectImage2 && (
-                          <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                              <Image
-                                  src={projectImage2.imageUrl}
-                                  alt={projectImage2.description}
-                                  width={1280}
-                                  height={720}
-                                  className="w-full h-auto object-contain"
-                              />
-                          </motion.div>
-                        ) : projectImage3 && (
-                          <motion.div {...motionProps} className="w-full relative rounded-2xl overflow-hidden bg-muted">
-                              <Image
-                                  src={projectImage3.imageUrl}
-                                  alt={projectImage3.description}
-                                  width={1280}
-                                  height={720}
-                                  className="w-full h-auto object-contain"
-                              />
-                          </motion.div>
-                        )
-                      )
-                    )}
-                  </div>
-                </section>
-              )}
-
-              <section className={cn(
-                "bg-background text-foreground", 
-                isMaplegeniImageSkipped ? "pb-20 md:pb-24 pt-8 md:pt-12" : (isSpacingFix ? "pb-20 md:pb-24 pt-4 md:pt-6" : sectionPadding)
-              )}>
-                <div className="container mx-auto px-4 sm:px-8 md:px-20">
-                  <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
-                    <ul className="space-y-8">
-                      {block.points.map((point: any, pIdx: number) => (
-                        <motion.li
-                          key={pIdx}
-                          {...motionProps}
-                          transition={{ ...motionProps.transition, delay: 0.1 * (pIdx + 1) }}
-                          className="flex items-start"
-                        >
-                          <span className="text-primary mr-4 mt-1">&#8226;</span>
-                          <p className="text-lg md:text-xl lg:text-2xl 2xl:text-[28px] text-muted-foreground leading-relaxed">
-                            <span className="font-semibold text-primary">{point.title}: </span>
-                            {point.description}
-                          </p>
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </section>
+              {renderTitle}
+              {isTextFirstProject && renderPoints}
+              {renderImage}
+              {!isTextFirstProject && renderPoints}
             </div>
           );
         })}
