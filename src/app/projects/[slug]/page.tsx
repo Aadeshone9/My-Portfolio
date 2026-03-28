@@ -754,7 +754,7 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                               ? "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fsbg0dKpE8BV4MnGFdoTDsu%2Fportfolio%3Fpage-id%3D1403%253A173%26node-id%3D1403-7250%26viewport%3D-2931%252C-1913%252C0.21%26t%3Df3q7lEBvUcL4G0Ub-8%26scaling%3Dscale-down-width%26content-scaling%3Dfixed%26starting-point-node-id%3D1403%253A7250%26hide-ui%3D1"
                               : params.slug === 'maplegeni'
                               ? "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fsbg0dKpE8BV4MnGFdoTDsu%2Fportfolio%3Fpage-id%3D1403%253A173%26node-id%3D1403-18699%26viewport%3D-2931%252C-1913%252C0.21%26t%3Df3q7lEBvUcL4G0Ub-8%26scaling%3Dscale-down-width%26content-scaling%3Dfixed%26starting-point-node-id%3D1403%3A18699%26hide-ui%3D1"
-                              : "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fsbg0dKpE8BV4MnGFdoTDsu%2Fportfolio%3Fpage-id%3D1403%253A173%26node-id%3D1406-17782%26viewport%3D14166%252C-3522%252C0.45%26t%3DC7OHYj9uSruW3mf5-8%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D1406%253A17782%26show-proto-sidebar%3D1%26hide-ui%3D1"
+                              : "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FUmpbABs5apfO6S1sKdSD0l%2FUntitled%3Fpage-id%3D0%253A1%26node-id%3D3-189%26viewport%3D185%252C288%252C0.52%26t%3DjpxilzSKnjIhFbJn-8%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D3%253A189%26hide-ui%3D1"
                             } 
                             allowFullScreen
                         />
