@@ -1,8 +1,8 @@
+
 'use client';
 
 import Header from '@/components/Header';
 import ProjectStack from '@/components/ProjectStack';
-import SpotlightCard from '@/components/SpotlightCard';
 import FadeIn from '@/components/FadeIn';
 import TiltedCard from '@/components/TiltedCard';
 import Approach from '@/components/Approach';
@@ -10,7 +10,6 @@ import PillButton from '@/components/PillButton';
 import Footer from '@/components/Footer';
 import ToolStack from '@/components/ToolStack';
 import AnimatedShape from '@/components/AnimatedShape';
-import DesignSystemCTA from '@/components/DesignSystemCTA';
 import Showreel from '@/components/Showreel';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -179,7 +178,6 @@ export default function Home() {
 
       </main>
       <Footer />
-      <DesignSystemCTA />
     </div>
   );
 }
