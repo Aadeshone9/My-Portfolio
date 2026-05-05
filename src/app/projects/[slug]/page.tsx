@@ -51,7 +51,6 @@ const motionProps = {
   transition: { duration: 0.6, ease: "easeOut" },
 };
 
-// Count-up component for metrics
 const Counter = ({ value }: { value: string }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
@@ -166,6 +165,7 @@ const projectData: Record<string, any> = {
         title: 'Design Ethics (Core Pillars)',
         icon: 'ShieldCheck',
         points: [
+          { title: 'Useful', description: 'Providing clear and concise service activities to help users understand the value proposition quickly.' },
           { title: 'Useful', description: 'Providing clear and concise service activities to help users understand the value proposition quickly.' },
           { title: 'Usable', description: 'Creating an intuitive interaction model that minimizes friction in service discovery.' },
           { title: 'Desirable', description: 'Implementing delightful craft and visual polish to build emotional resonance.' }
@@ -406,7 +406,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
 
   const showImages = params.slug !== 'thermax-edge';
   const isThermax = params.slug === 'thermax-edge';
-  const isTextFirstProject = params.slug === 'mahindra-finance' || params.slug === 'design-research-ops';
   const sectionPadding = showImages ? "py-20 md:py-24" : "py-12 md:py-16";
 
   const imagePrefix = 
@@ -420,7 +419,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
   const projectImage3 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-3`);
   const projectImage4 = PlaceHolderImages.find(p => p.id === `${imagePrefix}-image-4`);
 
-  // Parallax Hero effect
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -453,7 +451,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
     <div className="bg-background text-foreground" ref={containerRef}>
       <Header />
       <main>
-        {/* Hero Section */}
         <section className={cn("w-full relative overflow-hidden flex items-center", showImages ? "h-screen" : "min-h-[60vh] md:min-h-[70vh]")}>
           <motion.div 
             style={{ scale: heroScale, opacity: heroOpacity, filter: heroBlur }}
@@ -492,7 +489,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           </div>
         </section>
 
-        {/* Contribution Section */}
         <section className={cn("bg-background text-foreground relative", sectionPadding)}>
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
@@ -548,7 +544,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           </div>
         </section>
 
-        {/* Audit Methodology (Only for Thermax) */}
         {isThermax && project.methodology && (
           <section className={cn("bg-card text-card-foreground relative", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
@@ -575,7 +570,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           </section>
         )}
 
-        {/* Key Outcomes Section */}
         <section className={cn("bg-background text-foreground relative", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20 relative">
                 <FadeIn>
@@ -609,7 +603,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
             </div>
         </section>
         
-        {/* Strategic Gap Section */}
         <section className={cn("bg-background text-foreground relative pt-20 md:pt-24 pb-0")}>
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
@@ -630,7 +623,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           </div>
         </section>
 
-        {/* Gap Image Section */}
         {showImages && projectImage2 && (
           <section className="py-10 md:py-12 bg-background">
               <div className="container mx-auto px-4 sm:px-8 md:px-20">
@@ -648,7 +640,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           </section>
         )}
 
-        {/* Core Challenge Section */}
         <section className={cn("bg-background text-foreground relative pb-20 md:pb-24 pt-12 md:pt-16")}>
           <div className="container mx-auto px-4 sm:px-8 md:px-20 relative z-10">
             <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
@@ -672,7 +663,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           </div>
         </section>
 
-        {/* Rationale Blocks */}
         {project.rationales.map((block: any, blockIdx: number) => {
           const RationaleIcon = IconMap[block.icon] || Search;
           
@@ -693,7 +683,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
                 </div>
               </section>
 
-              {/* Rationale Images */}
               {showImages && (
                 <section className="bg-background py-10 md:py-12">
                   <div className="container mx-auto px-4 sm:px-8 md:px-20">
@@ -760,7 +749,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           );
         })}
 
-        {/* Quantifiable Outcomes Section */}
         <section className={cn("bg-background text-foreground", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
                 <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
@@ -794,7 +782,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
             </div>
         </section>
 
-        {/* Experience Enhancers (Only for VIDA) */}
         {params.slug === 'vida' && (
           <section className={cn("bg-background text-foreground", sectionPadding)}>
             <div className="container mx-auto px-4 sm:px-8 md:px-20">
@@ -832,7 +819,6 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           </section>
         )}
 
-        {/* Key Learnings Section */}
         <section className={cn("bg-background text-foreground", sectionPadding)}>
           <div className="container mx-auto px-4 sm:px-8 md:px-20">
             <div className="max-w-4xl lg:max-w-5xl 2xl:max-w-7xl">
@@ -864,10 +850,8 @@ export default function ProjectPage({ params: paramsPromise }: { params: Promise
           </div>
         </section>
 
-        {/* Continuity Loop Footer */}
         <NextProjectFooter currentSlug={params.slug} />
 
-        {/* Call to Action Section */}
         <section className="pb-20 container mx-auto px-4 sm:px-8 md:px-20">
           <div className="flex flex-col items-start gap-6">
             <div className="w-[84px] h-[84px] rounded-full bg-primary mb-6"></div>

@@ -106,7 +106,7 @@ const ToolStack = () => {
               Design Research | Data Analytics | User Behaviour Analytics | Task Analysis & Persona Hypothesis | Information Architecture | Heuristics
             </p>
           </div>
-          <div className="mt-10" id="design-skills-trigger">
+          <div className="mt-10">
             <h3 className="font-headline font-semibold text-xl md:text-2xl text-left text-foreground mb-2">
               Design
             </h3>
