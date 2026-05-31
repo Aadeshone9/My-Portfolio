@@ -1,0 +1,102 @@
+{
+  "projects": [
+    {
+      "id": "vida",
+      "slug": "vida",
+      "title": "VIDA EV Mobility",
+      "subtitle": "Driving Loyalty & Efficiency",
+      "heroTag": "Behavioural UX Case Study",
+      "images": {
+        "hero": "project1-image-1",
+        "rationale1": "project1-image-2",
+        "rationale2": "project1-image-3"
+      },
+      "layoutType": "standard"
+    },
+    {
+      "id": "maplegeni",
+      "slug": "maplegeni",
+      "title": "Scalable B2C Design",
+      "subtitle": "Global Software Services Platform",
+      "heroTag": "B2C Software Platform Case Study",
+      "images": {
+        "hero": "project4-image-1",
+        "rationale1": "project4-image-2",
+        "rationale2": "project4-image-3",
+        "rationale3": "project4-image-5",
+        "rationale4": "project4-image-4"
+      },
+      "layoutType": "standard",
+      "inlineContent": {
+        "rationale4": "figma-maplegeni"
+      }
+    },
+    {
+      "id": "design-research-ops",
+      "slug": "design-research-ops",
+      "title": "Research Ops",
+      "subtitle": "Scaling research for 300+ Designers",
+      "heroTag": "Research Operations Case Study",
+      "images": {
+        "hero": "project2-image-1",
+        "rationale1": "project2-image-2",
+        "rationale2": "project2-image-3",
+        "rationale3": "project2-image-4"
+      },
+      "layoutType": "text-first",
+      "inlineContent": {
+        "rationale3": "figma-research-ops"
+      }
+    },
+    {
+      "id": "mahindra-finance",
+      "slug": "mahindra-finance",
+      "title": "Unified Financial Ecosystem",
+      "subtitle": "Designing for Trust & Growth",
+      "heroTag": "Financial Ecosystem Strategy",
+      "images": {
+        "hero": "project3-image-1",
+        "rationale1": "project3-image-2",
+        "rationale2": "project3-image-3",
+        "rationale3": "project3-image-4"
+      },
+      "layoutType": "text-first",
+      "inlineContent": {
+        "rationale3": "figma-mahindra"
+      }
+    },
+    {
+      "id": "thermax-edge",
+      "slug": "thermax-edge",
+      "title": "Industrial UX Audit",
+      "subtitle": "Benchmarking 'Customer Connect'",
+      "heroTag": "UX Audit & Research Benchmarking",
+      "images": {},
+      "layoutType": "audit",
+      "hasNoImages": true
+    }
+  ],
+  "imageUrls": {
+    "project1-image-1": "/images/project1/hero.jpg",
+    "project1-image-2": "/images/project1/image-1.jpg",
+    "project1-image-3": "/images/project1/image-2.jpg",
+    "project2-image-1": "/images/project2/hero.jpg",
+    "project2-image-2": "/images/project2/image-1.jpg",
+    "project2-image-3": "/images/project2/image-2.jpg",
+    "project2-image-4": "/images/project2/image-3.jpg",
+    "project3-image-1": "/images/project3/hero.jpg",
+    "project3-image-2": "/images/project3/image-1.jpg",
+    "project3-image-3": "/images/project3/image-2.jpg",
+    "project3-image-4": "/images/project3/image-3.jpg",
+    "project4-image-1": "/images/project4/hero.jpg",
+    "project4-image-2": "/images/project4/image-1.jpg",
+    "project4-image-3": "/images/project4/image-2.jpg",
+    "project4-image-4": "/images/project4/image-3.jpg",
+    "project4-image-5": "/images/project4/image-4.jpg"
+  },
+  "embeds": {
+    "figma-research-ops": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fsbg0dKpE8BV4MnGFdoTDsu%2Fportfolio%3Fpage-id%3D1403%253A173%26node-id%3D1403-7250%26viewport%3D-2931%252C-1913%252C0.21%26t%3Df3q7lEBvUcL4G0Ub-8%26scaling%3Dscale-down-width%26content-scaling%3Dfixed%26starting-point-node-id%3D1403%253A7250%26hide-ui%3D1",
+    "figma-maplegeni": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fsbg0dKpE8BV4MnGFdoTDsu%2Fportfolio%3Fpage-id%3D1403%253A173%26node-id%3D1403-18699%26viewport%3D-2931%252C-1913%252C0.21%26t%3Df3q7lEBvUcL4G0Ub-8%26scaling%3Dscale-down-width%26content-scaling%3Dfixed%26starting-point-node-id%3D1403%3A18699%26hide-ui%3D1",
+    "figma-mahindra": "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FUmpbABs5apfO6S1sKdSD0l%2FUntitled%3Fpage-id%3D0%253A1%26node-id%3D3-189%26viewport%3D185%252C288%252C0.52%26t%3DjpxilzSKnjIhFbJn-8%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D3%253A189%26hide-ui%3D1"
+  }
+}
